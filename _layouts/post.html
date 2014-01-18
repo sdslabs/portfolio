@@ -1,0 +1,20 @@
+---
+layout: home
+comment: Whatever content we pass from here will be injected inside the main tag
+---
+<div class="post">
+	<div class="images">
+		{% for image in page.images %}
+		<img src="{{image}}">
+		{% endfor %}
+	</div>
+	<h2 class="post-title">{{ page.tittle }}</h2>
+	<div class="description">
+		{{ content }}
+	</div>
+	<div class="share-buttons">
+		<a class="twitter"></a>
+		<a class="fb"></a>
+		<a class="g+"></a>
+	</div>
+</div>

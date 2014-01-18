@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <!--[if lt IE 9]>
+      <script src="/assets/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <!-- #todo Set its background to sdslabs logo -->
+      <nav>
+        <a class='icon-fb'></a>
+        <a class='icon-twitter'></a>
+        <a class='icon-rss'></a>
+        <a class='icon-email'></a>
+      </nav>
+    </header>
+    <nav>
+      {% comment %}
+        Loop through the site category list from data file.
+        This is because we want full names for each category
+      {% endcomment %}
+      {% for category in site.data.category %}
+      <nav>
+        {% comment %}
+          The category_name is the first word in lower case
+        {% endcomment %}
+        {% assign category_name = category|split: ' '|first|downcase %}
+        <a href="/{{ category_name }}.html">{{ category }}</a>
+        <ul>
+          {% for post in site.categories[category_name] %}
+          <a href="{{post.url}}">{{post.title}}</a>
+          {% endfor %}
+        </ul>
+      </nav>
+      <a href="/about.html">About Us</a>
+      {% endfor %}
+    </nav>
+    <main>
+      {{ content }}
+    </main>
+    <footer>
+      &copy; SDSLabs. Source available on <a href="https://github.com/sdslabs/portfolio">GitHub</a>
+    </footer>
+  </body>
+</html>

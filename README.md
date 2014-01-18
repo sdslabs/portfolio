@@ -16,6 +16,10 @@ type of story.
 A direct post page (muzi.html) will only show the direct popup with nothing in bg.
 
 This repo uses a lot of jekyll magic to make sure everything is clean and simple.
+Instead of relying on JavaScript to filter stuff when you click on something, we
+instead use HTML pages (easily created by Jekyll) over an AJAX request
+made by checking for clicks using JQuery and History.js to decide what content to show.
+History.js takes care of making URLs, and the back button work for us.
 
 #Adding a new Tile
 To add a new post, just create a new post under `_posts/YEAR-MONTH-DATE-TITLE.md`

@@ -1,10 +1,12 @@
 <!doctype html>
 <html>
   <head>
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} | SDSLabs</title>
     <!--[if lt IE 9]>
       <script src="/assets/js/html5shiv.js"></script>
     <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/assets/js/jquery.history.js"></script>
   </head>
   <body>
     <header>
@@ -27,15 +29,15 @@
           The category_name is the first word in lower case
         {% endcomment %}
         {% assign category_name = category|split: ' '|first|downcase %}
-        <a href="/{{ category_name }}.html">{{ category }}</a>
+        <a href="/category/{{ category_name }}.html">{{ category }}</a>
         <ul>
           {% for post in site.categories[category_name] %}
           <a href="{{post.url}}">{{post.title}}</a>
           {% endfor %}
         </ul>
       </nav>
-      <a href="/about.html">About Us</a>
       {% endfor %}
+      <a href="/about.html">About Us</a>
     </nav>
     <main>
       {{ content }}
@@ -43,5 +45,6 @@
     <footer>
       &copy; SDSLabs. Source available on <a href="https://github.com/sdslabs/portfolio">GitHub</a>
     </footer>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Achievements | SDSLabs
+title: Achievements
 ---
 <ul>
   {% for post in site.categories.achievements %}

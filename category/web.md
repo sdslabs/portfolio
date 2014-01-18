@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Web Development | SDSLabs
+title: Web Development
 ---
 <ul>
   {% for post in site.categories.web %}

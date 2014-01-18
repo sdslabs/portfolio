@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Mobile Development | SDSLabs
+title: Mobile Development
 ---
 <ul>
   {% for post in site.categories.mobile %}

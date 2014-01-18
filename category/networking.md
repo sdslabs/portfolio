@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Networking | SDSLabs
+title: Networking
 ---
 <ul>
   {% for post in site.categories.networking %}

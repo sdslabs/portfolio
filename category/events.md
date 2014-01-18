@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Events | SDSLabs
+title: Events
 ---
 <ul>
   {% for post in site.categories.events %}

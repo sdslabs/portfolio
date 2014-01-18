@@ -1,6 +1,6 @@
 ---
 layout: home
-title: SDSLabs Portfolio
+title: Portfolio
 ---
 <ul>
   {% for post in site.posts %}

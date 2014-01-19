@@ -1,0 +1,60 @@
+body{
+	background-color: #F2F2F2;
+}
+a{
+	text-decoration: none;
+	color:#000;
+}
+
+/* Begin Left Bar*/
+div#logo{
+	min-height: 150px;
+}
+
+/* Left Navigation */
+nav.left-nav{
+	background: #252525;
+	padding: 15px;
+	min-height:600px;
+}
+
+nav.left-nav a{
+	color: #F2F2F2;
+}
+
+nav.left-nav ul{
+	font-size: 0.8em;
+	margin:10px;
+	padding-left: 10px;
+}
+
+/*  Main Column */
+header.social-share{
+	min-height: 75px;
+}
+
+.content-wrap{
+	background-color: #FFF;
+	padding: 20px;
+}
+
+.block{
+	border: 1px solid #eee;
+	min-height: 300px;
+}
+
+.excerpt, .full-content{
+	display: none;
+}
+
+/* Footer */
+footer{
+	text-align: center;
+	color:#565656;
+	padding: 20px;
+	font-size: 0.8em;
+}
+footer a{
+	color: #565656;
+	text-decoration: underline;
+}

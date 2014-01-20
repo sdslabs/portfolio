@@ -1,7 +1,7 @@
 History.Adapter.bind(window,'statechange',function(){ // Note: We are using statechange instead of popstate
 	var state = History.getState();
 	$.get(state.url, function(html){
-		$('main')[0].innerHTML=$(html).filter('main')[0].innerHTML;
+		$('main')[0].innerHTML=$(html).find('div>main')[0].innerHTML;
 		$('title')[0].innerText=$(html).filter('title')[0].innerText;
 	})
 });

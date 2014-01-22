@@ -5,8 +5,7 @@ title: Portfolio
 <div class="pure-g">
   <!-- Begin Load Content from md -->
   {% for post in site.posts %}
-    <div class="pure-u-1-3 block">
-      <img src="{{ post.images.first }}">
+    <div class="pure-u-1-3 block" style="background-image:url('{{ post.images.first }}')">
       <a href="{{ post.url }}">{{ post.title }}</a>
       <div class="excerpt">
       	{{ post.excerpt }}

@@ -8,7 +8,14 @@ a{
 
 /* Begin Left Bar*/
 div#logo{
-	min-height: 150px;
+	padding:10px;
+}
+
+#logo h1{
+	margin:0px;
+}
+#logo img{
+
 }
 
 /* Left Navigation */
@@ -31,6 +38,12 @@ nav.left-nav ul{
 /*  Main Column */
 header.social-share{
 	min-height: 75px;
+	line-height:75px;
+	padding-left: 4%;
+}
+
+.social-share a{
+	padding-right: 20px;
 }
 
 .content-wrap{
@@ -41,6 +54,8 @@ header.social-share{
 .block{
 	border: 1px solid #eee;
 	min-height: 300px;
+	background-size:cover;
+	background-position: 50%;
 }
 
 .excerpt, .full-content{

@@ -11,3 +11,10 @@ $('nav a').click(function(e){
 	History.pushState(null, null, link);
 	e.preventDefault();
 });
+
+//Block Hovering
+$(function(){
+	$('.block').hover(function(){
+		$(this).find('.hover').slideToggle('fast');
+	})
+});

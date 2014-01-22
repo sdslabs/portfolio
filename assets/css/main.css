@@ -56,10 +56,29 @@ header.social-share{
 	min-height: 300px;
 	background-size:cover;
 	background-position: 50%;
+	position:relative;
 }
 
-.excerpt, .full-content{
+.full-content{
 	display: none;
+}
+.hover{
+	position: absolute;
+	bottom: 0px;
+	background: rgba(255,255, 255, 0.75);
+	width: 100%;
+	padding:10px;
+	display:none;
+}
+
+.hover h6{
+	padding-left: 10px;
+	margin:0px;
+	font-size:0.9em;
+}
+
+.hover .excerpt{
+	font-size:0.7em;
 }
 
 /* Footer */

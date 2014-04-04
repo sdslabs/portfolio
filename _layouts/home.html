@@ -1,70 +1,147 @@
-<!doctype html>
-<html>
-  <head>
-    <title>{{ page.title }} | SDSLabs</title>
-    <!--[if lt IE 9]>
-      <script src="/assets/js/html5shiv.js"></script>
-    <![endif]-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="/assets/js/jquery.history.js"></script>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
-  </head>
-  <body>
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>SDSLabs</title>
+  <meta name="author" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords"  content="" />
+  <meta name="Resource-type" content="Document" />
 
-    <div class="pure-g">
-      <div class="pure-u-1-5">
-        <!-- Begin Space for Logo -->
-        <div id="logo">
-          <h1>
-            <a href="/"><img src="/assets/images/sdslabs-logo.png" alt="SDSLabs" title="SDSLabs" height="100px"></a>
-          </h1>
-        </div>
+  <link rel="stylesheet" type="text/css" href="/assets/css/jquery.fullPage.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/examples.css" />
 
-        <!-- Begin Left Navigation -->
-         <nav class="left-nav">
-        {% comment %}
-          Loop through the site category list from data file.
-          This is because we want full names for each category
-        {% endcomment %}
-        {% for category in site.data.category %}
-        
-          {% comment %}
-            The category_name is the first word in lower case
-          {% endcomment %}
-          {% assign category_name = category|split: ' '|first|downcase %}
-          <a href="/category/{{ category_name }}.html">{{ category }}</a>
-          <ul>
-            {% for post in site.categories[category_name] %}
-            <a href="{{post.url}}">{{post.title}}</a>
-            {% endfor %}
-          </ul>
-       
-        {% endfor %}
-        <a href="/about.html">About Us</a>
-        </nav>
-      </div>
+  <style>
+  
+  /* Style for our header texts 
+  * --------------------------------------- */
+  h1{
+    font-size: 5em; 
+    font-family: arial,helvetica;
+    color: #fff;
+    margin:0;
+  }
+  .intro p{
+    color: #fff;
+  }
+  
+  /* Centered texts in each section 
+  * --------------------------------------- */
+  .section{
+    text-align:center;
+  }
+  
+  
+  /* Overwriting styles for the navigation dots (to place it where we want)
+  * --------------------------------------- */
+  .fullPage-slidesNav.bottom{
+    bottom: 25px;
+  }
+  
+  /* Bottom menu
+  * --------------------------------------- */
+  #infoMenu li a {
+    color: #fff;
+  }
+  
+  #section2 h1{
+    color: #333;
+  }
+  
+  </style>
 
-      <div class="pure-u-4-5">
-        <header class="social-share">
-          <!-- #todo Set its background to sdslabs logo -->
-          <nav>
-            <a class='icon-fb' href="https://www.facebook.com/SDSLabs" target="_blank"><img src="/assets/images/fb-icon.png"></a>
-            <a class='icon-twitter' href="https://twitter.com/sdslabs" target="_blank"><img src="/assets/images/twitter-icon.png"></a>
-            <a class='icon-github' href="https://www.github.com/sdslabs" target="_blank"><img src="/assets/images/gh-icon.png"></a>
-            <a class='icon-blog' href="http://blog.sdslabs.co" target="_blank"><img src="/assets/images/blog-icon.png"></a>
-          </nav>
-        </header>
-       
-        <main class="content-wrap">
-          {{ content }}
-        </main>
-        <footer>
-          &copy; SDSLabs. Source available on <a href="https://github.com/sdslabs/portfolio">GitHub</a>
-        </footer>
-      </div>
+  <!--[if IE]>
+    <script type="text/javascript">
+       var console = { log: function() {} };
+    </script>
+  <![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>  
+  <script src="/assets/js/jquery.slimscroll.min.js"></script>
+  <script src="/assets/js/jquery.fullPage.js"></script>
+  <script type="text/javascript" src="/assets/js/examples.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $.fn.fullpage({
+        anchors: ['intro', 'projects', 'events', 'team'],
+        slidesColor: ['#8FB98B', '#DE564B', '#EAE1C0', '#CFCFCF'],
+        slidesNavigation: true,     
+      });
+    });
+  </script>
+
+</head>
+<body>
+
+<div class="section " id="section0">
+  <div class="intro">
+    <h1>SDSLabs</h1>
+    <p>...Aur bakar</p>
+  </div>    
+  </div>
+</div>
+<div class="section" id="section1">
+    <div class="slide" id="slide1" data-anchor="slide1">
+    <div class="intro">
+      <h1>Clickable</h1>
+      <p>
+        You can even click on the navigation and jump directly to another section.
+      </p>
     </div>
+  </div>
+  
+    <div class="slide" id="slide2" data-anchor="slide2">
+    <h1>Slide 2</h1>
+  </div>
+  
+  <div class="slide" id="slide3" data-anchor="slide3">
+    <h1>Slide 2</h1>
+  </div>  <div class="slide" id="slide3" data-anchor="slide3">
+    <h1>Slide 2</h1>
+  </div>
+  <div class="slide" id="slide3" data-anchor="slide3">
+    <h1>Slide 2</h1>
+  </div>
+  <div class="slide" id="slide3" data-anchor="slide3">
+    <h1>Slide 2</h1>
+  </div>
+  <div class="slide" id="slide3" data-anchor="slide3">
+    <h1>Slide 2</h1>
+  </div>
+  <div class="slide" id="slide3" data-anchor="slide3">
+    <h1>Slide 2</h1>
+  </div>
+  <div class="slide" id="slide3" data-anchor="slide3">
+    <h1>Slide 2</h1>
+  </div>
+  <div class="slide" id="slide3" data-anchor="slide3">
+    <h1>Slide 2</h1>
+  </div>
+  <div class="slide" id="slide3" data-anchor="slide3">
+    <h1>Slide 2</h1>
+  </div>
+  <div class="slide" id="slide3" data-anchor="slide3">
+    <h1>Slide 2</h1>
+  </div>
+  <div class="slide" id="slide3" data-anchor="slide3">
+    <h1>Slide 2</h1>
+  </div>
+  <div class="slide" id="slide3" data-anchor="slide3">
+    <h1>Slide 2</h1>
+  </div>
+</div>
 
-    <script src="/assets/js/script.js"></script>
-  </body>
+<div class="section" id="section2">
+  <div class="intro">
+    <h1>Enjoy it</h1>
+  </div>
+</div>
+
+<div class="section" id="section3">
+  <div class="intro">
+    <h1>Team</h1>
+  </div>
+</div>
+
+</body>
 </html>

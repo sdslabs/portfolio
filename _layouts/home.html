@@ -8,7 +8,7 @@
   <meta name="Resource-type" content="Document" />
 
   <link rel="stylesheet" type="text/css" href="/assets/css/jquery.fullPage.css" />
-  <link rel="stylesheet" type="text/css" href="/assets/css/examples.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
 
   <style>
   
@@ -37,15 +37,6 @@
     bottom: 25px;
   }
   
-  /* Bottom menu
-  * --------------------------------------- */
-  #infoMenu li a {
-    color: #fff;
-  }
-  
-  #section2 h1{
-    color: #333;
-  }
   
   </style>
 
@@ -59,19 +50,37 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>  
   <script src="/assets/js/jquery.slimscroll.min.js"></script>
   <script src="/assets/js/jquery.fullPage.js"></script>
-  <script type="text/javascript" src="/assets/js/examples.js"></script>
   <script type="text/javascript">
+
     $(document).ready(function() {
       $.fn.fullpage({
         anchors: ['intro', 'projects', 'events', 'team'],
         slidesColor: ['#8FB98B', '#DE564B', '#EAE1C0', '#CFCFCF'],
-        slidesNavigation: true,     
+        slidesNavigation: true, 
+        navigation: true,
+        resize: false,
+        // menu : '.nav-menu',
+        scrollOverflow : true,
+        verticalCentered : false,
+        css3 : true,
+        paddingTop : '50px',
+        fixedElements : '.nav'    
       });
     });
   </script>
 
 </head>
 <body>
+
+<div class="nav">
+  <ul class="nav-menu">
+    <li data-menuanchor="intro" class="active"><a href="#intro" >Home </a></li>
+    <li data-menuanchor="projects"> <a href="#projects"> Work </a></li>
+    <li data-menuanchor="events"> <a href="#events"> Events </a></li>
+    <li data-menuanchor="team"><a href="#team"> About Us </a></li>
+    <li><a href="http://blog.sdslabs.co/"> Blog </a></li>
+  </ul>
+</div>
 
 <div class="section " id="section0">
   <div class="intro">
@@ -83,7 +92,7 @@
 <div class="section" id="section1">
     <div class="slide" id="slide1" data-anchor="slide1">
     <div class="intro">
-      <h1>Clickable</h1>
+      <h1>Projects</h1>
       <p>
         You can even click on the navigation and jump directly to another section.
       </p>
@@ -133,13 +142,13 @@
 
 <div class="section" id="section2">
   <div class="intro">
-    <h1>Enjoy it</h1>
+    <h1>Events</h1>
   </div>
 </div>
 
 <div class="section" id="section3">
   <div class="intro">
-    <h1>Team</h1>
+    <h1>About Us</h1>
   </div>
 </div>
 

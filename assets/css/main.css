@@ -1,6 +1,8 @@
-body{
-	background-color: #F2F2F2;
+*{
+	font-size:13px;
+	font-family: Arial;
 }
+
 a{
 	text-decoration: none;
 	color:#000;
@@ -18,77 +20,24 @@ div#logo{
 
 }
 
-/* Left Navigation */
-nav.left-nav{
-	background: #252525;
-	padding: 15px;
-	min-height:600px;
-}
-
-nav.left-nav a{
-	color: #F2F2F2;
-}
-
-nav.left-nav ul{
-	font-size: 0.8em;
-	margin:10px;
-	padding-left: 10px;
-}
-
-/*  Main Column */
-header.social-share{
-	min-height: 75px;
-	line-height:75px;
-	padding-left: 4%;
-}
-
-.social-share a{
-	padding-right: 20px;
-}
-
-.content-wrap{
+.nav{
+	position: fixed;
+	top:0px;
+	left:0px;
+	height: 40px;
 	background-color: #FFF;
-	padding: 20px;
-}
-
-.block{
-	border: 1px solid #eee;
-	min-height: 300px;
-	background-size:cover;
-	background-position: 50%;
-	position:relative;
-}
-
-.full-content{
-	display: none;
-}
-.hover{
-	position: absolute;
-	bottom: 0px;
-	background: rgba(255,255, 255, 0.75);
 	width: 100%;
-	padding:10px;
-	display:none;
-}
-
-.hover h6{
-	padding-left: 10px;
-	margin:0px;
-	font-size:0.9em;
-}
-
-.hover .excerpt{
-	font-size:0.7em;
-}
-
-/* Footer */
-footer{
 	text-align: center;
-	color:#565656;
-	padding: 20px;
-	font-size: 0.8em;
+	line-height: 40px;
 }
-footer a{
-	color: #565656;
-	text-decoration: underline;
+
+.nav-menu{
+	list-style:none;
+	padding:0px;
+	margin: 0px;
+}
+
+.nav-menu li{
+	display:inline;
+	margin-left: 10px;
 }

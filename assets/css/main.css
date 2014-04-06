@@ -52,3 +52,17 @@ div#logo{
 	margin-top: 200px;
 	color: #000;
 }
+.grid{
+	margin:50px;
+}
+.block-work{
+	min-height: 200px;
+	width: 300px;
+	border-radius: 10px;
+}
+.block-work .hover{
+	display: none;
+}
+.block-work .full-content{
+	display: none;
+}

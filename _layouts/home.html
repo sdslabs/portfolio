@@ -44,10 +44,10 @@
 
     $(document).ready(function() {
       $.fn.fullpage({
-        anchors: ['intro', 'projects', 'events', 'team'],
-        slidesColor: ['#FFF', '#DE564B', '#EAE1C0', '#CFCFCF'],
+        anchors: ['intro', 'work', 'events', 'team'],
+        slidesColor: ['#FFF', '#FFF', '#EAE1C0', '#CFCFCF'],
         slidesNavigation: true, 
-        navigation: true,
+        // navigation: true,
         resize: false,
         menu : '#nav-menu',
         scrollOverflow : true,
@@ -64,7 +64,7 @@
 
 <ul id="nav-menu">
   <li data-menuanchor="intro" class="active"><a href="#intro" >Home</a></li>
-  <li data-menuanchor="projects"> <a href="#projects">Work</a></li>
+  <li data-menuanchor="work"> <a href="#work">Work</a></li>
   <li data-menuanchor="events"> <a href="#events">Events</a></li>
   <li data-menuanchor="team"><a href="#team">About Us</a></li>
   <li><a href="http://blog.sdslabs.co/">Blog</a></li>
@@ -78,54 +78,38 @@
   </div>
 </div>
 <div class="section" id="section1">
-    <div class="slide" id="slide1" data-anchor="slide1">
-    <div class="intro">
+    <div class="slide" id="web-slide" data-anchor="web-slide">
       <h1>Projects</h1>
-      <p>
-        You can even click on the navigation and jump directly to another section.
-      </p>
-    </div>
+      <div class="grid">
+       {% for post in site.posts %}
+        <div style="background-image:url('{{ post.images.first }}')" class="block-work">
+          <div class="hover">
+            <h6>
+             <a href="{{ post.url }}">{{ post.title }}</a>
+            </h6>
+            <div class="excerpt">
+              {{ post.excerpt }} <a href="{{ post.url }}">Read More</a>
+            </div>
+          </div>
+          <div class="full-content">
+            {{ post.content }}
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+
   </div>
   
-    <div class="slide" id="slide2" data-anchor="slide2">
-    <h1>Slide 2</h1>
+  <div class="slide" id="mobile-slide" data-anchor="mobile-slide">
+    <h1>Mobile Development</h1>
+  </div> 
+  <div class="slide" id="pag-slide" data-anchor="pag-slide">
+    <h1>Programming & Algorithm </h1>
+  </div>  
+  <div class="slide" id="misc-slide" data-anchor="misc-slide">
+    <h1>Misc</h1>
   </div>
-  
-  <div class="slide" id="slide3" data-anchor="slide3">
-    <h1>Slide 2</h1>
-  </div>  <div class="slide" id="slide3" data-anchor="slide3">
-    <h1>Slide 2</h1>
-  </div>
-  <div class="slide" id="slide3" data-anchor="slide3">
-    <h1>Slide 2</h1>
-  </div>
-  <div class="slide" id="slide3" data-anchor="slide3">
-    <h1>Slide 2</h1>
-  </div>
-  <div class="slide" id="slide3" data-anchor="slide3">
-    <h1>Slide 2</h1>
-  </div>
-  <div class="slide" id="slide3" data-anchor="slide3">
-    <h1>Slide 2</h1>
-  </div>
-  <div class="slide" id="slide3" data-anchor="slide3">
-    <h1>Slide 2</h1>
-  </div>
-  <div class="slide" id="slide3" data-anchor="slide3">
-    <h1>Slide 2</h1>
-  </div>
-  <div class="slide" id="slide3" data-anchor="slide3">
-    <h1>Slide 2</h1>
-  </div>
-  <div class="slide" id="slide3" data-anchor="slide3">
-    <h1>Slide 2</h1>
-  </div>
-  <div class="slide" id="slide3" data-anchor="slide3">
-    <h1>Slide 2</h1>
-  </div>
-  <div class="slide" id="slide3" data-anchor="slide3">
-    <h1>Slide 2</h1>
-  </div>
+
 </div>
 
 <div class="section" id="section2">

@@ -44,3 +44,11 @@ div#logo{
 	border-bottom:1px solid #C2C2C2;
 }
 
+#section0{
+	background:url('/assets/images/background-section0.jpg') #F2CD72 no-repeat center center !important;
+}
+
+#section0 .intro{
+	margin-top: 200px;
+	color: #000;
+}

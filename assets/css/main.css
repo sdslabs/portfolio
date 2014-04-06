@@ -1,11 +1,11 @@
 *{
 	font-size:13px;
-	font-family: Arial;
+	font-family: 'Lato', Arial, sans-serif;
+	color: #5D5D5D;
 }
 
 a{
 	text-decoration: none;
-	color:#000;
 }
 
 /* Begin Left Bar*/
@@ -20,7 +20,7 @@ div#logo{
 
 }
 
-.nav{
+#nav-menu{
 	position: fixed;
 	top:0px;
 	left:0px;
@@ -29,15 +29,18 @@ div#logo{
 	width: 100%;
 	text-align: center;
 	line-height: 40px;
-}
-
-.nav-menu{
 	list-style:none;
 	padding:0px;
 	margin: 0px;
+	color: #5D5D5D;
 }
 
-.nav-menu li{
+#nav-menu li{
 	display:inline;
-	margin-left: 10px;
+	margin-left: 15px;
 }
+
+#nav-menu li.active{
+	border-bottom:1px solid #C2C2C2;
+}
+

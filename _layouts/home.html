@@ -8,7 +8,9 @@
   <meta name="Resource-type" content="Document" />
 
   <link rel="stylesheet" type="text/css" href="/assets/css/jquery.fullPage.css" />
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+
 
   <style>
   
@@ -59,7 +61,7 @@
         slidesNavigation: true, 
         navigation: true,
         resize: false,
-        // menu : '.nav-menu',
+        menu : '#nav-menu',
         scrollOverflow : true,
         verticalCentered : false,
         css3 : true,
@@ -72,15 +74,13 @@
 </head>
 <body>
 
-<div class="nav">
-  <ul class="nav-menu">
-    <li data-menuanchor="intro" class="active"><a href="#intro" >Home </a></li>
-    <li data-menuanchor="projects"> <a href="#projects"> Work </a></li>
-    <li data-menuanchor="events"> <a href="#events"> Events </a></li>
-    <li data-menuanchor="team"><a href="#team"> About Us </a></li>
-    <li><a href="http://blog.sdslabs.co/"> Blog </a></li>
-  </ul>
-</div>
+<ul id="nav-menu">
+  <li data-menuanchor="intro" class="active"><a href="#intro" >Home</a></li>
+  <li data-menuanchor="projects"> <a href="#projects">Work</a></li>
+  <li data-menuanchor="events"> <a href="#events">Events</a></li>
+  <li data-menuanchor="team"><a href="#team">About Us</a></li>
+  <li><a href="http://blog.sdslabs.co/">Blog</a></li>
+</ul>
 
 <div class="section " id="section0">
   <div class="intro">

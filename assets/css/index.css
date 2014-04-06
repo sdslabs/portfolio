@@ -1,50 +1,40 @@
 /*
-Syntax error: Invalid CSS after "body": expected selector, was "{"
+Syntax error: Invalid variable: "$color = #5D5D5D;".
         on line 1 of index.sass
 
-1: body{
-2: 	font-size: 14px
-3: 	}
+1: $color = #5D5D5D;
+2: 
+3: body{
+4: 	size: 14px
+5: 	}
 
 Backtrace:
 index.sass:1
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/scss/parser.rb:1306:in `expected'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/scss/parser.rb:1242:in `expected'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/scss/static_parser.rb:21:in `parse_selector'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:383:in `visit_rule'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/stack.rb:79:in `block in with_base'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/stack.rb:121:in `with_frame'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/stack.rb:79:in `with_base'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:152:in `visit'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:52:in `map'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:151:in `visit'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/root_node.rb:36:in `css_tree'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/tree/root_node.rb:20:in `render'
+/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/engine.rb:749:in `parse_variable'
+/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/engine.rb:649:in `parse_line'
+/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/engine.rb:543:in `build_tree'
+/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/engine.rb:562:in `block in append_children'
+/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/engine.rb:561:in `each'
+/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/engine.rb:561:in `append_children'
+/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/engine.rb:412:in `_to_tree'
 /home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/engine.rb:274:in `render'
 /home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/plugin/compiler.rb:414:in `update_stylesheet'
 /home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/plugin/compiler.rb:189:in `block in update_stylesheets'
 /home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/plugin/compiler.rb:186:in `each'
 /home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/plugin/compiler.rb:186:in `update_stylesheets'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/plugin/compiler.rb:393:in `on_file_changed'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/plugin/compiler.rb:248:in `block in watch'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/listen-2.4.1/lib/listen/listener.rb:151:in `call'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/listen-2.4.1/lib/listen/listener.rb:151:in `block in _wait_for_changes'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/listen-2.4.1/lib/listen/listener.rb:146:in `loop'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/listen-2.4.1/lib/listen/listener.rb:146:in `_wait_for_changes'
-/home/ashwini/.rvm/gems/ruby-2.1.0/gems/listen-2.4.1/lib/listen/listener.rb:44:in `block in start'
+/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/plugin/compiler.rb:221:in `watch'
+/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/plugin.rb:108:in `method_missing'
+/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/exec.rb:509:in `watch_or_update'
+/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/exec.rb:346:in `process_result'
+/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/exec.rb:43:in `parse'
+/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/lib/sass/exec.rb:22:in `parse!'
+/home/ashwini/.rvm/gems/ruby-2.1.0/gems/sass-3.3.4/bin/sass:13:in `<top (required)>'
+/home/ashwini/.rvm/gems/ruby-2.1.0/bin/sass:23:in `load'
+/home/ashwini/.rvm/gems/ruby-2.1.0/bin/sass:23:in `<main>'
+/home/ashwini/.rvm/gems/ruby-2.1.0/bin/ruby_executable_hooks:15:in `eval'
+/home/ashwini/.rvm/gems/ruby-2.1.0/bin/ruby_executable_hooks:15:in `<main>'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"body\": expected selector, was \"{\"\A         on line 1 of index.sass\A \A 1: body{\A 2: 	font-size: 14px\A 3: 	}"; }
+  content: "Syntax error: Invalid variable: \"$color = #5D5D5D;\".\A         on line 1 of index.sass\A \A 1: $color = #5D5D5D;\A 2: \A 3: body{\A 4: 	size: 14px\A 5: 	}"; }

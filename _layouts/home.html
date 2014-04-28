@@ -11,6 +11,7 @@
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
   <link rel="stylesheet" type="text/css" href="/assets/css/animate.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/960.css" />
 
 
   <style>
@@ -82,9 +83,10 @@
 <div class="section" id="section1">
     <div class="slide" id="web-slide" data-anchor="web-slide">
       <h1>Projects</h1>
-      <div class="grid">
+      <div class="container_12">
        {% for post in site.posts %}
-        <div style="background-image:url('{{ post.images.first }}')" class="block-work">
+       {% if post.category != 'events' %}
+        <div style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
           <div class="hover">
             <h6>
              <a href="{{ post.url }}">{{ post.title }}</a>
@@ -97,7 +99,8 @@
             {{ post.content }}
           </div>
         </div>
-      {% endfor %}
+        {% endif %}
+       {% endfor %}
       </div>
 
   </div>

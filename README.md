@@ -4,7 +4,10 @@ SDSLabs Portfolio
 This is a portfolio of various products made by SDSLabs. It will also include
 our achievements (such as contests won) and some details about the members involved
 in the specific item.
-
+#Installation
+- Make sure you have ruby installed, if not install the latest from [rvm](https://rvm.io)
+- Now run `gem install jekyll`. Wait, _gem is slow_ :D
+- Simply execute `jekyll serve` and app will be hosted at address which jekyll will tell you.
 #Development
 This repository uses Jekyll for storing data as markdown items that are easily
 edited/created. All items will be created as posts in jekyll, and will be available

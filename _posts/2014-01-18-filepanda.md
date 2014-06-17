@@ -4,6 +4,6 @@ images:
 title: Filepanda
 layout: post
 category: web
-excerpt: Placeholder Text.
+excerpt: Filepanda is our online software bucket.
 ---
-Placeholder Text
+Filepanda is our online software bucket. Regularly updating its apps on its own, filepanda makes it sure that you have the latest release available.

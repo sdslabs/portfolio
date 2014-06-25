@@ -82,102 +82,118 @@
   </div>
 </div>
 <div class="section" id="section1">
-    <div class="slide" id="web-slide" data-anchor="web-slide">
-      <h1>Projects</h1>
-      <div class="container_12">
-       {% for post in site.posts %}
-       {% if post.category == 'web' %}
-        <div style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
-          <div class="hover">
-            <h6>
-             <a href="{{ post.url }}">{{ post.title }}</a>
-            </h6>
-            <div class="excerpt">
-              {{ post.excerpt }} <a href="{{ post.url }}">Read More</a>
-            </div>
-          </div>
-          <div class="full-content">
-            {{ post.content }}
+  <div class="slide" id="web-slide" data-anchor="web-slide">
+    <h1>Projects</h1>
+    <div class="container_12">
+     {% for post in site.posts %}
+     {% if post.category == 'web' %}
+      <div style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
+        <div class="hover">
+          <h6>
+           <a href="{{ post.url }}">{{ post.title }}</a>
+          </h6>
+          <div class="excerpt">
+            {{ post.excerpt }} <a href="{{ post.url }}">Read More</a>
           </div>
         </div>
-        {% endif %}
-       {% endfor %}
+        <div class="full-content">
+          {{ post.content }}
+        </div>
       </div>
-
+      {% endif %}
+     {% endfor %}
+    </div>
   </div>
-  
   <div class="slide" id="mobile-slide" data-anchor="mobile-slide">
     <h1>Mobile Development</h1>
-      <div class="container_12">
-       {% for post in site.posts %}
-       {% if post.category == 'mdg' %}
-        <div style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
-          <div class="hover">
-            <h6>
-             <a href="{{ post.url }}">{{ post.title }}</a>
-            </h6>
-            <div class="excerpt">
-              {{ post.excerpt }} <a href="{{ post.url }}">Read More</a>
-            </div>
-          </div>
-          <div class="full-content">
-            {{ post.content }}
+    <div class="container_12">
+     {% for post in site.posts %}
+     {% if post.category == 'mdg' %}
+      <div style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
+        <div class="hover">
+          <h6>
+           <a href="{{ post.url }}">{{ post.title }}</a>
+          </h6>
+          <div class="excerpt">
+            {{ post.excerpt }} <a href="{{ post.url }}">Read More</a>
           </div>
         </div>
-        {% endif %}
-       {% endfor %}
+        <div class="full-content">
+          {{ post.content }}
+        </div>
       </div>
+      {% endif %}
+     {% endfor %}
+    </div>
   </div> 
   <div class="slide" id="pag-slide" data-anchor="pag-slide">
     <h1>Programming & Algorithm </h1>
-      <div class="container_12">
-       {% for post in site.posts %}
-       {% if post.category == 'pag' %}
-        <div style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
-          <div class="hover">
-            <h6>
-             <a href="{{ post.url }}">{{ post.title }}</a>
-            </h6>
-            <div class="excerpt">
-              {{ post.excerpt }} <a href="{{ post.url }}">Read More</a>
-            </div>
-          </div>
-          <div class="full-content">
-            {{ post.content }}
+    <div class="container_12">
+     {% for post in site.posts %}
+     {% if post.category == 'pag' %}
+      <div style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
+        <div class="hover">
+          <h6>
+           <a href="{{ post.url }}">{{ post.title }}</a>
+          </h6>
+          <div class="excerpt">
+            {{ post.excerpt }} <a href="{{ post.url }}">Read More</a>
           </div>
         </div>
-        {% endif %}
-       {% endfor %}
+        <div class="full-content">
+          {{ post.content }}
+        </div>
       </div>
-
+      {% endif %}
+     {% endfor %}
+    </div>
   </div>  
   <div class="slide" id="misc-slide" data-anchor="misc-slide">
     <h1>Misc</h1>
-      <div class="container_12">
-       {% for post in site.posts %}
-       {% if post.category == 'misc' %}
-        <div style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
-          <div class="hover">
-            <h6>
-             <a href="{{ post.url }}">{{ post.title }}</a>
-            </h6>
-            <div class="excerpt">
-              {{ post.excerpt }} <a href="{{ post.url }}">Read More</a>
-            </div>
-          </div>
-          <div class="full-content">
-            {{ post.content }}
+    <div class="container_12">
+     {% for post in site.posts %}
+     {% if post.category == 'misc' %}
+      <div style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
+        <div class="hover">
+          <h6>
+           <a href="{{ post.url }}">{{ post.title }}</a>
+          </h6>
+          <div class="excerpt">
+            {{ post.excerpt }} <a href="{{ post.url }}">Read More</a>
           </div>
         </div>
-        {% endif %}
-       {% endfor %}
+        <div class="full-content">
+          {{ post.content }}
+        </div>
       </div>
+      {% endif %}
+     {% endfor %}
+    </div>
   </div>
 </div>
 
 <div class="section" id="section2">
   <div class="intro">
     <h1>Events</h1>
+    <div class="container_12">
+     {% for post in site.posts %}
+     {% if post.category == 'event' %}
+      <div style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
+        <div class="hover">
+          <h6>
+           <a href="{{ post.url }}">{{ post.title }}</a>
+          </h6>
+          <div class="excerpt">
+            {{ post.excerpt }} <a href="{{ post.url }}">Read More</a>
+          </div>
+        </div>
+        <div class="full-content">
+          {{ post.content }}
+        </div>
+      </div>
+      {% endif %}
+     {% endfor %}
+    </div>    
   </div>
 </div>
 

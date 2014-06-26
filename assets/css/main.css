@@ -76,3 +76,9 @@ div#logo{
 .controlArrow.next{
 	border-left-color: rgba(0,0,0,0.1) !important;
 }
+#pag-slide .grid_4{
+}
+#pag-slide .grid_4 p:first-child{
+	font-size: 1.4em;
+	font-weight: 500;
+}

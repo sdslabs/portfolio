@@ -97,6 +97,17 @@ div#logo{
 	padding: 70px;
 	border-radius: 15px;
 }
+.block-work .full-content button{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	font-weight: 600;
+	font-size: 18px;
+	cursor: pointer;
+}
 .block-work .full-content p{
 	color: #fff;
 }

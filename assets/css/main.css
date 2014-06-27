@@ -1,7 +1,6 @@
 *{
 	font-size:13px;
 	font-family: 'Lato', Arial, sans-serif;
-	color: #5D5D5D;
 }
 h1{
 	margin: 10px
@@ -9,7 +8,9 @@ h1{
 a{
 	text-decoration: none;
 }
-
+h1, p{
+	color: #5D5D5D;
+}
 /* Begin Left Bar*/
 div#logo{
 	padding:10px;
@@ -70,6 +71,7 @@ div#logo{
 }
 .block-work a {
 	font-weight: 600;
+	cursor: pointer;
 }
 .block-work h6{
 	margin-bottom:10px;
@@ -86,8 +88,17 @@ div#logo{
 	display: none;
 	position: absolute;
 	z-index: 1;
-	width: 1600px;
-	height: 1000px;
+	width: 600px;
+	height: 150px;
+	top: 100px;
+	left: 300px;
+	background-color: rgba(0,0,0,0.75);
+	text-align:center;
+	padding: 70px;
+	border-radius: 15px;
+}
+.block-work .full-content p{
+	color: #fff;
 }
 .controlArrow.prev{
 	border-right-color: rgba(0,0,0,0.1) !important;

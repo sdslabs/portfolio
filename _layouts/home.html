@@ -42,7 +42,9 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>  
   <script src="/assets/js/jquery.slimscroll.min.js"></script>
+
   <script src="/assets/js/jquery.fullPage.js"></script>
+
   <script type="text/javascript">
 
     $(document).ready(function() {
@@ -62,7 +64,7 @@
     });
 
   </script>
-
+  <script src="/assets/js/script.js"></script>
 </head>
 <body>
 
@@ -94,10 +96,11 @@
            <a href="{{ post.url }}">{{ post.title }}</a>
           </h6>
           <div class="excerpt">
-            {{ post.excerpt }} <br/> <a href="#">Read More</a>
+            {{ post.excerpt }} <br/> <a>Read More</a>
           </div>
         </div>
         <div class="full-content">
+          {{ post.title }}
           {{ post.content }}
         </div>
       </div>
@@ -117,7 +120,7 @@
            <a href="{{ post.url }}">{{ post.title }}</a>
           </h6>
           <div class="excerpt">
-            {{ post.excerpt }} <br/> <a href="#">Read More</a>
+            {{ post.excerpt }} <br/> <a>Read More</a>
           </div>
         </div>
         <div class="full-content">
@@ -184,7 +187,7 @@
            <a href="{{ post.url }}">{{ post.title }}</a>
           </h6>
           <div class="excerpt">
-            {{ post.excerpt }} <br/><a href="#">Read More</a>
+            {{ post.excerpt }} <br/><a Read More</a>
           </div>
         </div>
         <div class="full-content">
@@ -212,7 +215,7 @@
            <a href="{{ post.url }}">{{ post.title }}</a>
           </h6>
           <div class="excerpt">
-            {{ post.excerpt }} <br/><a href="#">Read More</a>
+            {{ post.excerpt }} <br/><a Read More</a>
           </div>
         </div>
         <div class="full-content">
@@ -231,6 +234,5 @@
     <h1>About Us</h1>
   </div>
 </div>
- <script src="/assets/js/script.js"></script>
 </body>
 </html>

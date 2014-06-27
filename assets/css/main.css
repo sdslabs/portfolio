@@ -117,13 +117,22 @@ div#logo{
 .controlArrow.next{
 	border-left-color: rgba(0,0,0,0.1) !important;
 }
-.intro p{
+.about p{
 	width: 600px;
 	font-size: 20px;
 	font-weight: 500;
 	position: relative;
 	left: 385px;
 	top: 30px;
+}
+.about .social{
+	margin-top: 40px;
+	margin-left: 14%;
+}
+.about .social a{
+	float:left;
+	padding: 10px;
+
 }
 #pag-slide .grid_4{
 }

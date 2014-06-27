@@ -64,11 +64,18 @@ div#logo{
 	border-radius: 10px;
 	margin: 15px;
 }
+.block-work div,a{
+	color: #fff;
+}
+.block-work a {
+	font-weight: 600;
+}
 .block-work .hover{
 	display: none;
- 	background: rgba(0,0, 0, 0.75);
- 	height: 100%;
- 	width: 100%;
+ 	background: rgba(0, 0, 0, 0.75);
+ 	height: 180px;
+ 	border-radius: 10px;
+ 	width: 94%;
  	padding:10px;
 }
 .block-work .full-content{

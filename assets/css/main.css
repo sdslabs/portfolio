@@ -58,6 +58,9 @@ div#logo{
 .grid{
 	margin:50px;
 }
+.slide{
+	position: relative;
+}
 .block-work{
 	min-height: 200px;
 	background-repeat: no-repeat;
@@ -90,7 +93,7 @@ div#logo{
 	z-index: 1;
 	width: 600px;
 	height: 150px;
-	top: 100px;
+	top: 120px;
 	left: 300px;
 	background-color: rgba(0,0,0,0.75);
 	text-align:center;
@@ -110,6 +113,7 @@ div#logo{
 }
 .block-work .full-content p{
 	color: #fff;
+	font-size: 14px;
 }
 .controlArrow.prev{
 	border-right-color: rgba(0,0,0,0.1) !important;
@@ -127,14 +131,12 @@ div#logo{
 }
 .about .social{
 	margin-top: 40px;
-	margin-left: 14%;
+	margin-left: 16%;
 }
 .about .social a{
 	float:left;
 	padding: 10px;
 
-}
-#pag-slide .grid_4{
 }
 #pag-slide .grid_4 p:first-child{
 	font-size: 1.4em;

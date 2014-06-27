@@ -8,7 +8,7 @@ $(document).ready(function(){
 		$(this).find('.hover').slideUp('slow');
 		});
 	$('.block-work .excerpt a').click( function(e){
-		$(this).parent().parent().next().toggle('fast');
+		$(this).parent().parent().next().toggle('fast').css;
 		e.stopPropagation();
 	});
 	$('html').click(function(e){

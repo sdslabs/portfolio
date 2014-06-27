@@ -64,11 +64,15 @@ div#logo{
 	border-radius: 10px;
 	margin: 15px;
 }
-.block-work div,a{
+.block-work a,div{
 	color: #fff;
+	font-size: 14px;
 }
 .block-work a {
 	font-weight: 600;
+}
+.block-work h6{
+	margin-bottom:10px;
 }
 .block-work .hover{
 	display: none;
@@ -80,6 +84,10 @@ div#logo{
 }
 .block-work .full-content{
 	display: none;
+	position: absolute;
+	z-index: 1;
+	width: 1600px;
+	height: 1000px;
 }
 .controlArrow.prev{
 	border-right-color: rgba(0,0,0,0.1) !important;

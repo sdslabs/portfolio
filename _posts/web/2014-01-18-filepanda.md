@@ -1,6 +1,6 @@
 ---
 images:
-  - /assets/images/filepanda.jpg
+  - /assets/images/posts/filepanda.jpg
 title: Filepanda
 layout: post
 category: web

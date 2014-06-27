@@ -1,6 +1,6 @@
 ---
 images:
-  - /assets/images/cv.jpg
+  - /assets/images/posts/cv.jpg
 title: Codevillage
 layout: post
 category: web

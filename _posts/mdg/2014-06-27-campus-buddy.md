@@ -1,6 +1,6 @@
 ---
 images:
-  - /assets/images/campus-buddy.jpg
+  - /assets/images/posts/campus-buddy.jpg
 title: Campus Buddy
 layout: post
 category: mdg

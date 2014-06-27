@@ -66,6 +66,10 @@ div#logo{
 }
 .block-work .hover{
 	display: none;
+ 	background: rgba(0,0, 0, 0.75);
+ 	height: 100%;
+ 	width: 100%;
+ 	padding:10px;
 }
 .block-work .full-content{
 	display: none;

@@ -117,6 +117,14 @@ div#logo{
 .controlArrow.next{
 	border-left-color: rgba(0,0,0,0.1) !important;
 }
+.intro p{
+	width: 600px;
+	font-size: 20px;
+	font-weight: 500;
+	position: relative;
+	left: 385px;
+	top: 30px;
+}
 #pag-slide .grid_4{
 }
 #pag-slide .grid_4 p:first-child{

@@ -5,7 +5,7 @@ $(document).ready(function(){
 		$(this).find('.hover').slideDown('slow');
 		},
 		function(){//Hover out
-		$(this).find('.hover').slideUp('slow');
+		$(this).find('.hover').slideUp('fast');
 		});
 	$('.block-work .excerpt a').click( function(e){
 		$(this).parent().parent().next().toggle('fast').css;

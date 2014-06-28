@@ -115,6 +115,11 @@ div#logo{
 	color: #fff;
 	font-size: 14px;
 }
+#pag-slide .block-work p a{
+	color: #5D5D5D;
+	font-size: 1.2em;
+	font-weight: 400;
+}
 .controlArrow.prev{
 	border-right-color: rgba(0,0,0,0.1) !important;
 }

@@ -131,7 +131,7 @@ div#logo{
 	font-size: 20px;
 	font-weight: 500;
 	position: relative;
-	left: 385px;
+	left: 350px;
 	top: 30px;
 }
 .about .social{
@@ -142,6 +142,9 @@ div#logo{
 	float:left;
 	padding: 10px;
 
+}
+.about .social a:first-child{
+	padding-top: 5px;
 }
 #pag-slide .grid_4 p:first-child{
 	font-size: 1.4em;

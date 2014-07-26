@@ -69,17 +69,17 @@
 <body>
 
 <ul id="nav-menu">
-  <li data-menuanchor="intro" class="active"><a href="#intro" >Home</a></li>
-  <li data-menuanchor="work"> <a href="#work">Work</a></li>
-  <li data-menuanchor="events"> <a href="#events">Events</a></li>
-  <li data-menuanchor="team"><a href="#team">About Us</a></li>
-  <li><a href="http://blog.sdslabs.co/">Blog</a></li>
-  <li><a href="http://team.sdslabs.co/">Team</a></li>
+  <li data-menuanchor="intro" class="active"><a title="Intro Section" href="#intro" >Home</a></li>
+  <li data-menuanchor="work"> <a title="Work" href="#work">Work</a></li>
+  <li data-menuanchor="events"> <a title="Events Sections" href="#events">Events</a></li>
+  <li data-menuanchor="team"><a title="About Us" href="#team">About Us</a></li>
+  <li><a title="Blog" href="http://blog.sdslabs.co/">Blog</a></li>
+  <li><a title="Team" href="http://team.sdslabs.co/">Team</a></li>
 </ul>
 
 <div class="section " id="section0">
   <div class="intro">
-    <p><img src="/assets/images/logo.png"></p>
+    <p><img title="SDSLabs Logo" src="/assets/images/logo.png"></p>
     <p class="animated fadeInDown">Innovating at IIT Roorkee</p>
   </div>    
   </div>
@@ -91,17 +91,17 @@
     <div class="container_12">
      {% for post in site.posts %}
      {% if post.category == 'web' %}
-      <div style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
+      <div title="{{post.title}}" style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
         <div class="hover">
           <h6>
-           <a href="{{ post.url }}">{{ post.title }}</a>
+           <a title="{{post.title}}" href="{{ post.url }}">{{ post.title }}</a>
           </h6>
           <div class="excerpt">
             {{ post.excerpt }} <br/> <a>Read More</a>
           </div>
         </div>
         <div class="full-content">
-          <button><img src="/assets/images/close.png"/></button>
+          <button><img title="Close" src="/assets/images/close.png"/></button>
           {{ post.title }}
           {{ post.content }}
         </div>
@@ -116,17 +116,17 @@
     <div class="container_12">
      {% for post in site.posts %}
      {% if post.category == 'mdg' %}
-      <div style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
+      <div title="{{post.title}}" style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
         <div class="hover">
           <h6>
-           <a href="{{ post.url }}">{{ post.title }}</a>
+           <a title="{{post.title}}" href="{{ post.url }}">{{ post.title }}</a>
           </h6>
           <div class="excerpt">
             {{ post.excerpt }} <br/> <a>Read More</a>
           </div>
         </div>
         <div class="full-content">
-          <button><img src="/assets/images/close.png"/></button>
+          <button><img title="Close"src="/assets/images/close.png"/></button>
           {{ post.title }}
           {{ post.content }}
         </div>
@@ -189,17 +189,17 @@
     <div class="container_12">
      {% for post in site.posts %}
      {% if post.category == 'misc' %}
-      <div style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
+      <div title="{{post.title}}" style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
         <div class="hover">
           <h6>
-           <a href="{{ post.url }}">{{ post.title }}</a>
+           <a title="{{post.title}}" href="{{ post.url }}">{{ post.title }}</a>
           </h6>
           <div class="excerpt">
-            {{ post.excerpt }} <br/><a> Read More</a>
+            {{ post.excerpt }} <br/><a title="Read More"> Read More</a>
           </div>
         </div>
         <div class="full-content">
-          <button><img src="/assets/images/close.png"/></button>
+          <button><img title="Close" src="/assets/images/close.png"/></button>
           {{ post.title }}
           {{ post.content }}
         </div>
@@ -219,17 +219,17 @@
     <div class="container_12">
      {% for post in site.posts %}
      {% if post.category == 'event' %}
-      <div style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
+      <div title="{{post.title}}" style="background-image:url('{{ post.images.first }}')" class="block-work grid_4">
         <div class="hover">
           <h6>
-           <a href="{{ post.url }}">{{ post.title }}</a>
+           <a title="{{post.title}}" href="{{ post.url }}">{{ post.title }}</a>
           </h6>
           <div class="excerpt">
-            {{ post.excerpt }} <br/><a> Read More</a>
+            {{ post.excerpt }} <br/><a title="Read More"> Read More</a>
           </div>
         </div>
         <div class="full-content">
-          <button><img src="/assets/images/close.png"/></button>
+          <button><img title="Close" src="/assets/images/close.png"/></button>
           {{ post.title }}
           {{ post.content }}
         </div>
@@ -243,7 +243,7 @@
 <div class="section" id="section3">
   <div class="intro about">
     <h1>About Us</h1>
-    <img src="/assets/images/sdslabs-logo.png" class="lab-logo"/>
+    <img title="SDSLabs Logo" src="/assets/images/sdslabs-logo.png" class="lab-logo"/>
     <p>
     SDSLabs is a tech student body organization that does cool stuff at IIT-Roorkee. We're innovating in lots of technical areas and aim to make lives easier for everyone.
     </p>
@@ -251,11 +251,11 @@
     At SDSLabs, we are continously working on interesting applications and ideas. We work on wide variety if fields including web, mobile, networking, game and linux development
     </p>
     <p class="social">
-      <a href="//team.sdslabs.co" target="_blank"><img src="/assets/images/team-icon.png"/></a>
-      <a href="//facebook.com/SDSLabs" target="_blank"><img src="/assets/images/fb-icon.png"/></a>
-      <a href="//twiter.com/SDSLabs" target="_blank"><img src="/assets/images/twitter-icon.png"/></a>
-      <a href="//github.com/sdslabs" target="_blank"><img src="/assets/images/gh-icon.png"/></a>
-      <a href="//blog.sdslabs.co" target="_blank"><img src="/assets/images/blog-icon.png"/></a>
+      <a title="Team SDSLabs" href="//team.sdslabs.co" target="_blank"><img src="/assets/images/team-icon.png"/></a>
+      <a title="Facebook" href="//facebook.com/SDSLabs" target="_blank"><img src="/assets/images/fb-icon.png"/></a>
+      <a title="Twitter" href="//twiter.com/SDSLabs" target="_blank"><img src="/assets/images/twitter-icon.png"/></a>
+      <a title="Github SDSLabs" href="//github.com/sdslabs" target="_blank"><img src="/assets/images/gh-icon.png"/></a>
+      <a title="Blog" href="//blog.sdslabs.co" target="_blank"><img src="/assets/images/blog-icon.png"/></a>
     </p>
   </div>
 </div>

@@ -48,7 +48,9 @@ div#logo{
 }
 
 #section0{
-	background:url('/assets/images/background-section0.jpg') #F2CD72 no-repeat center center !important;
+	background:url('/assets/images/background-section0.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #section0 .intro{

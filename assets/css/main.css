@@ -126,25 +126,26 @@ div#logo{
 .controlArrow.next{
 	border-left-color: rgba(0,0,0,0.1) !important;
 }
+.about img{
+	margin-bottom: 30px;
+}
 .about p{
 	width: 600px;
 	font-size: 20px;
 	font-weight: 500;
-	position: relative;
-	left: 350px;
-	top: 30px;
+	margin: 0 auto;
 }
 .about .social{
+	margin: 0 auto;
 	margin-top: 40px;
-	margin-left: 16%;
+	margin
 }
 .about .social a{
-	float:left;
 	padding: 10px;
 
 }
-.about .social a:first-child{
-	padding-top: 5px;
+.about .social a:first-child >img{ 
+	size: 36px 36px;
 }
 #pag-slide .grid_4 p:first-child{
 	font-size: 1.4em;

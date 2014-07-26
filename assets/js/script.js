@@ -2,7 +2,7 @@
 $(document).ready(function(){
 	$('.block-work').hover(
 		function(){//Hover in
-		$(this).find('.hover').slideDown('slow');
+		$(this).find('.hover').slideDown('fast');
 		},
 		function(){//Hover out
 		$(this).find('.hover').slideUp('fast');

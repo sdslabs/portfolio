@@ -1,5 +1,23 @@
 @import 'normalize';
 @import 'colors';
+@import 'fonts';
+
+@mixin bg-spl($url){
+  background: url($url) no-repeat fixed 5% 150px #2c3e50;
+  background-size: 50%;
+  color: white;
+  position: relative;
+}
+
+@mixin clearfix(){
+  &:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+  }
+}
 
 html {
   height: 100%;
@@ -7,10 +25,23 @@ html {
 
 body {
   min-height: 100%;
+  font-family: AvenirNext;
 }
 
 section {
-  height: 100%;
+  min-height: 100%;
+  @include clearfix();
+}
+
+.clear-height {
+  min-height: initial;
+}
+
+.clear {
+  clear: both;
+}
+
+.top-s {
 }
 
 .left-s {
@@ -37,14 +68,145 @@ section {
   float: right;
 }
 
-#intro {
-  .left-s {
-    background: $blue-1;
+.bg-spl {
+  position: relative;
+  height: 100%;
+
+  .info {
+    margin-left: 60%;
+    padding: 12% 50px 0px 0px;
+    font-size: 1.1em;
+
+    a {
+      color: $blue-1;
+      text-decoration: none;
+
+      &:hover {
+        color: $blue-2;
+      }
+    }
   }
 }
 
-#second {
-  .right-s {
-    background: $green-1;
+#intro {
+  .top-s {
+    background: $grey-1;
+    text-align: center;
+    padding: 10px 0px;
+
+    .logo {
+      height: 200px;
+    }
+
+    h1, h3 {
+      font-weight: normal;
+    }
+  }
+
+  .bottom-b {
+    text-align: center;
+
+    .groups {
+      width: 80%;
+      margin: auto;
+
+      .set {
+        width: 33%;
+        float: left;
+        font-size: 1.1em;
+        padding: 100px 0;
+
+        h2 {
+          font-weight: normal;
+          margin: 0;
+        }
+
+        img {
+          height: 100px;
+        }
+      }
+    }
+  }
+}
+
+#muzi {
+  @include bg-spl('../img/apps/muzi.png');
+}
+
+#sp {
+  @include bg-spl('../img/apps/sp.png');
+}
+
+#omegle {
+  @include bg-spl('../img/apps/omegle.png');
+}
+
+#cv {
+  @include bg-spl('../img/apps/cv.png');
+}
+
+#fp {
+  @include bg-spl('../img/apps/fp.png');
+}
+
+#echo {
+  @include bg-spl('../img/apps/echo.png');
+}
+
+#erdos {
+  @include bg-spl('../img/apps/erdos.png');
+}
+
+#sdslabs {
+  background: #2c3e50;
+  color: white;
+
+  .content {
+    padding: 50px 100px 50px 50px;
+
+    p {
+      font-size: 1.4em;
+    }
+  }
+
+  .lab {
+    width: 100%;
+    height: 500px;
+    background-image: url('../img/sdslabs.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 40px rgba(0,0,0,.9);
+  }
+}
+
+#stats {
+  background: #c0392b;
+  color: white;
+
+  h1 {
+    font-weight: normal;
+    text-align: center;
+    padding: 30px 0;
+    margin: 0;
+  }
+
+  .data {
+    width: 700px;
+    margin: auto;
+    font-size: 1.3em;
+
+    .entry:nth-child(odd){
+      border-right: 3px solid white;
+      width: 45%;
+      text-align: right;
+      padding: 0 5% 0 0;
+    }
+    .entry:nth-child(even){
+      border-left: 3px solid white;
+      width: 50%;
+      padding: 0 0 0 5%;
+      margin-left: 50%;
+    }
   }
 }

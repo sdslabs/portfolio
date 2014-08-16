@@ -1,0 +1,50 @@
+@import 'normalize';
+@import 'colors';
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+section {
+  height: 100%;
+}
+
+.left-s {
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+.right-b {
+  width: 70%;
+  height: 100%;
+  float: right;
+}
+
+.left-b {
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+
+.right-s {
+  width: 30%;
+  height: 100%;
+  float: right;
+}
+
+#intro {
+  .left-s {
+    background: $blue-1;
+  }
+}
+
+#second {
+  .right-s {
+    background: $green-1;
+  }
+}

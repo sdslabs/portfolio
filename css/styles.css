@@ -416,7 +416,7 @@ section.no-height {
   height: 100%; }
   .bg-spl .info {
     margin-left: 60%;
-    padding: 12% 50px 0px 0px;
+    padding: 5px 50px 0px 0px;
     font-size: 1.1em; }
     .bg-spl .info a {
       text-decoration: none;
@@ -424,6 +424,9 @@ section.no-height {
       border-bottom: 1px solid #eee; }
       .bg-spl .info a:hover {
         border-bottom: 1px solid #f1c40f; }
+
+.muzi-spl {
+  padding: 100px 0 0; }
 
 nav {
   background: #d43a3a;

@@ -126,6 +126,7 @@ nav {
 #intro {
   background: white;
   color: white;
+  position: relative;
 
   .top-s {
     text-align: center;
@@ -261,4 +262,10 @@ nav {
     font-size: 2em;
     color: white;
   }
+}
+
+.scroll {
+  bottom: 0;
+  position: absolute;
+  left: 49%;
 }

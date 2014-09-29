@@ -33,6 +33,10 @@ section {
   @include clearfix();
 }
 
+section.no-height {
+  min-height: initial;
+}
+
 .clear-height {
   min-height: initial;
 }
@@ -196,6 +200,7 @@ nav {
     h1 {
       color: $c-orange-1;
       text-align: center;
+      font-weight: normal;
     }
   }
 
@@ -212,6 +217,7 @@ nav {
 
 #stats {
   background: white;
+  padding: 0px 0px 100px;
 
   h1 {
     font-weight: normal;
@@ -238,5 +244,17 @@ nav {
       padding: 0 0 0 5%;
       margin-left: 50%;
     }
+  }
+}
+
+#contact {
+  background: $c-orange-1;
+  padding: 50px 0;
+
+  p {
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+    color: white;
   }
 }

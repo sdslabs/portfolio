@@ -374,7 +374,7 @@ body {
   font-family: AvenirNext; }
 
 section {
-  height: 100%; }
+  min-height: 100%; }
   section:after {
     content: ".";
     display: block;
@@ -416,84 +416,107 @@ section {
     padding: 12% 50px 0px 0px;
     font-size: 1.1em; }
     .bg-spl .info a {
-      color: #3498db;
-      text-decoration: none; }
+      text-decoration: none;
+      color: white;
+      border-bottom: 1px solid #eee; }
       .bg-spl .info a:hover {
-        color: #2980b9; }
+        border-bottom: 1px solid #f1c40f; }
 
-#intro .top-s {
-  background: #ecf0f1;
-  text-align: center;
-  padding: 10px 0px; }
-  #intro .top-s .logo {
-    height: 200px; }
-  #intro .top-s h1, #intro .top-s h3 {
-    font-weight: normal; }
-#intro .bottom-b {
-  text-align: center; }
-  #intro .bottom-b .groups {
-    width: 80%;
-    margin: auto; }
-    #intro .bottom-b .groups .set {
-      width: 33%;
-      float: left;
-      font-size: 1.1em;
-      padding: 100px 0; }
-      #intro .bottom-b .groups .set h2 {
-        font-weight: normal;
-        margin: 0; }
-      #intro .bottom-b .groups .set img {
-        height: 100px; }
+nav {
+  background: #d43a3a;
+  padding: 15px 50px;
+  font-size: 1.2em;
+  color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box; }
+  nav a {
+    text-decoration: none;
+    margin: 0px 10px;
+    color: white; }
+    nav a:hover {
+      border-bottom: 1px solid #eee; }
+  nav .right {
+    float: right;
+    padding: 15px 0 0; }
+
+#intro {
+  background: white;
+  color: white; }
+  #intro .top-s {
+    text-align: center;
+    background: #ea4949; }
+    #intro .top-s .table {
+      padding: 150px 0px 0px 0px; }
+  #intro .bottom-b {
+    text-align: center; }
+    #intro .bottom-b .groups {
+      width: 80%;
+      margin: auto; }
+      #intro .bottom-b .groups .set {
+        width: 33%;
+        float: left;
+        font-size: 1.1em;
+        padding: 100px 0; }
+        #intro .bottom-b .groups .set h2 {
+          font-weight: normal;
+          margin: 0; }
+        #intro .bottom-b .groups .set img {
+          height: 100px; }
 
 #muzi {
-  background: url("../img/apps/muzi.png") no-repeat fixed 5% 150px #2c3e50;
+  background: url("../img/apps/muzi.png") no-repeat fixed 5% 150px #ea4949;
   background-size: 50%;
   color: white;
   position: relative; }
 
 #sp {
-  background: url("../img/apps/sp.png") no-repeat fixed 5% 150px #2c3e50;
+  background: url("../img/apps/sp.png") no-repeat fixed 5% 150px #ea4949;
   background-size: 50%;
   color: white;
   position: relative; }
 
 #omegle {
-  background: url("../img/apps/omegle.png") no-repeat fixed 5% 150px #2c3e50;
+  background: url("../img/apps/omegle.png") no-repeat fixed 5% 150px #ea4949;
   background-size: 50%;
   color: white;
   position: relative; }
 
 #cv {
-  background: url("../img/apps/cv.png") no-repeat fixed 5% 150px #2c3e50;
+  background: url("../img/apps/cv.png") no-repeat fixed 5% 150px #ea4949;
   background-size: 50%;
   color: white;
   position: relative; }
 
 #fp {
-  background: url("../img/apps/fp.png") no-repeat fixed 5% 150px #2c3e50;
+  background: url("../img/apps/fp.png") no-repeat fixed 5% 150px #ea4949;
   background-size: 50%;
   color: white;
   position: relative; }
 
 #echo {
-  background: url("../img/apps/echo.png") no-repeat fixed 5% 150px #2c3e50;
+  background: url("../img/apps/echo.png") no-repeat fixed 5% 150px #ea4949;
   background-size: 50%;
   color: white;
   position: relative; }
 
 #erdos {
-  background: url("../img/apps/erdos.png") no-repeat fixed 5% 150px #2c3e50;
+  background: url("../img/apps/erdos.png") no-repeat fixed 5% 150px #ea4949;
   background-size: 50%;
   color: white;
   position: relative; }
 
 #sdslabs {
-  background: #2c3e50;
-  color: white; }
+  background: white; }
   #sdslabs .content {
-    padding: 50px 100px 50px 50px; }
+    padding: 50px 100px; }
     #sdslabs .content p {
-      font-size: 1.4em; }
+      font-size: 1.4em;
+      text-align: justify; }
+    #sdslabs .content h1 {
+      color: #ea4949;
+      text-align: center; }
   #sdslabs .lab {
     width: 100%;
     height: 500px;
@@ -504,24 +527,24 @@ section {
     box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.9); }
 
 #stats {
-  background: #c0392b;
-  color: white; }
+  background: white; }
   #stats h1 {
     font-weight: normal;
     text-align: center;
-    padding: 30px 0;
-    margin: 0; }
+    padding: 100px 0 50px;
+    margin: 0;
+    color: #ea4949; }
   #stats .data {
     width: 700px;
     margin: auto;
-    font-size: 1.3em; }
+    font-size: 1.4em; }
     #stats .data .entry:nth-child(odd) {
-      border-right: 3px solid white;
+      border-right: 3px solid #ea4949;
       width: 45%;
       text-align: right;
       padding: 0 5% 0 0; }
     #stats .data .entry:nth-child(even) {
-      border-left: 3px solid white;
+      border-left: 3px solid #ea4949;
       width: 50%;
       padding: 0 0 0 5%;
       margin-left: 50%; }

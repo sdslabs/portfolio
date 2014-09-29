@@ -3,7 +3,7 @@
 @import 'fonts';
 
 @mixin bg-spl($url){
-  background: url($url) no-repeat fixed 5% 150px #2c3e50;
+  background: url($url) no-repeat fixed 5% 150px $c-orange-1;
   background-size: 50%;
   color: white;
   position: relative;
@@ -29,7 +29,7 @@ body {
 }
 
 section {
-  height: 100%;
+  min-height: 100%;
   @include clearfix();
 }
 
@@ -78,28 +78,53 @@ section {
     font-size: 1.1em;
 
     a {
-      color: $blue-1;
       text-decoration: none;
+      color: white;
+      border-bottom: 1px solid #eee;
 
       &:hover {
-        color: $blue-2;
+        border-bottom: 1px solid $yellow-1;
       }
     }
   }
 }
 
-#intro {
-  .top-s {
-    background: $grey-1;
-    text-align: center;
-    padding: 10px 0px;
+nav {
+  background: $c-orange-2;
+  padding: 15px 50px;
+  font-size: 1.2em;
+  color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
 
-    .logo {
-      height: 200px;
+  a {
+    text-decoration: none;
+    margin: 0px 10px;
+    color: white;
+
+    &:hover {
+      border-bottom: 1px solid #eee;
     }
+  }
 
-    h1, h3 {
-      font-weight: normal;
+  .right {
+    float: right;
+    padding: 15px 0 0;
+  }
+}
+
+#intro {
+  background: white;
+  color: white;
+
+  .top-s {
+    text-align: center;
+    background: $c-orange-1;
+
+    .table {
+      padding: 150px 0px 0px 0px;
     }
   }
 
@@ -158,14 +183,19 @@ section {
 }
 
 #sdslabs {
-  background: #2c3e50;
-  color: white;
+  background: white;
 
   .content {
-    padding: 50px 100px 50px 50px;
+    padding: 50px 100px;
 
     p {
       font-size: 1.4em;
+      text-align: justify;
+    }
+
+    h1 {
+      color: $c-orange-1;
+      text-align: center;
     }
   }
 
@@ -181,29 +211,29 @@ section {
 }
 
 #stats {
-  background: #c0392b;
-  color: white;
+  background: white;
 
   h1 {
     font-weight: normal;
     text-align: center;
-    padding: 30px 0;
+    padding: 100px 0 50px;
     margin: 0;
+    color: $c-orange-1;
   }
 
   .data {
     width: 700px;
     margin: auto;
-    font-size: 1.3em;
+    font-size: 1.4em;
 
     .entry:nth-child(odd){
-      border-right: 3px solid white;
+      border-right: 3px solid $c-orange-1;
       width: 45%;
       text-align: right;
       padding: 0 5% 0 0;
     }
     .entry:nth-child(even){
-      border-left: 3px solid white;
+      border-left: 3px solid $c-orange-1;
       width: 50%;
       padding: 0 0 0 5%;
       margin-left: 50%;

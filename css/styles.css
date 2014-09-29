@@ -460,8 +460,10 @@ nav {
     #intro .top-s h1, #intro .top-s h2 {
       font-weight: normal;
       margin: 0; }
+    #intro .top-s h1 {
+      padding-top: 20px; }
     #intro .top-s h2 {
-      padding-bottom: 20px; }
+      padding-bottom: 30px; }
   #intro .bottom-b {
     text-align: center; }
     #intro .bottom-b .groups {

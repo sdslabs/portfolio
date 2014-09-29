@@ -436,7 +436,8 @@ nav {
   position: absolute;
   top: 0;
   width: 100%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  z-index: 1; }
   nav a {
     text-decoration: none;
     margin: 0px 10px;

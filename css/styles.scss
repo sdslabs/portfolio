@@ -134,7 +134,16 @@ nav {
     background: $c-orange-1;
 
     .table {
-      padding: 150px 0px 0px 0px;
+      padding: 100px 0px 0px 0px;
+    }
+
+    h1, h2 {
+      font-weight: normal;
+      margin: 0;
+    }
+
+    h2 {
+      padding-bottom: 20px;
     }
   }
 
@@ -266,7 +275,7 @@ nav {
 }
 
 .scroll {
-  bottom: 30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px;
+  bottom: 50px;
   position: absolute;
   left: 49%;
 }

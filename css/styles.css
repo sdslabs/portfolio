@@ -456,7 +456,12 @@ nav {
     text-align: center;
     background: #ea4949; }
     #intro .top-s .table {
-      padding: 150px 0px 0px 0px; }
+      padding: 100px 0px 0px 0px; }
+    #intro .top-s h1, #intro .top-s h2 {
+      font-weight: normal;
+      margin: 0; }
+    #intro .top-s h2 {
+      padding-bottom: 20px; }
   #intro .bottom-b {
     text-align: center; }
     #intro .bottom-b .groups {
@@ -569,6 +574,6 @@ nav {
     color: white; }
 
 .scroll {
-  bottom: 30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px30px;
+  bottom: 50px;
   position: absolute;
   left: 49%; }

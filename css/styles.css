@@ -522,6 +522,12 @@ nav {
   color: white;
   position: relative; }
 
+  #backdoor {
+    background: url("../img/apps/backdoor.png") no-repeat fixed 5% 150px #ea4949;
+    background-size: 50%;
+    color: white;
+    position: relative; }
+
 #sdslabs {
   background: white; }
   #sdslabs .content {

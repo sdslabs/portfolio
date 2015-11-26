@@ -1,229 +1,201 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta charset="UTF-8">
-  <title>SDS Portfolio</title>
-  <meta name="description" content="The portfolio of Software Development Section, IIT Roorkee, India">
-  <meta name="author" content="SDSLabs">
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/png" href="favicon.png" />
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+	<title>SDSLabs</title>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Slab">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Anton">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Poiret+One">
+	<!--for rain effect -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/style1.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!--end rain effect-->
+
+	<style type="text/css">
+
+	html, body {
+		width:100%;
+		height:100%;
+	}
+
+	body {font-family:sans-serif;}
+
+	body > div {
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background:transparent center no-repeat;
+		background-size:cover;
+	}
+
+	.box {
+		position:absolute;
+		left:0;
+		height:100%;
+		background:#09f;
+	}
+
+	p {margin:1em 0;}
+	</style>
 </head>
 
-<body>
-  <nav>
-    <div class="right">
-      <a href="#muzi">Projects</a>
-       | <a href="#sdslabs">About</a>
-       | <a href="https://blog.sdslabs.co/">Blog</a>
-       | <a href="#contact">Contact</a>
-    </div>
-    <div class="left">
-      <img class='logo' src="img/sds_top_logo.png" alt="">
-    </div>
-  </nav>
-  <section id="intro" class="no-height">
-    <div class="top-s">
-      <div class="table">
-        <h1>Software Development Section</h1>
-        <h2>IIT Roorkee, India</h2>
-        <img src="img/top_portion.png" alt="">
-      </div>
-    </div>
-    <div class="bottom-b">
-      <div class="groups">
-        <div class="set">
-          <img src="img/pag_logo.png" alt="">
-        </div>
-        <div class="set">
-          <img src="img/sdslabs_logo.png" alt="">
-        </div>
-        <div class="set">
-          <img src="img/mdg_logo.png" alt="">
-        </div>
-      </div>
-    </div>
-    <img class="scroll" src="img/navigation.png" alt="">
-  </section>
+<body style = "background-color:rgb(255,255,255);color:white;background-repeat: no-repeat;background-attachment: fixed;background-position: center; ">
 
-  <section id="sdslabs" class="clear-height">
-    <div class="content">
-      <h1>About SDSLabs</h1>
-      <p>
-      SDSLabs is a student group that constantly tries to innovate and foster technical activities in campus. Our members work in C++, Go, PHP, Ruby, Node.js, Python, sometimes even delving into socket level programming.
-      </p>
-      <p>
-        We conduct lectures and workshops on all these topics and also conduct monthly competitions on our various self developed applications.
-      </p>
-      <p>
-        We are highly indebted to Redmine (project managment system), Gitolite (local git managament), Slack (team chat), Dropbox and Google Groups for our functioning.
-      </p>
-    </div>
-    <div class="lab">
-    </div>
-    <div class="clear"></div>
-  </section>
+<!--	<div data-500-start="transform:translate(0%,0%);" data-1500-start="transform:translate(100%,0%);font-family: 'Tangerine', serif;"><center></center>kk</div>
+	<div data-500-start="transform:translate(-100%,0%);" data-1500-start="transform:translate(0%,0%);">dd</div>
+-->
 
-  <section id='muzi' class='bg-spl'>
-    <div class="info">
-      <div class="muzi-spl">
-        <h3>Muzi</h3>
-        <p>
-          With over 130,000 tracks by 11,000 artists and updating daily, Muzi is the one stop online music player for the IIT Roorkee intranet.
-        </p>
-        <p>
-          Muzi is a one page JS app with the backend written in PHP. Applications like <a href="https://github.com/sdslabs/nano">Nano</a> have been developed over this backend also.
-        </p>
-      </div>
-    </div>
-  </section>
+	<div data-0-start="transform:translate(0,0%);background-color:rgb(255,255,255);color:rgb(0,0,0);" data-500-start="transform:translate(0,-100%);color:rgb(255,255,255);background-color:rgb(44,62,80);" class = "slide-1">
+		<center>
+			SDSLabs
+			<br>
+			<img src = "think.svg" style = "width:50px"> <img src = "build.svg" style = "width:50px"> <img src = "ship.svg" style = "width:50px">
+		</center>
+	</div>
+	<div data-0-start="transform:translate(0,100%);background-color:rgb(255,255,255);opacity:0;" data-500-start="transform:translate(0,0%);background-color:rgb(44,62,80);opacity:1;" data-1500-start="transform:translate(0%,0%);background-color:rgb(44,62,80);background-image: url('bike.jpg');"data-2000-start="transform:translate(0%,0%);background-color:rgb(44,62,80);background-image: url('bike.jpg');" data-2500-start="transform:translate(-100%,0%);background-color:rgb(0,0,0);opacity:0;" class = "slide-2" >
+		<center>
+		<span style = "background-color:black;opacity:.7;color:white;">
+			SDSLabs is a student group that constantly tries to innovate and foster technical activities in campus. <br><br>Our members work in C++, Go, PHP, Ruby, Node.js, Python, sometimes even delving into socket level programming.
+		</span>
+		</center>
+	</div>
+	<div data-0-start="transform:translate(0,100%);background-color:rgb(255,255,255);opacity:0;" data-500-start="transform:translate(0,0%);background-color:rgb(44,62,80);opacity:0;" data-1500-start="-webkit-filter: grayscale(100%);filter: grayscale(100%);transform:translate(0%,0%);background-color:rgb(44,62,80);background-image: url('bike.jpg');opacity:1;" data-2500-start="-webkit-filter: grayscale(100%);filter: grayscale(100%);transform:translate(0%,0%);background-color:rgb(44,62,80);background-image: url('bike.jpg');opacity:1;"class = "slide-2" >
+		<center>	<img src = "team6.png">	</center>
 
-  <section id='sp' class='bg-spl'>
-    <div class="info">
-      <h3>Study Portal</h3>
-      <p>
-        Study Portal is the knowledge hub of IIT Roorkee. Through Study Portal, anyone can share open courseware files, videos, presentations etc. Currently over 4,000 files have been shared across 500 courses and total downloads has crossed 80,000.
-      </p>
-      <p>
-        The tech stack includes <a href="https://github.com/anandkunal/ToroPHP">Toro microframework</a> and <a href="http://handlebarsjs.com">Handlebars.js</a> for templating.
-      </p>
-      <p>
-        For more details, check out the <a href="http://blog.sdslabs.co/2013/10/studyportal-echo-2013/">blog post</a> on Study Portal.
-      </p>
-    </div>
-  </section>
+	</div>
 
-  <section id='erdos' class='bg-spl'>
-    <div class="info">
-      <h3>Erdos</h3>
-      <p>
-        Erdős is an application for Math Geeks to try out new mathematical problems and keep track of who solves what. Named after one of the most prolific mathematician of all times, Paul Erdős, it is a portal for users to test their mettle on various mathematical problems, some of which may require users to write code.<br><br>
-        Checkout <a href="https://erdos.sdslabs.co/" target="_blank">Erdős</a> now.
-      </p>
-    </div>
-  </section>
+	<script type="text/javascript" src="./src/skrollr.js"></script>
+	
+	<div data-0-start="transform:translate(100%,0%);" data-2000-start="transform:translate(100%,0%);background-color:rgb(255,255,255);opacity:0;" data-2500-start="transform:translate(0%,0%);background-color:rgb(255,255,255);opacity:1;" data-3000-start="transform:translate(0%,-100%);background-color:rgb(51,153,255);opacity:1;" class = "slide-3">
+		<center>
+			<div style = "width:80%;height:80%;">
+				<span>
+				Muzi<br>
+				</span>
+				<span>
+				</span>
+				<img src = "./apps/muzi.png" style = "width:40vw;"><br>
+				<div class = "desc">
+				With over 130,000 tracks by 11,000 artists and updating daily, Muzi is the one stop online music player for the IIT Roorkee intranet.
+				Muzi is a one page JS app with the backend written in PHP. Applications like Nano have been developed over this backend also.
+				</div>
+			</div>
+		</center>
+	</div>
+	
+	<div data-0-start="transform:translate(0%,100%);background-color:rgb(255,255,255);"data-2500-start="transform:translate(0%,100%);background-color:rgb(255,255,255);" data-3000-start="transform:translate(0%,0%);background-color:rgb(51,153,255);opacity:1;" data-3500-start="transform:translate(100%,0%);background-color:rgb(253,70,45);opacity:1;" class = "slide-3">
+		<center>
+			<div style = "width:80%;height:80%;">
+				<span>
+				Erdos<br>
+				</span>
+				<span>
+				</span>
+				<img src = "./apps/erdos.png" style = "width:40vw;"><br>
+				<div class = "desc">
+				Erdős is an application for Math Geeks to try out new mathematical problems and keep track of who solves what. Named after one of the most prolific mathematician of all times, Paul Erdős, it is a portal for users to test their mettle on various mathematical problems, some of which may require users to write code.
+				</div>
+			</div>
+		</center>
+	</div>
+	<div data-0-start="transform:translate(-100%,0%);background-color:rgb(51,153,255);" data-3000-start="transform:translate(-100%,0%);background-color:rgb(51,153,255);" data-3500-start="transform:translate(0%,0%);background-color:rgb(253,70,45);opacity:1;" data-4000-start="transform:translate(0%,-100%);background-color:rgb(17,17,17);"  class = "backdoor">
+		<center>
+			<div style = "width:80%;height:80%;">
+				<span>
+				Codevillage<br>
+				</span>
+				<span>
+				</span>
+				<img src = "./apps/cv.png" style = "width:40vw;"><br>
+				<div class = "desc">
+				Codevillage is an online judge with a core philosophy of improving the programming skills of the IITR junta. Several problems related to algorithms and programming are available here that anyone can try their hands on. Whether you are a young padawan or a jedi master, you’ll - find problems here suitable for your skills.
+				</div>
+			</div>
+		</center>
+	</div>
+	<div data-0-start="transform:translate(0%,100%);background-color:rgb(253,70,45);" data-3500-start="transform:translate(0%,100%);background-color:rgb(253,70,45);" data-4000-start="transform:translate(0%,0%);background-color:rgb(17,17,17);opacity:1;" data-4500-start="transform:translate(-100%,0%);background-color:rgb(56,167,222);opacity:1;" class = "backdoor">
+		<center>
+			<div style = "width:80%;height:80%;">
+				<span>
+				Backdoor<br>
+				</span>
+				<span>
+				</span>
+				<img src = "./apps/backdoor.png" style = "width:40vw;"><br>
+				<div class = "desc">
+				Backdoor is a platform for computer security enthusiasts to show their talent in a competitive environment. After opening up for users outside of IIT Roorkee this year, this always online CTF (Capture the Flag) competition has quickly garnered over 2000 users worldwide.
 
-  <section id='backdoor' class='bg-spl'>
-    <div class="info">
-      <h3>Backdoor</h3>
-      <p>
-        Backdoor is a platform for computer security enthusiasts to show their talent in a competitive environment.
-        After opening up for users outside of IIT Roorkee this year, this always online CTF (Capture the Flag) competition has quickly garnered over 2000 users worldwide.<br><br>
-        Checkout <a href="https://backdoor.sdslabs.co/" target="_blank">Backdoor</a> now.
-      </p>
-    </div>
-  </section>
+				</div>
+			</div>
+		</center>
+	</div>
+	
+	<div data-0-start="transform:translate(100%,0%);background-color:rgb(17,17,17);" data-4000-start="transform:translate(100%,0%);background-color:rgb(17,17,17);" data-4500-start="transform:translate(0%,0%);background-color:rgb(56,167,222);opacity:1;" data-5000-start="transform:translate(0%,-100%);background-color:rgb(105,50,20);opacity:1;" class = "backdoor">
+		<center>
+			<div style = "width:80%;height:80%;">
+				<span>
+				Study Portal<br>
+				</span>
+				<span>
+				</span>
+				<img src = "./apps/sp.png" style = "width:40vw;"><br>
+				<div class = "desc">
+				Study Portal is the knowledge hub of IIT Roorkee. Through Study Portal, anyone can share open courseware files, videos, presentations etc. Currently over 4,000 files have been shared across 500 courses and total downloads has crossed 80,000.
 
-  <section id='cv' class='bg-spl'>
-    <div class="info">
-      <h3>Code Village</h3>
-      <p>
-        Codevillage is an online judge with a core philosophy of
-        improving the programming skills of the IITR junta.
-        Several problems related to algorithms and programming
-        are available here that anyone can try their hands on.
-        Whether you are a young padawan or a jedi master, you’ll
-        - find problems here suitable for your skills.
-      </p>
-    </div>
-  </section>
 
-  <section id='echo' class='bg-spl'>
-    <div class="info">
-      <h3>Echo</h3>
-      <p>
-        Echo provides you the book you need, whether you are on a leisure drive or under
-        the crunch of an oncoming examination. This interactive
-        search app lets you download the book you need from the
-        millions in the collection using its lightning fast search
-        relying on a massive collection of indexed books. Echo
-        also allows you to view the book right in the browser and
-        has category search, ratings etc. in its pack of goodies.
-      </p>
-    </div>
-  </section>
 
-  <section id='omegle' class='bg-spl'>
-    <div class="info">
-      <h3>Omegle</h3>
-      <p>
-        All work and no play makes Jack a dull boy. Omegle is an intranet application that comes alive around 2am when the campus internet begins. Omegle allows people to chat anonymously.
-        </p>
-        <p>
-          Omegle has been built in Node.js and employs <a href="http://socket.io">socket.io</a> for real time communication
-        </p>
-    </div>
-  </section>
+				</div>
+			</div>
+		</center>
+	</div>
+	<div data-0-start="transform:translate(0%,100%);background-color:rgb(56,167,222);" data-4500-start="transform:translate(0%,100%);background-color:rgb(56,167,222);" data-5000-start="transform:translate(0%,0%);background-color:rgb(105,50,20);opacity:1;"data-5500-start="transform:translate(-100%,0%);background-color:rgb(0,0,0);opacity:1;" class = "backdoor">
+		<center>
+			<div style = "width:80%;height:80%;">
+				<span>
+				Echo<br>
+				</span>
+				<span>
+				</span>
+				<img src = "./apps/echo.png" style = "width:40vw;"><br>
+				<div class = "desc">
+				Echo provides you the book you need, whether you are on a leisure drive or under the crunch of an oncoming examination. This interactive search app lets you download the book you need from the millions in the collection using its lightning fast search relying on a massive collection of indexed books. Echo also allows you to view the book right in the browser and has category search, ratings etc. in its pack of goodies.
+				</div>
+			</div>
+		</center>
+	</div>
+	<div data-0-start="transform:translate(100%,0%);background-image: url('contact.jpg');" data-5000-start="transform:translate(100%,0%);background-image: url('contact.jpg');" data-5500-start="transform:translate(0%,0%);background-image: url('contact.jpg');opacity:1;"class = "contact">
+		<div>
+			<div style = "float:right;margin-top:10vh;margin-right:5vw;">
+				contact@sdslabs.co.in<br>
+				facebook.com/SDSLabs
+			</div>
+		</div>
+	</div>
+	<div data-0-start="transform:translate(100%,0%);background-color:black;opacity:1;" data-5000-start="transform:translate(100%,0%);background-color:black;opacity:1;" data-5500-start="transform:translate(0%,0%);background-color:black;opacity:0;"class = "backdoor">
+	</div>
 
-  <section id='fp' class='bg-spl'>
-    <div class="info">
-      <h3>File Panda</h3>
-      <p>
-        File Panda is the intranet repository of free and open source applications. It is a self updating application which ensure that it always has the latest version of each software.
-      </p>
-      <p>
-        File Panda has been developed in PHP and uses the Limonade microframework.
-      </p>
-    </div>
-  </section>
+	
+	<script type="text/javascript" src="./src/skrollr.js"></script>
+	
 
-  <section id="stats" class="no-height">
-    <h1>Stats</h1>
-    <div class="data">
-      <div class="entry">
-        6 Sennheisers
-      </div>
-      <div class="entry">
-        3 Skullcandy
-      </div>
-      <div class="entry">
-        6 Nexus 7
-      </div>
-      <div class="entry">
-        3 iPads
-      </div>
-      <div class="entry">
-        3 MacBook Pro
-      </div>
-      <div class="entry">
-        2 System 76 Ubuntu laptops
-      </div>
-      <div class="entry">
-        2 Wacom Graphic Tablets
-      </div>
-      <div class="entry">
-        1 Intuos Manga Graphic Tablet
-      </div>
-      <div class="entry">
-        1 Raspberry Pi
-      </div>
-      <div class="entry">
-        2 Dell PowerEdge Servers
-      </div>
-      <div class="entry">
-        10 External Monitor
-      </div>
-      <div class="entry">
-        1 42' LCD TV
-      </div>
-      <div class="entry">
-        3 Dribbble Accounts
-      </div>
-      <div class="entry">
-        40 Public Repositories on GitHub
-      </div>
-      <div class="entry">
-        30% Non Vegetarians
-      </div>
-      <div class="entry">
-        70% Teetotallers
-      </div>
-      <div class="entry">
-        21 CS undergrad members vs 43 non CS (all time)
-      </div>
-    </div>
-  </section>
-
-  <section class="no-height" id="contact">
-    <p>contact@sdslabs.co.in</p>
-  </section>
+	<script type="text/javascript">
+	skrollr.init({
+		constants: {
+			//fill the box for a "duration" of 150% of the viewport (pause for 150%)
+			//adjust for shorter/longer pause
+			box: '150p'
+		}
+	});
+	</script>
 </body>
+
+</html>

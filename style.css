@@ -1,0 +1,42 @@
+.slide-1 {
+	font-family: 'Josefin Slab', serif;font-size:400%;
+	display: flex;justify-content: center;
+	flex-direction: column;
+}
+.slide-2 {
+	font-family: 'Anton', serif;font-size:400%;
+	display: flex;justify-content: center;
+	flex-direction: column;
+	font-size: 130%;
+}
+.slide-3 {
+	font-family: 'Anton', serif;font-size:400%;
+	display: flex;justify-content: center;
+	flex-direction: column;
+	color:black;
+}
+.backdoor {
+	font-family: 'Anton', serif;font-size:400%;
+	display: flex;justify-content: center;
+	flex-direction: column;
+	color:white;
+}
+.contact {
+	font-family: 'Anton', serif;font-size:400%;
+	color:white;
+}
+.left {
+	width:200px;
+	height:100%;
+	display: flex;justify-content: center;flex-direction: column;
+	float:left;
+}
+.right {
+	width:200px;
+	height:100%;
+	float:right;
+}
+.desc {
+	font-size:40%;
+	font-family: 'Poiret One', serif;
+}

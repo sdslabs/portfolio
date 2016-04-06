@@ -1,0 +1,188 @@
+
+<!-- saved from url=(0031)https://sdslabs.co.in/farewell/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style type="text/css">
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		div.heading {
+			background-image: url('background.png');
+			background-size: cover;
+			height: 800px;
+			text-align: center;
+		}
+		div img {
+			display: inline-block;
+			margin: 0 auto;
+			margin-top: 364px;
+		}
+		#player {
+			margin-top: 0;
+			display: none;
+		}
+		div.images {
+			margin-top: 50px;
+			width: 1120px;
+			margin: 0 auto;
+		}
+		div.images div {
+			margin: 0 10px;
+			width: 250px;
+			height: 250px;
+			background-size: cover;
+			border-radius: 50%;
+			background-repeat: none;
+			display: inline-block;
+		}
+
+		div.images div.nemo {
+			background-image: url('nemo.jpg');
+		}
+
+		div.images div.chetty {
+			background-image: url('chetty.jpg');
+			background-position: -80px;
+		}
+
+		div.images div.vikalp {
+			background-image: url('vikalp.jpg');
+		}
+
+		div.images div.shagun {
+			background-image: url('shagun.png');
+		}
+
+		div.images div.mehta {
+			background-image: url('mehta.jpg');
+		}
+
+		div.images div.mangla {
+			background-image: url('mangla.jpg');
+			background-position: -80px;
+		}
+
+		div.images div.das {
+			background-image: url('das.jpg');
+		}
+
+		div.images div.jayant {
+			background-image: url('jayant.jpg');
+		}
+
+		div.senti-sec {
+			text-align: center;
+			width: 1120px;
+			margin: 0 auto;
+		}
+
+		div.senti-sec h2 {
+			font-family: 'Lato', 'Times New Roman';
+			font-size: 32px;
+			font-weight: 800;
+		}
+
+		div.senti-sec p{
+			font-family: 'Lato', 'Times New Roman';
+			font-size: 24px;
+		}
+
+		#footer {
+			font-family: 'Lato', 'Times New Roman';
+			margin-top: 5%;
+			text-align: center;
+			font-size: 200%;
+		}
+	</style>
+	
+	<title>#oneLastRide</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<a href="#" id="play-video">
+			<!-- 1. The <div> tag will contain the <iframe> (and video player) -->
+			<div class="heading">
+				<div id="player"></div><!-- frameborder="0" allowfullscreen="1" title="YouTube video player" width="1280" height="720" src="./#oneLastRide_files/n6D00Bigm0g.html"></iframe>
+				--><img src="play.png" id="play-button">
+			</div>
+		</a>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<div class="images">
+			<div class="nemo"></div>
+			<div class="chetty"></div>
+			<div class="jayant"></div>
+			<div class="shagun"></div>
+			<br>
+			<br>
+			<br>
+			<div class="mehta"></div>
+			<div class="mangla"></div>
+			<div class="das"></div>
+			<div class="vikalp"></div>
+			
+		</div>
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<div class="senti-sec">
+			<h2>You'll be remembered</h2>
+			<p>It is always harder to be left behind than to be the one to go. Farewell has a sweet sound of reluctance. Good-bye is short and final, a word with teeth sharp to bite through the string that ties past to the future.  Yet, the farewell is not final but only till we meet again. You will move on, live your life. So will we. We will be okay. Someday, in the distant future,  we will find each other again.</p>
+		</div>
+
+		<div id="footer">
+			#oneLastRide
+		</div>
+
+		<br>
+		<br>
+		<br>
+	
+	<script type="text/javascript" id="www-widgetapi-script" src="./#oneLastRide_files/www-widgetapi.js" async=""></script><script src="./#oneLastRide_files/player_api"></script><script src="./#oneLastRide_files/jquery-1.11.2.min.js"></script>
+	<script>      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/player_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubePlayerAPIReady() {
+        player = new YT.Player('player', {width: 1280,
+   	  height: 720,
+          playerVars: { 'autoplay': 0, 'controls': 1,'autohide':1,'wmode':'opaque' },
+          videoId: 'n6D00Bigm0g',
+          events: {
+            'onReady': onPlayerReady}
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+      function showVideo(e) {
+      	document.getElementById('play-button').style.display = 'none';
+      	document.getElementById('player').style.display = 'inline-block';
+	document.querySelector('.heading').style.backgroundImage = 'none';
+	document.querySelector('.heading').style.backgroundColor = '#000';
+	event.target.playVideo();
+      }
+
+      document.getElementById('play-video').onclick = showVideo;
+        
+      }
+
+</script>
+
+</body></html>

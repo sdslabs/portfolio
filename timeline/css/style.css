@@ -22,9 +22,13 @@ body {
 }
 
 a {
-  color: #acb7c0;
+  color: #52C5C2;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
+}
+
+a:hover {
+  color: #639E9D;
 }
 
 img {
@@ -269,6 +273,12 @@ header h1 {
 .cd-timeline-content p {
   margin: 1em 0;
   line-height: 1.6;
+}
+.cd-timeline-content ul {
+  list-style-type: disc;
+}
+.cd-timeline-content li {
+  margin: 1em 2em;
 }
 .cd-timeline-content .cd-read-more {
   float: right;

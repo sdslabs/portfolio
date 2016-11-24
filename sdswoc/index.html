@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<title>SDSLabs</title>
+		<link rel="shortcut icon" href="./logo.png">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	  	<script src="js/swal.js"></script>
+		<link rel="stylesheet" href="css/swal.css">
+		<script>
+
+			$(document).ready(function() {
+			    $('.cbp-mc-form').submit(function(e) {
+			        data = $('#contact_form').serialize();
+			        $.ajax({
+			            url: 'submit',
+			            type: 'POST',
+			            data: data,
+			        })
+			        .done(function(response) {
+			        	swal(response);
+			        })
+			        e.preventDefault();
+			    });
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<center>
+				<h1>SDSLabs Mentorship Program</h1>
+				<br>
+				Submit Your Proposals for SDSLabs Winter Mentorship Program
+			</center>
+			<div class="main">
+				<form class="cbp-mc-form">
+					<div class="cbp-mc-column">
+						<label for="first_name">Name</label>
+	  					<input type="text" id="first_name" name="first_name" placeholder="Asu Palai">
+	  					<label for="year"> Year</label>
+	  					<select id="year" name="year">
+	  						<option>Year</option>
+	  						<option>1</option>
+	  						<option>2</option>
+	  						<option>3</option>
+	  						<option>4</option>
+	  						<option>5</option>
+	  						<option>Others</option>
+	  					</select>
+	  					<label for="country">Branch</label>
+	  					<input type="text" id="branch" name="branch" placeholder="Civil Engineering">
+	  				</div>
+	  				<div class="cbp-mc-column">
+	  					<label for="phone">7060334777</label>
+	  					<input type="text" id="phone" name="phone" placeholder="+351 999 999">
+	  					<label for="email">Email Address</label>
+	  					<input type="text" id="email" name="email" placeholder="jon@doe.com">
+	  					<label for="gender"> Gender</label>
+	  					<select id="gender" name="gender">
+	  						<option>Gender</option>
+	  						<option>Male</option>
+	  						<option>Female</option>
+	  						<option>Others</option>
+	  					</select>
+	  				</div>
+	  				<div class="cbp-mc-column">
+	  					<label for="description">Short Description</label>
+	  					<textarea id="description" name="description"></textarea>	
+	  					<label for="proposal">Propsal Link</label>
+	  					<input type="text" id="proposal" name="proposal" placeholder="drive.google.com/thisismyswaggyproposal">
+	  				</div>
+  				
+	  				<div class="cbp-mc-submit-wrap">
+		  				<input class="cbp-mc-submit" type="submit" value="Submit" method="post" />
+	  				</div>
+				</form>
+			</div>
+		</div>
+	</body>
+
+</html>

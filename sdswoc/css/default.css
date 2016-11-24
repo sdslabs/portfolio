@@ -23,6 +23,9 @@ body {
     color: #8d99af;
     background: #172130;
 }
+option {
+	color:black;
+}
 
 a {
 	color: #8d99af;

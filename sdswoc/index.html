@@ -13,9 +13,9 @@
 
 			$(document).ready(function() {
 			    $('.cbp-mc-form').submit(function(e) {
-			        data = $('#contact_form').serialize();
+			        data = $('.cbp-mc-form').serialize();
 			        $.ajax({
-			            url: 'submit',
+			            url: 'http://sdswoc.sdslabs.co/submit',
 			            type: 'POST',
 			            data: data,
 			        })
@@ -53,7 +53,7 @@
 	  					<input type="text" id="branch" name="branch" placeholder="Civil Engineering">
 	  				</div>
 	  				<div class="cbp-mc-column">
-	  					<label for="phone">7060334777</label>
+	  					<label for="phone">Phone Number</label>
 	  					<input type="text" id="phone" name="phone" placeholder="+351 999 999">
 	  					<label for="email">Email Address</label>
 	  					<input type="text" id="email" name="email" placeholder="jon@doe.com">
@@ -68,7 +68,7 @@
 	  				<div class="cbp-mc-column">
 	  					<label for="description">Short Description</label>
 	  					<textarea id="description" name="description"></textarea>	
-	  					<label for="link">Proposal Link</label>
+	  					<label for="link">Propsoal Link</label>
 	  					<input type="text" id="link" name="link" placeholder="drive.google.com/thisismyswaggyproposal">
 	  				</div>
   				

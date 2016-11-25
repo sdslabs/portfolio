@@ -517,6 +517,12 @@ nav {
   color: white;
   position: relative; }
 
+#game {
+  background: url("../img/apps/game.png") no-repeat fixed 5% 150px #ea4949;
+  background-size: 50%;
+  color: white;
+  position: relative; }
+
 #fp {
   background: url("../img/apps/fp.png") no-repeat fixed 5% 150px #ea4949;
   background-size: 50%;

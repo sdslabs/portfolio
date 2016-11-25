@@ -492,6 +492,12 @@ nav {
   color: white;
   position: relative; }
 
+#brute {
+  background: url("../img/apps/brute.png") no-repeat fixed 5% 150px #ea4949;
+  background-size: 50%;
+  color: white;
+  position: relative; }
+
 #omegle {
   background: url("../img/apps/omegle.png") no-repeat fixed 5% 150px #ea4949;
   background-size: 50%;
@@ -500,6 +506,19 @@ nav {
 
 #cv {
   background: url("../img/apps/cv.png") no-repeat fixed 5% 150px #ea4949;
+  background-size: 50%;
+  color: white;
+  position: relative; }
+
+
+#live {
+  background: url("../img/apps/live.png") no-repeat fixed 5% 150px #ea4949;
+  background-size: 50%;
+  color: white;
+  position: relative; }
+
+#game {
+  background: url("../img/apps/game.png") no-repeat fixed 5% 150px #ea4949;
   background-size: 50%;
   color: white;
   position: relative; }

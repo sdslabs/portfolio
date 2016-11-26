@@ -9,6 +9,7 @@
 		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 	  	<script src="js/swal.js"></script>
 		<link rel="stylesheet" href="css/swal.css">
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<script>
 
 			$(document).ready(function() {
@@ -71,8 +72,8 @@
 	  					<label for="link">Proposal Link</label>
 	  					<input type="text" id="link" name="link" placeholder="drive.google.com/thisismyswaggyproposal">
 	  				</div>
-  				
 	  				<div class="cbp-mc-submit-wrap">
+						<div class="g-recaptcha" data-sitekey="6LeWDA0UAAAAAMOMXIrvrbiVMxFFOLLp-CCnFsVv"></div>
 		  				<input class="cbp-mc-submit" type="submit" value="Submit" method="post" />
 	  				</div>
 				</form>

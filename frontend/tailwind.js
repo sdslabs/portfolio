@@ -44,12 +44,14 @@ let defaultConfig = require("tailwindcss/defaultConfig")();
 
 let colors = {
     transparent: "transparent",
-
-    black: "rgba(30, 30, 30, 1)",
-    grey: "rgba(10, 15, 13, 1)",
-    "grey-light": "rgba(10, 15, 13, 0.07)",
+    white: "rgba(255, 255, 255, 1)",
+    black: "rgba(10, 15, 13, 1)",
+    grey: "rgba(10, 15, 13, 0.07)",
     purple: "rgba(58, 23, 114, 1)",
-    orange: "rgba(229, 89, 52, 1)"
+    orange: "rgba(229, 89, 52, 1)",
+    blue: "rgba(55, 193, 225, 1)",
+    yellow: "rgba(251, 177, 60, 1)",
+    green: "rgba(82, 170, 94, 1)"
 };
 
 module.exports = {
@@ -171,18 +173,18 @@ module.exports = {
   */
 
     textSizes: {
-        sm_root: "8.7847728px",
+        sm_root: "7.5847728px",
         root: "0.7320644vw",
         xxl_root: "12.44px",
         xs: "1rem", // 10px
         sm: "1.2rem", // 12px
         base: "1.4rem", // 14px
-        lg: "1.6rem", // 18px
-        xl: "1.8rem", // 20px
+        lg: "1.6rem", // 16px
+        xl: "1.8rem", // 18px
         "2xl": "2.4rem", // 24px
         "3xl": "3rem", // 30px
         "4xl": "3.6rem", // 36px
-        "5xl": "4.8rem" // 48px
+        "5xl": "5.2rem" // 52px
     },
 
     /*
@@ -227,6 +229,9 @@ module.exports = {
         none: 1,
         tight: 1.25,
         normal: 1.5,
+        160: 1.6,
+        170: 1.7,
+        180: 1.8,
         loose: 2
     },
 
@@ -403,6 +408,7 @@ module.exports = {
         "40": "10rem",
         "48": "12rem",
         "64": "16rem",
+        "88": "22rem",
         "1/2": "50%",
         "1/3": "33.33333%",
         "2/3": "66.66667%",
@@ -414,6 +420,7 @@ module.exports = {
         "4/5": "80%",
         "1/6": "16.66667%",
         "5/6": "83.33333%",
+        "4/7": "57.14286%",
         full: "100%",
         screen: "100vw"
     },
@@ -567,6 +574,7 @@ module.exports = {
         "8": "2rem",
         "10": "2.5rem",
         "12": "3rem",
+        "14": "3.5rem",
         "16": "4rem",
         "20": "5rem",
         "24": "6rem",
@@ -659,11 +667,11 @@ module.exports = {
   */
 
     shadows: {
-        default: "0 2px 4px 0 rgba(0,0,0,0.10)",
-        md: "0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)",
-        lg: "0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)",
-        inner: "inset 0 2px 4px 0 rgba(0,0,0,0.06)",
-        outline: "0 0 0 3px rgba(52,144,220,0.5)",
+        sm: "0 2px 4px 0 rgba(0, 0, 0, 0.10)",
+        md: "0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08)",
+        lg: "0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08)",
+        inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
+        outline: "0 0 0 3px rgba(52, 144, 220, 0.5)",
         none: "none"
     },
 
@@ -707,6 +715,7 @@ module.exports = {
         "0": "0",
         "25": ".25",
         "50": ".5",
+        "60": ".6",
         "75": ".75",
         "100": "1"
     },

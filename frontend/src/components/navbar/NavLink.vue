@@ -1,8 +1,8 @@
 <template>
-    <a v-if="native" :href="url" :class="last ? 'mr-0': 'mr-20'" class="no-underline block mt-4 sm:inline-block sm:mt-0" target="blank">
+    <a v-if="native" :href="url" :class="last ? 'mr-0': 'mr-20'" class="no-underline block mt-8 sm:inline-block sm:mt-0" target="blank">
         <span class="block text-black pb-3">{{text}}</span>
     </a>
-    <router-link v-else :to="url" :class="last ? 'mr-0': 'mr-20'" class="no-underline block mt-4 sm:inline-block sm:mt-0">
+    <router-link v-else :to="url" :class="last ? 'mr-0': 'mr-20'" class="no-underline block mt-8 sm:inline-block sm:mt-0">
         <span class="block text-black pb-3">{{text}}</span>
     </router-link>
 </template>

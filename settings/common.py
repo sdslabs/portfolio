@@ -28,6 +28,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'vumjqmvqdxn^4$-e1@&!q%=&#dvo)bfh!74bo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+CORS_ORIGIN_ALLOW_ALL = DEBUG
+
 ALLOWED_HOSTS = []
 
 
@@ -62,9 +64,35 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+    'DEFAULT_THROTTLE_CLASSES': (
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle'
+    ),
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '100/minute',
+        'user': '100/minute'
+    },
+    'DEFAULT_PARSER_CLASSES': (
+        'rest_framework.parsers.JSONParser',
+        'rest_framework.parsers.MultiPartParser'
+    )
+}
+
 
 TEMPLATES = [
     {
@@ -132,12 +160,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'apps', 'base', 'static'),
 )
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 CACHES = {
     'default': {

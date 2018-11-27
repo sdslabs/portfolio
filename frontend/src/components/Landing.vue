@@ -1,6 +1,6 @@
 <template>
-    <div class="font-sans">
-        <div class="banner px-16 relative flex flex-col justify-center items-center sm:px-0 sm:justify-between sm:flex-row">
+    <div>
+        <div class="banner pt-navbar px-16 relative flex flex-col justify-center items-center sm:px-0 sm:justify-between sm:flex-row">
             <div class="hidden sm:flex w-88 h-full items-center justify-center">
                 <img class="w-full pb-20" src="@/assets/images/home1.png" />
             </div>
@@ -30,7 +30,6 @@ export default {
 
 <style scoped lang="scss">
 .banner {
-    padding-top: 7.4rem;
     height: 80vh;
 }
 

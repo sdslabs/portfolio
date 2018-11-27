@@ -26,7 +26,6 @@
 </template>
 
 <script>
-
 import NavLink from "@/components/navbar/NavLink.vue";
 import Button from "@/components/Button.vue";
 
@@ -46,11 +45,11 @@ export default {
             this.scrolled = window.scrollY > 0;
         }
     },
-    created () {
-        window.addEventListener('scroll', this.handleScroll);
+    created() {
+        window.addEventListener("scroll", this.handleScroll);
     },
     destroyed() {
-        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener("scroll", this.handleScroll);
     },
     components: {
         NavLink,

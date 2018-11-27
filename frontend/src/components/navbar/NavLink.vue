@@ -20,14 +20,13 @@ export default {
 </script>
 
 <style scoped>
-    .router-link-active {
-        @apply font-semibold;
-    }
+.router-link-active {
+    @apply font-semibold;
+}
 
-    @screen sm {
-        .router-link-active span {
-            @apply border-black border-solid border-l-0 border-r-0 border-t-0 border-b-2;
-        }
+@screen sm {
+    .router-link-active span {
+        @apply border-black border-solid border-l-0 border-r-0 border-t-0 border-b-2;
     }
-
+}
 </style>

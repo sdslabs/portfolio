@@ -16,7 +16,6 @@
 </template>
 
 <script>
-
 import Button from "@/components/Button.vue";
 
 export default {
@@ -30,6 +29,5 @@ export default {
     components: {
         Button
     }
-}
-
+};
 </script>

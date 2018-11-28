@@ -13,7 +13,7 @@
                 <img class="sm:hidden w-full pt-20" src="@/assets/images/home3.png" />
             </div>
         </div>
-        <div class="banner-footer flex justify-center">
+        <div class="banner-footer flex justify-center items-start">
             <router-link to="/projects" class="inline-flex flex-col items-center no-underline text-base">
                 <img class="pt-16 sm:pt-0 block" src="@/assets/images/down-arrow.svg" />
                 <span class="block text-black pt-4">Projects</span>

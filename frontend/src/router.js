@@ -4,7 +4,7 @@ import Home from "./views/Home.vue";
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
     mode: "history",
     base: process.env.BASE_URL,
     routes: [
@@ -12,13 +12,19 @@ export default new Router({
             path: "/",
             name: "home",
             component: Home,
-            props: true
+            props: true,
+            meta: {
+                title: "SDSLabs"
+            }
         },
         {
             path: "/projects",
             name: "projects",
             component: Home,
-            props: true
+            props: true,
+            meta: {
+                title: "SDSLabs | Projects"
+            }
         },
         {
             path: "/about",
@@ -27,7 +33,17 @@ export default new Router({
             // this generates a separate chunk (about.[hash].js) for this route
             // which is lazy-loaded when the route is visited.
             component: () =>
-                import(/* webpackChunkName: "about" */ "./views/About.vue")
+                import(/* webpackChunkName: "about" */ "./views/About.vue"),
+            meta: {
+                title: "SDSLabs | About Us"
+            }
         }
     ]
 });
+
+router.beforeEach((to, from, next) => {
+    document.title = to.meta.title;
+    next();
+});
+
+export default router;

@@ -1,6 +1,7 @@
 <template>
     <div>
-        <div id="home">
+        <Sidebar v-bind:projects="projects" v-bind:isVisible="true" />
+        <div id="home" class="z-20 relative bg-white">
             <Landing />
         </div>
         <div class="px-16 sm:px-88 flex flex-col justify-center items-center" id="projects">
@@ -11,6 +12,7 @@
                 v-bind:desc="project.description"
                 v-bind:url="project.url"
                 v-bind:image_url="project.image"
+                v-bind:permalink="project.permalink"
             />
         </div>
     </div>
@@ -20,7 +22,8 @@
 
 import axios from "axios";
 
-import Router from '@/router.js';
+import Router from "@/router.js";
+import Sidebar from "@/components/Sidebar.vue";
 import Landing from "@/components/Landing.vue";
 import Project from "@/components/Project.vue";
 
@@ -30,19 +33,19 @@ function handleIntersect(entries, observer) {
     let projectsElement = document.querySelector("#projects");
     if (projectsElement == null)
         return;
-    console.log("Handling intersect");
     for(let i = 0; i < entries.length; i++) {
         let entry = entries[i];
-        if (entry.intersectionRatio > this.prevRatio) {
+        if (entry.intersectionRatio > 0.05 && this.$route.name != 'projects') {
+            this.auto = true;
             Router.push({ name: 'projects' })
-        } else if (entry.intersectionRatio < this.prevRatio) {
+        } else if (entry.intersectionRatio < 0.05 && this.$route.name != 'home') {
+            this.auto = true;
             Router.push({ name: 'home' })
         }
-        this.prevRatio = entry.intersectionRatio;
     }
 }
 
-function createObserver(el) {
+function createObserver() {
     let observer;
     let options = {
         root: null,
@@ -50,20 +53,20 @@ function createObserver(el) {
         threshold: [0, 1.5/30]
     };
     observer = new IntersectionObserver(this.handleIntersect, options);
-    observer.observe(el);
-    this.observer = observer;
+    return observer;
 }
 
 export default {
     name: "home",
     components: {
+        Sidebar,
         Landing,
         Project
     },
     data: function initData() {
         return {
             projects: {},
-            prevRatio: 0,
+            auto: false,
             isObserverSet: 0,
             observer: undefined
         }
@@ -73,16 +76,14 @@ export default {
             let projectsElement = document.querySelector("#projects");
             let homeElement = document.querySelector("#home");
 
-            if (this.prevRatio < 0.05) {
+            if (!this.auto) {
                 if(to.name == "projects" && from.name == "home") {
                     projectsElement.scrollIntoView(scrollOptions);
-                    this.prevRatio = 0.050000001;
+                } else if(to.name == "home" && from.name == "projects") {
+                    homeElement.scrollIntoView(scrollOptions);
                 }
             } else {
-                if(to.name == "home" && from.name == "projects") {
-                    homeElement.scrollIntoView(scrollOptions);
-                    this.prevRatio = 0.049999999;
-                }
+                this.auto = false;
             }
         }
     },
@@ -105,14 +106,19 @@ export default {
         if (!this.isObserverSet && Object.keys(this.projects).length > 0) {
             let currentRoute = this.$route;
             let projectsElement = document.querySelector("#projects");
-            this.createObserver(projectsElement);
             if (currentRoute.name == "projects") {
-                console.log("Current route is projects");
                 projectsElement.scrollIntoView(scrollOptions);
-                this.prevRatio = 0.050000001;
             }
-            this.isObserverSet = true;
+            let observer = this.createObserver();
+            setTimeout(function(){
+                observer.observe(projectsElement);
+                this.observer = observer;
+                this.isObserverSet = true;
+            },1);
         }
+    },
+    destroyed() {
+        this.observer.disconnect();
     }
 };
 </script>

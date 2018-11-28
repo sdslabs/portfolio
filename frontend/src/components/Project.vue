@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-navbar h-screen flex justify-end items-center" :id="permalink">
+    <div class="pt-navbar sm:h-screen flex justify-end items-center" :id="permalink">
         <div class="project-wrapper sm:w-5/6 flex flex-col sm:flex-row justify-center items-center">
             <div class="sm:w-4/10 sm:pr-16">
                 <h2 class="uppercase font-bold text-3xl leading-170 pb-12">{{ title }}</h2>

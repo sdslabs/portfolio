@@ -13,7 +13,7 @@
         <div :class="open ? 'block': 'hidden'" class="relative w-full flex-grow sm:flex sm:items-center sm:w-auto z-10">
             <div class="text-sm text-black leading-normal sm:flex justify-center sm:flex-grow ">
                 <NavLink v-bind:native=false v-bind:last=false url="/projects" text="PROJECTS" />
-                <NavLink v-bind:native=false v-bind:last=false url="/news" text="NEWS" />
+                <NavLink v-bind:native=false v-bind:last=false url="/feed" text="FEED" />
                 <NavLink v-bind:native=true v-bind:last=false url="https://blog.sdslabs.co/" text="BLOG" />
                 <NavLink v-bind:native=false v-bind:last=false url="/about" text="ABOUT US" />
                 <NavLink v-bind:native=false v-bind:last=true url="/contact" text="CONTACT" />

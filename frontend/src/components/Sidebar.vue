@@ -1,5 +1,5 @@
 <template>
-    <ul class="fixed w-88 z-10 h-screen bg-white flex flex-col pl-36 pt-navbar justify-center list-reset">
+    <ul class="hidden fixed z-10 h-screen bg-white flex-col pt-navbar justify-center list-reset pl-16 sm:flex sm:pl-36 sm:w-88 ">
         <SideLink
             v-for="(project, permalink, index) in projects"
             v-bind:key="index"

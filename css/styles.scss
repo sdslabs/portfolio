@@ -205,6 +205,18 @@ nav {
   @include bg-spl('../img/apps/erdos.png');
 }
 
+#cerebro {
+  @include bg-spl('../img/apps/cerebro.png');
+}
+
+#beast {
+  @include bg-spl('../img/apps/beast.png');
+}
+
+#rubeus {
+  @include bg-spl('../img/apps/rubeus.png');
+}
+
 #sdslabs {
   background: white;
 

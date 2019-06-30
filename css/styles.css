@@ -541,6 +541,24 @@ nav {
   color: white;
   position: relative; }
 
+#cerebro {
+  background: url("../img/apps/cerebro.png") no-repeat fixed 5% 150px #ea4949;
+  background-size: 50%;
+  color: white;
+  position: relative; }
+
+#rubeus {
+  background: url("../img/apps/rubeus.png") no-repeat fixed 5% 150px #ea4949;
+  background-size: 50%;
+  color: white;
+  position: relative; }
+
+#beast {
+  background: url("../img/apps/beast.png") no-repeat fixed 5% 150px #ea4949;
+  background-size: 50%;
+  color: white;
+  position: relative; }
+
   #backdoor {
     background: url("../img/apps/backdoor.png") no-repeat fixed 5% 150px #ea4949;
     background-size: 50%;

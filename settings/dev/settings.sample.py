@@ -2,6 +2,7 @@ from ..common import *  # noqa: ignore=F405
 
 DEBUG = True
 
+CORS_ORIGIN_ALLOW_ALL = DEBUG
 ALLOWED_HOSTS = ['*']
 
 DATABASES = {

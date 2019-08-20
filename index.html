@@ -11,15 +11,23 @@
 
 <body>
   <nav>
-    <div class="right">
+    <div class="right" id="hamburger">
+      <input type="checkbox" id="ham-input" />
+  <div class="ham">
+   <span></span>
+   <span></span>
+   <span></span>
+  </div>
+  <div id="menu">
       <a href="#muzi">Projects</a>
        | <a href="#sdslabs">About</a>
        | <a href="timeline/index.html">Timeline</a>
        | <a href="https://blog.sdslabs.co/">Blog</a>
        | <a href="#contact">Contact</a>
     </div>
+    </div>
     <div class="left">
-      <img class='logo' src="img/sds_top_logo.png" alt="">
+    <a href="https://sdslabs.co" class="logo"><img class='logo' src="img/sds_top_logo.png" alt=""></a>
     </div>
   </nav>
   <section id="intro" class="no-height">
@@ -27,7 +35,7 @@
       <div class="table">
         <h1>Software Development Section</h1>
         <h2>IIT Roorkee, India</h2>
-        <img src="img/top_portion.png" alt="">
+       <img src="img/top_portion.png" alt="">
       </div>
     </div>
     <div class="bottom-b">
@@ -42,8 +50,8 @@
           <img src="img/dsg_logo.svg" alt="">
         </div>
       </div>
+      <img src="img/navigation.png" alt="">
     </div>
-    <img class="scroll" src="img/navigation.png" alt="">
   </section>
 
   <section id="sdslabs" class="clear-height">
@@ -68,6 +76,7 @@
     <div class="info">
       <div class="muzi-spl">
         <h3>Muzi</h3>
+        <img class="app-img" src="img/apps/muzi.png" alt="">
         <p>
           With over 130,000 tracks by 11,000 artists and updating daily, Muzi is the one stop online music player for the IIT Roorkee intranet.
         </p>
@@ -81,6 +90,7 @@
   <section id='cerebro' class='bg-spl'>
     <div class="info">
       <h3>Cerebro</h3>
+      <img class="app-img" src="img/apps/cerebro.png" alt="">
       <p>
         Cerebro, a platform for hosting data hackathons exclusively in IITR developed by SDSLabs. It's challenges and competetions are maintained by members of SDSLabs and Data Science Group.</p>
       <p>
@@ -95,6 +105,7 @@
   <section id='rubeus' class='bg-spl'>
     <div class="info">
       <h3>Rubeus</h3>
+      <img class="app-img" src="img/apps/rubeus.png" alt="">
       <p>
         Rubeus is a 2D cross-platform game engine developed indigenously in SDSLabs. It derives its workflow from a lot of popular game engines and is specifically designed for new game developers. 
       </p>
@@ -110,6 +121,7 @@
   <section id='sp' class='bg-spl'>
     <div class="info">
       <h3>Study Portal</h3>
+      <img class="app-img" src="img/apps/sp.png" alt="">
       <p>
         Study Portal is the knowledge hub of IIT Roorkee. Through Study Portal, anyone can share open courseware files, videos, presentations etc. Currently over 4,000 files have been shared across 500 courses and total downloads has crossed 80,000.
       </p>
@@ -125,6 +137,7 @@
   <section id='erdos' class='bg-spl'>
     <div class="info">
       <h3>Erdős</h3>
+      <img class="app-img" src="img/apps/erdos.png" alt="">
       <p>
         Erdős is an application for math geeks to try out new mathematical problems and keep track of who solves what. Named after one of the most prolific mathematician of all times, Paul Erdős, it is a portal for users to test their mettle on various mathematical problems, some of which may require users to write code.<br><br>
         Check out <a href="https://erdos.sdslabs.co/" target="_blank">Erdős</a> now.
@@ -135,6 +148,7 @@
   <section id='backdoor' class='bg-spl'>
     <div class="info">
       <h3>Backdoor</h3>
+      <img class="app-img" src="img/apps/backdoor.png" alt="">
       <p>
         Backdoor is a platform for computer security enthusiasts to show their talent in a competitive environment.
         After opening up for users outside of IIT Roorkee this year, this always online CTF (Capture the Flag) competition has quickly garnered over 2000 users worldwide.<br><br>
@@ -146,6 +160,7 @@
   <section id='beast' class='bg-spl'>
     <div class="info">
       <h3>Beast</h3>
+      <img class="app-img" src="img/apps/backdoor_logo.png" alt="">
       <p>
         Beast is a challenge deployment tool for our CTF platform Backdoor. It performs all the tasks from syncing the challenges with the production server to building the challenge images and setting up the xinetd service.
       </p>
@@ -161,6 +176,7 @@
   <section id='cv' class='bg-spl'>
     <div class="info">
       <h3>Code Village</h3>
+      <img class="app-img" src="img/apps/cv.png" alt="">
       <p>
         Codevillage is an online judge with a core philosophy of
         improving the programming skills of the IITR junta.
@@ -175,6 +191,7 @@
   <section id='echo' class='bg-spl'>
     <div class="info">
       <h3>Echo</h3>
+      <img class="app-img" src="img/apps/echo.png" alt="">
       <p>
         Echo provides you the book you need, whether you are on a leisure drive or under
         the crunch of an oncoming examination. This interactive
@@ -190,6 +207,7 @@
   <section id='brute' class='bg-spl'>
     <div class="info">
       <h3>Brute DC</h3>
+      <img class="app-img" src="img/apps/brute.png" alt="">
       <p>
         DC by SDSLabs aims to create a more visually pleasing interface over the generic DC++. While DC++ is required in some way to use the application, you, the user can view all content in a better way with proper design.
       </p>
@@ -202,6 +220,7 @@
   <section id='game' class='bg-spl'>
     <div class="info">
       <h3>Gaming Portal</h3>
+      <img class="app-img" src="img/apps/game.png" alt="">
       <p>
        WHERE IDEAS COME TO LIFE
       </p>
@@ -215,6 +234,7 @@
   <section id='live' class='bg-spl'>
     <div class="info">
       <h3>Live</h3>
+      <img class="app-img" src="img/apps/live.png" alt="">
       <p>
         Live is a live streaming app develop by SDSLabs, it streams sports matches and displays TV schedule when the matches will be hosted.
         People can vote on what they have to watch and based on the voting the channel is switched
@@ -225,6 +245,7 @@
   <section id='omegle' class='bg-spl'>
     <div class="info">
       <h3>Omegle</h3>
+      <img class="app-img" src="img/apps/omegle.png" alt="">
       <p>
         All work and no play makes Jack a dull boy. Omegle is an intranet application that comes alive around 2am when the campus internet begins. Omegle allows people to chat anonymously.
         </p>
@@ -237,6 +258,7 @@
   <section id='fp' class='bg-spl'>
     <div class="info">
       <h3>File Panda</h3>
+      <img class="app-img" src="img/apps/fp.png" alt="">
       <p>
         File Panda is the intranet repository of free and open source applications. It is a self updating application which ensure that it always has the latest version of each software.
       </p>
@@ -309,6 +331,7 @@
       <div class="entry">
         40% CS undergrad members vs 60% non CS (all time)
       </div>
+      <div class="vertical-line"></div>
     </div>
   </section>
 

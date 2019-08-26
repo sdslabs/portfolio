@@ -18,8 +18,8 @@ The next 2 steps are for installing postgresql. Alternatively, if you do not wan
 - Run `docker-compose -f settings/dev/postgres-docker-compose.yml up -d`.
 
 - Once you have an up and running configuration of postgresql copy `settings/dev/settings.sample.py` to `settings/dev/settings.py` and update the postgresql credentials.
-- Run `python manage.py createsuperuser --settings=settings.dev.settings`.
 - Run `python manage.py migrate --settings settings.dev.settings`.
+- Run `python manage.py createsuperuser --settings=settings.dev.settings`.
 - Run `python manage.py runserver --settings settings.dev.settings`.
 - Open `localhost:8000/admin` to verify that your django backend is working perfectly.
 - Go to the `frontend` directory.

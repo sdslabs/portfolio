@@ -560,7 +560,8 @@ nav {
       @media (max-width: 576px) {
         #intro .top-s .table img {
           width: 82vw; } }
-    #intro .top-s h1, #intro .top-s h2 {
+    #intro .top-s h1,
+    #intro .top-s h2 {
       font-weight: normal; }
     #intro .top-s h1 {
       padding-top: 20px; }

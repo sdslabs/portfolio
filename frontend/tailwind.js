@@ -56,7 +56,9 @@ let colors = {
     border: "rgba(25, 25, 25, 0.5)",
     darkblue: "rgba(37, 110, 255, 1)",
     carousel: "rgba(25, 25, 25, 0.36)",
-    team: "rgba(248, 248, 248, 1)"
+    team: "rgba(248, 248, 248, 1)",
+    red: "rgb(229, 89, 52, 1)",
+    border: "rgba(25, 25, 25, 0.5)"
 };
 
 module.exports = {
@@ -322,6 +324,7 @@ module.exports = {
 
     borderWidths: {
         "0": "0",
+        feed: "0.3px",
         "1": "1px",
         "2": "2px",
         "4": "4px",
@@ -441,9 +444,13 @@ module.exports = {
         "1/6": "16.66667%",
         "5/6": "83.33333%",
         "4/7": "57.14286%",
-        feed: "55.2rem",
         sister: "73.1rem",
         groups: "112.8rem",
+        largetext: "102.5rem",
+        image: "45.6rem",
+        feed: "55.2rem",
+        event: "26.4rem",
+        eventdesc: "110.8rem",
         full: "100%",
         screen: "100vw"
     },
@@ -484,9 +491,15 @@ module.exports = {
         "48": "12rem",
         "64": "16rem",
         "80": "20rem",
+<<<<<<< HEAD
         "96": "24rem",
         "120": "30rem",
+=======
+        "72": "18rem",
+        "128": "32rem",
+>>>>>>> feat: developed news page and event page templates
         full: "100%",
+        upevent: "54.2rem",
         screen: "100vh"
     },
 
@@ -611,6 +624,7 @@ module.exports = {
         navbar: "7.9rem",
         "32": "8rem",
         "36": "9rem",
+        "40": "10rem",
         "44": "11rem",
         "60": "15rem",
         "72": "18rem",
@@ -646,16 +660,22 @@ module.exports = {
         "8": "2rem",
         "10": "2.5rem",
         "12": "3rem",
-        "14": "3.5rem",
+        "14": "3.6rem",
         "16": "4rem",
         "20": "5rem",
         "24": "6rem",
-        "26": "6.5rem",
+        "28": "7rem",
         "32": "8rem",
-        "36": "9rem",
+        "40": "10rem",
         "44": "11rem",
         "96": "24rem",
         "1/4": "25%"
+        "48": "12rem",
+        "56": "15rem",
+        "64": "16rem",
+        "68": "17rem",
+        "76": "19rem",
+        "98": "25rem"
     },
 
     /*
@@ -727,6 +747,8 @@ module.exports = {
         inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
         outline: "0 0 0 3px rgba(52, 144, 220, 0.5)",
         sister: "0px 6px 30px rgba(0, 0, 0, 0.07)",
+        feed: "0px 6px 30px rgba(0, 0, 0, 0.07)",
+        image: "0px 6px 15px rgba(0, 0, 0, 0.1)",
         none: "none"
     },
 

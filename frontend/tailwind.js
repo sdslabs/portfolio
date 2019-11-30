@@ -493,9 +493,11 @@ module.exports = {
         "72": "18rem",
         "76": "19rem",
         "80": "20rem",
+        "88": "22rem",
         "96": "24rem",
         "120": "30rem",
         "128": "32rem",
+        "154": "42rem",
         full: "100%",
         upevent: "54.2rem",
         screen: "100vh"
@@ -650,7 +652,7 @@ module.exports = {
     margin: {
         auto: "auto",
         px: "1px",
-        gallery: "-9.6875rem",
+        gallery: "-15.6875rem",
         "0": "0",
         "1": "0.25rem",
         "2": "0.5rem",
@@ -883,6 +885,7 @@ module.exports = {
         fontWeights: ["responsive", "hover", "focus"],
         height: ["responsive"],
         inset: ["responsive"],
+        justifyContent: ["responsive"],
         leading: ["responsive"],
         lists: ["responsive"],
         margin: ["responsive"],

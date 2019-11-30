@@ -1,19 +1,24 @@
 <template>
-    <div class="flex flex-col pt-44 w-screen">
+    <div class="flex flex-col pt-56 w-full">
         <div
-            class="flex md:flex-row-reverse items-center md:justify-between flex-col"
+            class="flex md:flex-row-reverse items-center justify-between md:justify-between flex-col pl-0 pr-0"
         >
-            <div class="flex flex-row items-center md:pr-56">
-                <img class="img1" src="@/assets/images/labs1.png" />
+            <div
+                class="flex flex-row items-center justify-center md:ml-44 md:mr-56"
+            >
+                <img class="img1 w-72" src="@/assets/images/labs1.svg" />
                 <img
-                    class="img2 md:pt-44 md:pl-5"
-                    src="@/assets/images/labs2.png"
+                    class="img2 w-88 md:pt-56 md:pl-8"
+                    src="@/assets/images/labs2.svg"
                 />
-                <img class="img3 md:pb-20" src="@/assets/images/labs3.png" />
+                <img
+                    class="img3 w-88 md:pb-32"
+                    src="@/assets/images/labs3.svg"
+                />
             </div>
-            <div class="flex flex-col md:pl-64 pl-0 pt-24 md:pt-0">
-                <div class="text-xl font-extrabold">What is SDSLabs</div>
-                <div class="w-96 pt-10 text-grey leading-170">
+            <div class="flex flex-col md:pl-56 pr-0 pt-24 md:pt-0">
+                <div class="text-3xl font-extrabold">What is SDSLabs</div>
+                <div class="w-100 md:w-108 pt-10 text-lg text-grey leading-170">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada
                     nisl. Pellentesque sagittis fringilla tempor. Pellentesque
@@ -23,12 +28,12 @@
             </div>
         </div>
         <div
-            class="flex md:flex-row items-center md:justify-between md:pl-64 md:pr-64 pt-36 flex-col pl-0 pr-0"
+            class="flex md:flex-row items-center md:justify-between md:ml-64 md:mr-64 pt-36 flex-col pl-0 pr-0"
         >
             <Gallery class="" />
-            <div class="flex flex-col md:pr-8 md:pt-0 pr-0 pt-44">
-                <div class="text-xl font-extrabold">What we do</div>
-                <div class="w-96 pt-10 text-grey leading-170">
+            <div class="flex flex-col md:pr-14 md:pt-0 pr-0 pt-64">
+                <div class="text-3xl font-extrabold">What we do</div>
+                <div class="w-100 pt-10 text-lg text-grey leading-170">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada
                     nisl. Pellentesque sagittis fringilla tempor. Pellentesque

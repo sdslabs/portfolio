@@ -411,6 +411,9 @@ module.exports = {
         "72": "20rem",
         "88": "22rem",
         "96": "26rem",
+        "98": "30rem",
+        "100": "35rem",
+        "108": "45rem",
         gallery: "39.125rem",
         "1/2": "50%",
         "1/3": "33.33333%",
@@ -464,6 +467,9 @@ module.exports = {
         "48": "12rem",
         "56": "14rem",
         "64": "16rem",
+        "88": "22rem",
+        "128": "32rem",
+        "154": "42rem",
         full: "100%",
         screen: "100vh"
     },
@@ -592,7 +598,8 @@ module.exports = {
         "44": "11rem",
         "56": "15rem",
         "64": "18rem",
-        "88": "22rem"
+        "88": "22rem",
+        "96": "24rem"
     },
 
     /*
@@ -613,7 +620,7 @@ module.exports = {
     margin: {
         auto: "auto",
         px: "1px",
-        gallery: "-9.6875rem",
+        gallery: "-15.6875rem",
         "0": "0",
         "1": "0.25rem",
         "2": "0.5rem",
@@ -628,7 +635,10 @@ module.exports = {
         "20": "5rem",
         "24": "6rem",
         "32": "8rem",
-        "64": "16rem"
+        "44": "11rem",
+        "56": "15rem",
+        "64": "16rem",
+        "98": "25rem"
     },
 
     /*
@@ -772,8 +782,8 @@ module.exports = {
     },
 
     inset: {
-        '0': 0,
-        '20': "20rem",
+        "0": 0,
+        "20": "20rem",
         auto: "auto"
     },
 
@@ -817,6 +827,7 @@ module.exports = {
         fontWeights: ["responsive", "hover", "focus"],
         height: ["responsive"],
         inset: ["responsive"],
+        justifyContent: ["responsive"],
         leading: ["responsive"],
         lists: ["responsive"],
         margin: ["responsive"],

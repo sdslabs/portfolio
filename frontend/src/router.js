@@ -37,6 +37,24 @@ const router = new Router({
             meta: {
                 title: "SDSLabs | About Us"
             }
+        },
+        {
+            path: "/news",
+            name: "news",
+            component: () =>
+                import(/* webpackChunkName: "about" */ "./views/News.vue"),
+            meta: {
+                title: "SDSLabs | News"
+            }
+        },
+        {
+            path: "/news/event",
+            name: "event",
+            component: () =>
+                import(/* webpackChunkName: "about" */ "./views/Event.vue"),
+            meta: {
+                title: "SDSLabs | News"
+            }
         }
     ]
 });

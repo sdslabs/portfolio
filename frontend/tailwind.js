@@ -1,18 +1,12 @@
 /*
-
 Tailwind - The Utility-First CSS Framework
-
 A project by Adam Wathan (@adamwathan), Jonathan Reinink (@reinink),
 David Hemphill (@davidhemphill) and Steve Schoger (@steveschoger).
-
 Welcome to the Tailwind config file. This is where you can customize
 Tailwind specifically for your project. Don't be intimidated by the
 length of this file. It's really just a big JavaScript object and
 we've done our very best to explain each section.
-
 View the full documentation at https://tailwindcss.com.
-
-
 |-------------------------------------------------------------------------------
 | The default config
 |-------------------------------------------------------------------------------
@@ -46,7 +40,7 @@ let colors = {
     transparent: "transparent",
     white: "rgba(255, 255, 255, 1)",
     black: "rgba(10, 15, 13, 1)",
-    grey: "rgba(10, 15, 13, 0.07)",
+    grey: "rgba(10, 15, 13, 0.6)",
     purple: "rgba(58, 23, 114, 1)",
     orange: "rgba(229, 89, 52, 1)",
     blue: "rgba(55, 193, 225, 1)",
@@ -56,9 +50,7 @@ let colors = {
     border: "rgba(25, 25, 25, 0.5)",
     darkblue: "rgba(37, 110, 255, 1)",
     carousel: "rgba(25, 25, 25, 0.36)",
-    team: "rgba(248, 248, 248, 1)",
-    red: "rgb(229, 89, 52, 1)",
-    border: "rgba(25, 25, 25, 0.5)"
+    team: "rgba(248, 248, 248, 1)"
 };
 
 module.exports = {
@@ -415,20 +407,24 @@ module.exports = {
         "28": "7rem",
         "32": "8rem",
         "40": "10rem",
+        "44": "11rem",
         "48": "12rem",
         "52": "13rem",
         "56": "14rem",
         "60": "15rem",
         "64": "16rem",
-        "80": "20rem",
+        "72": "20rem",
+        "84": "21rem",
         "88": "22rem",
+        "92": "23rem",
         "96": "24rem",
         "100": "25rem",
         "104": "26rem",
-        "120": "30rem",
-        "140": "35rem",
-        "144": "36rem",
         "180": "45rem",
+        "200": "50rem",
+        "220": "55rem",
+        "240": "60rem",
+        "292": "73rem",
         gallery: "39.125rem",
         "1/2": "50%",
         "1/3": "33.33333%",
@@ -488,11 +484,14 @@ module.exports = {
         "20": "5rem",
         "24": "6rem",
         "32": "8rem",
+        "36": "9rem",
         "40": "10rem",
         "44": "11rem",
         "48": "12rem",
+        "56": "14rem",
         "64": "16rem",
         "72": "18rem",
+        "76": "19rem",
         "80": "20rem",
         "96": "24rem",
         "120": "30rem",
@@ -618,6 +617,7 @@ module.exports = {
         "14": "3.5rem",
         "16": "4rem",
         "20": "5rem",
+        "22": "5.5rem",
         "24": "6rem",
         "28": "7rem",
         navbar: "7.9rem",
@@ -649,6 +649,7 @@ module.exports = {
     margin: {
         auto: "auto",
         px: "1px",
+        gallery: "-9.6875rem",
         "0": "0",
         "1": "0.25rem",
         "2": "0.5rem",
@@ -656,6 +657,7 @@ module.exports = {
         "4": "1rem",
         "5": "1.25rem",
         "6": "1.5rem",
+        "7": "1.75rem",
         "8": "2rem",
         "10": "2.5rem",
         "12": "3rem",
@@ -665,6 +667,7 @@ module.exports = {
         "24": "6rem",
         "28": "7rem",
         "32": "8rem",
+        "36": "9rem",
         "40": "10rem",
         "44": "11rem",
         "48": "12rem",
@@ -674,6 +677,7 @@ module.exports = {
         "76": "19rem",
         "96": "24rem",
         "100": "25rem",
+        "176": "44rem",
         "1/4": "25%"
     },
 
@@ -832,6 +836,12 @@ module.exports = {
         current: "currentColor"
     },
 
+    inset: {
+        '0': 0,
+        '20': "20rem",
+        auto: "auto"
+    },
+
     /*
   |-----------------------------------------------------------------------------
   | Modules                  https://tailwindcss.com/docs/configuration#modules
@@ -871,6 +881,7 @@ module.exports = {
         fonts: ["responsive"],
         fontWeights: ["responsive", "hover", "focus"],
         height: ["responsive"],
+        inset: ["responsive"],
         leading: ["responsive"],
         lists: ["responsive"],
         margin: ["responsive"],

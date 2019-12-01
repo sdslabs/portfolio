@@ -1,24 +1,24 @@
 <template>
-    <div class="flex flex-col pt-56 w-full">
+    <div class="flex flex-col pt-60 w-full">
         <div
             class="flex md:flex-row-reverse items-center justify-between md:justify-between flex-col pl-0 pr-0"
         >
             <div
-                class="flex flex-row items-center justify-center md:ml-44 md:mr-56"
+                class="flex flex-row items-center justify-center md:ml-64 md:mr-60"
             >
                 <img class="img1 w-72" src="@/assets/images/labs1.svg" />
                 <img
-                    class="img2 w-88 md:pt-56 md:pl-8"
+                    class="img2 w-88 md:pt-96 md:pl-0"
                     src="@/assets/images/labs2.svg"
                 />
                 <img
-                    class="img3 w-88 md:pb-32"
+                    class="img3 w-88 md:mb-64 md:-ml-52"
                     src="@/assets/images/labs3.svg"
                 />
             </div>
-            <div class="flex flex-col md:pl-56 pr-0 pt-24 md:pt-0">
+            <div class="flex flex-col md:pl-60 pr-0 pt-24 md:pt-0">
                 <div class="text-3xl font-extrabold">What is SDSLabs</div>
-                <div class="w-100 md:w-108 pt-10 text-lg text-grey leading-170">
+                <div class="w-140 md:w-180 pt-10 text-lg text-grey leading-170">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada
                     nisl. Pellentesque sagittis fringilla tempor. Pellentesque
@@ -31,9 +31,9 @@
             class="flex md:flex-row items-center md:justify-between md:ml-64 md:mr-64 pt-36 flex-col pl-0 pr-0"
         >
             <Gallery class="" />
-            <div class="flex flex-col md:pr-14 md:pt-0 pr-0 pt-64">
+            <div class="flex flex-col md:pr-14 md:pt-0 pr-0 pt-72">
                 <div class="text-3xl font-extrabold">What we do</div>
-                <div class="w-100 pt-10 text-lg text-grey leading-170">
+                <div class="w-140 pt-10 text-lg text-grey leading-170">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada
                     nisl. Pellentesque sagittis fringilla tempor. Pellentesque

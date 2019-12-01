@@ -417,6 +417,7 @@ module.exports = {
         "40": "10rem",
         "48": "12rem",
         "52": "13rem",
+        "56": "14rem",
         "60": "15rem",
         "64": "16rem",
         "80": "20rem",
@@ -490,14 +491,11 @@ module.exports = {
         "44": "11rem",
         "48": "12rem",
         "64": "16rem",
+        "72": "18rem",
         "80": "20rem",
-<<<<<<< HEAD
         "96": "24rem",
         "120": "30rem",
-=======
-        "72": "18rem",
         "128": "32rem",
->>>>>>> feat: developed news page and event page templates
         full: "100%",
         upevent: "54.2rem",
         screen: "100vh"
@@ -668,14 +666,14 @@ module.exports = {
         "32": "8rem",
         "40": "10rem",
         "44": "11rem",
-        "96": "24rem",
-        "1/4": "25%"
         "48": "12rem",
-        "56": "15rem",
+        "60": "15rem",
         "64": "16rem",
         "68": "17rem",
         "76": "19rem",
-        "98": "25rem"
+        "96": "24rem",
+        "100": "25rem",
+        "1/4": "25%"
     },
 
     /*

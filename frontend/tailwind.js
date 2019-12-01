@@ -57,9 +57,7 @@ let colors = {
     border: "rgba(25, 25, 25, 0.5)",
     darkblue: "rgba(37, 110, 255, 1)",
     carousel: "rgba(25, 25, 25, 0.36)",
-    team: "rgba(248, 248, 248, 1)",
-    red: "rgb(229, 89, 52, 1)",
-    border: "rgba(25, 25, 25, 0.5)"
+    team: "rgba(248, 248, 248, 1)"
 };
 
 module.exports = {
@@ -420,6 +418,7 @@ module.exports = {
         "44": "11rem",
         "48": "12rem",
         "52": "13rem",
+        "56": "14rem",
         "60": "15rem",
         "64": "16rem",
         "72": "18rem",
@@ -687,9 +686,11 @@ module.exports = {
         "40": "10rem",
         "44": "11rem",
         "48": "12rem",
+        "60": "15rem",
         "64": "16rem",
         "76": "19rem",
         "96": "24rem",
+        "100": "25rem",
         "178": "44.5rem",
         "1/4": "25%"
     },

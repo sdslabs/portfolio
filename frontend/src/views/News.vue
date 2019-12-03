@@ -73,13 +73,22 @@
 </template>
 
 <script>
-import Label from "@/components/Label.vue"
-import UpdateCard from "@/components/news/UpdateCard.vue"
+import axios from "axios";
+import Label from "@/components/Label.vue";
+import UpdateCard from "@/components/news/UpdateCard.vue";
 export default {
     name: "news",
     components: {
         Label,
         UpdateCard
+    },
+    data: function initData() {
+        return {
+            event: {},
+            appUpdate: {},
+            onlineCompetition: {},
+            eventUpdates: {}
+        }
     }
 };
 </script>

@@ -15,7 +15,7 @@
                 <span class="font-black text-xl">Designers</span>
             </div>
         </div>
-        <div class="w-96 h-48 bg-team mt-96 -ml-44">
+        <div class="w-96 h-48 bg-team mt-96 -ml-64">
             <div class="self-center text-center mt-16">
                 <span class="font-black text-4xl">40+ </span>
                 <span class="font-black text-xl">Alumni</span>

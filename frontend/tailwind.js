@@ -51,7 +51,8 @@ let colors = {
     orange: "rgba(229, 89, 52, 1)",
     blue: "rgba(55, 193, 225, 1)",
     yellow: "rgba(251, 177, 60, 1)",
-    green: "rgba(82, 170, 94, 1)"
+    green: "rgba(82, 170, 94, 1)",
+    carousel: "rgba(25, 25, 25, 0.36)"
 };
 
 module.exports = {
@@ -510,6 +511,8 @@ module.exports = {
 
     minHeight: {
         "0": "0",
+        "64": "16rem",
+        "88": "22rem",
         full: "100%",
         screen: "100vh"
     },

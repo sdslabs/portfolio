@@ -1,10 +1,10 @@
 <template>
-    <div class="flex flex-col pt-60 w-full pb-20">
+    <div class="flex flex-col pt-60 w-full">
         <div
             class="flex md:flex-row-reverse items-center justify-between md:justify-between flex-col pl-0 pr-0"
         >
             <div
-                class="flex flex-row items-center justify-center md:ml-64 md:mr-60"
+                class="flex flex-row justify-center md:ml-64 md:mr-60"
             >
                 <img class="img1 w-72" src="@/assets/images/labs1.svg" />
                 <img
@@ -28,10 +28,10 @@
             </div>
         </div>
         <div
-            class="flex md:flex-row items-center md:justify-between md:ml-64 md:mr-64 pt-36 flex-col pl-0 pr-0"
+            class="flex md:flex-row items-center justify-center md:justify-between md:ml-64 md:mr-64 pt-36 flex-col pl-0 pr-0"
         >
-            <Gallery class="" />
-            <div class="flex flex-col md:pr-14 md:pt-0 pr-0 pt-72">
+            <div class="ml-20"><Gallery/></div>
+            <div class="flex flex-col md:pr-14 md:pt-0 pr-0 pt-48">
                 <div class="text-3xl font-extrabold">What we do</div>
                 <div class="w-140 pt-10 text-lg text-grey leading-170">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.

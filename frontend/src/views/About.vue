@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col pt-56 w-full">
+    <div class="flex flex-col pt-60 w-full pb-20">
         <div
             class="flex md:flex-row-reverse items-center justify-between md:justify-between flex-col pl-0 pr-0"
         >

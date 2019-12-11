@@ -430,6 +430,7 @@ module.exports = {
         "4/7": "57.14286%",
         largetext: "102.5rem",
         image: "45.6rem",
+        news: "112.8rem",
         feed: "55.2rem",
         event: "26.4rem",
         eventdesc: "110.8rem",

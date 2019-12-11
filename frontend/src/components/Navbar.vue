@@ -16,7 +16,7 @@
                 <NavLink v-bind:native=false v-bind:last=false url="/feed" text="FEED" />
                 <NavLink v-bind:native=true v-bind:last=false url="https://blog.sdslabs.co/" text="BLOG" />
                 <NavLink v-bind:native=false v-bind:last=false url="/about" text="ABOUT US" />
-                <NavLink v-bind:native=false v-bind:last=true url="/contact" text="CONTACT" />
+                <NavLink v-bind:native=true v-bind:last=true url="https://chat.sdslabs.co/" text="CONTACT" />
             </div>
         </div>
         <div :class="open ? 'block': 'hidden'" class="text-sm sm:flex mt-4 sm:mt-0">

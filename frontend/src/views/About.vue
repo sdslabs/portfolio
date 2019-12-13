@@ -4,7 +4,7 @@
             class="flex flex-col-reverse md:flex-row-reverse items-center justify-between md:justify-between flex-col pl-0 pr-0"
         >
             <div
-                class="flex flex-row justify-center mt-12 ml-6 mr-6 md:ml-64 md:mr-60"
+                class="flex flex-row justify-center mt-12 ml-8 mr-8 md:ml-64 md:mr-60"
             >
                 <img class="img1 w-72" src="@/assets/images/labs1.svg" />
                 <img
@@ -16,7 +16,7 @@
                     src="@/assets/images/labs3.svg"
                 />
             </div>
-            <div class="flex flex-col ml-6 mr-6 md:w-auto md:pl-60 pr-0 md:pt-24 md:pt-0">
+            <div class="flex flex-col ml-8 mr-8 md:w-auto md:pl-60 pr-0 md:pt-24 md:pt-0">
                 <div class="text-3xl font-extrabold">What is SDSLabs</div>
                 <div class="md:w-180 pt-10 text-lg text-grey leading-170">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -30,8 +30,8 @@
         <div
             class="flex flex-col-reverse mt-28 md:flex-row md:justify-between md:ml-64 md:mr-64 md:pt-36"
         >
-            <div class="mt-16 md:mt-0 ml-6 mr-6"><Gallery/></div>
-            <div class="flex flex-col mr-6 ml-6 md:w-auto md:pr-14 md:pt-8">
+            <div class="mt-16 md:mt-0 ml-8 mr-8"><Gallery/></div>
+            <div class="flex flex-col mr-8 ml-8 md:w-auto md:pr-14 md:pt-8">
                 <div class="text-3xl font-extrabold">What we do</div>
                 <div class="md:w-140 pt-10 text-lg text-grey leading-170">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.

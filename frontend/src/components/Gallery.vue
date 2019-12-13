@@ -1,25 +1,25 @@
 <template>
-    <div class="gallery w-gallery">
+    <div class="gallery flex flex-col w-auto md:w-gallery">
         <img
-            class="h-88 md:h-128 md:w-180"
+            class="md:h-128 md:w-180 rounded-lg"
             v-bind:src="slides[queue-1].image"
             alt="image"
         />
         <div
-            class="textbox absolute w-104 h-auto min-h-64 pb-10 ml-44 -mt-32 md:w-120 md:h-auto md:min-h-88 md:ml-98 md:-mt-gallery bg-white z-30"
+            class="textbox w-auto ml-6 mr-6 h-auto min-h-64 -mt-32 md:w-120 md:h-auto md:min-h-88 md:ml-98 md:-mt-gallery bg-white z-30"
         >
-            <div class="font-extrabold md:text-lg mt-10 ml-10">{{slides[queue-1].title}}</div>
+            <div class="font-extrabold text-2xl md:text-lg mt-10 ml-10">{{slides[queue-1].title}}</div>
             <div
-                class="w-88 md:w-96 leading-170 text-grey md:text-base mt-8 ml-10"
+                class="md:w-104 leading-170 text-grey text-xl md:text-base mt-8 ml-10 mb-8"
             >
                 {{slides[queue-1].description}}
             </div>
         </div>
-        <div>
-            <span class="h-3 w-3 rounded-50 inline-block mt-16" v-bind:class="{'bg-black': queue===1, 'bg-carousel': queue!==1}"/>
-            <span class="h-3 w-3 rounded-50 inline-block mt-16 ml-4" v-bind:class="{'bg-black': queue===2, 'bg-carousel': queue!==2}"/>
-            <span class="h-3 w-3 rounded-50 inline-block mt-16 ml-4" v-bind:class="{'bg-black': queue===3, 'bg-carousel': queue!==3}"/>
-            <span class="h-3 w-3 rounded-50 inline-block mt-16 ml-4" v-bind:class="{'bg-black': queue===4, 'bg-carousel': queue!==4}"/>
+        <div class="self-center md:self-start md:-mt-32">
+            <span class="h-4 w-4 md:h-3 md:w-3 rounded-50 inline-block mt-16" v-bind:class="{'bg-black': queue===1, 'bg-carousel': queue!==1}"/>
+            <span class="h-4 w-4 md:h-3 md:w-3 rounded-50 inline-block mt-16 ml-4" v-bind:class="{'bg-black': queue===2, 'bg-carousel': queue!==2}"/>
+            <span class="h-4 w-4 md:h-3 md:w-3 rounded-50 inline-block mt-16 ml-4" v-bind:class="{'bg-black': queue===3, 'bg-carousel': queue!==3}"/>
+            <span class="h-4 w-4 md:h-3 md:w-3 rounded-50 inline-block mt-16 ml-4" v-bind:class="{'bg-black': queue===4, 'bg-carousel': queue!==4}"/>
         </div>
     </div>
 </template>
@@ -28,6 +28,7 @@
 import lectures from "@/assets/images/lectures.svg";
 import hackathons from "@/assets/images/hackathons.svg";
 import workshops from "@/assets/images/workshops.svg";
+import competitions from "@/assets/images/competitions.svg";
 export default {
     name: "Gallery",
     data: function initData() {
@@ -52,7 +53,7 @@ export default {
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem. sagittis fringilla tempor."
                 },
                 {
-                    image: "",
+                    image: competitions,
                     title: "Competitions",
                     description:
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Pellentesque sagittis fringilla tempor. Pellentesque sit amet augue sit amet quam feugiat porta vitae sit amet ligula."

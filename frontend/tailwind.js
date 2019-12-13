@@ -54,7 +54,8 @@ let colors = {
     green: "rgba(82, 170, 94, 1)",
     red: "rgb(229, 89, 52, 1)",
     border: "rgba(25, 25, 25, 0.5)",
-    darkblue: "rgba(37, 110, 255, 1)"
+    darkblue: "rgba(37, 110, 255, 1)",
+    carousel: "rgba(25, 25, 25, 0.36)"
 };
 
 module.exports = {
@@ -369,6 +370,7 @@ module.exports = {
         sm: ".125rem",
         default: ".25rem",
         lg: ".5rem",
+        "50": "50%",
         full: "9999px"
     },
 
@@ -414,6 +416,7 @@ module.exports = {
         "60": "15rem",
         "64": "16rem",
         "88": "22rem",
+        "96": "24rem",
         "100": "25rem",
         "104": "26rem",
         "120": "30rem",

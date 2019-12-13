@@ -1,8 +1,8 @@
 <template>
-  <div class="font-sans" id="app">
-    <TopNavbar />
-    <router-view/>
-  </div>
+    <div class="font-sans" id="app">
+        <TopNavbar />
+        <router-view />
+    </div>
 </template>
 
 <script>

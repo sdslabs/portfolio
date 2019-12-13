@@ -46,12 +46,13 @@ let colors = {
     transparent: "transparent",
     white: "rgba(255, 255, 255, 1)",
     black: "rgba(10, 15, 13, 1)",
-    grey: "rgba(10, 15, 13, 0.07)",
+    grey: "rgba(10, 15, 13, 0.6)",
     purple: "rgba(58, 23, 114, 1)",
     orange: "rgba(229, 89, 52, 1)",
     blue: "rgba(55, 193, 225, 1)",
     yellow: "rgba(251, 177, 60, 1)",
-    green: "rgba(82, 170, 94, 1)"
+    green: "rgba(82, 170, 94, 1)",
+    carousel: "rgba(25, 25, 25, 0.36)"
 };
 
 module.exports = {
@@ -366,6 +367,7 @@ module.exports = {
         sm: ".125rem",
         default: ".25rem",
         lg: ".5rem",
+        "50": "50%",
         full: "9999px"
     },
 
@@ -408,7 +410,13 @@ module.exports = {
         "40": "10rem",
         "48": "12rem",
         "64": "16rem",
+        "72": "20rem",
         "88": "22rem",
+        "104": "26rem",
+        "120": "30rem",
+        "140": "35rem",
+        "180": "45rem",
+        gallery: "39.125rem",
         "1/2": "50%",
         "1/3": "33.33333%",
         "2/3": "66.66667%",
@@ -459,7 +467,11 @@ module.exports = {
         "24": "6rem",
         "32": "8rem",
         "48": "12rem",
+        "56": "14rem",
         "64": "16rem",
+        "88": "22rem",
+        "128": "32rem",
+        "154": "42rem",
         full: "100%",
         screen: "100vh"
     },
@@ -499,6 +511,8 @@ module.exports = {
 
     minHeight: {
         "0": "0",
+        "64": "16rem",
+        "88": "22rem",
         full: "100%",
         screen: "100vh"
     },
@@ -586,7 +600,11 @@ module.exports = {
         "32": "8rem",
         "36": "9rem",
         "44": "11rem",
-        "88": "22rem"
+        "48": "12rem",
+        "60": "15rem",
+        "72": "18rem",
+        "88": "22rem",
+        "96": "24rem"
     },
 
     /*
@@ -620,7 +638,15 @@ module.exports = {
         "16": "4rem",
         "20": "5rem",
         "24": "6rem",
-        "32": "8rem"
+        "28": "7rem",
+        "32": "8rem",
+        "40": "10rem",
+        "44": "11rem",
+        "52": "13rem",
+        "56": "14rem",
+        "60": "15rem",
+        "64": "16rem",
+        "98": "25rem"
     },
 
     /*
@@ -653,7 +679,12 @@ module.exports = {
         "16": "4rem",
         "20": "5rem",
         "24": "6rem",
-        "32": "8rem"
+        "32": "8rem",
+        "40": "10rem",
+        "44": "11rem",
+        "48": "12rem",
+        "52": "13rem",
+        gallery: "15.6875rem"
     },
 
     /*
@@ -763,6 +794,12 @@ module.exports = {
         current: "currentColor"
     },
 
+    inset: {
+        "0": 0,
+        "20": "20rem",
+        auto: "auto"
+    },
+
     /*
   |-----------------------------------------------------------------------------
   | Modules                  https://tailwindcss.com/docs/configuration#modules
@@ -802,6 +839,8 @@ module.exports = {
         fonts: ["responsive"],
         fontWeights: ["responsive", "hover", "focus"],
         height: ["responsive"],
+        inset: ["responsive"],
+        justifyContent: ["responsive"],
         leading: ["responsive"],
         lists: ["responsive"],
         margin: ["responsive"],

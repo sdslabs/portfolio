@@ -13,7 +13,7 @@
                             Software Development
                         </div>
                     </div>
-                    <div class="md:pl-100 md:-mt-12 mt-8">
+                    <div class="md:pl-100 md:-mt-14 mt-8">
                         <div class="flex rounded shadow-md mt-0 flex-row ml-8 mr-8 md:w-92 h-auto">
                             <div class="my-8 mb-14 mx-10 w-20 h-20 md:m-8">
                                 <img src="@/assets/images/interest2.png">
@@ -23,7 +23,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="md:-mt-12 mt-8">
+                    <div class="md:-mt-14 mt-8">
                         <div class="flex rounded shadow-md mt-0 mr-0 flex-row ml-8 mr-8 md:w-92 h-auto">
                             <div class="my-8 mb-14 mx-10 w-20 h-20 md:m-8">
                                 <img src="@/assets/images/interest3.png">
@@ -33,7 +33,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="md:pl-100 md:-mt-12 mt-8">
+                    <div class="md:pl-100 md:-mt-14 mt-8">
                         <div class="flex rounded shadow-md mt-0 mr-0 flex-row ml-8 mr-8 md:w-92 h-auto">
                             <div class="my-8 mb-14 mx-10 w-20 h-20 md:m-8">
                                 <img src="@/assets/images/interest4.png">
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-6 md:-mt-12 mt-8">
+                    <div class="mt-6 md:-mt-14 mt-8">
                         <div class="flex rounded shadow-md mt-0 mr-0 flex-row ml-8 mr-8 md:w-92 h-auto">
                             <div class="my-8 mb-14 mx-10 w-20 h-20 md:m-8">
                                 <img src="@/assets/images/interest5.png">
@@ -82,9 +82,9 @@
             </div>
 
             <div id="timeline_bar" class="timeline_bar flex align-bottom h-auto w-full mt-16 overflow-x-auto md:pl-64">
-                <div class="timeline-bar flex flex-row-reverse flex-no-wrap py-1" v-for="timeline in timelines" v-bind:key="timeline.id">
+                <div class="timeline-bar flex flex-row-reverse flex-no-wrap py-1" v-for="(timeline, index) in timelines" v-bind:key="index">
                     <div class="timeline-box shadow-md ml-5 mr-5 self-center w-148 md:w-144 p-10">
-                        <div class="text-xl md:text-base font-semibold">{{ timeline.date }}</div>
+                        <div class="text-xl md:text-base font-semibold">{{ timeline.timing }}</div>
                         <div class="text-1.5xl md:text-lg text-grey-900 font-semibold pt-13">{{ timeline.title }}</div>
                         <div class="text-xl md:text-base text-grey pt-10 leading-normal">{{ timeline.description }}</div>
                     </div>
@@ -105,40 +105,34 @@ import axios from "axios";
 export default {
     data () {
         return {
-            timeline: {},
-            timelines: [
+            timelines: {},
+            timeline: [
                 {
-                    id: 6,
                     date: "March, 2018",
                     title: "Microsoft Code.Fun.do 2018",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Pellentesque sagittis fringilla tempor."
                 },
                 {
-                    id: 5,
                     date: "February, 2018",
                     title: "LIVE Revamped",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing aenean lacinia"
                 },
                 {
-                    id: 4,
                     date: "March, 2018",
                     title: "Microsoft Code.Fun.do 2018",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Pellentesque sagittis fringilla tempor."
                 },
                 {
-                    id: 3,
                     date: "January, 2018",
                     title: "Inter IIT Tech Meet",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximu"
                 },
                 {
-                    id: 2,
                     date: "February, 2018",
                     title: "CTFtime ranking",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Pellentesque sagittis fringilla tempor."
                 },
                 {
-                    id: 1,
                     date: "December, 2018",
                     title: "XYZ",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximu"
@@ -153,7 +147,7 @@ export default {
     },
     mounted() {
         axios
-            .get('http://0.0.0.0:8000/api/timeline')
+            .get('http://0.0.0.0:8000/api/timeline/?format=json')
             .then(response => {
                 let timelines = {}
                 for(let i = 0; i < response.data.length; i++) {

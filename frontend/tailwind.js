@@ -1,18 +1,12 @@
 /*
-
 Tailwind - The Utility-First CSS Framework
-
 A project by Adam Wathan (@adamwathan), Jonathan Reinink (@reinink),
 David Hemphill (@davidhemphill) and Steve Schoger (@steveschoger).
-
 Welcome to the Tailwind config file. This is where you can customize
 Tailwind specifically for your project. Don't be intimidated by the
 length of this file. It's really just a big JavaScript object and
 we've done our very best to explain each section.
-
 View the full documentation at https://tailwindcss.com.
-
-
 |-------------------------------------------------------------------------------
 | The default config
 |-------------------------------------------------------------------------------
@@ -46,7 +40,7 @@ let colors = {
     transparent: "transparent",
     white: "rgba(255, 255, 255, 1)",
     black: "rgba(10, 15, 13, 1)",
-    grey: "rgba(10, 15, 13, 0.07)",
+    grey: "rgba(10, 15, 13, 0.6)",
     purple: "rgba(58, 23, 114, 1)",
     orange: "rgba(229, 89, 52, 1)",
     blue: "rgba(55, 193, 225, 1)",
@@ -181,7 +175,9 @@ module.exports = {
         base: "1.4rem", // 14px
         lg: "1.6rem", // 16px
         xl: "1.8rem", // 18px
+        "1.5xl": "2rem", // 20px
         "2xl": "2.4rem", // 24px
+        "2.5xl": "2.7rem", //27px
         "3xl": "3rem", // 30px
         "4xl": "3.6rem", // 36px
         "5xl": "5.2rem" // 52px
@@ -232,6 +228,8 @@ module.exports = {
         160: 1.6,
         170: 1.7,
         180: 1.8,
+        240: 2.4,
+        280: 2.8,
         loose: 2
     },
 
@@ -402,13 +400,31 @@ module.exports = {
         "10": "2.5rem",
         "12": "3rem",
         "16": "4rem",
+        "18": "4.5rem",
         "24": "6rem",
         "28": "7rem",
         "32": "8rem",
         "40": "10rem",
+        "44": "11rem",
         "48": "12rem",
         "64": "16rem",
+        "72": "20rem",
+        "84": "21rem",
         "88": "22rem",
+        "92": "23rem",
+        "96": "24rem",
+        "100": "25rem",
+        "104": "26rem",
+        "120": "30rem",
+        "144": "36rem",
+        "148": "37rem",
+        "180": "45rem",
+        "200": "50rem",
+        "220": "55rem",
+        "240": "60rem",
+        "292": "73rem",
+        "448": "112rem",
+        gallery: "39.125rem",
         "1/2": "50%",
         "1/3": "33.33333%",
         "2/3": "66.66667%",
@@ -456,10 +472,20 @@ module.exports = {
         "10": "2.5rem",
         "12": "3rem",
         "16": "4rem",
+        "18": "4.5rem",
+        "20": "5rem",
         "24": "6rem",
         "32": "8rem",
+        "36": "9rem",
+        "40": "10rem",
         "48": "12rem",
+        "56": "14rem",
         "64": "16rem",
+        "76": "19rem",
+        "84": "21rem",
+        "96": "24rem",
+        "100": "25rem",
+        "144": "36rem",
         full: "100%",
         screen: "100vh"
     },
@@ -577,16 +603,23 @@ module.exports = {
         "8": "2rem",
         "10": "2.5rem",
         "12": "3rem",
+        "13": "3.25rem",
         "14": "3.5rem",
         "16": "4rem",
         "20": "5rem",
+        "22": "5.5rem",
         "24": "6rem",
         "28": "7rem",
         navbar: "7.9rem",
         "32": "8rem",
         "36": "9rem",
         "44": "11rem",
-        "88": "22rem"
+        "56": "14rem",
+        "60": "15rem",
+        "64": "18rem",
+        "88": "22rem",
+        "96": "24rem",
+        "100": "25rem"
     },
 
     /*
@@ -607,6 +640,7 @@ module.exports = {
     margin: {
         auto: "auto",
         px: "1px",
+        gallery: "-9.6875rem",
         "0": "0",
         "1": "0.25rem",
         "2": "0.5rem",
@@ -614,13 +648,25 @@ module.exports = {
         "4": "1rem",
         "5": "1.25rem",
         "6": "1.5rem",
+        "7": "1.75rem",
         "8": "2rem",
         "10": "2.5rem",
         "12": "3rem",
+        "14": "3.5rem",
         "16": "4rem",
         "20": "5rem",
         "24": "6rem",
-        "32": "8rem"
+        "28": "7rem",
+        "32": "8rem",
+        "36": "9rem",
+        "40": "10rem",
+        "64": "16rem",
+        "88": "22rem",
+        "92": "23rem",
+        "96": "24rem",
+        "100": "25rem",
+        "144": "36rem",
+        "176": "44rem"
     },
 
     /*
@@ -650,6 +696,7 @@ module.exports = {
         "8": "2rem",
         "10": "2.5rem",
         "12": "3rem",
+        "14": "3.5rem",
         "16": "4rem",
         "20": "5rem",
         "24": "6rem",
@@ -674,7 +721,7 @@ module.exports = {
 
     shadows: {
         sm: "0 2px 4px 0 rgba(0, 0, 0, 0.10)",
-        md: "0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08)",
+        md: "0 5px 10px 0 rgba(0, 0, 0, 0.07), 0 2px 4px 0 rgba(0, 0, 0, 0.07)",
         lg:
             "0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08)",
         inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
@@ -763,6 +810,12 @@ module.exports = {
         current: "currentColor"
     },
 
+    inset: {
+        "0": 0,
+        "20": "20rem",
+        auto: "auto"
+    },
+
     /*
   |-----------------------------------------------------------------------------
   | Modules                  https://tailwindcss.com/docs/configuration#modules
@@ -802,6 +855,7 @@ module.exports = {
         fonts: ["responsive"],
         fontWeights: ["responsive", "hover", "focus"],
         height: ["responsive"],
+        inset: ["responsive"],
         leading: ["responsive"],
         lists: ["responsive"],
         margin: ["responsive"],

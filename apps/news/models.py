@@ -4,13 +4,21 @@ from django.db import models
 
 EVENTS = [
     ('upcoming', 'upcoming'),
-    ('past1', 'past1'),
-    ('past2', 'past2')
+    ('past', 'past'),
+    ('retired', 'retired')
+]
+
+TYPE = [
+    ('upcoming', 'upcoming event'),
+    ('app', 'app update'),
+    ('online', 'online competition'),
+    ('past', 'past event')
 ]
 
 
 class Event(models.Model):
     """Model representing details of upcoming event"""
+    type = models.CharField(max_length=100, choices=TYPE)
     title = models.CharField(max_length=40)
     timing = models.CharField(max_length=50)
     description = models.CharField(max_length=500)
@@ -21,36 +29,7 @@ class Event(models.Model):
 
     class Meta:
         app_label = 'news'
-        db_table = 'upcoming event'
-
-    def __str__(self):
-        return self.title
-
-
-class AppUpdate(models.Model):
-    """Model representing app updates"""
-    title = models.CharField(max_length=40)
-    description = models.CharField(max_length=500)
-    url = models.URLField(max_length=200)
-
-    class Meta:
-        app_label = 'news'
-        db_table = 'app update'
-
-    def __str__(self):
-        return self.title
-
-
-class OnlineCompetition(models.Model):
-    """Model representing details of online competition"""
-    title = models.CharField(max_length=40)
-    timing = models.CharField(max_length=50)
-    description = models.CharField(max_length=500)
-    url = models.URLField(max_length=200)
-
-    class Meta:
-        app_label = 'news'
-        db_table = 'online competition'
+        db_table = 'event'
 
     def __str__(self):
         return self.title

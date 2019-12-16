@@ -106,38 +106,6 @@ export default {
     data () {
         return {
             timelines: {},
-            timeline: [
-                {
-                    date: "March, 2018",
-                    title: "Microsoft Code.Fun.do 2018",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Pellentesque sagittis fringilla tempor."
-                },
-                {
-                    date: "February, 2018",
-                    title: "LIVE Revamped",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing aenean lacinia"
-                },
-                {
-                    date: "March, 2018",
-                    title: "Microsoft Code.Fun.do 2018",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Pellentesque sagittis fringilla tempor."
-                },
-                {
-                    date: "January, 2018",
-                    title: "Inter IIT Tech Meet",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximu"
-                },
-                {
-                    date: "February, 2018",
-                    title: "CTFtime ranking",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Pellentesque sagittis fringilla tempor."
-                },
-                {
-                    date: "December, 2018",
-                    title: "XYZ",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximu"
-                },
-            ]
         }
     },
     methods: {

@@ -1,27 +1,13 @@
 from rest_framework import serializers
 
-from .models import Event, AppUpdate, OnlineCompetition, EventUpdate
+from .models import Event, EventUpdate
 
 
 class EventSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Event
-        fields = ('title', 'timing', 'description', 'description1', 'url', 'image', 'status')
-
-
-class AppUpdateSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = AppUpdate
-        fields = ('title', 'description', 'url')
-
-
-class OnlineCompetitionSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = OnlineCompetition
-        fields = ('title', 'timing', 'description', 'url')
+        fields = ('type', 'title', 'timing', 'description', 'description1', 'url', 'image', 'status')
 
 
 class EventUpdateSerializer(serializers.ModelSerializer):

@@ -26,7 +26,11 @@ def get_events(request):
     response_data = serializer.data
     return Response(response_data, status=status.HTTP_200_OK)
 
-
+@throttle_classes([
+    AnonRateThrottle,
+])
+@api_view(['GET'])
+@permission_classes((permissions.AllowAny, ))
 def get_event_updates(request):
     """
     Get a list of updates

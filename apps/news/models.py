@@ -8,7 +8,7 @@ EVENTS = [
     ('retired', 'retired')
 ]
 
-TYPE = [
+TYPES = [
     ('upcoming', 'upcoming event'),
     ('app', 'app update'),
     ('online', 'online competition'),
@@ -18,7 +18,7 @@ TYPE = [
 
 class Event(models.Model):
     """Model representing details of upcoming event"""
-    type = models.CharField(max_length=100, choices=TYPE)
+    types = models.CharField(max_length=100, choices=TYPES)
     title = models.CharField(max_length=40)
     timing = models.CharField(max_length=50)
     description = models.CharField(max_length=500)
@@ -29,7 +29,7 @@ class Event(models.Model):
 
     class Meta:
         app_label = 'news'
-        db_table = 'event'
+        db_table = 'events'
 
     def __str__(self):
         return self.title
@@ -47,7 +47,7 @@ class EventUpdate(models.Model):
 
     class Meta:
         app_label = 'news'
-        db_table = 'event update'
+        db_table = 'event updates'
 
     def __str__(self):
         return self.title

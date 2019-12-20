@@ -6,7 +6,7 @@ from .models import Event, EventUpdate
 
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
-    list_display = ('type', 'title', 'timing', 'description', 'description1', 'url', 'image', 'status')
+    list_display = ('types', 'title', 'timing', 'description', 'description1', 'url', 'image', 'status')
 
 @admin.register(EventUpdate)
 class EventUpdateAdmin(admin.ModelAdmin):

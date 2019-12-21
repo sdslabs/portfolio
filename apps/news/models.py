@@ -15,10 +15,16 @@ TYPES = [
     ('past', 'past event')
 ]
 
+PRIORITY = [
+    ('large', 'large'),
+    ('small', 'small')
+]
+
 
 class Event(models.Model):
     """Model representing details of upcoming event"""
     types = models.CharField(max_length=100, choices=TYPES)
+    priority = models.CharField(max_length=50, choices=PRIORITY)
     title = models.CharField(max_length=40)
     timing = models.CharField(max_length=50)
     description = models.CharField(max_length=500)

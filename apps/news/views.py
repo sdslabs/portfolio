@@ -20,11 +20,19 @@ def get_events(request):
     """
     Get a list of events
     """
-    event = Event.objects.filter()
-    serializer = EventSerializer(
-        event, many=True, context={'request': request})
-    response_data = serializer.data
-    return Response(response_data, status=status.HTTP_200_OK)
+    event_array = []
+    events = Event.objects.filter()
+    for event in events:
+        event_update = EventUpdate.objects.filter(event=event)
+        event_serializer = EventSerializer(
+            event, many=False, context={'request': request})
+        event_update_serializer = EventUpdateSerializer(
+            event_update, many=True, context={'request': request}
+        )
+        response_data = {'event': event_serializer.data, 'event_update': event_update_serializer.data}
+        event_array.append(response_data)
+    return Response(event_array, status=status.HTTP_200_OK)
+
 
 @throttle_classes([
     AnonRateThrottle,

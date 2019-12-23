@@ -43,7 +43,7 @@ export default {
     },
     props: {
         event: Object,
-        eventUpdates: Object
+        eventUpdates: Array
     }
 };
 </script>

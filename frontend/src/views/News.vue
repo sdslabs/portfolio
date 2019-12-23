@@ -11,14 +11,15 @@
         </div>
         <div
             class="flex flex-row pt-28 pr-navbar"
-            v-for="event in event"
-            v-bind:key="event"
+            v-for="event_block in event"
+            v-bind:key="event_block"
         >
             <div class="flex flex-col">
-                <div v-if="event.types == 'upcoming'">
-                    <LargeFeed>
-                        event={{ event }} eventUpdates={{ eventUpdates }}
-                    </LargeFeed>
+                <div v-if="event_block.event.types == 'upcoming'">
+                    <LargeFeed
+                        :event="event_block.event"
+                        :eventUpdates="event_block.event_update"
+                    />
                 </div>
                 <div v-if="event.types == 'past'">
                     <LargeFeed
@@ -59,31 +60,19 @@ export default {
     data: function initData() {
         return {
             event: {},
-            eventUpdates: {}
+            eventUpdates: []
         };
     },
     mounted() {
         axios
             .get("http://0.0.0.0:8000/api/news/?format=json")
             .then(response => {
-                let event = {};
-                for (let i = 0; i < response.data.length; i++) {
-                    event[response.data[i]["title"]] = response.data[i];
-                }
+                let events = response.data;
+                let event = [];
+                events.forEach(event_block => {
+                    event.push(event_block);
+                });
                 this.event = Object.assign({}, this.event, event);
-            });
-        axios
-            .get("http://0.0.0.0:8000/api/news/updates/?format=json")
-            .then(response => {
-                let eventUpdates = {};
-                for (let i = 0; i < response.data.length; i++) {
-                    eventUpdates[response.data[i]["title"]] = response.data[i];
-                }
-                this.eventUpdates = Object.assign(
-                    {},
-                    this.eventUpdates,
-                    eventUpdates
-                );
             });
     }
 };

@@ -1,15 +1,18 @@
 <template>
-    <div class="w-event h-auto shadow-feed pl-10 pt-10 pr-10">
+    <div class="md:w-event h-auto shadow-feed pl-10 pt-10 pr-10">
         <Label :text="event.types" />
         <div class="flex flex-col mt-10 pb-10">
             <div class="font-extrabold text-xl leading-180">
-                {{ event.title }}
+                {{ event.title.toUpperCase() }}
             </div>
-            <div class="mt-20 text-base leading-normal">
+            <div class="mt-8 text-base font-semibold leading-170">
+                {{ event.timing }}
+            </div>
+            <div class="mt-14 text-base leading-normal">
                 {{ event.description }}
             </div>
         </div>
-        <div class="mt-8 font-extrabold text-base text-blue mb-8 leading-170">
+        <div class="mt-8 font-extrabold text-base text-blue pb-8 leading-170">
             Check Now
         </div>
     </div>
@@ -25,5 +28,5 @@ export default {
     props: {
         event: Object
     }
-}
+};
 </script>

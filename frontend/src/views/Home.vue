@@ -4,7 +4,10 @@
         <div id="home" class="z-20 relative bg-white">
             <Landing />
         </div>
-        <div class="px-16 sm:px-88 flex flex-col justify-center items-center" id="projects">
+        <div
+            class="px-16 sm:px-88 pb-28 sm:pb-0 flex flex-col justify-center items-center"
+            id="projects"
+        >
             <Project
                 v-for="(project, permalink, index) in projects"
                 v-bind:key="index"
@@ -19,7 +22,6 @@
 </template>
 
 <script>
-
 import axios from "axios";
 
 import Router from "@/router.js";
@@ -27,20 +29,22 @@ import Sidebar from "@/components/Sidebar.vue";
 import Landing from "@/components/Landing.vue";
 import Project from "@/components/Project.vue";
 
-let scrollOptions = {behavior: "smooth", block: "start"};
+let scrollOptions = { behavior: "smooth", block: "start" };
 
 function handleIntersect(entries, observer) {
     let projectsElement = document.querySelector("#projects");
-    if (projectsElement == null)
-        return;
-    for(let i = 0; i < entries.length; i++) {
+    if (projectsElement == null) return;
+    for (let i = 0; i < entries.length; i++) {
         let entry = entries[i];
-        if (entry.intersectionRatio > 0.05 && this.$route.name != 'projects') {
+        if (entry.intersectionRatio > 0.05 && this.$route.name != "projects") {
             this.auto = true;
-            Router.push({ name: 'projects' })
-        } else if (entry.intersectionRatio < 0.05 && this.$route.name != 'home') {
+            Router.push({ name: "projects" });
+        } else if (
+            entry.intersectionRatio < 0.05 &&
+            this.$route.name != "home"
+        ) {
             this.auto = true;
-            Router.push({ name: 'home' })
+            Router.push({ name: "home" });
         }
     }
 }
@@ -50,7 +54,7 @@ function createObserver() {
     let options = {
         root: null,
         rootMargin: "0px",
-        threshold: [0, 1.5/30]
+        threshold: [0, 1.5 / 30]
     };
     observer = new IntersectionObserver(this.handleIntersect, options);
     return observer;
@@ -69,17 +73,17 @@ export default {
             auto: false,
             isObserverSet: 0,
             observer: undefined
-        }
+        };
     },
     watch: {
-        '$route': function(to, from) {
+        $route: function(to, from) {
             let projectsElement = document.querySelector("#projects");
             let homeElement = document.querySelector("#home");
 
             if (!this.auto) {
-                if(to.name == "projects" && from.name == "home") {
+                if (to.name == "projects" && from.name == "home") {
                     projectsElement.scrollIntoView(scrollOptions);
-                } else if(to.name == "home" && from.name == "projects") {
+                } else if (to.name == "home" && from.name == "projects") {
                     homeElement.scrollIntoView(scrollOptions);
                 }
             } else {
@@ -93,14 +97,14 @@ export default {
     },
     mounted() {
         axios
-            .get('http://0.0.0.0:8000/api/projects/?format=json')
+            .get("http://0.0.0.0:8000/api/projects/?format=json")
             .then(response => {
-                let projects = {}
-                for(let i = 0; i < response.data.length; i++) {
-                    projects[response.data[i]["permalink"]] = response.data[i]
+                let projects = {};
+                for (let i = 0; i < response.data.length; i++) {
+                    projects[response.data[i]["permalink"]] = response.data[i];
                 }
                 this.projects = Object.assign({}, this.projects, projects);
-            })
+            });
     },
     updated() {
         if (!this.isObserverSet && Object.keys(this.projects).length > 0) {
@@ -110,11 +114,11 @@ export default {
                 projectsElement.scrollIntoView(scrollOptions);
             }
             let observer = this.createObserver();
-            setTimeout(function(){
+            setTimeout(function() {
                 observer.observe(projectsElement);
                 this.observer = observer;
                 this.isObserverSet = true;
-            },1);
+            }, 1);
         }
     },
     destroyed() {

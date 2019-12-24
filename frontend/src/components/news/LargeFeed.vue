@@ -1,9 +1,9 @@
 <template>
-    <div class="w-feed h-auto shadow-feed pl-10 pt-10 pr-navbar">
+    <div class="md:w-feed h-auto shadow-feed pl-10 pt-10 pr-navbar">
         <Label :text="event.types" />
         <div class="flex flex-col h-72 mt-12 pb-12">
             <div class="font-extrabold text-xl leading-180">
-                {{ event.title }}
+                {{ event.title.toUpperCase() }}
             </div>
             <div class="mt-8 text-base font-semibold leading-170">
                 {{ event.timing }}
@@ -20,13 +20,12 @@
             <div class="font-semibold text-base leading-170">
                 {{ index + 1 }} Updates
             </div>
-            <UpdateCard>
-                title={{ eventUpdates.title }} description={{
-                    eventUpdate.description
-                }}
-            </UpdateCard>
+            <UpdateCard
+                :title="eventUpdates.title"
+                :description="eventUpdate.description"
+            />
         </div>
-        <div class="mt-10 font-extrabold text-base text-red mb-8 leading-170">
+        <div class="mt-10 font-extrabold text-base text-red pb-8 leading-170">
             Know more
         </div>
     </div>

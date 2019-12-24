@@ -21,26 +21,24 @@
                         :eventUpdates="event_block.event_update"
                     />
                 </div>
-                <div v-if="event.types == 'past'">
+                <div v-if="event_block.event.types == 'online'">
                     <LargeFeed
-                        >event={{ event }} eventUpdates={{
-                            eventUpdates
-                        }}</LargeFeed
-                    >
+                        :event="event_block.event" 
+                        :eventUpdates="event_block.eventUpdates"
+                    />
                 </div>
             </div>
             <div class="flex flex-col ml-10">
                 <div class="flex flex-row">
-                    <div v-if="event.types == 'app'">
-                        <SmallFeed :event="event" />
+                    <div v-if="event_block.event.types == 'app'">
+                        <SmallFeed :event="event_block.event" />
                     </div>
                 </div>
-                <div v-if="event.types == 'past'">
+                <div v-if="event_block.event.types == 'past'">
                     <LargeFeed
-                        >event={{ event }} eventUpdates={{
-                            eventUpdates
-                        }}</LargeFeed
-                    >
+                        :event="event_block.event" 
+                        :eventUpdates="event_block.eventUpdates"
+                    />
                 </div>
             </div>
         </div>

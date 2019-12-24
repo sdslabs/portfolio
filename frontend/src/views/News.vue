@@ -65,7 +65,7 @@
                 >
                     <LargeFeed
                         :event="event_block.event"
-                        :eventUpdates="event_block.event_update"
+                        :eventUpdates="event_block.eventUpdates"
                     />
                 </div>
                 <div

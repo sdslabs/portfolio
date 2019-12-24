@@ -12,17 +12,17 @@
                 {{ event.description }}
             </div>
         </div>
+        <div class="font-semibold text-base leading-170">
+            {{ eventUpdates.length }} Updates 
+        </div>
         <div
             class="flex flex-col mt-12 pb-10"
-            v-for="(eventUpdates, index) in eventUpdates"
+            v-for="eventUpdates in eventUpdates"
             v-bind:key="eventUpdates"
         >
-            <div class="font-semibold text-base leading-170">
-                {{ index + 1 }} Updates
-            </div>
             <UpdateCard
-                :title="eventUpdates.title"
-                :description="eventUpdate.description"
+                :title ="eventUpdates.title"
+                :description ="eventUpdates.description"
             />
         </div>
         <div class="mt-10 font-extrabold text-base text-red pb-8 leading-170">
@@ -38,7 +38,8 @@ export default {
     name: "largefeed",
     components: {
         Label,
-        UpdateCard
+        UpdateCard,
+        Event
     },
     props: {
         event: Object,

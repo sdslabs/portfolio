@@ -7,7 +7,7 @@
                         ><div><img src="@/assets/images/back.svg" /></div
                     ></router-link>
                     <div class="mt-24 md:mt-32">
-                        <Label text="upcoming event" />
+                        {{event}}
                     </div>
                     <div
                         class="md:w-feed mt-20 font-black text-3xl leading-180"
@@ -98,6 +98,10 @@ export default {
         Label,
         Button,
         Update
+    },
+    props: {
+        event: Object,
+        eventUpdates: Array
     }
 };
 </script>

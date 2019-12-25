@@ -7,7 +7,7 @@
                         ><div><img src="@/assets/images/back.svg" /></div
                     ></router-link>
                     <div class="mt-24 md:mt-32">
-                        {{event}}
+                        sss {{event}}
                     </div>
                     <div
                         class="md:w-feed mt-20 font-black text-3xl leading-180"

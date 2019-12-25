@@ -12,18 +12,20 @@
                 {{ event.description }}
             </div>
         </div>
-        <div class="font-semibold text-base leading-170">
-            {{ eventUpdates.length }} Updates 
-        </div>
-        <div
-            class="flex flex-col mt-12 pb-10"
-            v-for="eventUpdates in eventUpdates"
-            v-bind:key="eventUpdates"
-        >
-            <UpdateCard
-                :title ="eventUpdates.title"
-                :description ="eventUpdates.description"
-            />
+        <div v-if="eventUpdates.length!=0">
+            <div class="font-semibold text-base leading-170">
+                {{ eventUpdates.length }} Updates 
+            </div>
+            <div
+                class="flex flex-col mt-12 pb-10"
+                v-for="eventUpdates in eventUpdates"
+                v-bind:key="eventUpdates"
+            >
+                <UpdateCard
+                    :title ="eventUpdates.title"
+                    :description ="eventUpdates.description"
+                />
+            </div>
         </div>
         <div class="mt-10 font-extrabold text-base text-red pb-8 leading-170">
             Know more

@@ -1,7 +1,7 @@
 <template>
     <div class="md:w-feed h-auto shadow-feed pl-10 pt-10 pr-navbar">
         <Label :text="event.types" />
-        <div class="flex flex-col h-72 mt-12 pb-12">
+        <div class="flex flex-col h-auto mt-12 pb-12">
             <div class="font-extrabold text-xl leading-180">
                 {{ event.title.toUpperCase() }}
             </div>
@@ -13,11 +13,11 @@
             </div>
         </div>
         <div v-if="eventUpdates.length != 0">
-            <div class="font-semibold text-base leading-170">
+            <div class="font-semibold text-base pt-14 leading-170">
                 {{ eventUpdates.length }} Updates
             </div>
             <div
-                class="flex flex-col mt-12 pb-10"
+                class="flex flex-col pb-10"
                 v-for="eventUpdates in eventUpdates"
                 v-bind:key="eventUpdates"
             >

@@ -29,7 +29,7 @@
         </div>
         <div class="mt-10 font-extrabold text-base pb-8 leading-170">
             <router-link
-                :to="{ path: 'news', params: { title: event.title }}"
+                :to="'/news/'+event.title"
                 class="no-underline inline-block text-red"
             >
                 Know More

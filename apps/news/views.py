@@ -23,8 +23,8 @@ def get_events(request):
     event_requested = request.query_params.get('title')
     if event_requested is not None:
         event = Event.objects.filter(title=event_requested)
-        event_update = EventUpdate.objects.filter(event=event)
-        event_serializer = EventSerializer(event, many=False, context={'request': request})
+        event_update = EventUpdate.objects.filter(event=event[0])
+        event_serializer = EventSerializer(event, many=True, context={'request': request})
         event_update_serializer = EventUpdateSerializer(event_update, many=True, context={'request': request})
         response_data = {'event': event_serializer.data, 'event_update': event_update_serializer.data}
         return Response(response_data, status=status.HTTP_200_OK)

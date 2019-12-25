@@ -45,7 +45,7 @@ export default {
     name: "largefeed",
     components: {
         Label,
-        UpdateCard,
+        UpdateCard
     },
     props: {
         event: Object,

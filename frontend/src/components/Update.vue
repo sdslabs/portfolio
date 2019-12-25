@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col md:flex-row mt-16 mb-32">
         <div class="md:w-feed flex flex-col md:ml-60 mt-16">
-            <div class="font-extrabold text-xl leading-180">{{ title }}</div>
+            <div class="font-extrabold text-xl leading-180">{{ title.toUpperCase() }}</div>
             <div
                 :class="
                     timing ? 'font-semibold text-base mt-14' : 'text-base mt-20'

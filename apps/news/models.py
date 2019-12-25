@@ -44,9 +44,11 @@ class Event(models.Model):
 class EventUpdate(models.Model):
     """Model representing event update"""
     title = models.CharField(max_length=40)
-    description = models.CharField(max_length=500)
+    timing = models.CharField(max_length=50, blank=True)
+    description = models.CharField(max_length=500, blank=True)
     description1 = models.CharField(max_length=500)
     description2 = models.CharField(max_length=500)
+    description3 = models.CharField(max_length=500)
     url = models.URLField(max_length=200)
     image = models.ImageField(upload_to='news')
     event = models.ForeignKey(Event, on_delete=models.CASCADE)

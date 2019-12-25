@@ -7,12 +7,12 @@
                         ><div><img src="@/assets/images/back.svg" /></div
                     ></router-link>
                     <div class="mt-24 md:mt-32">
-                        {{ events.event[0].type }}
+                        <Label :text="events.event[0].types"/>
                     </div>
                     <div
                         class="md:w-feed mt-20 font-black text-3xl leading-180"
                     >
-                        {{ events.event[0].title }}
+                        {{ events.event[0].title.toUpperCase() }}
                     </div>
                     <div class="mt-8 text-base font-semibold leading-170">
                         {{ events.event[0].timing }}
@@ -44,7 +44,7 @@
                 {{ events.event_update.length }} Updates
             </div>
             <div>
-                <div 
+                <div
                     v-for="event_update in events.event_update"
                     v-bind:key="event_update"
                 >
@@ -75,21 +75,23 @@ export default {
         Button,
         Update
     },
-    data () {
+    data() {
         return {
             events: {},
-            title: "",
-        }
+            title: ""
+        };
     },
     created() {
         this.title = this.$route.params.title;
     },
     mounted() {
         axios
-            .get("http://0.0.0.0:8000/api/news/?format=json",{ params: { title : this.title}})
+            .get("http://0.0.0.0:8000/api/news/?format=json", {
+                params: { title: this.title }
+            })
             .then(response => {
-                let events = []
-                events = response.data
+                let events = [];
+                events = response.data;
                 this.events = Object.assign({}, this.events, events);
             });
     }

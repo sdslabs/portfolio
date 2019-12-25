@@ -14,4 +14,4 @@ class EventUpdateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = EventUpdate
-        fields = ('title', 'description', 'description1', 'description2', 'image', 'event')
+        fields = ('title', 'timing', 'description', 'description1', 'description2', 'description3', 'image', 'event')

@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="mt-12 font-extrabold text-base leading-180">
-            {{ title }}
+            {{ title.toUpperCase() }}
         </div>
         <div class="mt-5 text-base leading-normal">{{ description }}</div>
     </div>

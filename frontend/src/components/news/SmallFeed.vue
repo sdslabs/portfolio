@@ -12,8 +12,13 @@
                 {{ event.description }}
             </div>
         </div>
-        <div class="mt-8 font-extrabold text-base text-blue pb-8 leading-170">
-            Check Now
+        <div class="mt-8 font-extrabold text-base pb-8 leading-170">
+            <a
+                :href="event.url"
+                target="_blank"
+                class="no-underline inline-block text-blue"
+                >Know More</a
+            >
         </div>
     </div>
 </template>

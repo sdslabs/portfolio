@@ -55,8 +55,9 @@ const router = new Router({
             }
         },
         {
-            path: "/news/event/a",
+            path: "/news/event/:title",
             name: "event",
+            props: true,
             component: () =>
                 import(/* webpackChunkName: "about" */ "./views/Event.vue"),
             meta: {

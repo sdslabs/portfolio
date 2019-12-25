@@ -65,7 +65,7 @@
                 >
                     <LargeFeed
                         :event="event_block.event"
-                        :eventUpdates="event_block.eventUpdates"
+                        :eventUpdates="event_block.event_update"
                     />
                 </div>
                 <div
@@ -79,7 +79,7 @@
                 <div v-if="event_block.event.types == 'past event'">
                     <LargeFeed
                         :event="event_block.event"
-                        :eventUpdates="event_block.eventUpdates"
+                        :eventUpdates="event_block.event_update"
                     />
                 </div>
             </div>

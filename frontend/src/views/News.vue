@@ -11,14 +11,15 @@
                 dolor sit amet, adipiscing elit.
             </div>
         </div>
-        <div class="pt-24">
+        <div class="pt-24 pb-24 md:grid">
             <div
-                class="md:pr-navbar"
+                class="md:pr-navbar md:w-event"
                 v-for="event_block in event"
                 v-bind:key="event_block"
             >
-                <div class="flex flex-col">
+                <div>
                     <div
+                    class="md:grid-item mb-10 md:w-feed"
                         v-if="
                             event_block.event.types == 'upcoming event' &&
                                 event_block.event.priority == 'large'
@@ -35,7 +36,7 @@
                                 event_block.event.priority == 'small'
                         "
                     >
-                        <SmallFeed :event="event_block.event" />
+                        <SmallFeed class="md:grid-item mb-10 md:w-event" :event="event_block.event" />
                     </div>
                     <div
                         v-if="
@@ -49,6 +50,7 @@
                         />
                     </div>
                     <div
+                    class="md:grid-item mb-10 md:w-event"
                         v-if="
                             event_block.event.types == 'online competition' &&
                                 event_block.event.priority == 'small'
@@ -69,6 +71,7 @@
                     />
                 </div>
                 <div
+                class="md:grid-item mb-10 md:w-event"
                     v-if="
                         event_block.event.types == 'app update' &&
                             event_block.event.priority == 'small'
@@ -76,7 +79,7 @@
                 >
                     <SmallFeed :event="event_block.event" />
                 </div>
-                <div v-if="event_block.event.types == 'past event'">
+                <div class="md:grid-item mb-10 md:w-feed" v-if="event_block.event.types == 'past event'">
                     <LargeFeed
                         :event="event_block.event"
                         :eventUpdates="event_block.event_update"
@@ -87,6 +90,8 @@
     </div>
 </template>
 
+<script type="text/javascript" src="masonry.pkgd.js">
+</script>
 <script>
 import axios from "axios";
 import LargeFeed from "@/components/news/LargeFeed.vue";
@@ -131,6 +136,11 @@ export default {
                 });
                 this.event = Object.assign({}, this.event, event);
             });
+        var elem = document.querySelector(".grid");
+        var msnry = new Masonry(elem, {
+            itemSelector: ".grid-item",
+            columnWidth: 1200,
+        });
     }
 };
 </script>

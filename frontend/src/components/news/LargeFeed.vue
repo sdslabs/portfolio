@@ -12,9 +12,9 @@
                 {{ event.description }}
             </div>
         </div>
-        <div v-if="eventUpdates.length!=0">
+        <div v-if="eventUpdates.length != 0">
             <div class="font-semibold text-base leading-170">
-                {{ eventUpdates.length }} Updates 
+                {{ eventUpdates.length }} Updates
             </div>
             <div
                 class="flex flex-col mt-12 pb-10"
@@ -22,13 +22,17 @@
                 v-bind:key="eventUpdates"
             >
                 <UpdateCard
-                    :title ="eventUpdates.title"
-                    :description ="eventUpdates.description"
+                    :title="eventUpdates.title"
+                    :description="eventUpdates.description"
                 />
             </div>
         </div>
-        <div class="mt-10 font-extrabold text-base text-red pb-8 leading-170">
-            Know more
+        <div class="mt-10 font-extrabold text-base pb-8 leading-170">
+            <a
+                :href="'/news/' + event.title"
+                class="no-underline inline-block text-red"
+                >Know More</a
+            >
         </div>
     </div>
 </template>

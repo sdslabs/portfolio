@@ -108,9 +108,26 @@ export default {
             .get("http://0.0.0.0:8000/api/news/?format=json")
             .then(response => {
                 let events = response.data;
+                let eventList = [];
                 let event = [];
                 events.forEach(event_block => {
-                    event.push(event_block);
+                    eventList.push(event_block);
+                });
+                eventList.forEach(events_list => {
+                    if (events_list.event.types === "upcoming event")
+                        event.push(events_list);
+                });
+                eventList.forEach(events_list => {
+                    if (events_list.event.types === "app update")
+                        event.push(events_list);
+                });
+                eventList.forEach(events_list => {
+                    if (events_list.event.types === "online competition")
+                        event.push(events_list);
+                });
+                eventList.forEach(events_list => {
+                    if (events_list.event.types === "past event")
+                        event.push(events_list);
                 });
                 this.event = Object.assign({}, this.event, event);
             });

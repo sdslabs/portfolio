@@ -20,18 +20,27 @@ def get_events(request):
     """
     Get a list of events
     """
-    event_array = []
-    events = Event.objects.filter()
-    for event in events:
+    event_requested = request.query_params.get('title')
+    if event_requested is not None:
+        event = Event.objects.filter(title=event_requested)
         event_update = EventUpdate.objects.filter(event=event)
-        event_serializer = EventSerializer(
-            event, many=False, context={'request': request})
-        event_update_serializer = EventUpdateSerializer(
-            event_update, many=True, context={'request': request}
-        )
+        event_serializer = EventSerializer(event, many=False, context={'request': request})
+        event_update_serializer = EventUpdateSerializer(event_update, many=True, context={'request': request})
         response_data = {'event': event_serializer.data, 'event_update': event_update_serializer.data}
-        event_array.append(response_data)
-    return Response(event_array, status=status.HTTP_200_OK)
+        return Response(response_data, status=status.HTTP_200_OK)
+    else:
+        event_array = []
+        events = Event.objects.filter()
+        for event in events:
+            event_update = EventUpdate.objects.filter(event=event)
+            event_serializer = EventSerializer(
+                event, many=False, context={'request': request})
+            event_update_serializer = EventUpdateSerializer(
+                event_update, many=True, context={'request': request}
+            )
+            response_data = {'event': event_serializer.data, 'event_update': event_update_serializer.data}
+            event_array.append(response_data)
+        return Response(event_array, status=status.HTTP_200_OK)
 
 
 @throttle_classes([

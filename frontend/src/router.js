@@ -48,7 +48,7 @@ const router = new Router({
             }
         },
         {
-            path: "/news/event/:title",
+            path: "/news/:title",
             name: "event",
             props: true,
             component: () =>

@@ -28,11 +28,12 @@
             </div>
         </div>
         <div class="mt-10 font-extrabold text-base pb-8 leading-170">
-            <a
-                :href="'/news/' + event.title"
+            <router-link
+                :to="{ path: 'news', params: { title: event.title }}"
                 class="no-underline inline-block text-red"
-                >Know More</a
             >
+                Know More
+            </router-link>
         </div>
     </div>
 </template>
@@ -45,7 +46,6 @@ export default {
     components: {
         Label,
         UpdateCard,
-        Event
     },
     props: {
         event: Object,

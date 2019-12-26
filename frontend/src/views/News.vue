@@ -11,7 +11,7 @@
                 dolor sit amet, adipiscing elit.
             </div>
         </div>
-        <div class="pt-24 pb-24 md:grid">
+        <div class="pt-24 pb-24">
             <div
                 class="md:pr-navbar md:w-event"
                 v-for="event_block in event"
@@ -19,7 +19,7 @@
             >
                 <div>
                     <div
-                    class="md:grid-item mb-10 md:w-feed"
+                    class="mb-10 md:w-feed"
                         v-if="
                             event_block.event.types == 'upcoming event' &&
                                 event_block.event.priority == 'large'
@@ -36,7 +36,7 @@
                                 event_block.event.priority == 'small'
                         "
                     >
-                        <SmallFeed class="md:grid-item mb-10 md:w-event" :event="event_block.event" />
+                        <SmallFeed class="mb-10 md:w-event" :event="event_block.event" />
                     </div>
                     <div
                         v-if="
@@ -50,7 +50,7 @@
                         />
                     </div>
                     <div
-                    class="md:grid-item mb-10 md:w-event"
+                    class="mb-10 md:w-event"
                         v-if="
                             event_block.event.types == 'online competition' &&
                                 event_block.event.priority == 'small'
@@ -71,7 +71,7 @@
                     />
                 </div>
                 <div
-                class="md:grid-item mb-10 md:w-event"
+                class="mb-10 md:w-event"
                     v-if="
                         event_block.event.types == 'app update' &&
                             event_block.event.priority == 'small'
@@ -79,19 +79,20 @@
                 >
                     <SmallFeed :event="event_block.event" />
                 </div>
-                <div class="md:grid-item mb-10 md:w-feed" v-if="event_block.event.types == 'past event'">
+                <div class="mb-10 md:w-feed" v-if="event_block.event.types == 'past event' && event_block.event.priority == 'large'">
                     <LargeFeed
                         :event="event_block.event"
                         :eventUpdates="event_block.event_update"
                     />
+                </div>
+                 <div class="mb-10 md:w-feed" v-if="event_block.event.types == 'past event' && event_block.event.priority == 'small'">
+                    <SmallFeed :event="event_block.event"/>
                 </div>
             </div>
         </div>
     </div>
 </template>
 
-<script type="text/javascript" src="masonry.pkgd.js">
-</script>
 <script>
 import axios from "axios";
 import LargeFeed from "@/components/news/LargeFeed.vue";
@@ -108,8 +109,8 @@ export default {
             eventUpdates: []
         };
     },
-    mounted() {
-        axios
+    async mounted() {
+        await axios
             .get("http://0.0.0.0:8000/api/news/?format=json")
             .then(response => {
                 let events = response.data;
@@ -136,11 +137,6 @@ export default {
                 });
                 this.event = Object.assign({}, this.event, event);
             });
-        var elem = document.querySelector(".grid");
-        var msnry = new Masonry(elem, {
-            itemSelector: ".grid-item",
-            columnWidth: 1200,
-        });
     }
 };
 </script>

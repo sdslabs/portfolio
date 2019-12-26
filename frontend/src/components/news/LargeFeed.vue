@@ -23,6 +23,8 @@
             >
                 <UpdateCard
                     :title="eventUpdates.title"
+                    :url="eventUpdates.url"
+                    :timing="eventUpdates.timing"
                     :description="eventUpdates.description"
                 />
             </div>

@@ -44,13 +44,13 @@ class Event(models.Model):
 class EventUpdate(models.Model):
     """Model representing event update"""
     title = models.CharField(max_length=40)
-    timing = models.CharField(max_length=50, blank=True)
+    timing = models.CharField(max_length=50, blank=True, default='')
     description = models.CharField(max_length=500, blank=True)
-    description1 = models.CharField(max_length=500)
-    description2 = models.CharField(max_length=500)
-    description3 = models.CharField(max_length=500)
-    url = models.URLField(max_length=200)
-    image = models.ImageField(upload_to='news')
+    description1 = models.CharField(max_length=500, blank=True)
+    description2 = models.CharField(max_length=500, blank=True)
+    description3 = models.CharField(max_length=500, blank=True)
+    url = models.URLField(max_length=200, blank=True)
+    image = models.ImageField(upload_to='news', blank=True)
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
 
     class Meta:

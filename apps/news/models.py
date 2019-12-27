@@ -2,12 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-EVENTS = [
-    ('upcoming', 'upcoming'),
-    ('past', 'past'),
-    ('retired', 'retired')
-]
-
 TYPES = [
     ('upcoming event', 'upcoming'),
     ('app update', 'app'),
@@ -31,7 +25,7 @@ class Event(models.Model):
     description1 = models.CharField(max_length=1000, blank=True)
     url = models.URLField(max_length=200)
     image = models.ImageField(upload_to='news', blank=True)
-    status = models.CharField(max_length=10, choices=EVENTS)
+    is_visible = models.BooleanField(default=True)
 
     class Meta:
         app_label = 'news'

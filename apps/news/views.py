@@ -22,7 +22,7 @@ def get_events(request):
     """
     event_requested = request.query_params.get('title')
     if event_requested is not None:
-        event = Event.objects.filter(title=event_requested)
+        event = Event.objects.filter(title=event_requested, is_visible=True)
         event_update = EventUpdate.objects.filter(event=event[0])
         event_serializer = EventSerializer(event, many=True, context={'request': request})
         event_update_serializer = EventUpdateSerializer(event_update, many=True, context={'request': request})
@@ -30,7 +30,7 @@ def get_events(request):
         return Response(response_data, status=status.HTTP_200_OK)
     else:
         event_array = []
-        events = Event.objects.filter()
+        events = Event.objects.filter(is_visible=True)
         for event in events:
             event_update = EventUpdate.objects.filter(event=event)
             event_serializer = EventSerializer(

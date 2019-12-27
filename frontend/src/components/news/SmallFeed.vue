@@ -17,7 +17,7 @@
                 :href="event.url"
                 target="_blank"
                 class="no-underline inline-block text-blue"
-                >Know More</a
+                >Check Now</a
             >
         </div>
     </div>

@@ -32,7 +32,7 @@
         <div class="mt-10 font-extrabold text-base pb-8 leading-170">
             <router-link
                 :to="'/news/'+event.title"
-                class="no-underline inline-block text-red"
+                :class="'no-underline inline-block text-'+colors[index]"
             >
                 Know More
             </router-link>
@@ -48,6 +48,12 @@ export default {
     components: {
         Label,
         UpdateCard
+    },
+    data: function initData() {
+        return {
+            index: Date.now() % 6,
+            colors: ["blue", "red", "green", "yellow", "purple", "orange"]
+        };
     },
     props: {
         event: Object,

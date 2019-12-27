@@ -16,7 +16,7 @@
             <a
                 :href="event.url"
                 target="_blank"
-                class="no-underline inline-block text-blue"
+                :class="'no-underline inline-block text-'+colors[index]"
                 >Check Now</a
             >
         </div>
@@ -29,6 +29,12 @@ export default {
     name: "smallfeed",
     components: {
         Label
+    },
+    data: function initData() {
+        return {
+            index: Date.now() % 6,
+            colors: ["blue", "red", "green", "yellow", "purple", "orange"]
+        };
     },
     props: {
         event: Object

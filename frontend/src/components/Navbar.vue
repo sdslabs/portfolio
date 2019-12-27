@@ -1,7 +1,7 @@
 <template>
     <nav
         :class="scrolled ? 'shadow-sm' : ''"
-        class="fixed font-sans antialiased bg-white flex justify-between items-center flex-wrap py-4 px-16 sm:py-8 sm:px-36 w-full z-30"
+        class="fixed font-sans antialiased bg-white flex justify-between items-center flex-wrap py-4 pt-14 px-16 sm:py-8 sm:px-36 w-full z-30"
     >
         <div class="flex items-center flex-no-shrink">
             <router-link to="/" class="block">
@@ -29,7 +29,7 @@
         </div>
         <div
             :class="open ? 'block' : 'hidden'"
-            class="relative w-full flex-grow sm:flex sm:items-center sm:w-auto z-10"
+            class="relative w-full flex-grow sm:flex sm:items-center sm:w-auto z-10 hidden"
         >
             <div
                 class="text-sm text-black leading-normal sm:flex justify-center sm:flex-grow "
@@ -68,7 +68,7 @@
         </div>
         <div
             :class="open ? 'block' : 'hidden'"
-            class="text-sm sm:flex mt-4 sm:mt-0"
+            class="text-sm sm:flex mt-4 sm:mt-0 hidden"
         >
             <Button
                 v-bind:native="true"
@@ -76,11 +76,15 @@
                 text="Login"
             />
         </div>
+        <div :class="open ? 'block' : 'hidden'" class="fixed -ml-16 -mt-21">
+            <NavMobile @click="toggle"/>
+        </div>
     </nav>
 </template>
 
 <script>
 import NavLink from "@/components/navbar/NavLink.vue";
+import NavMobile from "@/components/navbar/NavMobile.vue";
 import Button from "@/components/Button.vue";
 
 export default {
@@ -107,7 +111,8 @@ export default {
     },
     components: {
         NavLink,
-        Button
+        Button,
+        NavMobile
     }
 };
 </script>

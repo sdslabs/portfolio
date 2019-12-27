@@ -16,12 +16,12 @@
                 </div>
             </div>
             <div class="-ml-6 flex sm:-ml-0 sm:pl-24 sm:w-7/10">
-                <div class="self-center z-30">
+                <div class="self-center z-10">
                     <img class="w-full" :src="image_url" />
                 </div>
             </div>
             <div
-                class="bg-yellow w-100 h-120 self-end -mr-16 -mb-6.7/10 sm:-ml-2/10 sm:-mr-0 sm:-mb-0"
+                :class="'w-100 h-120 self-end -mr-16 -mb-6.7/10 sm:-ml-2/10 sm:-mr-0 sm:-mb-0 bg-' + colors[index]"
             />
         </div>
     </div>
@@ -56,6 +56,12 @@ export default {
     },
     components: {
         Button
+    },
+    data: function initData() {
+        return {
+            index: Date.now() % 6,
+            colors: ["black", "green", "darkblue", "red", "blue", "yellow"]
+        };
     }
 };
 </script>

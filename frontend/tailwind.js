@@ -51,7 +51,10 @@ let colors = {
     orange: "rgba(229, 89, 52, 1)",
     blue: "rgba(55, 193, 225, 1)",
     yellow: "rgba(251, 177, 60, 1)",
-    green: "rgba(82, 170, 94, 1)"
+    green: "rgba(82, 170, 94, 1)",
+    red: "rgb(229, 89, 52, 1)",
+    border: "rgba(25, 25, 25, 0.5)",
+    darkblue: "rgba(37, 110, 255, 1)"
 };
 
 module.exports = {

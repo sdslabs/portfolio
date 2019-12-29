@@ -1,7 +1,7 @@
 <template>
     <nav
         :class="scrolled ? 'shadow-sm' : ''"
-        class="fixed font-sans antialiased bg-white flex justify-between items-center flex-wrap py-4 pt-14 px-16 sm:py-8 sm:px-36 w-full z-30"
+        class="fixed font-sans antialiased bg-white flex justify-between items-center flex-wrap py-4 py-14 px-16 sm:py-8 sm:px-36 w-full z-30"
     >
         <div class="flex items-center flex-no-shrink">
             <router-link to="/" class="block">

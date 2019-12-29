@@ -1,25 +1,25 @@
 <template>
-    <div class="gallery flex flex-col w-auto md:w-gallery">
+    <div class="gallery flex flex-col w-auto sm:w-gallery">
         <img
-            class="md:h-128 md:w-180 rounded-lg"
+            class="sm:h-128 sm:w-180 rounded-lg"
             v-bind:src="slides[queue-1].image"
             alt="image"
         />
         <div
-            class="textbox w-auto ml-6 mr-6 h-auto min-h-64 -mt-32 md:w-120 md:h-auto md:min-h-88 md:ml-98 md:-mt-gallery bg-white z-30"
+            class="textbox w-auto ml-6 mr-6 h-auto min-h-64 -mt-32 pr-6 sm:w-120 sm:h-auto sm:min-h-88 sm:ml-98 sm:-mt-gallery bg-white z-20"
         >
-            <div class="font-extrabold text-2xl md:text-lg mt-10 ml-10">{{slides[queue-1].title}}</div>
+            <div class="font-extrabold text-2xl sm:text-lg mt-10 ml-10">{{slides[queue-1].title}}</div>
             <div
-                class="md:w-104 leading-170 text-grey text-xl md:text-base mt-8 ml-10 mb-8"
+                class="sm:w-104 leading-170 text-grey text-xl sm:text-base mt-8 ml-10 mb-8"
             >
                 {{slides[queue-1].description}}
             </div>
         </div>
-        <div class="self-center md:self-start md:-mt-32">
-            <span class="h-4 w-4 md:h-3 md:w-3 rounded-50 inline-block mt-16" v-bind:class="{'bg-black': queue===1, 'bg-carousel': queue!==1}"/>
-            <span class="h-4 w-4 md:h-3 md:w-3 rounded-50 inline-block mt-16 ml-4" v-bind:class="{'bg-black': queue===2, 'bg-carousel': queue!==2}"/>
-            <span class="h-4 w-4 md:h-3 md:w-3 rounded-50 inline-block mt-16 ml-4" v-bind:class="{'bg-black': queue===3, 'bg-carousel': queue!==3}"/>
-            <span class="h-4 w-4 md:h-3 md:w-3 rounded-50 inline-block mt-16 ml-4" v-bind:class="{'bg-black': queue===4, 'bg-carousel': queue!==4}"/>
+        <div class="self-center sm:self-start sm:-mt-32">
+            <span class="h-4 w-4 sm:h-3 sm:w-3 rounded-50 inline-block mt-16" v-bind:class="{'bg-black': queue===1, 'bg-carousel': queue!==1}"/>
+            <span class="h-4 w-4 sm:h-3 sm:w-3 rounded-50 inline-block mt-16 ml-4" v-bind:class="{'bg-black': queue===2, 'bg-carousel': queue!==2}"/>
+            <span class="h-4 w-4 sm:h-3 sm:w-3 rounded-50 inline-block mt-16 ml-4" v-bind:class="{'bg-black': queue===3, 'bg-carousel': queue!==3}"/>
+            <span class="h-4 w-4 sm:h-3 sm:w-3 rounded-50 inline-block mt-16 ml-4" v-bind:class="{'bg-black': queue===4, 'bg-carousel': queue!==4}"/>
         </div>
     </div>
 </template>

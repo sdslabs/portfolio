@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col sm:pt-36 pt-48 w-full">
+    <div class="flex flex-col sm:pt-60 pt-48 w-full">
         <div
             class="flex flex-col-reverse sm:flex-row-reverse items-center justify-between sm:justify-between flex-col pl-0 pr-0"
         >
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div
-            class="flex flex-col-reverse mt-28 sm:flex-row sm:justify-between sm:ml-64 sm:mr-36 sm:pt-36"
+            class="flex flex-col-reverse mt-36 sm:flex-row sm:justify-between sm:ml-64 sm:mr-36 sm:pt-36"
         >
             <div class="mt-16 sm:mt-0 ml-8 mr-8"><Gallery/></div>
             <div class="flex flex-col mr-8 ml-8 sm:w-auto sm:ml-100 sm:pt-8">
@@ -196,19 +196,22 @@
                 </button>
             </div>
         </div>
-        <div><SisterGroups/></div>
+        <div><Team/></div>
+        <div class="pt-24 sm:mt-24 pb-56 sm:pb-44"><SisterGroups/></div>
     </div>
     </div>
 </template>
 
 <script>
 import Gallery from "@/components/Gallery.vue";
+import Team from "@/components/Team.vue";
 import SisterGroups from "@/components/SisterGroups.vue";
 import axios from "axios";
 export default {
     name: "about",
     components: {
         Gallery,
+        Team,
         SisterGroups
     },
     data() {

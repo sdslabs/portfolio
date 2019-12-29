@@ -1,14 +1,14 @@
 <template>
     <div
-        class="sister-groups w-auto flex flex-col md:content-center ml-8 mr-8 md:ml-0 md:mr-0 pt-60"
+        class="sister-groups w-auto flex flex-col md:content-center ml-8 mr-8 sm:ml-0 sm:mr-0 pt-60"
     >
         <div
-            class="font-black  md:self-center text-3xl leading-loose md:w-feed md:text-center"
+            class="font-black  sm:self-center text-3xl leading-loose sm:w-feed sm:text-center"
         >
             Sister Groups
         </div>
         <div
-            class="font-base md:font-semibold md:self-center text-base md:text-center leading-normal md:w-sister mt-12"
+            class="font-base sm:font-semibold sm:text-grey sm:self-center text-base sm:text-center leading-normal sm:w-sister mt-12"
         >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac
             lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Pellentesque
@@ -16,7 +16,7 @@
             feugiat porta vitae sit amet ligula.
         </div>
         <div
-            class="sister flex flex-row self-center mt-32 justify-between md:w-groups"
+            class="sister flex flex-row self-center mt-32 justify-between sm:w-groups"
         >
             <div>
                 <Sister
@@ -27,6 +27,7 @@
             </div>
             <div>
                 <Sister
+                    class="ml-10"
                     v-bind:url="pag"
                     title="PROGRAMMING & ALGORITHMS GROUP"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem."
@@ -34,6 +35,7 @@
             </div>
             <div>
                 <Sister
+                    class="ml-10"
                     v-bind:url="infosec"
                     title="INFOSEC IITR"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem."

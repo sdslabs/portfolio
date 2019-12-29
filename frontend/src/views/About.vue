@@ -195,19 +195,21 @@
                     <img src="@/assets/images/scroll-arrow.svg">
                 </button>
             </div>
-
         </div>
+        <div><SisterGroups/></div>
     </div>
     </div>
 </template>
 
 <script>
 import Gallery from "@/components/Gallery.vue";
+import SisterGroups from "@/components/SisterGroups.vue";
 import axios from "axios";
 export default {
     name: "about",
     components: {
-        Gallery
+        Gallery,
+        SisterGroups
     },
     data() {
         return {

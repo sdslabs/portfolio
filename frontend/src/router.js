@@ -39,13 +39,14 @@ const router = new Router({
             }
         },
         {
-<<<<<<< HEAD
             path: "*",
             name: "error404",
             component: () => import("./views/Error404.vue"),
             meta: {
                 title: "SDSLabs | Error"
-=======
+            }
+        },
+        {
             path: "/news",
             name: "news",
             component: () =>
@@ -62,7 +63,6 @@ const router = new Router({
                 import(/* webpackChunkName: "about" */ "./views/Event.vue"),
             meta: {
                 title: "SDSLabs | News"
->>>>>>> feat: developed news page and event page templates
             }
         }
     ]

@@ -60,9 +60,9 @@
                     text="ABOUT US"
                 />
                 <NavLink
-                    v-bind:native="false"
+                    v-bind:native="true"
                     v-bind:last="true"
-                    url="/contact"
+                    url="http://chat.sdslabs.co/"
                     text="CONTACT"
                 />
             </div>

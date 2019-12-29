@@ -40,7 +40,7 @@ let colors = {
     transparent: "transparent",
     white: "rgba(255, 255, 255, 1)",
     black: "rgba(10, 15, 13, 1)",
-    grey: "rgba(10, 15, 13, 0.07)",
+    grey: "rgba(10, 15, 13, 0.6)",
     purple: "rgba(58, 23, 114, 1)",
     orange: "rgba(229, 89, 52, 1)",
     blue: "rgba(55, 193, 225, 1)",
@@ -50,7 +50,8 @@ let colors = {
     border: "rgba(25, 25, 25, 0.5)",
     darkblue: "rgba(37, 110, 255, 1)",
     carousel: "rgba(25, 25, 25, 0.36)",
-    team: "rgba(248, 248, 248, 1)"
+    team: "rgba(248, 248, 248, 1)",
+    label: "rgba(10, 15, 13, 0.07)"
 };
 
 module.exports = {

@@ -2,7 +2,7 @@
     <div class="flex flex-col w-144 h-96 shadow-sister">
         <div class="flex flex-row mt-8">
             <div><img class="ml-12 w-56 h-40" :src="url" /></div>
-            <div class="mt-12 ml-12 leading-160 font-semibold text-lg w-96">
+            <div class="mt-12 mx-12 leading-160 font-semibold text-lg w-96">
                 {{ title }}
             </div>
         </div>

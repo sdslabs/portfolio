@@ -21,5 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/projects/', include('projects.urls')),
     url(r'^api/news/', include('news.urls')),
-    url(r'', include('base.urls')),
+    url(r'^api/timeline', include('base.urls')),
 ] + static(MEDIA_URL, document_root=MEDIA_ROOT)

@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div
-                :class="'w-100 h-120 self-end -mr-16 -mb-6.7/10 sm:-ml-2/10 sm:-mr-0 sm:-mb-0 bg-' + colors[index]"
+                :class="'w-100 h-3.5/10 sm:h-120 self-end -mr-16 -mb-6.7/10 sm:-ml-2/10 sm:-mr-0 sm:-mb-0 bg-' + colors[index]"
             />
         </div>
     </div>

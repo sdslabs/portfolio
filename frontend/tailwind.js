@@ -40,7 +40,7 @@ let colors = {
     transparent: "transparent",
     white: "rgba(255, 255, 255, 1)",
     black: "rgba(10, 15, 13, 1)",
-    grey: "rgba(10, 15, 13, 0.6)",
+    grey: "rgba(10, 15, 13, 0.07)",
     purple: "rgba(58, 23, 114, 1)",
     orange: "rgba(229, 89, 52, 1)",
     blue: "rgba(55, 193, 225, 1)",
@@ -501,6 +501,7 @@ module.exports = {
         "120": "30rem",
         "128": "32rem",
         "154": "42rem",
+        "3.5/10": "35vh",
         full: "100%",
         upevent: "54.2rem",
         screen: "100vh"

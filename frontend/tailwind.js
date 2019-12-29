@@ -181,6 +181,7 @@ module.exports = {
         base: "1.4rem", // 14px
         lg: "1.6rem", // 16px
         xl: "1.8rem", // 18px
+        "1.5xl": "2.1rem", //21px
         "2xl": "2.4rem", // 24px
         "3xl": "3rem", // 30px
         "4xl": "3.6rem", // 36px
@@ -635,6 +636,7 @@ module.exports = {
         "40": "10rem",
         "44": "11rem",
         "48": "12rem",
+        "56": "14rem",
         "60": "15rem",
         "72": "18rem",
         "88": "22rem",
@@ -686,6 +688,7 @@ module.exports = {
         "64": "16rem",
         "68": "17rem",
         "76": "19rem",
+        "92": "23rem",
         "96": "24rem",
         "98": "24.5rem",
         "100": "25rem",
@@ -721,6 +724,7 @@ module.exports = {
         "8": "2rem",
         "10": "2.5rem",
         "12": "3rem",
+        "14": "3.5rem",
         "16": "4rem",
         "18": "4.5rem",
         "20": "5rem",

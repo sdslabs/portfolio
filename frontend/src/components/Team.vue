@@ -25,8 +25,8 @@
         </div>
     </div>
     <div class="flex flex-col w-auto mx-10 sm:ml-26">
-        <div class="font-black text-3xl leading-loose md:w-88">Our Team</div>
-        <div class="sm:w-144 sm:mt-14 mt-10 font-semibold text-base text-grey leading-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada nisl.</div>
+        <div class="text-3xl font-black">Our Team</div>
+        <div class="pt-10 text-lg text-grey leading-170 sm:w-144">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada nisl.</div>
         <div><Button class="mt-14 bg-purple" v-bind:native=true url="https://team.sdslabs.co/" text="Open Teampage"/></div>
     </div>
   </div>

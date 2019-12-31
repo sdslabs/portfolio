@@ -3,12 +3,12 @@
         class="sister-groups w-auto flex flex-col md:content-center ml-8 mr-8 sm:ml-0 sm:mr-0 sm:pt-60"
     >
         <div
-            class="font-black  sm:self-center text-3xl leading-loose sm:w-feed sm:text-center"
+            class="text-3xl font-extrabold sm:self-center leading-loose sm:w-feed sm:text-center"
         >
             Sister Groups
         </div>
         <div
-            class="font-base sm:font-semibold sm:text-grey sm:self-center text-base sm:text-center leading-normal sm:w-sister mt-12"
+            class="sm:w-180 pt-6 text-lg text-grey leading-170 sm:self-center sm:text-center sm:w-sister"
         >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac
             lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Pellentesque

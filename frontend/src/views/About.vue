@@ -8,7 +8,7 @@
             >
                 <img class="img1 w-72" src="@/assets/images/labs1.svg" />
                 <img
-                    class="img2 w-88 pt-52 sm:pt-96 sm:pl-0"
+                    class="img2 sm:w-88 sm:pt-96 pt-0 pl-0"
                     src="@/assets/images/labs2.svg"
                 />
                 <img
@@ -99,8 +99,8 @@
                 </div>
 
                 <div class="flex flex-col sm:pl-60 mx-10">
-                    <div class="text-3xl font-black sm:-mt-24">Area of Interest</div>
-                    <div class="text-xl sm:text-base w-auto sm:w-180 pt-10 font-normal text-grey leading-180 sm:leading-170">
+                    <div class="text-3xl font-extrabold">Area of Interest</div>
+                    <div class="sm:w-180 pt-10 text-lg text-grey leading-170">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada
                         nisl. Pellentesque sagittis fringilla tempor. Pellentesque
@@ -116,7 +116,7 @@
                 class="flex sm:flex-col sm:items-center sm:justify-between flex-col mx-10 sm:ml-0"
             >
                 <div class="text-3xl font-black">Timeline</div>
-                <div class="sm:text-base text-xl w-auto sm:w-292 pt-10 sm:mt-16 sm:text-center font-normal sm:font-semibold text-grey leading-180 sm:leading-170">
+                <div class="sm:w-292 pt-10 text-lg text-grey leading-170 w-auto sm:text-center">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac
                     lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Pellentesque
                     sagittis fringilla tempor. Pellentesque sit amet augue sit amet quam
@@ -124,7 +124,7 @@
                 </div>
             </div>
 
-            <div id="timeline_bar" class="timeline_bar flex align-bottom h-auto w-full mt-16 overflow-x-auto sm:pl-64">
+            <div id="timeline_bar" class="timeline_bar flex align-bottom h-auto w-full mt-16 overflow-x-auto md:pl-64">
                 <div class="timeline-bar flex flex-row-reverse flex-no-wrap py-1" v-for="(timeline, index) in timelines" v-bind:key="index">
                     <div class="timeline-box shadow-md ml-5 mr-5 self-center w-148 sm:w-144 p-10">
                         <div class="text-xl sm:text-base font-semibold">{{ timeline.timing }}</div>
@@ -134,7 +134,7 @@
                 </div>
             </div>
 
-            <div class="scroll_icon w-auto">
+            <div class="scroll_icon w-auto hidden md:block">
                 <button id="scroll_btn" class="scroll_btn self-center h-10 sm:w-16 sm:h-16 mt-16 sm:mt-32" v-on:click="scrollFunction">
                     <img src="@/assets/images/scroll-arrow.svg">
                 </button>
@@ -170,7 +170,7 @@ export default {
     },
     mounted() {
         axios
-            .get("http://0.0.0.0:8000/api/timeline/?format=json")
+            .get("http://0.0.0.0:8000/api/timeline?format=json")
             .then(response => {
                 let timelines = {};
                 for (let i = 0; i < response.data.length; i++) {
@@ -183,26 +183,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media screen and (max-width: 576px) {
-    .img1 {
-        width: 12.78rem;
-        height: 10.326rem;
-        margin-top: 3.3rem;
-    }
-
-    .img2 {
-        width: 13.18rem;
-        height: 8.92rem;
-        margin-top: 11.5rem;
-        margin-left: 0.7rem;
-    }
-
-    .img3 {
-        width: 14.213rem;
-        height: 8.99rem;
-    }
-}
-
 .timeline_bar {
     scroll-behavior: smooth;
 }
@@ -228,9 +208,23 @@ export default {
     width: 26.4rem;
 }
 
-@media only screen and (max-width: 576px) {
-    .timeline-bar:nth-child(n) {
-        width: 48rem;
+@media screen and (max-width: 576px) {
+    .img1 {
+        width: 12.78rem;
+        height: 10.326rem;
+        margin-top: 3.3rem;
+    }
+
+    .img2 {
+        width: 13.18rem;
+        height: 8.92rem;
+        margin-top: 11.5rem;
+        margin-left: 0.7rem;
+    }
+
+    .img3 {
+        width: 14.213rem;
+        height: 8.99rem;
     }
 }
 </style>

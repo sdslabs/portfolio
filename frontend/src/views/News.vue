@@ -11,11 +11,11 @@
                 dolor sit amet, adipiscing elit.
             </div>
         </div>
-        <div class="sm:grid pt-24 pb-24">
+        <div class="sm:grid sm:w-news pt-24 pb-24">
             <div
                 class="sm:grid-item sm:pr-navbar sm:w-event"
                 v-for="event_block in event"
-                v-bind:key="event_block"
+                v-bind:key="event_block.event.title"
             >
                 <div>
                     <div
@@ -93,9 +93,9 @@
     </div>
 </template>
 
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"/>
 <script>
 import axios from "axios";
+import Masonry from "masonry-layout";
 import LargeFeed from "@/components/news/LargeFeed.vue";
 import SmallFeed from "@/components/news/SmallFeed.vue";
 export default {
@@ -138,7 +138,7 @@ export default {
                 });
                 this.event = Object.assign({}, this.event, event);
             });
-        var elem = document.querySelector(".grid");
+        var elem = document.querySelector("#grid");
         var msnry = new Masonry(elem, {
             // options
             itemSelector: ".grid-item",

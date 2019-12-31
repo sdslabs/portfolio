@@ -19,7 +19,7 @@
             <div
                 class="flex flex-col pb-10"
                 v-for="eventUpdates in eventUpdates"
-                v-bind:key="eventUpdates"
+                v-bind:key="eventUpdates.title"
             >
                 <UpdateCard
                     :title="eventUpdates.title"

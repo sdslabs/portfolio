@@ -18,8 +18,8 @@
                     class="py-6"
                     v-bind:native="false"
                     v-bind:last="false"
-                    url="/feed"
-                    text="FEED"
+                    url="/news"
+                    text="NEWS"
                 />
                 <NavLink
                     class="py-6"

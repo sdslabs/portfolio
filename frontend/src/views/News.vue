@@ -1,19 +1,19 @@
 <template>
     <div
-        class="flex flex-col ml-10 mr-10 md:ml-0 md:mr-0 pt-44 md:pt-60 md:pl-60 md:w-full"
+        class="flex flex-col ml-10 mr-10 sm:ml-0 sm:mr-0 pt-44 sm:pt-60 sm:pl-60 sm:w-full"
     >
         <div class="flex flex-col">
             <div class="font-black text-3xl leading-180">News Updates</div>
-            <div class="md:w-largetext text-base mt-10 leading-normal">
+            <div class="sm:w-largetext sm:text-base mt-10 sm:leading-normal text-lg text-grey leading-170">
                 Lorem ipsum dolor sit amet, adipiscing elit. Aenean commodo
                 ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer
                 adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum
                 dolor sit amet, adipiscing elit.
             </div>
         </div>
-        <div class="pt-24 pb-24">
+        <div class="sm:grid pt-24 pb-24">
             <div
-                class="md:pr-navbar md:w-event"
+                class="sm:grid-item sm:pr-navbar sm:w-event"
                 v-for="event_block in event"
                 v-bind:key="event_block"
             >
@@ -93,6 +93,7 @@
     </div>
 </template>
 
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"/>
 <script>
 import axios from "axios";
 import LargeFeed from "@/components/news/LargeFeed.vue";
@@ -137,6 +138,12 @@ export default {
                 });
                 this.event = Object.assign({}, this.event, event);
             });
+        var elem = document.querySelector(".grid");
+        var msnry = new Masonry(elem, {
+            // options
+            itemSelector: ".grid-item",
+            columnWidth: 200
+        });
     }
 };
 </script>

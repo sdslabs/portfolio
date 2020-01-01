@@ -124,8 +124,8 @@
                 </div>
             </div>
 
-            <div id="timeline_bar" class="timeline_bar flex align-bottom h-auto w-full mt-16 overflow-x-auto md:pl-64">
-                <div class="timeline-bar flex flex-row-reverse flex-no-wrap py-1" v-for="(timeline, index) in timelines" v-bind:key="index">
+            <div id="timeline_bar" class="timeline_bar flex align-bottom h-auto w-full mt-16 overflow-x-auto sm:pl-64">
+                <div class="timeline-bar flex flex-row-reverse sm:flex-no-wrap py-1" v-for="(timeline, index) in timelines" v-bind:key="index">
                     <div class="timeline-box shadow-md ml-5 mr-5 self-center w-148 sm:w-144 p-10">
                         <div class="text-xl sm:text-base font-semibold">{{ timeline.timing }}</div>
                         <div class="text-1.5xl sm:text-lg text-grey-900 font-semibold pt-13">{{ timeline.title }}</div>
@@ -141,7 +141,7 @@
             </div>
         </div>
         <div><Team/></div>
-        <div class="pt-24 sm:mt-24 pb-56 sm:pb-44"><SisterGroups/></div>
+        <div class="pt-24 sm:mt-24 pb-44"><SisterGroups/></div>
     </div>
     </div>
 </template>

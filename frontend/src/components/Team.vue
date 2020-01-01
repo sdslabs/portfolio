@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col-reverse pt-60 sm:flex-row sm:pl-72 sm:pr-100 sm:pt-60 sm:w-full sm:justify-center">
+  <div class="flex flex-col-reverse pt-24 sm:flex-row sm:pl-72 sm:pr-100 sm:pt-60 sm:w-full sm:justify-center">
     <div class="flex flex-row mx-10 mt-20 sm:mt-0 sm:mr-26">
         <div class="flex flex-col w-96 h-80 bg-team mt-36">
             <div class="self-center"><img class="w-64 mt-12" src="@/assets/images/dev.svg"/></div>

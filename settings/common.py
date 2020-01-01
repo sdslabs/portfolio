@@ -49,7 +49,7 @@ THIRD_PARTY_APPS = [
 ]
 
 OUR_APPS = [
-    'base',
+    'timeline',
     'news',
     'projects'
 ]

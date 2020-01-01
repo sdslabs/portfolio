@@ -2,7 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-
 class Timeline(models.Model):
     """Model representing details of timeline"""
     timing = models.CharField(max_length=50)
@@ -15,3 +14,4 @@ class Timeline(models.Model):
 
     def __str__(self):
         return self.title
+

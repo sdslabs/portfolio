@@ -7,4 +7,4 @@ class TimelineSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Timeline
-        fields = ('timing', 'title', 'description')
+        fields = ( 'timing', 'title', 'description' )

@@ -49,16 +49,16 @@
             >
                 <div class="sm:mr-28 sm:w-220 w-full mt-16">
                     <div class="flex rounded shadow-md flex-row ml-8 mr-8 h-auto sm:w-92">
-                        <div class="my-8 mb-14 mx-10 w-20 h-20 sm:m-8">
+                        <div class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto">
                             <img src="@/assets/images/interest1.png">
                         </div>
                         <div class="font-sans font-semibold self-center text-1.5xl leading-280 sm:text-base align-middle sm:leading-160">
                             Software Development
                         </div>
                     </div>
-                    <div class="sm:pl-100 sm:-mt-14 mt-8">
+                    <div class="sm:pl-100 sm:-mt-10 mt-8">
                         <div class="flex rounded shadow-md mt-0 flex-row ml-8 mr-8 sm:w-92 h-auto">
-                            <div class="my-8 mb-14 mx-10 w-20 h-20 sm:m-8">
+                            <div class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto">
                                 <img src="@/assets/images/interest2.png">
                             </div>
                             <div class="font-sans font-semibold self-center text-1.5xl leading-280 sm:text-base align-middle sm:leading-160 sm:mr-10">
@@ -66,9 +66,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sm:-mt-14 mt-8">
+                    <div class="sm:-mt-10 mt-8">
                         <div class="flex rounded shadow-md mt-0 mr-0 flex-row ml-8 mr-8 sm:w-92 h-auto">
-                            <div class="my-8 mb-14 mx-10 w-20 h-20 sm:m-8">
+                            <div class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto">
                                 <img src="@/assets/images/interest3.png">
                             </div>
                             <div class="font-sans font-semibold self-center text-1.5xl leading-280 sm:text-base align-middle sm:leading-160">
@@ -76,9 +76,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sm:pl-100 sm:-mt-14 mt-8">
+                    <div class="sm:pl-100 sm:-mt-10 mt-8">
                         <div class="flex rounded shadow-md mt-0 mr-0 flex-row ml-8 mr-8 sm:w-92 h-auto">
-                            <div class="my-8 mb-14 mx-10 w-20 h-20 sm:m-8">
+                            <div class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto">
                                 <img src="@/assets/images/interest4.png">
                             </div>
                             <div class="font-sans font-semibold self-center text-1.5xl leading-280 sm:text-base align-middle sm:leading-160">
@@ -86,9 +86,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-6 sm:-mt-14 mt-8">
+                    <div class="sm:-mt-10 mt-8">
                         <div class="flex rounded shadow-md mt-0 mr-0 flex-row ml-8 mr-8 sm:w-92 h-auto">
-                            <div class="my-8 mb-14 mx-10 w-20 h-20 sm:m-8">
+                            <div class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto">
                                 <img src="@/assets/images/interest5.png">
                             </div>
                             <div class="font-sans font-semibold self-center text-1.5xl leading-280 sm:text-base align-middle sm:leading-160 sm:mr-10">

@@ -127,8 +127,8 @@
             <div id="timeline_bar" class="timeline_bar flex align-bottom h-auto w-full mt-16 overflow-x-auto sm:pl-64">
                 <div class="timeline-bar flex flex-row-reverse sm:flex-no-wrap py-1" v-for="(timeline, index) in timelines" v-bind:key="index">
                     <div class="timeline-box shadow-md ml-5 mr-5 self-center w-148 sm:w-144 p-10">
-                        <div class="text-xl sm:text-base font-semibold">{{ timeline.timing }}</div>
-                        <div class="text-1.5xl sm:text-lg text-grey-900 font-semibold pt-13">{{ timeline.title }}</div>
+                        <div :class="'text-xl sm:text-base font-semibold text-' + colors[index.length % 6]">{{ timeline.timing }}</div>
+                        <div class="text-1.5xl sm:text-lg text-grey-900 font-semibold pt-14">{{ timeline.title }}</div>
                         <div class="text-xl sm:text-base text-grey pt-10 leading-normal">{{ timeline.description }}</div>
                     </div>
                 </div>
@@ -158,9 +158,10 @@ export default {
         Team,
         SisterGroups
     },
-    data() {
+    data: function initData() {
         return {
-            timelines: {}
+            timelines: {},
+            colors: ["blue", "red", "green", "yellow", "purple", "orange"]
         };
     },
     methods: {

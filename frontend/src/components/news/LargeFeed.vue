@@ -13,7 +13,7 @@
             </div>
         </div>
         <div v-if="eventUpdates.length != 0">
-            <hr class="border-t-feed border-border w-feed -ml-10">
+            <hr class="border-t-feed border-border md:w-feed -ml-10 -mr-32">
             <div class="font-semibold text-base pt-14 leading-170">
                 {{ eventUpdates.length }} Updates
             </div>
@@ -30,7 +30,7 @@
                 />
             </div>
         </div>
-        <hr class="border-t-feed border-border w-feed -ml-10">
+        <hr class="border-t-feed border-border md:w-feed -ml-10 -mr-32">
         <div class="mt-10 font-extrabold text-base pb-8 leading-170">
             <router-link
                 :to="'/news/'+event.title"

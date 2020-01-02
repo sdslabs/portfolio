@@ -16,13 +16,13 @@
                 </div>
             </div>
             <div class="-ml-6 flex sm:-ml-0 sm:pl-24 sm:w-7/10">
-                <div class="self-center z-10">
-                    <img class="w-full" :src="image_url" />
+                <div class="self-center flex flex-row z-10">
+                    <img class="w-full z-20" :src="image_url" />
+                    <div
+                        :class="'w-140 h-140 sm:h-120 self-end -mr-16 -mt-14 -mb-14 -ml-5/10 sm:-mr-26 bg-' + colors[index]"
+                    />
                 </div>
             </div>
-            <div
-                :class="'w-100 h-3.5/10 sm:h-120 self-end -mr-16 -mb-6.7/10 sm:-ml-2/10 sm:-mr-0 sm:-mb-0 bg-' + colors[index]"
-            />
         </div>
     </div>
 </template>

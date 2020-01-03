@@ -22,11 +22,11 @@
                 </p>
             </div>
             <div
-                class="w-screen md:w-88 flex flex-row-reverse justify-between sm:h-full sm:items-center sm:justify-center"
+                class="w-screen sm:w-88 flex flex-row-reverse justify-between sm:h-full sm:items-center sm:justify-center"
             >
                 <div>
                     <img
-                        class="w-60 md:w-88 pt-20"
+                        class="w-60 sm:w-88 pt-20"
                         src="@/assets/images/home2.svg"
                     />
                 </div>

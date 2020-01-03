@@ -1,5 +1,5 @@
 <template>
-    <div class="md:w-feed h-auto shadow-feed pt-10">
+    <div class="sm:w-feed h-auto shadow-feed pt-10">
         <div class="pl-10">
             <Label :text="event.types" />
         </div>

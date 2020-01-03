@@ -1,23 +1,23 @@
 <template>
-    <div class="event pt-40 md:pt-60 flex flex-col ml-8 mr-8 md:ml-0 md:mr-0">
+    <div class="event pt-40 sm:pt-60 flex flex-col ml-8 mr-8 sm:ml-0 sm:mr-0">
         <div class="flex flex-col pb-40">
-            <div class="flex flex-col md:flex-row">
-                <div class="flex flex-col md:ml-60">
+            <div class="flex flex-col sm:flex-row">
+                <div class="flex flex-col sm:ml-60">
                     <router-link to="/news"
                         ><div><img src="@/assets/images/back.svg" /></div
                     ></router-link>
-                    <div class="mt-24 md:mt-32">
+                    <div class="mt-24 sm:mt-32">
                         <Label :text="events.event[0].types"/>
                     </div>
                     <div
-                        class="md:w-feed mt-20 font-black text-3xl leading-180"
+                        class="sm:w-feed mt-20 font-black text-3xl leading-180"
                     >
                         {{ events.event[0].title.toUpperCase() }}
                     </div>
                     <div class="mt-8 text-base font-semibold leading-170">
                         {{ events.event[0].timing }}
                     </div>
-                    <div class="md:w-feed mt-14 text-base leading-normal">
+                    <div class="sm:w-feed mt-14 text-base leading-normal">
                         {{ events.event[0].description }}
                     </div>
                     <div class="mt-28">
@@ -28,19 +28,19 @@
                         />
                     </div>
                 </div>
-                <div class="mt-20 md:mt-0 md:ml-44 shadow-image">
+                <div class="mt-20 sm:mt-0 sm:ml-44 shadow-image">
                     <img
-                        class="md:w-image"
+                        class="sm:w-image"
                         :src="events.event[0].image"
                     />
                 </div>
             </div>
-            <div class="md:ml-60 mt-40 text-base md:w-eventdesc leading-normal">
+            <div class="sm:ml-60 mt-40 text-base sm:w-eventdesc leading-normal">
                 {{ events.event[0].description1 }}
             </div>
         </div>
         <div class="flex flex-col" v-if="events.event_update.length != 0">
-            <div class="mt-40 md:ml-60 font-extrabold text-lg leading-170">
+            <div class="mt-40 sm:ml-60 font-extrabold text-lg leading-170">
                 {{ events.event_update.length }} Updates
             </div>
             <div>

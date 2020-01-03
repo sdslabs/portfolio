@@ -134,7 +134,7 @@
                 </div>
             </div>
 
-            <div class="scroll_icon w-auto hidden md:block">
+            <div class="scroll_icon w-auto hidden sm:block">
                 <button id="scroll_btn" class="scroll_btn self-center h-10 sm:w-16 sm:h-16 mt-16 sm:mt-32" v-on:click="scrollFunction">
                     <img src="@/assets/images/scroll-arrow.svg">
                 </button>

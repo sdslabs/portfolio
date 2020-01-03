@@ -1,7 +1,7 @@
 <template>
-    <div class="md:w-event h-auto shadow-feed pl-10 pt-10 pr-10">
-        <Label :text="event.types" />
-        <div class="flex flex-col mt-10 pb-10">
+    <div class="md:w-event h-auto shadow-feed pt-10">
+        <div class="pl-10"><Label :text="event.types" /></div>
+        <div class="flex flex-col mt-10 pb-10 pl-10 pr-10">
             <div class="font-extrabold text-xl leading-180">
                 {{ event.title.toUpperCase() }}
             </div>
@@ -12,8 +12,7 @@
                 {{ event.description }}
             </div>
         </div>
-        <hr class="border-t-feed md:w-event border-border -ml-10 -mr-10">
-        <div class="mt-8 font-extrabold text-base pb-8 leading-170">
+        <div class="pt-8 font-extrabold text-base pb-8 pl-10 border-t-feed border-border leading-170">
             <a
                 :href="event.url"
                 target="_blank"

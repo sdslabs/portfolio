@@ -1,6 +1,6 @@
 <template>
     <div
-        class="sister-groups w-auto flex flex-col md:content-center ml-8 mr-8 sm:ml-0 sm:mr-0 sm:pt-60"
+        class="sister-groups w-auto flex flex-col sm:content-center ml-8 mr-8 sm:ml-0 sm:mr-0 sm:pt-60"
     >
         <div
             class="text-3xl font-extrabold sm:self-center leading-loose sm:w-feed sm:text-center"
@@ -42,7 +42,7 @@
                 />
             </div>
         </div>
-        <div class="mt-12 md:hidden"><SisterGallery /></div>
+        <div class="mt-12 sm:hidden"><SisterGallery /></div>
     </div>
 </template>
 

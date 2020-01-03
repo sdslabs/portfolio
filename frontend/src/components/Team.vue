@@ -4,22 +4,22 @@
         <div class="flex flex-col w-96 h-80 bg-team mt-36">
             <div class="self-center"><img class="w-64 mt-12" src="@/assets/images/dev.svg"/></div>
             <div class="self-center mt-8">
-                <span class="font-black text-3xl md:text-4xl">20 </span>
-                <span class="font-black text-lg md:text-xl">Developers</span>
+                <span class="font-black text-3xl sm:text-4xl">20 </span>
+                <span class="font-black text-lg sm:text-xl">Developers</span>
             </div>
         </div>
         <div class="flex flex-col">
             <div class="flex flex-col w-64 h-80 bg-team ml-16 sm:ml-20">
                 <div class="self-center"><img class="w-28 mt-20" src="@/assets/images/des.svg"/></div>
                 <div class="self-center mt-1">
-                    <span class="font-black text-3xl md:text-4xl">9 </span>
-                    <span class="font-black text-lg md:text-xl">Designers</span>
+                    <span class="font-black text-3xl sm:text-4xl">9 </span>
+                    <span class="font-black text-lg sm:text-xl">Designers</span>
                 </div>
             </div>
             <div class="w-96 h-48 bg-team mt-16 ml-16 sm:ml-20">
                 <div class="self-center text-center mt-16">
-                    <span class="font-black text-3xl md:text-4xl">40+ </span>
-                    <span class="font-black text-lg md:text-xl">Alumni</span>
+                    <span class="font-black text-3xl sm:text-4xl">40+ </span>
+                    <span class="font-black text-lg sm:text-xl">Alumni</span>
                 </div>
             </div>
         </div>

@@ -38,7 +38,7 @@
                                 event_block.event.priority == 'small'
                         "
                     >
-                        <SmallFeed class="mb-10 md:w-event" :event="event_block.event" />
+                        <SmallFeed class="mb-10 sm:w-event" :event="event_block.event" />
                     </div>
                     <div
                         v-if="
@@ -52,7 +52,7 @@
                         />
                     </div>
                     <div
-                    class="mb-10 md:w-event"
+                    class="mb-10 sm:w-event"
                         v-if="
                             event_block.event.types == 'online competition' &&
                                 event_block.event.priority == 'small'
@@ -73,7 +73,7 @@
                     />
                 </div>
                 <div
-                class="mb-10 md:w-event"
+                class="mb-10 sm:w-event"
                     v-if="
                         event_block.event.types == 'app update' &&
                             event_block.event.priority == 'small'
@@ -81,13 +81,13 @@
                 >
                     <SmallFeed :event="event_block.event" />
                 </div>
-                <div class="mb-10 md:w-feed" v-if="event_block.event.types == 'past event' && event_block.event.priority == 'large'">
+                <div class="mb-10 sm:w-feed" v-if="event_block.event.types == 'past event' && event_block.event.priority == 'large'">
                     <LargeFeed
                         :event="event_block.event"
                         :eventUpdates="event_block.event_update"
                     />
                 </div>
-                 <div class="mb-10 md:w-feed" v-if="event_block.event.types == 'past event' && event_block.event.priority == 'small'">
+                 <div class="mb-10 sm:w-feed" v-if="event_block.event.types == 'past event' && event_block.event.priority == 'small'">
                     <SmallFeed :event="event_block.event"/>
                 </div>
             </div>

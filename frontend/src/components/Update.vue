@@ -1,6 +1,6 @@
 <template>
-    <div class="flex flex-col md:flex-row mt-16 mb-32">
-        <div class="md:w-feed flex flex-col md:ml-60 mt-16">
+    <div class="flex flex-col sm:flex-row mt-16 mb-32">
+        <div class="sm:w-feed flex flex-col sm:ml-60 mt-16">
             <div class="font-extrabold text-xl leading-180">{{ title.toUpperCase() }}</div>
             <div
                 :class="
@@ -14,9 +14,9 @@
             <div class="text-base mt-14 leading-normal">{{ description2 }}</div>
             <div class="text-base mt-14 leading-normal">{{ description3 }}</div>
         </div>
-        <div class="md:w-image">
+        <div class="sm:w-image">
             <img
-                class="mt-12 md:mt-0 md:ml-44 md:w-image shadow-image"
+                class="mt-12 sm:mt-0 sm:ml-44 sm:w-image shadow-image"
                 :src="image"
             />
         </div>

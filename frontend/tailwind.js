@@ -462,7 +462,7 @@ module.exports = {
         groups: "112.8rem",
         largetext: "102.5rem",
         image: "45.6rem",
-        news: "112.8rem",
+        news: "114.8rem",
         feed: "55.2rem",
         event: "26.4rem",
         eventdesc: "110.8rem",

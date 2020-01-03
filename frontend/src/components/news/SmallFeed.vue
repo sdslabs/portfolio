@@ -12,7 +12,6 @@
                 {{ event.description }}
             </div>
         </div>
-        <hr class="border-t-feed w-event border-border -ml-10">
         <div class="mt-8 font-extrabold text-base pb-8 leading-170">
             <a
                 :href="event.url"

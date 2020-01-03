@@ -1,5 +1,6 @@
 <template>
     <div
+        :key="key"
         class="flex flex-col ml-10 mr-10 sm:ml-0 sm:mr-0 pt-44 sm:pt-60 sm:pl-60 sm:w-full"
     >
         <div class="flex flex-col">
@@ -11,15 +12,16 @@
                 dolor sit amet, adipiscing elit.
             </div>
         </div>
-        <div class="sm:grid sm:w-news pt-24 pb-24">
+        <div id="grid" class="sm:grid sm:w-news pt-24 pb-24">
             <div
+                id="grid-item"
                 class="sm:grid-item sm:pr-navbar sm:w-event"
                 v-for="event_block in event"
                 v-bind:key="event_block.event.title"
             >
                 <div>
                     <div
-                    class="mb-10 md:w-feed"
+                    class="mb-10 sm:w-feed"
                         v-if="
                             event_block.event.types == 'upcoming event' &&
                                 event_block.event.priority == 'large'
@@ -95,7 +97,7 @@
 
 <script>
 import axios from "axios";
-import Masonry from "masonry-layout";
+// import Masonry from "masonry-layout";
 import LargeFeed from "@/components/news/LargeFeed.vue";
 import SmallFeed from "@/components/news/SmallFeed.vue";
 export default {
@@ -107,8 +109,34 @@ export default {
     data: function initData() {
         return {
             event: {},
-            eventUpdates: []
+            eventUpdates: [],
+            key: 0
         };
+    },
+    methods: {
+        windowResize() {
+            var elem = document.getElementsByClassName("sm:grid")[0];
+            if (window.innerWidth < 576) {
+                elem.id = "";
+                this.key = 1;
+            } else {
+                elem.id = "grid";
+                this.key = 2;
+            }
+        },
+        masonry() {
+            var elem = document.getElementById("grid");
+            var msnry = new Masonry(elem, {
+                // options
+                itemSelector: "#grid-item",
+                columnWidth: 700,
+                gutter: 24,
+                percentPosition: true
+            });
+        }
+    },
+    created() {
+        window.addEventListener("resize", this.windowResize);
     },
     async mounted() {
         await axios
@@ -138,12 +166,19 @@ export default {
                 });
                 this.event = Object.assign({}, this.event, event);
             });
-        var elem = document.querySelector("#grid");
-        var msnry = new Masonry(elem, {
-            // options
-            itemSelector: ".grid-item",
-            columnWidth: 200
-        });
+        if (window.innerWidth < 576) {
+            var elem = document.getElementById("grid");
+            elem.id = "";
+        }
+        this.masonry();
+    },
+    updated() {
+        if (window.innerWidth > 576) {
+            this.masonry();
+        }
+    },
+    destroyed() {
+        window.removeEventListener("resize", this.windowResize);
     }
 };
 </script>

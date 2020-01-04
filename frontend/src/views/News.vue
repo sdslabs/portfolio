@@ -101,6 +101,7 @@ import axios from "axios";
 // import Masonry from "masonry-layout";
 import LargeFeed from "@/components/news/LargeFeed.vue";
 import SmallFeed from "@/components/news/SmallFeed.vue";
+import { CONFIG } from "@/utils/constants.js";
 export default {
     name: "news",
     components: {
@@ -141,7 +142,7 @@ export default {
     },
     async mounted() {
         await axios
-            .get("http://0.0.0.0:8000/api/news/?format=json")
+            .get(CONFIG.NewsPageURL)
             .then(response => {
                 let events = response.data;
                 let eventList = [];

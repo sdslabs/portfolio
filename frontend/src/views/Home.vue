@@ -28,6 +28,7 @@ import Router from "@/router.js";
 import Sidebar from "@/components/Sidebar.vue";
 import Landing from "@/components/Landing.vue";
 import Project from "@/components/Project.vue";
+import { CONFIG } from "@/utils/constants.js";
 
 let scrollOptions = { behavior: "smooth", block: "start" };
 
@@ -97,7 +98,7 @@ export default {
     },
     mounted() {
         axios
-            .get("http://0.0.0.0:8000/api/projects/?format=json")
+            .get(CONFIG.HomePageURL)
             .then(response => {
                 let projects = {};
                 for (let i = 0; i < response.data.length; i++) {

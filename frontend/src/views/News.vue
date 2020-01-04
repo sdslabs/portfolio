@@ -12,10 +12,9 @@
                 dolor sit amet, adipiscing elit.
             </div>
         </div>
-        <div id="grid" class="sm:grid sm:w-news pt-24 pb-24">
+        <div id="grid" class="grid sm:w-news pt-24 pb-24">
             <div
-                id="grid-item"
-                class="sm:grid-item sm:pr-navbar sm:w-event"
+                class="grid-item sm:pr-navbar sm:w-event"
                 v-for="event_block in event"
                 v-bind:key="event_block.event.title"
             >
@@ -98,7 +97,6 @@
 
 <script>
 import axios from "axios";
-// import Masonry from "masonry-layout";
 import LargeFeed from "@/components/news/LargeFeed.vue";
 import SmallFeed from "@/components/news/SmallFeed.vue";
 import { CONFIG } from "@/utils/constants.js";
@@ -112,25 +110,28 @@ export default {
         return {
             event: {},
             eventUpdates: [],
-            key: 0
+            key: false,
+            size: 576
         };
     },
     methods: {
+        // Re-render element on window resize
         windowResize() {
-            var elem = document.getElementsByClassName("sm:grid")[0];
-            if (window.innerWidth < 576) {
+            var elem = document.getElementsByClassName("grid")[0];
+            if (window.innerWidth < this.size) {
                 elem.id = "";
-                this.key = 1;
+                this.key = true;
             } else {
                 elem.id = "grid";
-                this.key = 2;
+                this.key = false;
             }
         },
+        // Re-initialize masonry
         masonry() {
             var elem = document.getElementById("grid");
             var msnry = new Masonry(elem, {
                 // options
-                itemSelector: "#grid-item",
+                itemSelector: ".grid-item",
                 columnWidth: "#feed",
                 gutter: 24,
                 percentPosition: true
@@ -168,14 +169,14 @@ export default {
                 });
                 this.event = Object.assign({}, this.event, event);
             });
-        if (window.innerWidth < 576) {
+        if (window.innerWidth < this.size) {
             var elem = document.getElementById("grid");
             elem.id = "";
         }
         this.masonry();
     },
     updated() {
-        if (window.innerWidth > 576) {
+        if (window.innerWidth > this.size) {
             this.masonry();
         }
     },

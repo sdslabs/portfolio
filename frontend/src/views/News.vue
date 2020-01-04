@@ -21,6 +21,7 @@
             >
                 <div>
                     <div
+                    id="feed"
                     class="mb-10 sm:w-feed"
                         v-if="
                             event_block.event.types == 'upcoming event' &&
@@ -129,7 +130,7 @@ export default {
             var msnry = new Masonry(elem, {
                 // options
                 itemSelector: "#grid-item",
-                columnWidth: 700,
+                columnWidth: "#feed",
                 gutter: 24,
                 percentPosition: true
             });

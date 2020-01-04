@@ -39,14 +39,6 @@ const router = new Router({
             }
         },
         {
-            path: "*",
-            name: "error404",
-            component: () => import("./views/Error404.vue"),
-            meta: {
-                title: "SDSLabs | Error"
-            }
-        },
-        {
             path: "/news",
             name: "news",
             component: () =>
@@ -64,7 +56,15 @@ const router = new Router({
             meta: {
                 title: "SDSLabs | News"
             }
-        }
+        },
+        {
+            path: "*",
+            name: "error404",
+            component: () => import("./views/Error404.vue"),
+            meta: {
+                title: "SDSLabs | Error"
+            }
+        },
     ]
 });
 

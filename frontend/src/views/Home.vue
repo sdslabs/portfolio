@@ -98,7 +98,7 @@ export default {
     },
     mounted() {
         axios
-            .get(CONFIG.HomePageURL)
+            .get(`${ CONFIG.baseURL }/api/projects/?format=json`)
             .then(response => {
                 let projects = {};
                 for (let i = 0; i < response.data.length; i++) {

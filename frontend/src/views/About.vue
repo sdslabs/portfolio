@@ -150,6 +150,7 @@
 import Gallery from "@/components/Gallery.vue";
 import Team from "@/components/Team.vue";
 import SisterGroups from "@/components/SisterGroups.vue";
+import { CONFIG } from "@/utils/constants.js";
 import axios from "axios";
 export default {
     name: "about",
@@ -161,7 +162,7 @@ export default {
     data: function initData() {
         return {
             timelines: {},
-            colors: ["blue", "red", "green", "yellow", "purple", "orange"]
+            colors: CONFIG.colors
         };
     },
     methods: {
@@ -171,7 +172,7 @@ export default {
     },
     mounted() {
         axios
-            .get("http://0.0.0.0:8000/api/timeline?format=json")
+            .get(`${ CONFIG.baseURL }/api/timeline/?format=json`)
             .then(response => {
                 let timelines = {};
                 for (let i = 0; i < response.data.length; i++) {

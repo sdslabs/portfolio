@@ -29,6 +29,7 @@
 
 <script>
 import Button from "@/components/Button.vue";
+import { CONFIG } from "@/utils/constants.js";
 
 export default {
     name: "project",
@@ -60,7 +61,7 @@ export default {
     data: function initData() {
         return {
             index: Date.now() % 6,
-            colors: ["black", "green", "darkblue", "red", "blue", "yellow"]
+            colors: CONFIG.colors
         };
     }
 };

@@ -25,6 +25,7 @@
 
 <script>
 import Label from "@/components/Label.vue";
+import { CONFIG } from "@/utils/constants.js";
 export default {
     name: "smallfeed",
     components: {
@@ -33,7 +34,7 @@ export default {
     data: function initData() {
         return {
             index: Date.now() % 6,
-            colors: ["blue", "red", "green", "yellow", "purple", "orange"]
+            colors: CONFIG.colors
         };
     },
     props: {

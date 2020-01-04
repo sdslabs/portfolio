@@ -34,7 +34,7 @@
         <div class="pt-10 font-extrabold text-base pb-8 leading-170 pl-10 border-border border-t-feed">
             <router-link
                 :to="'/news/'+event.title"
-                :class="'no-underline inline-block text-'+colors[index]"
+                :class="'no-underline inline-block text-'+ colors[index]"
             >
                 Know More
             </router-link>
@@ -45,6 +45,7 @@
 <script>
 import Label from "@/components/Label.vue";
 import UpdateCard from "@/components/news/UpdateCard.vue";
+import { CONFIG } from "@/utils/constants.js";
 export default {
     name: "largefeed",
     components: {
@@ -54,7 +55,7 @@ export default {
     data: function initData() {
         return {
             index: Date.now() % 6,
-            colors: ["blue", "red", "green", "yellow", "purple", "orange"]
+            colors: CONFIG.colors
         };
     },
     props: {

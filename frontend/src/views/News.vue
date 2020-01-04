@@ -111,7 +111,7 @@ export default {
             event: {},
             eventUpdates: [],
             key: false,
-            size: 576
+            size: CONFIG.mobileSize
         };
     },
     methods: {
@@ -143,7 +143,7 @@ export default {
     },
     async mounted() {
         await axios
-            .get(CONFIG.NewsPageURL)
+            .get(`${ CONFIG.baseURL }/api/news/?format=json`)
             .then(response => {
                 let events = response.data;
                 let eventList = [];

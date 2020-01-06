@@ -6,8 +6,8 @@ from .models import Event, EventUpdate
 
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
-    list_display = ('types', 'title', 'timing', 'description', 'description1', 'url', 'image', 'is_visible' )
+    list_display = ('types', 'title', 'timing', 'shortDescription', 'fullDescription', 'url', 'image', 'is_visible' )
 
 @admin.register(EventUpdate)
 class EventUpdateAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description', 'description1', 'description2', 'url', 'image', 'event')
+    list_display = ('title', 'description', 'contactInfo', 'footNote', 'url', 'image', 'event')

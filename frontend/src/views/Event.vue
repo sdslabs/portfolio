@@ -18,7 +18,7 @@
                         {{ events.event[0].timing }}
                     </div>
                     <div class="sm:w-feed mt-14 text-base leading-normal">
-                        {{ events.event[0].description }}
+                        {{ events.event[0].shortDescription }}
                     </div>
                     <div class="mt-28">
                         <Button
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="sm:ml-60 mt-40 text-base sm:w-eventdesc leading-normal">
-                {{ events.event[0].description1 }}
+                {{ events.event[0].fullDescription }}
             </div>
         </div>
         <div class="flex flex-col" v-if="events.event_update.length != 0">
@@ -51,9 +51,10 @@
                     <Update
                         :title="event_update.title"
                         :timing="event_update.timing"
-                        :description1="event_update.description1"
-                        :description2="event_update.description2"
-                        :description3="event_update.description3"
+                        :description="event_update.description"
+                        :contactInfo="event_update.contactInfo"
+                        :footNote="event_update.footNote"
+                        :greetings="event_update.greetings"
                         :url="event_update.url"
                         :image="event_update.image"
                     />

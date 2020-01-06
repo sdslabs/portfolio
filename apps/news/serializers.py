@@ -7,11 +7,11 @@ class EventSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Event
-        fields = ('types', 'priority', 'title', 'timing', 'description', 'description1', 'url', 'image', 'is_visible' )
+        fields = ('types', 'priority', 'title', 'timing', 'shortDescription', 'fullDescription', 'url', 'image', 'is_visible' )
 
 
 class EventUpdateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = EventUpdate
-        fields = ('title', 'timing', 'description', 'description1', 'description2', 'description3', 'image', 'event')
+        fields = ('title', 'timing', 'description', 'contactInfo', 'footNote', 'greetings', 'image', 'event')

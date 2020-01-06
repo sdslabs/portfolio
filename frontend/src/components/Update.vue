@@ -4,15 +4,23 @@
             <div class="font-extrabold text-xl leading-180">{{ title.toUpperCase() }}</div>
             <div
                 :class="
-                    timing ? 'font-semibold text-base mt-14' : 'text-base mt-20'
+                    timing ? 'font-semibold text-base mt-14' : 'hidden'
                 "
                 class="leading-normal"
             >
-                {{ timing ? timing : description }}
+                {{ timing }}
             </div>
-            <div class="text-base mt-14 leading-normal">{{ description1 }}</div>
-            <div class="text-base mt-14 leading-normal">{{ description2 }}</div>
-            <div class="text-base mt-14 leading-normal">{{ description3 }}</div>
+            <div
+                :class="
+                    description ? 'text-base mt-20' : 'hidden'
+                "
+                class="leading-normal"
+            >
+                {{ description }}
+            </div>
+            <div class="text-base mt-14 leading-normal">{{ contactInfo }}</div>
+            <div class="text-base mt-14 leading-normal">{{ footNote }}</div>
+            <div class="text-base mt-14 leading-normal">{{ greetings }}</div>
         </div>
         <div class="sm:w-image">
             <img
@@ -30,9 +38,9 @@ export default {
         title: String,
         timing: String,
         description: String,
-        description1: String,
-        description2: String,
-        description3: String,
+        contactInfo: String,
+        footNote: String,
+        greetings: String,
         url: String,
         image: String
     }

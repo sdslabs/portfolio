@@ -13,12 +13,12 @@
                     THINK. BUILD. SHIP.
                 </h1>
                 <p
-                    class="text-xl text-justify pt-14 sm:w-4/7 leading-160 opacity-60"
+                    class="text-1.5xl font-semibold text-justify pt-14 sm:w-5/7 leading-160 opacity-60"
                 >
-                    Commodo aute aliquip excepteur incididunt ut magna minim
-                    esse sit elit. Aute mollit veniam laborum reprehenderit
-                    tempor est aute enim. Proident deserunt laborum
-                    reprehenderit ut.
+                    We at SDSLabs are a bunch of designers and developers who
+                    aim to encourage the development of technology and
+                    innovation in IITR campus (and beyond) by learning, sharing
+                    knowledge and solving problems.
                 </p>
             </div>
             <div

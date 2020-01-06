@@ -11,7 +11,7 @@
                 {{ event.timing }}
             </div>
             <div class="mt-16 text-base leading-normal">
-                {{ event.description }}
+                {{ event.shortDescription }}
             </div>
         </div>
         <div v-if="eventUpdates.length != 0">

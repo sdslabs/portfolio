@@ -19,11 +19,12 @@
             <div class="flex flex-col ml-8 mr-8 sm:w-auto sm:pl-60 pr-0 sm:pt-24 sm:pt-0">
                 <div class="text-3xl font-extrabold">What is SDSLabs</div>
                 <div class="sm:w-180 pt-10 text-lg text-grey leading-170">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada
-                    nisl. Pellentesque sagittis fringilla tempor. Pellentesque
-                    sit amet augue sit amet quam feugiat porta vitae sit amet
-                    ligula. Nulla posuere pellentesque metus sit amet.
+                    SDSLabs or Software Development Section Laboratories is a 
+                    student-run technical group at IIT Roorkee, which aims to 
+                    encourage the development of technology and innovation in 
+                    the campus and beyond. We believe in learning and sharing
+                    knowledge; collaboration and experimentation; and human 
+                    interaction that matters the most.
                 </div>
             </div>
         </div>
@@ -34,11 +35,11 @@
             <div class="flex flex-col mr-8 ml-8 sm:w-auto sm:ml-100 sm:pt-8">
                 <div class="text-3xl font-extrabold">What we do</div>
                 <div class="sm:w-140 pt-10 text-lg text-grey leading-170">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada
-                    nisl. Pellentesque sagittis fringilla tempor. Pellentesque
-                    sit amet augue sit amet quam feugiat porta vitae sit amet
-                    ligula.
+                    We are involved in a lot of activities on the campus, off 
+                    the campus and on the web. We conduct lectures and workshops 
+                    on different fields of tech, organize hackathons, and also 
+                    conduct online competitions on our various self developed
+                    applications.
                 </div>
             </div>
         </div>
@@ -101,11 +102,10 @@
                 <div class="flex flex-col sm:pl-60 mx-10">
                     <div class="text-3xl font-extrabold">Area of Interest</div>
                     <div class="sm:w-180 pt-10 text-lg text-grey leading-170">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada
-                        nisl. Pellentesque sagittis fringilla tempor. Pellentesque
-                        sit amet augue sit amet quam feugiat porta vitae sit amet
-                        ligula. Nulla posuere pellentesque metus sit amet.
+                        We constantly explore and experiment, try to learn new things, 
+                        and get out of the comfort zones. This gives the members of SDSLabs 
+                        a freedom to work in a diverse range of fields in technology and 
+                        innovation, some of which are mentioned here.
                     </div>
                 </div>
             </div>
@@ -117,10 +117,8 @@
             >
                 <div class="text-3xl font-black">Timeline</div>
                 <div class="sm:w-292 pt-10 text-lg text-grey leading-170 w-auto sm:text-center">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac
-                    lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Pellentesque
-                    sagittis fringilla tempor. Pellentesque sit amet augue sit amet quam
-                    feugiat porta vitae sit amet ligula.
+                    The timeline shows our past achievements that we’re proud of and the 
+                    milestones that we were able to achieve as a group over the course of time.
                 </div>
             </div>
 

@@ -2,9 +2,14 @@
     <div class="event pt-40 sm:pt-60 flex flex-col ml-8 mr-8 sm:ml-0 sm:mr-0">
         <div class="flex flex-col pb-40">
             <div class="flex flex-col sm:flex-row">
-                <div class="flex flex-col sm:ml-60">
-                    <router-link to="/news"
-                        ><div><img src="@/assets/images/back.svg" /></div
+                <div class="flex flex-col sm:ml-60 mt-10 sm:mt-0">
+                    <router-link to="/news" class="no-underline"
+                        ><div class="flex flex-row">
+                            <img src="@/assets/images/back-arrow.svg" />
+                            <div class="text-lg font-bold text-black ml-4">
+                                Back
+                            </div>
+                        </div
                     ></router-link>
                     <div class="mt-24 sm:mt-32">
                         <Label :text="events.event[0].types"/>

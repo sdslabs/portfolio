@@ -38,25 +38,25 @@ export default {
                     image: lectures,
                     title: "Lectures",
                     description:
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Pellentesque sagittis fringilla tempor."
+                        "We regularly organize open lectures for IITR junta on different tech fields we’ve been exploring like machine learning, web development, product design, game development, etc."
                 },
                 {
                     image: hackathons,
                     title: "SDSLabs Hackathon",
                     description:
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Pellentesque sagittis fringilla tempor. Lorem ipsum dolor"
+                        "Syntax Error Campus Hackathon is where student teams participate in a 60-hour sprint of coding, coffee, designing, brainstorming, snacks and finally presenting the output."
                 },
                 {
                     image: workshops,
                     title: "Workshops",
                     description:
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem. sagittis fringilla tempor."
+                        "We conduct hands-on workshops, which range from installing linux to even building a software from scratch, where everyone who comes can learn something new. "
                 },
                 {
                     image: competitions,
                     title: "Competitions",
                     description:
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Pellentesque sagittis fringilla tempor. Pellentesque sit amet augue sit amet quam feugiat porta vitae sit amet ligula."
+                        "Online competetions on ML, data science, programming, and CTFs are a great way for enthusiasts to show off some skills or learn something new in a competetive environment."
                 }
             ],
             queue: 1

@@ -19,7 +19,7 @@
             >
                 <svg
                     class="fill-current h-6 w-6"
-                    viewBox="0 0 20 20"
+                    viewBox="0 0 17 17"
                     xmlns="http://www.w3.org/2000/svg"
                 >
                     <title>Menu</title>

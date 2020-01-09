@@ -26,7 +26,7 @@
     </div>
     <div class="flex flex-col w-auto mx-10 sm:ml-26">
         <div class="text-3xl font-black">Our Team</div>
-        <div class="pt-10 text-lg text-grey leading-170 sm:w-144">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Aenean ac lacinia nisi, ac maximus sem. Ut eu malesuada nisl.</div>
+        <div class="pt-10 text-lg text-grey leading-170 sm:w-144">We are a group of dedicated individuals that are passionate about creating and integrating the latest technological innovations and building a platform to unite every person on the planet.</div>
         <div><Button class="mt-14 bg-purple" v-bind:native=true url="https://team.sdslabs.co/" text="Open Teampage"/></div>
     </div>
   </div>

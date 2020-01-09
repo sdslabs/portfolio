@@ -9,7 +9,7 @@
                 {{ event.timing }}
             </div>
             <div class="mt-14 text-base leading-normal">
-                {{ event.description }}
+                {{ event.shortDescription }}
             </div>
         </div>
         <div class="pt-8 font-extrabold text-base pb-8 pl-10 border-t-feed border-border leading-170">

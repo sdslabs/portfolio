@@ -55,6 +55,7 @@ import lectures from "@/assets/images/lectures.png";
 import hackathons from "@/assets/images/hackathons.png";
 import workshops from "@/assets/images/workshops.png";
 import competitions from "@/assets/images/competitions.png";
+import { CONFIG } from "@/utils/constants.js";
 export default {
     name: "Gallery",
     data: function initData() {
@@ -94,11 +95,86 @@ export default {
                 if (this.queue % 4 !== 0) {
                     this.queue++;
                 } else this.queue = 1;
-            }, 4000);
+            }, 6000);
+        },
+        swipedetect: function(el, callback) {
+            var startX = 0;
+            var touchsurface = el,
+                swipedir,
+                startY,
+                distX,
+                distY,
+                threshold = 30, //required min distance traveled to be considered swipe
+                restraint = 300, // maximum distance allowed at the same time in perpendicular direction
+                allowedTime = 300, // maximum time allowed to travel that distance
+                elapsedTime,
+                startTime,
+                handleswipe = callback || function(swipedir) {};
+
+            touchsurface.addEventListener(
+                "touchstart",
+                function(e) {
+                    var touchobj = e.changedTouches[0];
+                    swipedir = "none";
+                    startX = touchobj.pageX;
+                    startY = touchobj.pageY;
+                    startTime = new Date().getTime(); // record time when finger first makes contact with surface
+                    e.preventDefault();
+                },
+                false
+            );
+
+            touchsurface.addEventListener(
+                "touchmove",
+                function(e) {
+                    e.preventDefault(); // prevent scrolling when inside DIV
+                },
+                false
+            );
+
+            touchsurface.addEventListener(
+                "touchend",
+                function(e) {
+                    var touchobj = e.changedTouches[0];
+                    distX = touchobj.pageX - startX; // get horizontal dist traveled by finger while in contact with surface
+                    distY = touchobj.pageY - startY; // get vertical dist traveled by finger while in contact with surface
+                    elapsedTime = new Date().getTime() - startTime; // get time elapsed
+                    // first condition for awipe met
+                    if (
+                        Math.abs(distX) >= threshold &&
+                        Math.abs(distY) <= restraint
+                    ) {
+                        // 2nd condition for horizontal swipe met
+                        swipedir = distX < 0 ? "left" : "right"; // if dist traveled is negative, it indicates left swipe
+                    } else if (
+                        Math.abs(distY) >= threshold &&
+                        Math.abs(distX) <= restraint
+                    ) {
+                        // 2nd condition for vertical swipe met
+                        swipedir = distY < 0 ? "up" : "down"; // if dist traveled is negative, it indicates up swipe
+                    }
+                    handleswipe(swipedir);
+                    e.preventDefault();
+                },
+                false
+            );
         }
     },
     mounted() {
-        this.carousel();
+        if (window.innerWidth >= CONFIG.mobileSize) this.carousel();
+        else {
+            var swipearea = document.getElementsByClassName("gallery")[0];
+            var vm = this;
+            this.swipedetect(swipearea, function(swipedir) {
+                if (swipedir == "left" || swipedir == "up") {
+                    if (vm.queue < 4) vm.queue++;
+                    else if (vm.queue == 4) vm.queue = 1;
+                } else if (swipedir == "right" || swipedir == "down") {
+                    if (vm.queue > 1) vm.queue--;
+                    else if (vm.queue == 1) vm.queue = 4;
+                }
+            });
+        }
     }
 };
 </script>

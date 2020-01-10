@@ -142,11 +142,11 @@ export default {
         var vm = this;
         this.swipedetect(swipearea, function(swipedir) {
             if (swipedir == "left" || swipedir == "up") {
-                if (vm.queue > 1) vm.queue--;
-                else if (vm.queue == 1) vm.queue = 3;
-            } else if (swipedir == "right" || swipedir == "down") {
                 if (vm.queue < 3) vm.queue++;
                 else if (vm.queue == 3) vm.queue = 1;
+            } else if (swipedir == "right" || swipedir == "down") {
+                if (vm.queue > 1) vm.queue--;
+                else if (vm.queue == 1) vm.queue = 3;
             }
         });
     }

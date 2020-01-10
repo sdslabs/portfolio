@@ -157,10 +157,12 @@ export default {
 @keyframes slideIn {
     0% {
         transform: translate(100%, 0%);
+        display: none;
         opacity: 1;
     }
     100% {
         transform: translate(0%, 0%);
+        display: block;
         opacity: 1;
     }
 }

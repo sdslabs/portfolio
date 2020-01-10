@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col sm:pt-60 pt-48 w-full">
+    <div class="flex flex-col sm:pt-60 pt-48 w-full overflow-x-hidden">
         <div
             class="flex flex-col-reverse sm:flex-row-reverse items-center justify-between sm:justify-between flex-col pl-0 pr-0"
         >

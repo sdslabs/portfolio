@@ -8,7 +8,7 @@
         />
         <div
             :key="queue"
-            class="textbox w-auto ml-6 mr-6 h-auto min-h-88 -mt-32 pr-6 sm:w-120 sm:h-auto sm:min-h-88 sm:ml-98 sm:-mt-gallery bg-white z-30"
+            class="textbox w-auto ml-6 mr-6 h-auto min-h-88 -mt-32 pr-6 sm:w-120 sm:h-auto sm:min-h-88 sm:ml-98 sm:-mt-gallery bg-white z-20"
         >
             <div class="font-extrabold text-2xl sm:text-lg mt-10 ml-10">
                 {{ slides[queue - 1].title }}
@@ -183,20 +183,20 @@ export default {
     box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.07);
     border-radius: 5px;
 }
-// @keyframes slideIn {
-//     0% {
-//         transform: translate(100%, 0%);
-//         opacity: 1;
-//     }
-//     100% {
-//         transform: translate(0%, 0%);
-//         opacity: 1;
-//     }
-// }
-// @media screen and (max-width: 576px) {
-//     .image,
-//     .textbox {
-//         animation: slideIn 1s ease forwards;
-//     }
-// }
+@keyframes slideIn {
+    0% {
+        transform: translate(100%, 0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 576px) {
+    .image,
+    .textbox {
+        animation: slideIn 1s ease forwards;
+    }
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="fixed h-full w-full bg-grey z-30 sm:hidden" @click="close">
         <nav class="fixed h-full bg-white w-3/4 ml-1/4 flex flex-col">
-            <div class="self-end mt-20 mr-16 h-8 w-8" @click="close">
+            <div class="self-end mt-20 mr-16 h-8 w-8">
                 <img src="@/assets/images/close.svg" />
             </div>
             <div

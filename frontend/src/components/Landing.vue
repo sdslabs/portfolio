@@ -1,7 +1,7 @@
 <template>
     <div>
         <div
-            class="banner pt-88 sm:pt-navbar px-16 relative flex flex-col justify-center items-center sm:px-0 sm:justify-between sm:flex-row"
+            class="banner pt-96 sm:pt-navbar px-16 relative flex flex-col justify-center items-center sm:px-0 sm:justify-between sm:flex-row"
         >
             <div class="hidden sm:flex w-88 h-full items-center justify-center">
                 <img class="w-full pb-20" src="@/assets/images/home1.svg" />
@@ -47,7 +47,7 @@
                     class="pt-16 sm:pt-0 block"
                     src="@/assets/images/down-arrow.svg"
                 />
-                <span class="block text-black pt-4">Projects</span>
+                <span class="block text-grey pt-4 font-semibold">Projects</span>
             </router-link>
         </div>
     </div>

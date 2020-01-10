@@ -1,6 +1,6 @@
 <template>
     <div
-        class="pt-navbar sm:h-screen flex justify-end items-center"
+        class="pt-60 sm:pt-navbar sm:h-screen flex justify-end items-center"
         :id="permalink"
     >
         <div

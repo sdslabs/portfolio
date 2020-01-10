@@ -9,6 +9,7 @@ class Project(models.Model):
     description = models.CharField(max_length=500)
     url = models.URLField(max_length=200)
     image = models.ImageField(upload_to='projects')
+    color = models.CharField(max_length=15, blank=True)
     is_visible = models.BooleanField(default=False)
 
     class Meta:

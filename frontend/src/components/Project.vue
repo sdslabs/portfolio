@@ -7,7 +7,7 @@
             class="project-wrapper sm:w-5/6 flex flex-col-reverse sm:flex-row justify-center sm:items-center"
         >
             <div class="mt-20 sm:mt-0 sm:w-4/10 sm:pr-16">
-                <h2 class="uppercase font-bold text-3xl leading-170 pb-12">
+                <h2 class="uppercase font-black text-3xl leading-170 pb-12">
                     {{ title }}
                 </h2>
                 <p class="text-1.5xl sm:text-base leading-160">{{ desc }}</p>

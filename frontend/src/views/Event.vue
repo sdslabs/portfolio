@@ -44,8 +44,8 @@
                 {{ events.event[0].fullDescription }}
             </div>
         </div>
-        <div class="flex flex-col" v-if="events.event_update.length != 0">
-            <div class="mt-40 sm:ml-60 font-extrabold text-lg leading-170">
+        <div class="flex flex-col border-border border-t-feed sm:ml-60 sm:mr-36" v-if="events.event_update.length != 0">
+            <div class="mt-40 font-extrabold text-lg leading-170">
                 {{ events.event_update.length }} Updates
             </div>
             <div>

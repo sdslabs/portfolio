@@ -5,7 +5,9 @@
     >
         <div class="flex flex-col">
             <div class="font-black text-3xl leading-180">News Updates</div>
-            <div class="sm:w-largetext sm:text-base mt-10 sm:leading-normal text-lg text-grey leading-170">
+            <div
+                class="sm:w-largetext sm:text-base mt-10 sm:leading-normal text-lg text-grey leading-170"
+            >
                 Lorem ipsum dolor sit amet, adipiscing elit. Aenean commodo
                 ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer
                 adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum
@@ -20,8 +22,8 @@
             >
                 <div>
                     <div
-                    id="feed"
-                    class="mb-10 sm:w-feed"
+                        id="feed"
+                        class="mb-10 sm:w-feed"
                         v-if="
                             event_block.event.types == 'upcoming event' &&
                                 event_block.event.priority == 'large'
@@ -38,7 +40,10 @@
                                 event_block.event.priority == 'small'
                         "
                     >
-                        <SmallFeed class="mb-10 sm:w-event" :event="event_block.event" />
+                        <SmallFeed
+                            class="mb-10 sm:w-event"
+                            :event="event_block.event"
+                        />
                     </div>
                     <div
                         v-if="
@@ -52,7 +57,7 @@
                         />
                     </div>
                     <div
-                    class="mb-10 sm:w-event"
+                        class="mb-10 sm:w-event"
                         v-if="
                             event_block.event.types == 'online competition' &&
                                 event_block.event.priority == 'small'
@@ -73,7 +78,7 @@
                     />
                 </div>
                 <div
-                class="mb-10 sm:w-event"
+                    class="mb-10 sm:w-event"
                     v-if="
                         event_block.event.types == 'app update' &&
                             event_block.event.priority == 'small'
@@ -81,14 +86,26 @@
                 >
                     <SmallFeed :event="event_block.event" />
                 </div>
-                <div class="mb-10 sm:w-feed" v-if="event_block.event.types == 'past event' && event_block.event.priority == 'large'">
+                <div
+                    class="mb-10 sm:w-feed"
+                    v-if="
+                        event_block.event.types == 'past event' &&
+                            event_block.event.priority == 'large'
+                    "
+                >
                     <LargeFeed
                         :event="event_block.event"
                         :eventUpdates="event_block.event_update"
                     />
                 </div>
-                 <div class="mb-10 sm:w-feed" v-if="event_block.event.types == 'past event' && event_block.event.priority == 'small'">
-                    <SmallFeed :event="event_block.event"/>
+                <div
+                    class="mb-10 sm:w-feed"
+                    v-if="
+                        event_block.event.types == 'past event' &&
+                            event_block.event.priority == 'small'
+                    "
+                >
+                    <SmallFeed :event="event_block.event" />
                 </div>
             </div>
         </div>
@@ -143,7 +160,7 @@ export default {
     },
     async mounted() {
         await axios
-            .get(`${ CONFIG.baseURL }/api/news/?format=json`)
+            .get(`${CONFIG.baseURL}/api/news/?format=json`)
             .then(response => {
                 let events = response.data;
                 let eventList = [];

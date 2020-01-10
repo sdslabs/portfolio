@@ -9,10 +9,10 @@
                             <div class="text-lg font-bold text-black ml-4">
                                 Back
                             </div>
-                        </div
-                    ></router-link>
+                        </div></router-link
+                    >
                     <div class="mt-24 sm:mt-32">
-                        <Label :text="events.event[0].types"/>
+                        <Label :text="events.event[0].types" />
                     </div>
                     <div
                         class="sm:w-feed mt-20 font-black text-3xl leading-180"
@@ -34,10 +34,7 @@
                     </div>
                 </div>
                 <div class="mt-20 sm:mt-0 sm:ml-44 shadow-image">
-                    <img
-                        class="sm:w-image"
-                        :src="events.event[0].image"
-                    />
+                    <img class="sm:w-image" :src="events.event[0].image" />
                 </div>
             </div>
             <div class="sm:ml-60 mt-40 text-base sm:w-eventdesc leading-normal">
@@ -74,6 +71,7 @@ import axios from "axios";
 import Label from "@/components/Label.vue";
 import Update from "@/components/Update.vue";
 import Button from "@/components/Button.vue";
+import { CONFIG } from "@/utils/constants.js";
 export default {
     name: "event",
     components: {
@@ -92,7 +90,7 @@ export default {
     },
     mounted() {
         axios
-            .get("http://0.0.0.0:8000/api/news/?format=json", {
+            .get(`${CONFIG.baseURL}/api/news/?format=json`, {
                 params: { title: this.title }
             })
             .then(response => {

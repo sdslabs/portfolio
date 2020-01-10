@@ -13,7 +13,7 @@
                     THINK. BUILD. SHIP.
                 </h1>
                 <p
-                    class="text-1.5xl font-semibold text-justify pt-14 sm:w-5/7 leading-160 opacity-60"
+                    class="text-xl font-semibold text-center pt-14 sm:w-5/7 leading-160 opacity-60"
                 >
                     We at SDSLabs are a bunch of designers and developers who
                     aim to encourage the development of technology and
@@ -26,13 +26,13 @@
             >
                 <div>
                     <img
-                        class="w-60 sm:w-88 pt-20"
+                        class="w-60 sm:w-88 pt-8 sm:pt-20"
                         src="@/assets/images/home2.svg"
                     />
                 </div>
                 <div>
                     <img
-                        class="w-60 sm:hidden sm:w-full pt-20"
+                        class="w-60 sm:hidden sm:w-full pt-8"
                         src="@/assets/images/home1.svg"
                     />
                 </div>
@@ -47,7 +47,9 @@
                     class="pt-16 sm:pt-0 block"
                     src="@/assets/images/down-arrow.svg"
                 />
-                <span class="block text-grey pt-4 font-semibold">Projects</span>
+                <span class="block text-grey pt-4 font-semibold text-lg"
+                    >Projects</span
+                >
             </router-link>
         </div>
     </div>

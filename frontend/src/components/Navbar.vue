@@ -17,14 +17,7 @@
                 @click="toggle"
                 class="flex items-center px-6 py-4 border rounded"
             >
-                <svg
-                    class="fill-current h-6 w-6"
-                    viewBox="0 0 17 17"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <title>Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                </svg>
+                <img class="hamburger" src="@/assets/images/hamburger.svg" />
             </button>
         </div>
 
@@ -78,7 +71,7 @@
             />
         </div>
         <div :class="open ? 'block' : 'hidden'" class="fixed -ml-16 -mt-21">
-            <NavMobile @click="toggle"/>
+            <NavMobile @click="toggle" />
         </div>
     </nav>
 </template>
@@ -117,3 +110,19 @@ export default {
     }
 };
 </script>
+
+<style lang="scss" scoped>
+.hamburger::selection {
+    background-color: transparent;
+}
+.hamburger::-moz-selection {
+    background-color: transparent;
+}
+.hamburger {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+</style>

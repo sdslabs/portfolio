@@ -10,7 +10,7 @@
                 <h2 class="uppercase font-bold text-3xl leading-170 pb-12">
                     {{ title }}
                 </h2>
-                <p class="text-base leading-160">{{ desc }}</p>
+                <p class="text-1.5xl sm:text-base leading-160">{{ desc }}</p>
                 <div class="text-sm pt-16">
                     <Button v-bind:native="true" :url="url" text="Open App" />
                 </div>
@@ -20,7 +20,7 @@
                     <img class="w-full z-20" :src="image_url" />
                     <div
                         :class="
-                            'w-140 h-140 sm:h-120 self-end -mr-16 -ml-5/10 sm:-mr-26 bg-' +
+                            'w-140 sm:w-100 h-168 sm:h-148 self-end -mr-16 -mt-7 -mb-7 sm:-mt-8 sm:-mb-8 -ml-5/10 sm:-mr-0 sm:mr-26 bg-' +
                                 colors[index]
                         "
                     />

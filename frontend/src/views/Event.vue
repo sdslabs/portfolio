@@ -33,8 +33,11 @@
                         />
                     </div>
                 </div>
-                <div class="mt-20 sm:mt-0 sm:ml-44 shadow-image">
-                    <img class="sm:w-image" :src="events.event[0].image" />
+                <div class="mt-20 sm:mt-0 sm:ml-44">
+                    <img
+                        class="sm:w-image shadow-image"
+                        :src="events.event[0].image"
+                    />
                 </div>
             </div>
             <div class="sm:ml-60 mt-40 text-base sm:w-eventdesc leading-normal">

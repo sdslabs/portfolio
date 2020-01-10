@@ -1,19 +1,17 @@
 <template>
     <div class="flex flex-col sm:flex-row mt-16 mb-32">
         <div class="sm:w-feed flex flex-col sm:ml-60 mt-16">
-            <div class="font-extrabold text-xl leading-180">{{ title.toUpperCase() }}</div>
+            <div class="font-extrabold text-xl leading-180">
+                {{ title.toUpperCase() }}
+            </div>
             <div
-                :class="
-                    timing ? 'font-semibold text-base mt-14' : 'hidden'
-                "
+                :class="timing ? 'font-semibold text-base mt-14' : 'hidden'"
                 class="leading-normal"
             >
                 {{ timing }}
             </div>
             <div
-                :class="
-                    description ? 'text-base mt-20' : 'hidden'
-                "
+                :class="description ? 'text-base mt-20' : 'hidden'"
                 class="leading-normal"
             >
                 {{ description }}

@@ -1,6 +1,9 @@
 <template>
     <div class="sister-gallery w-full">
-        <div class="flex flex-col w-auto h-96 shadow-sister">
+        <div
+            :key="queue"
+            class="sister flex flex-col w-auto h-96 shadow-sister"
+        >
             <div class="flex flex-row mt-8 self-center">
                 <div>
                     <img
@@ -81,9 +84,9 @@ export default {
                 startY,
                 distX,
                 distY,
-                threshold = 30, //required min distance traveled to be considered swipe
-                restraint = 300, // maximum distance allowed at the same time in perpendicular direction
-                allowedTime = 300, // maximum time allowed to travel that distance
+                threshold = 30,
+                restraint = 300,
+                allowedTime = 300,
                 elapsedTime,
                 startTime,
                 handleswipe = callback || function(swipedir) {};
@@ -95,7 +98,7 @@ export default {
                     swipedir = "none";
                     startX = touchobj.pageX;
                     startY = touchobj.pageY;
-                    startTime = new Date().getTime(); // record time when finger first makes contact with surface
+                    startTime = new Date().getTime();
                     e.preventDefault();
                 },
                 false
@@ -104,7 +107,7 @@ export default {
             touchsurface.addEventListener(
                 "touchmove",
                 function(e) {
-                    e.preventDefault(); // prevent scrolling when inside DIV
+                    e.preventDefault();
                 },
                 false
             );
@@ -113,22 +116,19 @@ export default {
                 "touchend",
                 function(e) {
                     var touchobj = e.changedTouches[0];
-                    distX = touchobj.pageX - startX; // get horizontal dist traveled by finger while in contact with surface
-                    distY = touchobj.pageY - startY; // get vertical dist traveled by finger while in contact with surface
-                    elapsedTime = new Date().getTime() - startTime; // get time elapsed
-                    // first condition for awipe met
+                    distX = touchobj.pageX - startX;
+                    distY = touchobj.pageY - startY;
+                    elapsedTime = new Date().getTime() - startTime;
                     if (
                         Math.abs(distX) >= threshold &&
                         Math.abs(distY) <= restraint
                     ) {
-                        // 2nd condition for horizontal swipe met
-                        swipedir = distX < 0 ? "left" : "right"; // if dist traveled is negative, it indicates left swipe
+                        swipedir = distX < 0 ? "left" : "right";
                     } else if (
                         Math.abs(distY) >= threshold &&
                         Math.abs(distX) <= restraint
                     ) {
-                        // 2nd condition for vertical swipe met
-                        swipedir = distY < 0 ? "up" : "down"; // if dist traveled is negative, it indicates up swipe
+                        swipedir = distY < 0 ? "up" : "down";
                     }
                     handleswipe(swipedir);
                     e.preventDefault();
@@ -152,3 +152,19 @@ export default {
     }
 };
 </script>
+
+<style lang="scss" scoped>
+@keyframes slideIn {
+    0% {
+        transform: translate(100%, 0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+}
+.sister {
+    animation: slideIn 1s ease forwards;
+}
+</style>

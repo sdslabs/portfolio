@@ -1,6 +1,10 @@
 <template>
     <div class="fixed h-full w-full bg-grey z-30 sm:hidden" @click="close">
-        <nav class="fixed h-full bg-white w-3/4 ml-1/4 flex flex-col">
+        <nav
+            v-if="open"
+            v-bind:class="{ nav: open, navclose: !open }"
+            class="fixed h-full bg-white w-3/4 ml-1/4 flex flex-col"
+        >
             <div class="self-end mt-20 mr-16 h-8 w-8">
                 <img src="@/assets/images/close.svg" />
             </div>
@@ -41,9 +45,9 @@
                 />
                 <NavLink
                     class="py-6"
-                    v-bind:native="false"
+                    v-bind:native="true"
                     v-bind:last="true"
-                    url="/contact"
+                    url="http://chat.sdslabs.co"
                     text="CONTACT"
                     @click="close"
                 />
@@ -70,6 +74,12 @@ export default {
         NavLink,
         Button
     },
+    props: {
+        open: {
+            type: Boolean,
+            required: true
+        }
+    },
     methods: {
         close() {
             this.$emit("click");
@@ -77,3 +87,19 @@ export default {
     }
 };
 </script>
+
+<style lang="scss" scoped>
+@keyframes slideIn {
+    0% {
+        transform: translate(100%, 0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+}
+.nav {
+    animation: slideIn 1s ease forwards;
+}
+</style>

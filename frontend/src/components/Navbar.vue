@@ -71,7 +71,7 @@
             />
         </div>
         <div :class="open ? 'block' : 'hidden'" class="fixed -ml-16 -mt-21">
-            <NavMobile @click="toggle" />
+            <NavMobile :open="open" @click="toggle" />
         </div>
     </nav>
 </template>

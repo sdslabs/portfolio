@@ -7,15 +7,17 @@
             <div class="font-extrabold text-xl leading-180">
                 {{ event.title.toUpperCase() }}
             </div>
-            <div class="mt-8 text-base font-semibold leading-170">
+            <div class="mt-8 text-base font-semibold text-grey leading-170">
                 {{ event.timing }}
             </div>
-            <div class="mt-16 text-base leading-normal">
+            <div class="mt-16 text-base text-grey leading-normal">
                 {{ event.shortDescription }}
             </div>
         </div>
         <div v-if="eventUpdates.length != 0">
-            <div class="font-semibold text-base pt-14 leading-170 pl-10 border-t-feed border-border pr-navbar">
+            <div
+                class="font-semibold text-base pt-14 leading-170 pl-10 border-t-feed border-border pr-navbar"
+            >
                 {{ eventUpdates.length }} Updates
             </div>
             <div
@@ -31,10 +33,12 @@
                 />
             </div>
         </div>
-        <div class="pt-10 font-extrabold text-base pb-8 leading-170 pl-10 border-border border-t-feed">
+        <div
+            class="pt-10 font-extrabold text-base pb-8 leading-170 pl-10 border-border border-t-feed"
+        >
             <router-link
-                :to="'/news/'+event.title"
-                :class="'no-underline inline-block text-'+ colors[index]"
+                :to="'/news/' + event.title"
+                :class="'no-underline inline-block text-' + colors[index]"
             >
                 Know More
             </router-link>

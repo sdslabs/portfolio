@@ -50,7 +50,7 @@
             </div>
             <div class="text-sm mt-14 ml-12 mr-12">
                 <Button
-                    class="w-full h-24 text-center text-2xl leading-tight"
+                    class="w-full h-24 pb-20 text-center text-2xl"
                     v-bind:native="true"
                     url="https://accounts.sdslabs.co/"
                     text="Login"

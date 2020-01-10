@@ -52,7 +52,7 @@
                 >
                     <div class="sm:mr-28 sm:w-220 w-full mt-16">
                         <div
-                            class="flex rounded shadow-md flex-row ml-8 mr-8 h-auto sm:w-92"
+                            class="flex rounded shadow-sister flex-row ml-8 mr-8 h-auto sm:w-92"
                         >
                             <div
                                 class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto"
@@ -67,7 +67,7 @@
                         </div>
                         <div class="sm:pl-100 sm:-mt-10 mt-8">
                             <div
-                                class="flex rounded shadow-md mt-0 flex-row ml-8 mr-8 sm:w-92 h-auto"
+                                class="flex rounded shadow-sister mt-0 flex-row ml-8 mr-8 sm:w-92 h-auto"
                             >
                                 <div
                                     class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto"
@@ -83,7 +83,7 @@
                         </div>
                         <div class="sm:-mt-10 mt-8">
                             <div
-                                class="flex rounded shadow-md mt-0 mr-0 flex-row ml-8 mr-8 sm:w-92 h-auto"
+                                class="flex rounded shadow-sister mt-0 mr-0 flex-row ml-8 mr-8 sm:w-92 h-auto"
                             >
                                 <div
                                     class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto"
@@ -99,7 +99,7 @@
                         </div>
                         <div class="sm:pl-100 sm:-mt-10 mt-8">
                             <div
-                                class="flex rounded shadow-md mt-0 mr-0 flex-row ml-8 mr-8 sm:w-92 h-auto"
+                                class="flex rounded shadow-sister mt-0 mr-0 flex-row ml-8 mr-8 sm:w-92 h-auto"
                             >
                                 <div
                                     class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto"
@@ -115,7 +115,7 @@
                         </div>
                         <div class="sm:-mt-10 mt-8">
                             <div
-                                class="flex rounded shadow-md mt-0 mr-0 flex-row ml-8 mr-8 sm:w-92 h-auto"
+                                class="flex rounded shadow-sister mt-0 mr-0 flex-row ml-8 mr-8 sm:w-92 h-auto"
                             >
                                 <div
                                     class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto"
@@ -172,7 +172,7 @@
                         v-bind:key="index"
                     >
                         <div
-                            class="timeline-box shadow-md ml-5 mr-5 self-center w-148 sm:w-144 p-10"
+                            class="timeline-box shadow-sister ml-5 mr-5 self-center w-148 sm:w-144 p-10"
                         >
                             <div
                                 :class="

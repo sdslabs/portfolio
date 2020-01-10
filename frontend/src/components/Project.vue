@@ -10,7 +10,9 @@
                 <h2 class="uppercase font-black text-3xl leading-170 pb-12">
                     {{ title }}
                 </h2>
-                <p class="text-1.5xl sm:text-base leading-160">{{ desc }}</p>
+                <p class="text-1.5xl text-grey sm:text-base leading-160">
+                    {{ desc }}
+                </p>
                 <div class="text-sm pt-16">
                     <Button v-bind:native="true" :url="url" text="Open App" />
                 </div>

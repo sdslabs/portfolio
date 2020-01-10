@@ -6,19 +6,25 @@
             </div>
             <div
                 :class="timing ? 'font-semibold text-base mt-14' : 'hidden'"
-                class="leading-normal"
+                class="leading-normal text-grey"
             >
                 {{ timing }}
             </div>
             <div
                 :class="description ? 'text-base mt-20' : 'hidden'"
-                class="leading-normal"
+                class="leading-normal text-grey"
             >
                 {{ description }}
             </div>
-            <div class="text-base mt-14 leading-normal">{{ contactInfo }}</div>
-            <div class="text-base mt-14 leading-normal">{{ footNote }}</div>
-            <div class="text-base mt-14 leading-normal">{{ greetings }}</div>
+            <div class="text-base mt-14 text-grey leading-normal">
+                {{ contactInfo }}
+            </div>
+            <div class="text-base mt-14 text-grey leading-normal">
+                {{ footNote }}
+            </div>
+            <div class="text-base mt-14 text-grey leading-normal">
+                {{ greetings }}
+            </div>
         </div>
         <div class="sm:w-image">
             <img

@@ -10,10 +10,11 @@
         <div
             class="sm:w-180 pt-6 text-lg text-grey leading-170 sm:self-center sm:text-center sm:w-sister"
         >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac
-            lacinia nisi, ac maximus sem. Ut eu malesuada nisl. Pellentesque
-            sagittis fringilla tempor. Pellentesque sit amet augue sit amet quam
-            feugiat porta vitae sit amet ligula.
+            Sister groups are different smaller groups within the umbrella of
+            Software Development Section, along with SDSLabs. The members of
+            these groups focus on specific areas of technological innovation
+            like data science, competetive programming, and information
+            security.
         </div>
         <div
             class="sister flex flex-row self-center mt-32 justify-between sm:w-groups"
@@ -22,7 +23,7 @@
                 <Sister
                     v-bind:url="dsg"
                     title="DATA SCIENCE GROUP"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem."
+                    description="As a part of SDS, this group aims at improving the culture of Data Science and Machine Learning in IIT Roorkee."
                 />
             </div>
             <div>
@@ -30,15 +31,15 @@
                     class="ml-10"
                     v-bind:url="pag"
                     title="PROGRAMMING & ALGORITHMS GROUP"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem."
+                    description="A bunch of competitive programming enthusiasts, PAG, frequently organizes coding lectures and contests for IITR people."
                 />
             </div>
             <div>
                 <Sister
                     class="ml-10"
                     v-bind:url="infosec"
-                    title="INFOSEC IITR"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac lacinia nisi, ac maximus sem."
+                    title="INFOSECIITR"
+                    description="InfoSecIITR is a group of information security enthusiasts. It is an open group that consists only of IITR students and alumni."
                 />
             </div>
         </div>

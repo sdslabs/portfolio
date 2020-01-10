@@ -20,7 +20,7 @@
                     <img class="w-full z-20" :src="image_url" />
                     <div
                         :class="
-                            'w-140 sm:w-100 h-168 sm:h-148 self-end -mr-16 -mt-7 -mb-7 sm:-mt-8 sm:-mb-8 -ml-5/10 sm:-mr-0 sm:mr-26 bg-' +
+                            'w-140 sm:w-100 h-180 sm:h-148 self-end -mr-16 -mt-14 -mb-14 sm:-mt-8 sm:-mb-8 -ml-5/10 sm:-mr-0 sm:mr-26 bg-' +
                                 colors[index]
                         "
                     />

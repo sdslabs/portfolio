@@ -23,7 +23,7 @@
                     <div
                         :class="
                             'w-140 sm:w-100 h-180 sm:h-148 self-end -mr-16 -mt-14 -mb-14 sm:-mt-8 sm:-mb-8 -ml-5/10 sm:-mr-0 sm:mr-26 bg-' +
-                                colors[index]
+                                color
                         "
                     />
                 </div>
@@ -56,6 +56,10 @@ export default {
             required: true
         },
         permalink: {
+            type: String,
+            required: true
+        },
+        color: {
             type: String,
             required: true
         }

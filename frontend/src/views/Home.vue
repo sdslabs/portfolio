@@ -16,6 +16,7 @@
                 v-bind:url="project.url"
                 v-bind:image_url="project.image"
                 v-bind:permalink="project.permalink"
+                v-bind:color="project.color"
             />
         </div>
     </div>

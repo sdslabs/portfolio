@@ -112,17 +112,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.hamburger::selection {
-    background-color: transparent;
+button {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
-.hamburger::-moz-selection {
-    background-color: transparent;
-}
-.hamburger {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+button:active {
+    outline: none;
 }
 </style>

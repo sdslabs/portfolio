@@ -100,6 +100,6 @@ export default {
     }
 }
 .nav {
-    animation: slideIn 1s ease forwards;
+    animation: slideIn 0.5s ease forwards;
 }
 </style>

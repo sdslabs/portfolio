@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="home" class="home">
         <Sidebar v-bind:projects="projects" v-bind:isVisible="true" />
         <div id="home" class="z-20 relative bg-white">
             <Landing />
@@ -24,7 +24,6 @@
 
 <script>
 import axios from "axios";
-
 import Router from "@/router.js";
 import Sidebar from "@/components/Sidebar.vue";
 import Landing from "@/components/Landing.vue";
@@ -98,11 +97,6 @@ export default {
         handleIntersect: handleIntersect
     },
     mounted() {
-        window.addEventListener("scroll", function() {
-            var scrollTop =
-                window.pageYOffset || document.documentElement.scrollTop;
-            // window.scrollBy(0, window.innerHeight);
-        });
         axios
             .get(`${CONFIG.baseURL}/api/projects/?format=json`)
             .then(response => {

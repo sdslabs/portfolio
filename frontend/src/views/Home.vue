@@ -98,8 +98,13 @@ export default {
         handleIntersect: handleIntersect
     },
     mounted() {
+        window.addEventListener("scroll", function() {
+            var scrollTop =
+                window.pageYOffset || document.documentElement.scrollTop;
+            // window.scrollBy(0, window.innerHeight);
+        });
         axios
-            .get(`${ CONFIG.baseURL }/api/projects/?format=json`)
+            .get(`${CONFIG.baseURL}/api/projects/?format=json`)
             .then(response => {
                 let projects = {};
                 for (let i = 0; i < response.data.length; i++) {

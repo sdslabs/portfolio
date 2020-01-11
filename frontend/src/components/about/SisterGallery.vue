@@ -2,7 +2,11 @@
     <div class="sister-gallery w-full">
         <div
             :key="queue"
-            class="sister flex flex-col w-auto h-96 shadow-sister"
+            :class="
+                right
+                    ? 'sister-back' + ' flex flex-col w-auto h-96 shadow-sister'
+                    : 'sister' + ' flex flex-col w-auto h-96 shadow-sister'
+            "
         >
             <div class="flex flex-row mt-8 self-center">
                 <div>
@@ -73,7 +77,8 @@ export default {
                         "InfoSecIITR is a group of information security enthusiasts. It is an open group that consists only of IITR students and alumni."
                 }
             ],
-            queue: 1
+            queue: 1,
+            right: true
         };
     },
     methods: {
@@ -142,9 +147,11 @@ export default {
         var vm = this;
         this.swipedetect(swipearea, function(swipedir) {
             if (swipedir == "left" || swipedir == "up") {
+                vm.right = false;
                 if (vm.queue < 3) vm.queue++;
                 else if (vm.queue == 3) vm.queue = 1;
             } else if (swipedir == "right" || swipedir == "down") {
+                vm.right = true;
                 if (vm.queue > 1) vm.queue--;
                 else if (vm.queue == 1) vm.queue = 3;
             }
@@ -154,7 +161,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@keyframes slideIn {
+@keyframes slideLeft {
     0% {
         transform: translate(100%, 0%);
         display: none;
@@ -166,7 +173,22 @@ export default {
         opacity: 1;
     }
 }
+@keyframes slideRight {
+    0% {
+        transform: translate(-100%, 0%);
+        display: none;
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0%, 0%);
+        display: block;
+        opacity: 1;
+    }
+}
 .sister {
-    animation: slideIn 1s ease forwards;
+    animation: slideLeft 1s ease forwards;
+}
+.sister-back {
+    animation: slideRight 1s ease forwards;
 }
 </style>

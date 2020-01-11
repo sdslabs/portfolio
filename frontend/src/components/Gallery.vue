@@ -183,20 +183,4 @@ export default {
     box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.07);
     border-radius: 5px;
 }
-@keyframes slideIn {
-    0% {
-        transform: translate(100%, 0%);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(0%, 0%);
-        opacity: 1;
-    }
-}
-@media screen and (max-width: 576px) {
-    .image,
-    .textbox {
-        animation: slideIn 1s ease forwards;
-    }
-}
 </style>

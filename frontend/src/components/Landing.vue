@@ -1,7 +1,7 @@
 <template>
     <div>
         <div
-            class="banner pt-96 sm:pt-navbar px-16 relative flex flex-col justify-center items-center sm:px-0 sm:justify-between sm:flex-row"
+            class="banner pt-88 sm:pt-navbar px-16 relative flex flex-col justify-center items-center sm:px-0 sm:justify-between sm:flex-row"
         >
             <div class="hidden sm:flex w-88 h-full items-center justify-center">
                 <img class="w-full pb-20" src="@/assets/images/home1.svg" />
@@ -9,7 +9,9 @@
             <div
                 class="sm:h-full sm:flex sm:flex-1 flex-col items-center justify-center"
             >
-                <h1 class="text-5xl text-justify font-extrabold leading-170">
+                <h1
+                    class="text-4.5xl sm:text-5xl text-center font-extrabold leading-170"
+                >
                     THINK. BUILD. SHIP.
                 </h1>
                 <p

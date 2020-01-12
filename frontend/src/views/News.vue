@@ -6,7 +6,7 @@
         <div class="flex flex-col">
             <div class="font-black text-3xl leading-180">News Updates</div>
             <div
-                class="sm:w-largetext sm:text-base mt-10 sm:leading-normal text-lg text-grey leading-170"
+                class="sm:w-largetext sm:text-base mt-10 sm:leading-normal text-1.5xl text-grey leading-170"
             >
                 Lorem ipsum dolor sit amet, adipiscing elit. Aenean commodo
                 ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer

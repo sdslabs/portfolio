@@ -54,86 +54,96 @@
                 <div
                     class="flex flex-col-reverse sm:flex-row-reverse items-center sm:justify-between"
                 >
-                    <div class="sm:mr-28 sm:w-220 w-full mt-16">
-                        <div
-                            class="flex rounded shadow-sister flex-row ml-8 mr-8 h-auto sm:w-92"
-                        >
+                    <div class="sm:mr-28 sm:w-220 w-full mt-16 flex flex-row">
+                        <div>
                             <div
-                                class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto"
-                            >
-                                <img src="@/assets/images/interest1.png" />
-                            </div>
-                            <div
-                                class="font-sans font-semibold self-center text-1.5xl leading-280 sm:text-base align-middle sm:leading-160"
-                            >
-                                Software Development
-                            </div>
-                        </div>
-                        <div class="sm:pl-100 sm:-mt-10 mt-8">
-                            <div
-                                class="flex rounded shadow-sister mt-0 flex-row ml-8 mr-8 sm:w-92 h-auto"
+                                class="flex rounded shadow-sister flex-row ml-8 mr-8 h-auto sm:w-92"
                             >
                                 <div
                                     class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto"
                                 >
-                                    <img src="@/assets/images/interest2.png" />
-                                </div>
-                                <div
-                                    class="font-sans font-semibold self-center text-1.5xl leading-280 sm:text-base align-middle sm:leading-160 sm:mr-10"
-                                >
-                                    Information Security
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sm:-mt-10 mt-8">
-                            <div
-                                class="flex rounded shadow-sister mt-0 mr-0 flex-row ml-8 mr-8 sm:w-92 h-auto"
-                            >
-                                <div
-                                    class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto"
-                                >
-                                    <img src="@/assets/images/interest3.png" />
+                                    <img src="@/assets/images/interest1.png" />
                                 </div>
                                 <div
                                     class="font-sans font-semibold self-center text-1.5xl leading-280 sm:text-base align-middle sm:leading-160"
                                 >
-                                    Product Design
+                                    Software Development
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <div
+                                    class="flex rounded shadow-sister mt-0 mr-0 flex-row ml-8 mr-8 sm:w-92 h-auto"
+                                >
+                                    <div
+                                        class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto"
+                                    >
+                                        <img
+                                            src="@/assets/images/interest3.png"
+                                        />
+                                    </div>
+                                    <div
+                                        class="font-sans font-semibold self-center text-1.5xl leading-280 sm:text-base align-middle sm:leading-160"
+                                    >
+                                        Product Design
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <div
+                                    class="flex rounded shadow-sister mt-0 mr-0 flex-row ml-8 mr-8 sm:w-92 h-auto"
+                                >
+                                    <div
+                                        class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto"
+                                    >
+                                        <img
+                                            src="@/assets/images/interest5.png"
+                                        />
+                                    </div>
+                                    <div
+                                        class="font-sans font-semibold self-center text-1.5xl leading-280 sm:text-base align-middle sm:leading-160 sm:mr-10"
+                                    >
+                                        Game Development
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="sm:pl-100 sm:-mt-10 mt-8">
-                            <div
-                                class="flex rounded shadow-sister mt-0 mr-0 flex-row ml-8 mr-8 sm:w-92 h-auto"
-                            >
+
+                        <div class=" sm:-ml-8 sm:mt-12">
+                            <div class="mt-8">
                                 <div
-                                    class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto"
+                                    class="flex rounded shadow-sister mt-0 flex-row ml-8 mr-8 sm:w-92 h-auto"
                                 >
-                                    <img src="@/assets/images/interest4.png" />
-                                </div>
-                                <div
-                                    class="font-sans font-semibold self-center text-1.5xl leading-280 sm:text-base align-middle sm:leading-160"
-                                >
-                                    Data Science
+                                    <div
+                                        class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto"
+                                    >
+                                        <img src="@/assets/images/interest2.png" />
+                                    </div>
+                                    <div
+                                        class="font-sans font-semibold self-center text-1.5xl leading-280 sm:text-base align-middle sm:leading-160 sm:mr-10"
+                                    >
+                                        Information Security
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="sm:-mt-10 mt-8">
-                            <div
-                                class="flex rounded shadow-sister mt-0 mr-0 flex-row ml-8 mr-8 sm:w-92 h-auto"
-                            >
+                            <div class="mt-8">
                                 <div
-                                    class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto"
+                                    class="flex rounded shadow-sister mt-0 mr-0 flex-row ml-8 mr-8 sm:w-92 h-auto"
                                 >
-                                    <img src="@/assets/images/interest5.png" />
-                                </div>
-                                <div
-                                    class="font-sans font-semibold self-center text-1.5xl leading-280 sm:text-base align-middle sm:leading-160 sm:mr-10"
-                                >
-                                    Game Development
+                                    <div
+                                        class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto"
+                                    >
+                                        <img src="@/assets/images/interest4.png" />
+                                    </div>
+                                    <div
+                                        class="font-sans font-semibold self-center text-1.5xl leading-280 sm:text-base align-middle sm:leading-160"
+                                    >
+                                        Data Science
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
 
                     <div class="flex flex-col sm:pl-60 mx-10">
                         <div class="text-3xl font-extrabold">
@@ -168,7 +178,7 @@
 
                 <div
                     id="timeline_bar"
-                    class="timeline_bar flex align-bottom h-auto w-full mt-16 overflow-x-auto sm:pl-64"
+                    class="timeline_bar flex align-bottom h-auto sm:p-8 sm:mt-8 w-full mt-16 overflow-x-auto sm:pl-64"
                 >
                     <div
                         class="timeline-bar flex flex-row-reverse sm:flex-no-wrap py-1"
@@ -203,7 +213,7 @@
                 <div class="scroll_icon w-auto hidden sm:block">
                     <button
                         id="scroll_btn"
-                        class="scroll_btn self-center h-10 sm:w-16 sm:h-16 mt-16 sm:mt-32"
+                        class="scroll_btn self-center h-10 sm:w-16 sm:h-16 mt-16 sm:mt-16"
                         v-on:click="scrollFunction"
                     >
                         <img src="@/assets/images/scroll-arrow.svg" />

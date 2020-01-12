@@ -1,30 +1,33 @@
 <template>
-    <div>
+    <div id="home" class="home">
         <Sidebar v-bind:projects="projects" v-bind:isVisible="true" />
-        <div id="home" class="z-20 relative bg-white">
-            <Landing />
-        </div>
-        <div
-            class="px-16 sm:px-88 pb-28 sm:pb-0 flex flex-col justify-center items-center"
-            id="projects"
-        >
-            <Project
-                v-for="(project, permalink, index) in projects"
-                v-bind:key="index"
-                v-bind:title="project.title"
-                v-bind:desc="project.description"
-                v-bind:url="project.url"
-                v-bind:image_url="project.image"
-                v-bind:permalink="project.permalink"
-                v-bind:color="project.color"
-            />
-        </div>
+        <section class="fullpage">
+            <div id="home" class="z-20 relative bg-white">
+                <Landing />
+            </div>
+        </section>
+        <section class="fullpage">
+            <div
+                class="px-16 sm:px-88 pb-28 sm:pb-0 flex flex-col justify-center items-center"
+                id="projects"
+            >
+                <Project
+                    v-for="(project, permalink, index) in projects"
+                    v-bind:key="index"
+                    v-bind:title="project.title"
+                    v-bind:desc="project.description"
+                    v-bind:url="project.url"
+                    v-bind:image_url="project.image"
+                    v-bind:permalink="project.permalink"
+                    v-bind:color="project.color"
+                />
+            </div>
+        </section>
     </div>
 </template>
 
 <script>
 import axios from "axios";
-
 import Router from "@/router.js";
 import Sidebar from "@/components/Sidebar.vue";
 import Landing from "@/components/Landing.vue";
@@ -74,7 +77,11 @@ export default {
             projects: {},
             auto: false,
             isObserverSet: 0,
-            observer: undefined
+            observer: undefined,
+            inMove: false,
+            activeSection: 0,
+            offsets: [],
+            touchStartY: 0
         };
     },
     watch: {
@@ -95,11 +102,67 @@ export default {
     },
     methods: {
         createObserver: createObserver,
-        handleIntersect: handleIntersect
+        handleIntersect: handleIntersect,
+        calculateSectionOffsets() {
+            let sections = document.getElementsByTagName("section");
+            let length = sections.length;
+            for (let i = 0; i < length; i++) {
+                let sectionOffset = sections[i].offsetTop;
+                this.offsets.push(sectionOffset);
+            }
+        },
+        scrollToSection(id, force = false) {
+            if (this.inMove && !force) return false;
+            this.activeSection = id;
+            this.inMove = true;
+            document.getElementsByTagName("section")[id].scrollIntoView({
+                behavior: "smooth"
+            });
+            setTimeout(() => {
+                this.inMove = false;
+            }, 400);
+        },
+        handleMouseWheel: function(e) {
+            if (e.wheelDelta < 30 && !this.inMove) {
+                this.moveUp();
+            } else if (e.wheelDelta > 30 && !this.inMove) {
+                this.moveDown();
+            }
+            e.preventDefault();
+            return false;
+        },
+        moveDown() {
+            this.inMove = true;
+            this.activeSection--;
+            if (this.activeSection < 0) this.activeSection = this.offsets.length - 1;
+            this.scrollToSection(this.activeSection, true);
+        },
+        moveUp() {
+            this.inMove = true;
+            this.activeSection++;
+            if (this.activeSection > this.offsets.length - 1) this.activeSection = 0;
+            this.scrollToSection(this.activeSection, true);
+        },
+        touchStart(e) {
+            e.preventDefault();
+            this.touchStartY = e.touches[0].clientY;
+        },
+        touchMove(e) {
+            if (this.inMove) return false;
+            e.preventDefault();
+            const currentY = e.touches[0].clientY;
+            if (this.touchStartY < currentY) {
+                this.moveDown();
+            } else {
+                this.moveUp();
+            }
+            this.touchStartY = 0;
+            return false;
+        }
     },
     mounted() {
         axios
-            .get(`${ CONFIG.baseURL }/api/projects/?format=json`)
+            .get(`${CONFIG.baseURL}/api/projects/?format=json`)
             .then(response => {
                 let projects = {};
                 for (let i = 0; i < response.data.length; i++) {
@@ -123,8 +186,23 @@ export default {
             }, 1);
         }
     },
+    created() {
+        this.calculateSectionOffsets();
+        window.addEventListener("mousewheel", this.handleMouseWheel, {
+            passive: false
+        });
+        window.addEventListener("touchstart", this.touchStart, {
+            passive: false
+        });
+        window.addEventListener("touchmove", this.touchMove, {
+            passive: false
+        });
+    },
     destroyed() {
         this.observer.disconnect();
+        window.removeEventListener("DOMMouseScroll", this.handleMouseWheelDOM);
+        window.removeEventListener("touchstart", this.touchStart);
+        window.removeEventListener("touchmove", this.touchMove);
     }
 };
 </script>

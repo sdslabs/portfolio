@@ -134,7 +134,7 @@ export default {
     methods: {
         // Re-render element on window resize
         windowResize() {
-            var elem = document.getElementsByClassName("grid")[0];
+            let elem = document.getElementsByClassName("grid")[0];
             if (window.innerWidth < this.size) {
                 elem.id = "";
                 this.key = true;
@@ -145,8 +145,8 @@ export default {
         },
         // Re-initialize masonry
         masonry() {
-            var elem = document.getElementById("grid");
-            var msnry = new Masonry(elem, {
+            let elem = document.getElementById("grid");
+            let msnry = new Masonry(elem, {
                 // options
                 itemSelector: ".grid-item",
                 columnWidth: "#feed",
@@ -187,7 +187,7 @@ export default {
                 this.event = Object.assign({}, this.event, event);
             });
         if (window.innerWidth < this.size) {
-            var elem = document.getElementById("grid");
+            let elem = document.getElementById("grid");
             elem.id = "";
         }
         this.masonry();

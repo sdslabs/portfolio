@@ -1,28 +1,27 @@
 <template>
     <div id="home" class="home">
         <Sidebar v-bind:projects="projects" v-bind:isVisible="true" />
-        <section class="fullpage">
+        <section class="fullpage section">
             <div id="home" class="z-20 relative bg-white">
                 <Landing />
             </div>
         </section>
-        <section class="fullpage">
-            <div
-                class="px-16 sm:px-88 pb-28 sm:pb-0 flex flex-col justify-center items-center"
-                id="projects"
-            >
-                <Project
-                    v-for="(project, permalink, index) in projects"
-                    v-bind:key="index"
-                    v-bind:title="project.title"
-                    v-bind:desc="project.description"
-                    v-bind:url="project.url"
-                    v-bind:image_url="project.image"
-                    v-bind:permalink="project.permalink"
-                    v-bind:color="project.color"
-                />
-            </div>
-        </section>
+        <div
+            class="px-16 sm:px-88 pb-28 sm:pb-0 flex flex-col justify-center items-center"
+            id="projects"
+        >
+            <Project
+                class="fullpage section"
+                v-for="(project, permalink, index) in projects"
+                v-bind:key="index"
+                v-bind:title="project.title"
+                v-bind:desc="project.description"
+                v-bind:url="project.url"
+                v-bind:image_url="project.image"
+                v-bind:permalink="project.permalink"
+                v-bind:color="project.color"
+            />
+        </div>
     </div>
 </template>
 
@@ -104,18 +103,19 @@ export default {
         createObserver: createObserver,
         handleIntersect: handleIntersect,
         calculateSectionOffsets() {
-            let sections = document.getElementsByTagName("section");
+            let sections = document.getElementsByClassName("section");
             let length = sections.length;
             for (let i = 0; i < length; i++) {
                 let sectionOffset = sections[i].offsetTop;
                 this.offsets.push(sectionOffset);
             }
+            console.log(this.offsets);
         },
         scrollToSection(id, force = false) {
             if (this.inMove && !force) return false;
             this.activeSection = id;
             this.inMove = true;
-            document.getElementsByTagName("section")[id].scrollIntoView({
+            document.getElementsByClassName("section")[id].scrollIntoView({
                 behavior: "smooth"
             });
             setTimeout(() => {
@@ -141,8 +141,9 @@ export default {
         moveUp() {
             this.inMove = true;
             this.activeSection++;
-            if (this.activeSection > this.offsets.length - 1)
+            if (this.activeSection > this.offsets.length - 1) {
                 this.activeSection = 0;
+            }
             this.scrollToSection(this.activeSection, true);
         },
         touchStart(e) {
@@ -163,6 +164,7 @@ export default {
         }
     },
     mounted() {
+        this.calculateSectionOffsets();
         axios
             .get(`${CONFIG.baseURL}/api/projects/?format=json`)
             .then(response => {
@@ -174,6 +176,7 @@ export default {
             });
     },
     updated() {
+        this.calculateSectionOffsets();
         if (!this.isObserverSet && Object.keys(this.projects).length > 0) {
             let currentRoute = this.$route;
             let projectsElement = document.querySelector("#projects");
@@ -189,16 +192,15 @@ export default {
         }
     },
     created() {
-        // this.calculateSectionOffsets();
-        // window.addEventListener("mousewheel", this.handleMouseWheel, {
-        //     passive: false
-        // });
-        // window.addEventListener("touchstart", this.touchStart, {
-        //     passive: false
-        // });
-        // window.addEventListener("touchmove", this.touchMove, {
-        //     passive: false
-        // });
+        window.addEventListener("mousewheel", this.handleMouseWheel, {
+            passive: false
+        });
+        window.addEventListener("touchstart", this.touchStart, {
+            passive: false
+        });
+        window.addEventListener("touchmove", this.touchMove, {
+            passive: false
+        });
     },
     destroyed() {
         this.observer.disconnect();

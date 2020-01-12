@@ -5,10 +5,10 @@
             <div class="sm:font-extrabold font-bold text-2xl sm:text-xl leading-180">
                 {{ event.title.toUpperCase() }}
             </div>
-            <div class="mt-8 text-1.5xl sm:text-base text-grey font-semibold leading-170">
+            <div v-if="event.timing" class="mt-8 text-1.5xl sm:text-base text-grey font-semibold leading-170">
                 {{ event.timing }}
             </div>
-            <div class="mt-14 text-1.5xl sm:text-base text-grey leading-normal">
+            <div v-if="event.shortDescription" class="mt-14 text-1.5xl sm:text-base text-grey leading-normal">
                 {{ event.shortDescription }}
             </div>
         </div>

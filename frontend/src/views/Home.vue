@@ -201,11 +201,11 @@ export default {
             passive: false
         });
     },
-    destroyed() {
-        this.observer.disconnect();
-            window.removeEventListener("DOMMouseScroll", this.handleMouseWheelDOM);
-            window.removeEventListener("touchstart", this.touchStart);
-            window.removeEventListener("touchmove", this.touchMove);
+    beforeDestroy() {
+        // this.observer.disconnect();
+        window.removeEventListener("mousewheel", this.handleMouseWheel);
+        window.removeEventListener("touchstart", this.touchStart);
+        window.removeEventListener("touchmove", this.touchMove);
     }
 };
 </script>

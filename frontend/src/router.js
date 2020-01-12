@@ -64,7 +64,7 @@ const router = new Router({
             meta: {
                 title: "SDSLabs | Error"
             }
-        },
+        }
     ]
 });
 

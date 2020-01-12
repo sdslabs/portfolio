@@ -116,7 +116,9 @@
                                     <div
                                         class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto"
                                     >
-                                        <img src="@/assets/images/interest2.png" />
+                                        <img
+                                            src="@/assets/images/interest2.png"
+                                        />
                                     </div>
                                     <div
                                         class="font-sans font-semibold self-center text-1.5xl leading-280 sm:text-base align-middle sm:leading-160 sm:mr-10"
@@ -132,7 +134,9 @@
                                     <div
                                         class="my-8 mx-10 w-20 h-20 sm:m-8 sm:w-auto sm:h-auto"
                                     >
-                                        <img src="@/assets/images/interest4.png" />
+                                        <img
+                                            src="@/assets/images/interest4.png"
+                                        />
                                     </div>
                                     <div
                                         class="font-sans font-semibold self-center text-1.5xl leading-280 sm:text-base align-middle sm:leading-160"
@@ -143,7 +147,6 @@
                             </div>
                         </div>
                     </div>
-
 
                     <div class="flex flex-col sm:pl-60 mx-10">
                         <div class="text-3xl font-extrabold">

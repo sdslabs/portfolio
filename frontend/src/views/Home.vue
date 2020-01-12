@@ -134,13 +134,15 @@ export default {
         moveDown() {
             this.inMove = true;
             this.activeSection--;
-            if (this.activeSection < 0) this.activeSection = this.offsets.length - 1;
+            if (this.activeSection < 0)
+                this.activeSection = this.offsets.length - 1;
             this.scrollToSection(this.activeSection, true);
         },
         moveUp() {
             this.inMove = true;
             this.activeSection++;
-            if (this.activeSection > this.offsets.length - 1) this.activeSection = 0;
+            if (this.activeSection > this.offsets.length - 1)
+                this.activeSection = 0;
             this.scrollToSection(this.activeSection, true);
         },
         touchStart(e) {
@@ -187,22 +189,22 @@ export default {
         }
     },
     created() {
-        this.calculateSectionOffsets();
-        window.addEventListener("mousewheel", this.handleMouseWheel, {
-            passive: false
-        });
-        window.addEventListener("touchstart", this.touchStart, {
-            passive: false
-        });
-        window.addEventListener("touchmove", this.touchMove, {
-            passive: false
-        });
+        // this.calculateSectionOffsets();
+        // window.addEventListener("mousewheel", this.handleMouseWheel, {
+        //     passive: false
+        // });
+        // window.addEventListener("touchstart", this.touchStart, {
+        //     passive: false
+        // });
+        // window.addEventListener("touchmove", this.touchMove, {
+        //     passive: false
+        // });
     },
     destroyed() {
         this.observer.disconnect();
-        window.removeEventListener("DOMMouseScroll", this.handleMouseWheelDOM);
-        window.removeEventListener("touchstart", this.touchStart);
-        window.removeEventListener("touchmove", this.touchMove);
+        //     window.removeEventListener("DOMMouseScroll", this.handleMouseWheelDOM);
+        //     window.removeEventListener("touchstart", this.touchStart);
+        //     window.removeEventListener("touchmove", this.touchMove);
     }
 };
 </script>

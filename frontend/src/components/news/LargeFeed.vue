@@ -4,10 +4,14 @@
             <Label :text="event.types" />
         </div>
         <div class="flex flex-col h-auto mt-12 pb-12 pl-10 pr-navbar">
-            <div class="sm:font-extrabold font-bold text-2xl sm:text-xl leading-180">
+            <div
+                class="sm:font-extrabold font-bold text-2xl sm:text-xl leading-180"
+            >
                 {{ event.title.toUpperCase() }}
             </div>
-            <div class="mt-8 text-1.5xl sm:text-base font-semibold text-grey leading-170">
+            <div
+                class="mt-8 text-1.5xl sm:text-base font-semibold text-grey leading-170"
+            >
                 {{ event.timing }}
             </div>
             <div class="mt-16 text-1.5xl sm:text-base text-grey leading-normal">

@@ -54,7 +54,9 @@
                 <div
                     class="flex flex-col-reverse sm:flex-row-reverse items-center sm:justify-between"
                 >
-                    <div class="sm:mr-28 sm:w-220 w-full mt-16 flex flex-row">
+                    <div
+                        class="sm:mr-28 sm:w-220 w-full mt-16 sm:flex sm:flex-row"
+                    >
                         <div>
                             <div
                                 class="flex rounded shadow-sister flex-row ml-8 mr-8 h-auto sm:w-92"
@@ -184,7 +186,7 @@
                     class="timeline_bar flex align-bottom h-auto sm:p-8 sm:mt-8 w-full mt-16 overflow-x-auto sm:pl-64"
                 >
                     <div
-                        class="timeline-bar flex flex-row-reverse sm:flex-no-wrap py-1"
+                        class="timeline-bar flex flex-row-reverse sm:flex-no-wrap py-10 sm:py-1"
                         v-for="(timeline, index) in timelines"
                         v-bind:key="index"
                     >

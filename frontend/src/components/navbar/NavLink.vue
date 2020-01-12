@@ -4,7 +4,7 @@
         :href="url"
         :class="last ? 'mr-0' : 'mr-20'"
         class="no-underline block mt-8 sm:inline-block sm:mt-0"
-        target="blank"
+        target="_blank"
     >
         <span class="block text-black py-3">{{ text }}</span>
     </a>

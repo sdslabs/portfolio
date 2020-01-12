@@ -31,6 +31,7 @@
                     </div>
                     <div class="mt-28">
                         <Button
+                            v-if="events.event[0].types !== 'past event'"
                             v-bind:native="true"
                             :url="events.event[0].url"
                             text="Register Now"

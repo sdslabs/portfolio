@@ -162,6 +162,7 @@ export default {
     },
     mounted() {
         this.calculateSectionOffsets();
+        window.scrollTo(0, 0);
         axios
             .get(`${CONFIG.baseURL}/api/projects/?format=json`)
             .then(response => {

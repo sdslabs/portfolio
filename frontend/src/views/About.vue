@@ -256,6 +256,7 @@ export default {
         }
     },
     mounted() {
+        window.scrollTo(0, 0);
         axios
             .get(`${CONFIG.baseURL}/api/timeline/?format=json`)
             .then(response => {

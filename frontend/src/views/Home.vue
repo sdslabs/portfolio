@@ -1,11 +1,9 @@
 <template>
-    <div id="home" class="home">
+    <div id="home">
         <Sidebar v-bind:projects="projects" v-bind:isVisible="true" />
-        <section class="fullpage section">
-            <div id="home" class="z-20 relative bg-white">
-                <Landing />
-            </div>
-        </section>
+        <div id="home" class="z-20 relative bg-white fullpage section">
+            <Landing />
+        </div>
         <div
             class="px-16 sm:px-88 pb-28 sm:pb-0 flex flex-col justify-center items-center"
             id="projects"
@@ -195,14 +193,13 @@ export default {
             passive: false
         });
         window.addEventListener("touchstart", this.touchStart, {
-            passive: false
+            passive: true
         });
         window.addEventListener("touchmove", this.touchMove, {
-            passive: false
+            passive: true
         });
     },
     beforeDestroy() {
-        // this.observer.disconnect();
         window.removeEventListener("mousewheel", this.handleMouseWheel);
         window.removeEventListener("touchstart", this.touchStart);
         window.removeEventListener("touchmove", this.touchMove);

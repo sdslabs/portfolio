@@ -1,8 +1,19 @@
 <template>
-    <div class="fixed h-full w-full bg-grey z-30 sm:hidden" @click="close">
+    <div
+        v-bind:class="{
+            'bg-grey': open,
+            'bg-transparent': !open,
+            navhide: !open && !active
+        }"
+        class="fixed h-full w-full z-30 sm:hidden"
+        @click="close"
+    >
         <nav
-            v-if="open"
-            v-bind:class="{ nav: open, navclose: !open }"
+            v-bind:class="{
+                nav: open,
+                navclose: !open && active,
+                navhide: !open && !active
+            }"
             class="fixed h-full bg-white w-3/4 ml-1/4 flex flex-col"
         >
             <div class="self-end mt-8 mr-24 h-8 w-8">
@@ -80,9 +91,19 @@ export default {
             required: true
         }
     },
+    data() {
+        return {
+            active: false
+        };
+    },
     methods: {
         close() {
+            this.active = true;
             this.$emit("click");
+            setTimeout(() => {
+                let vm = this;
+                vm.active = false;
+            }, 500);
         }
     }
 };
@@ -99,7 +120,24 @@ export default {
         opacity: 1;
     }
 }
+@keyframes slideOut {
+    0% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(100%, 0%);
+        opacity: 1;
+        display: none;
+    }
+}
 .nav {
     animation: slideIn 0.5s ease forwards;
+}
+.navclose {
+    animation: slideOut 0.5s ease forwards;
+}
+.navhide {
+    display: none;
 }
 </style>

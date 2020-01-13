@@ -16,7 +16,7 @@
             >
                 {{ description }}
             </div>
-            <div class="text-1.5xl sm:text-base mt-14 text-grey leading-normal">
+            <div class="text-1.5xl sm:text-base overflow-x-hidden mt-14 text-grey leading-normal">
                 {{ contactInfo }}
             </div>
             <div class="text-1.5xl sm:text-base mt-14 text-grey leading-normal">

@@ -41,7 +41,7 @@
         <div class="flex flex-col w-auto mx-10 sm:ml-26">
             <div class="text-3xl font-black">Our Team</div>
             <div
-                class="pt-10 text-lg text-grey sm:font-semibold leading-170 sm:w-144"
+                class="pt-10 text-1.5xl sm:text-lg text-grey sm:font-semibold leading-170 sm:w-144"
             >
                 The amazing amalgamation of designers and developers along with
                 a vast alumni base has always been an important part of our

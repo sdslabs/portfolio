@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <div
-                        class="mt-6 ml-10 mr-12 text-lg text-grey leading-normal"
+                        class="mt-6 ml-10 mr-12 text-xl sm:text-lg text-grey leading-normal"
                     >
                         {{ slide.description }}
                     </div>

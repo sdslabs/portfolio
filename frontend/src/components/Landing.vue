@@ -1,7 +1,7 @@
 <template>
     <div>
         <div
-            class="banner pt-56 sm:pt-navbar px-16 relative flex flex-col justify-center items-center sm:px-0 sm:justify-between sm:flex-row"
+            class="banner pt-88 sm:pt-navbar px-16 relative flex flex-col justify-center items-center sm:px-0 sm:justify-between sm:flex-row"
         >
             <div class="hidden sm:flex w-88 h-full items-center justify-center">
                 <img class="w-full pb-20" src="@/assets/images/home1.svg" />

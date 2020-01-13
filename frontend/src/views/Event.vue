@@ -20,12 +20,12 @@
                         {{ events.event[0].title.toUpperCase() }}
                     </div>
                     <div
-                        class="mt-8 text-base text-grey font-semibold leading-170"
+                        class="mt-8 text-1.5xl sm:text-base text-grey font-semibold leading-170"
                     >
                         {{ events.event[0].timing }}
                     </div>
                     <div
-                        class="sm:w-feed mt-14 text-grey text-base leading-normal"
+                        class="sm:w-feed mt-14 text-grey text-1.5xl sm:text-base leading-normal"
                     >
                         {{ events.event[0].shortDescription }}
                     </div>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div
-                class="sm:ml-60 mt-40 text-base text-grey sm:w-eventdesc leading-normal"
+                class="sm:ml-60 mt-40 text-1.5xl sm:text-base text-grey sm:w-eventdesc leading-normal"
             >
                 {{ events.event[0].fullDescription }}
             </div>
@@ -55,7 +55,7 @@
             class="flex flex-col border-border border-t-feed sm:ml-60 sm:mr-36"
             v-if="events.event_update.length != 0"
         >
-            <div class="mt-40 font-extrabold text-lg leading-170">
+            <div class="mt-40 font-extrabold text-2xl sm:text-lg leading-170">
                 {{ events.event_update.length }} Updates
             </div>
             <div>

@@ -16,7 +16,7 @@
             }"
             class="fixed h-full bg-white w-3/4 ml-1/4 flex flex-col"
         >
-            <div class="self-end mt-8 mr-24 h-8 w-8">
+            <div class="self-end mt-16 mr-22 h-8 w-8">
                 <img src="@/assets/images/close.svg" />
             </div>
             <div

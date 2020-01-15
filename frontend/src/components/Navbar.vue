@@ -70,7 +70,7 @@
                 text="Login"
             />
         </div>
-        <div class="fixed -ml-16 -mt-40">
+        <div class="fixed -ml-16 -mt-21">
             <NavMobile :open="open" @click="toggle" />
         </div>
     </nav>

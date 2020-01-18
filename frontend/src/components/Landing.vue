@@ -1,7 +1,7 @@
 <template>
     <div>
         <div
-            class="banner pt-56 sm:pt-navbar px-16 relative flex flex-col justify-center items-center sm:px-0 sm:justify-between sm:flex-row"
+            class="banner pt-4 sm:pt-navbar px-16 relative flex flex-col justify-center items-center sm:px-0 sm:justify-between sm:flex-row"
         >
             <div class="hidden sm:flex w-88 h-full items-center justify-center">
                 <img class="w-full pb-20" src="@/assets/images/home1.svg" />
@@ -46,7 +46,7 @@
                 class="inline-flex flex-col items-center no-underline text-base"
             >
                 <img
-                    class="pt-16 sm:pt-0 block sm:h-10"
+                    class="pt-0 block sm:h-10"
                     src="@/assets/images/down-arrow.svg"
                 />
                 <span class="block text-grey pt-4 font-semibold text-lg"

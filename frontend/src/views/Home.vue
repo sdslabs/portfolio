@@ -1,7 +1,10 @@
 <template>
     <div id="home">
         <Sidebar v-bind:projects="projects" v-bind:isVisible="true" />
-        <div id="home" class="z-20 relative bg-white fullpage section">
+        <div
+            id="home"
+            class="z-20 relative pt-38 sm:pt-0 bg-white fullpage section"
+        >
             <Landing />
         </div>
         <div

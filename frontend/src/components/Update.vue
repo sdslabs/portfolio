@@ -1,28 +1,28 @@
 <template>
     <div class="flex flex-col sm:flex-row mt-16 mb-32">
         <div class="sm:w-feed flex flex-col mt-16">
-            <div class="font-extrabold text-xl leading-180">
+            <div class="font-extrabold text-2xl sm:text-xl leading-180">
                 {{ title.toUpperCase() }}
             </div>
             <div
-                :class="timing ? 'font-semibold text-base mt-14' : 'hidden'"
+                :class="timing ? 'font-semibold text-1.5xl sm:text-base mt-14' : 'hidden'"
                 class="leading-normal text-grey"
             >
                 {{ timing }}
             </div>
             <div
-                :class="description ? 'text-base mt-20' : 'hidden'"
+                :class="description ? 'text-1.5xl sm:text-base mt-20' : 'hidden'"
                 class="leading-normal text-grey"
             >
                 {{ description }}
             </div>
-            <div class="text-base mt-14 text-grey leading-normal">
+            <div class="text-1.5xl sm:text-base overflow-x-hidden mt-14 text-grey leading-normal">
                 {{ contactInfo }}
             </div>
-            <div class="text-base mt-14 text-grey leading-normal">
+            <div class="text-1.5xl sm:text-base mt-14 text-grey leading-normal">
                 {{ footNote }}
             </div>
-            <div class="text-base mt-14 text-grey leading-normal">
+            <div class="text-1.5xl sm:text-base mt-14 text-grey leading-normal">
                 {{ greetings }}
             </div>
         </div>

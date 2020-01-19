@@ -35,7 +35,7 @@
                 <div>
                     <img
                         class="w-60 sm:hidden sm:w-full pt-8"
-                        src="@/assets/images/home1.svg"
+                        src="@/assets/images/home4.svg"
                     />
                 </div>
             </div>
@@ -46,7 +46,7 @@
                 class="inline-flex flex-col items-center no-underline text-base"
             >
                 <img
-                    class="pt-0 block sm:h-10"
+                    class="pt-0 -mt-14 sm:-mt-0 block sm:h-10"
                     src="@/assets/images/down-arrow.svg"
                 />
                 <span class="block text-grey pt-4 font-semibold text-lg"

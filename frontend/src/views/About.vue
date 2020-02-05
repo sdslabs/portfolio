@@ -152,7 +152,7 @@
 
                     <div class="flex flex-col sm:pl-60 mx-10">
                         <div class="text-3xl font-extrabold">
-                            Area of Interest
+                            Areas of Interest
                         </div>
                         <div
                             class="sm:w-180 pt-10 text-1.5xl sm:text-lg sm:font-medium text-grey leading-170"

@@ -120,7 +120,7 @@ export default {
             });
             setTimeout(() => {
                 this.inMove = false;
-            }, 400);
+            }, 200);
         },
         handleMouseWheel: function(e) {
             if (e.wheelDelta < 30 && !this.inMove) {

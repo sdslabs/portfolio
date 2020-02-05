@@ -15,7 +15,7 @@
                     THINK. BUILD. SHIP.
                 </h1>
                 <p
-                    class="text-1.5xl sm:text-xl font-semibold text-center pt-14 sm:w-5/7 leading-160 opacity-60"
+                    class="text-1.5xl sm:text-xl font-medium text-center pt-14 sm:w-5/7 leading-160 opacity-60"
                 >
                     We at SDSLabs are a bunch of designers and developers who
                     aim to encourage the development of technology and

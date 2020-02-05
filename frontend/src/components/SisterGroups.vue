@@ -8,7 +8,7 @@
             Sister Groups
         </div>
         <div
-            class="sm:w-180 pt-6 text-1.5xl sm:text-lg text-grey sm:font-semibold leading-170 sm:self-center sm:text-center sm:w-sister"
+            class="sm:w-180 pt-6 text-1.5xl sm:text-lg text-grey sm:font-medium leading-170 sm:self-center sm:text-center sm:w-sister"
         >
             Sister groups are different smaller groups within the umbrella of
             Software Development Section, along with SDSLabs. The members of

@@ -21,7 +21,7 @@
             >
                 <div class="text-3xl font-extrabold">What is SDSLabs</div>
                 <div
-                    class="sm:w-180 pt-10 text-1.5xl sm:text-lg sm:font-semibold text-grey leading-170"
+                    class="sm:w-180 pt-10 text-1.5xl sm:text-lg sm:font-medium text-grey leading-170"
                 >
                     SDSLabs or Software Development Section Laboratories is a
                     student-run technical group at IIT Roorkee, which aims to
@@ -39,7 +39,7 @@
             <div class="flex flex-col mr-8 ml-8 sm:w-auto sm:ml-100 sm:pt-8">
                 <div class="text-3xl font-extrabold">What we do</div>
                 <div
-                    class="sm:w-140 pt-10 text-1.5xl sm:text-lg sm:font-semibold text-grey leading-170"
+                    class="sm:w-140 pt-10 text-1.5xl sm:text-lg sm:font-medium text-grey leading-170"
                 >
                     We are involved in a lot of activities on the campus, off
                     the campus and on the web. We conduct lectures and workshops
@@ -155,7 +155,7 @@
                             Area of Interest
                         </div>
                         <div
-                            class="sm:w-180 pt-10 text-1.5xl sm:text-lg sm:font-semibold text-grey leading-170"
+                            class="sm:w-180 pt-10 text-1.5xl sm:text-lg sm:font-medium text-grey leading-170"
                         >
                             We constantly explore and experiment, try to learn
                             new things, and get out of the comfort zones. This
@@ -173,7 +173,7 @@
                 >
                     <div class="text-3xl font-black">Timeline</div>
                     <div
-                        class="sm:w-292 pt-10 text-1.5xl sm:text-lg sm:font-semibold text-grey leading-170 w-auto sm:text-center"
+                        class="sm:w-292 pt-10 text-1.5xl sm:text-lg sm:font-medium text-grey leading-170 w-auto sm:text-center"
                     >
                         The timeline shows our past achievements that we’re
                         proud of and the milestones that we were able to achieve

@@ -10,7 +10,7 @@
                 class="sm:h-full sm:flex sm:flex-1 flex-col items-center justify-center"
             >
                 <h1
-                    class="text-4.5xl sm:text-5xl text-center font-extrabold leading-170"
+                    class="text-4.5xl sm:text-5xl pt-navbar text-center font-extrabold leading-170"
                 >
                     THINK. BUILD. SHIP.
                 </h1>

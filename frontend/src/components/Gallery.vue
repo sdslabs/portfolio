@@ -112,9 +112,6 @@ export default {
     },
     mounted() {
         if (window.innerWidth >= CONFIG.mobileSize) this.carousel();
-    },
-    updated() {
-        if (window.innerWidth >= CONFIG.mobileSize) this.carousel();
     }
 };
 </script>

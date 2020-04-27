@@ -52,7 +52,8 @@ let colors = {
     darkblue: "rgba(37, 110, 255, 1)",
     carousel: "rgba(25, 25, 25, 0.36)",
     team: "rgba(248, 248, 248, 1)",
-    label: "rgba(10, 15, 13, 0.07)"
+    label: "rgba(10, 15, 13, 0.07)",
+    footer: "rgba(248, 248, 248, 1)"
 };
 
 module.exports = {

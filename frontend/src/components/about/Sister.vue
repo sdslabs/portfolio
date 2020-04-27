@@ -6,7 +6,9 @@
                 {{ title }}
             </div>
         </div>
-        <div class="mt-6 ml-10 mr-12 text-1.5xl sm:text-base text-grey leading-normal">
+        <div
+            class="mt-6 ml-10 mr-12 text-1.5xl sm:text-base text-grey leading-normal"
+        >
             {{ description }}
         </div>
     </div>

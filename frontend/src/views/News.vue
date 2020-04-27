@@ -8,7 +8,8 @@
             <div
                 class="sm:w-largetext sm:text-base mt-10 sm:leading-normal text-1.5xl text-grey leading-170"
             >
-                Stay updated on coming up events or know more about things from recent past; things of your interest from our side.
+                Stay updated on coming up events or know more about things from
+                recent past; things of your interest from our side.
             </div>
         </div>
         <div id="grid" class="grid sm:w-news pt-24 pb-24">

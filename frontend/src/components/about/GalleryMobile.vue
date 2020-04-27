@@ -32,7 +32,6 @@ import lectures from "@/assets/images/lectures.png";
 import hackathons from "@/assets/images/hackathons.png";
 import workshops from "@/assets/images/workshops.png";
 import competitions from "@/assets/images/competitions.png";
-import { CONFIG } from "@/utils/constants.js";
 export default {
     name: "Gallery",
     components: {

@@ -1,7 +1,7 @@
 <template>
-    <div class="footer h-96 bg-footer flex flex-col justify-center">
+    <div class="footer h-96 z-20 bg-footer flex flex-col justify-center">
         <div class="font-extrabold leading-170 text-lg text-center">
-            Made with ❤️ by SDSLabs
+            Made with <i class="fas fa-heart text-red"></i> by SDSLabs
         </div>
         <div class="flex flex-row justify-center mt-20">
             <div class="mr-14">

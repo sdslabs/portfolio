@@ -24,7 +24,6 @@ services:
     container_name: portfolio
     volumes:
         - ".:/portfolio:rw"
-        - "./settings/dev/settings.sample.py:/portfolio/settings/dev/settings.py:"
     ports:
       - "5432:5432"
     depends_on:

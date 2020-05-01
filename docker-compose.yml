@@ -10,22 +10,20 @@ services:
       POSTGRES_HOST: "0.0.0.0"
 
     ports:
-      - "5432"
+      - "5432:5432"
     volumes:
       - ~/_postgresql_data:/var/lib/postgresql/data
 
   web:
     build: ./
     image: portfolio
-    command: bash -c 'python manage.py makemigrations &&
-             python manage.py migrate --settings settings.dev.settings &&
-             python manage.py createsuperuser --settings=settings.dev.settings &&
+    command: bash -c 'python manage.py migrate --settings settings.dev.settings &&
              python manage.py runserver --settings settings.dev.settings'
     container_name: portfolio
     volumes:
         - ".:/portfolio:rw"
     ports:
-      - "5432:5432"
+      - "8000:8000"
     depends_on:
       - db
     extra_hosts:

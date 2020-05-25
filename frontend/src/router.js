@@ -62,7 +62,8 @@ const router = new Router({
             name: "error404",
             component: () => import("./views/Error404.vue"),
             meta: {
-                title: "SDSLabs | Error"
+                title: "SDSLabs | Error",
+                hideFooter: true
             }
         }
     ]

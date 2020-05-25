@@ -2,7 +2,7 @@
     <div class="font-sans" id="app">
         <TopNavbar />
         <router-view />
-        <Footer />
+        <Footer v-if="!$route.meta.hideFooter" />
     </div>
 </template>
 

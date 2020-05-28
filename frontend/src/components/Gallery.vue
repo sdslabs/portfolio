@@ -27,6 +27,7 @@
                         'bg-black': queue === 1,
                         'bg-carousel': queue !== 1
                     }"
+                    v-on:click="queue = 1"
                 />
                 <span
                     class="h-4 w-4 sm:h-3 sm:w-3 rounded-50 inline-block mt-16 ml-4"
@@ -34,6 +35,7 @@
                         'bg-black': queue === 2,
                         'bg-carousel': queue !== 2
                     }"
+                    v-on:click="queue = 2"
                 />
                 <span
                     class="h-4 w-4 sm:h-3 sm:w-3 rounded-50 inline-block mt-16 ml-4"
@@ -41,6 +43,7 @@
                         'bg-black': queue === 3,
                         'bg-carousel': queue !== 3
                     }"
+                    v-on:click="queue = 3"
                 />
                 <span
                     class="h-4 w-4 sm:h-3 sm:w-3 rounded-50 inline-block mt-16 ml-4"
@@ -48,6 +51,7 @@
                         'bg-black': queue === 4,
                         'bg-carousel': queue !== 4
                     }"
+                    v-on:click="queue = 4"
                 />
             </div>
         </div>

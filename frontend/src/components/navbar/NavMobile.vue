@@ -58,7 +58,7 @@
                     class="py-6"
                     v-bind:native="true"
                     v-bind:last="true"
-                    url="http://chat.sdslabs.co"
+                    url="/contact"
                     text="CONTACT"
                     @click="close"
                 />

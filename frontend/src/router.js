@@ -60,6 +60,15 @@ const router = new Router({
             }
         },
         {
+            path: "/contact",
+            name: "contact",
+            component: () => import("./views/Contact.vue"),
+            meta: {
+                title: "SDSLabs | Contact",
+                hideFooter: true
+            }
+        },
+        {
             path: "*",
             name: "error404",
             component: () => import("./views/Error404.vue"),

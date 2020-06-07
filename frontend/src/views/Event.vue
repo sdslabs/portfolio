@@ -1,5 +1,8 @@
 <template>
-    <div class="event pt-40 sm:pt-60 flex flex-col ml-8 mr-8 sm:ml-0 sm:mr-0">
+    <div
+        class="event pt-40 sm:pt-60 flex flex-col ml-8 mr-8 sm:ml-0 sm:mr-0"
+        @click="close"
+    >
         <div class="flex flex-col pb-40">
             <div class="flex flex-col sm:flex-row">
                 <div class="flex flex-col sm:ml-60 mt-10 sm:mt-0">
@@ -85,6 +88,8 @@ import Label from "@/components/Label.vue";
 import Update from "@/components/Update.vue";
 import Button from "@/components/Button.vue";
 import { CONFIG } from "@/utils/constants.js";
+import { CLOSE_USER } from "@/mutation-types";
+
 export default {
     name: "event",
     components: {
@@ -97,6 +102,11 @@ export default {
             events: {},
             title: ""
         };
+    },
+    methods: {
+        close() {
+            this.$store.commit(CLOSE_USER);
+        }
     },
     created() {
         this.title = this.$route.params.title;

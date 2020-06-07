@@ -20,7 +20,7 @@
                 <img src="@/assets/images/close.svg" />
             </div>
             <div
-                class="text-lg text-black leading-normal justify-center mt-20 pl-12"
+                class="text-lg text-black leading-normal justify-center mt-20 pl-12 pr-12"
             >
                 <NavLink
                     class="py-6"
@@ -65,12 +65,48 @@
             </div>
             <div class="text-sm mt-14 ml-12 mr-12">
                 <Button
+                    v-if="!$store.state.login"
                     class="w-full h-24 pb-20 text-center text-lg"
                     v-bind:native="true"
                     url="https://accounts.sdslabs.co/"
                     text="Login"
                     @click="close"
                 />
+                <div v-else>
+                    <div class="flex flex-row items-center mt-4 pb-7">
+                        <div
+                            class="flex items-center justify-center h-20 w-20 rounded-50 bg-black text-white content-center font-bold text-2xl"
+                        >
+                            {{ this.name[0].toLowerCase() }}
+                        </div>
+                        <div
+                            class="ml-7 text-black font-extrabold font-sans text-xl"
+                        >
+                            {{ this.name.toUpperCase() }}
+                        </div>
+                    </div>
+                    <div class="h-18 flex flex-row bg-team mt-7">
+                        <div class="ml-6">
+                            <img src="@/assets/images/logo-square.svg" />
+                        </div>
+                        <div
+                            class="flex items-center font-sans font-semibold text-lg ml-6 mr-6"
+                        >
+                            <a
+                                class="no-underline text-black"
+                                rel="noreferrer noopener"
+                                href="https://accounts.sdslabs.co/"
+                                >Open SDSLabs Account</a
+                            >
+                        </div>
+                    </div>
+                    <div
+                        class="logout font-sans text-xl mt-16 mb-8 cursor-pointer"
+                        @click="logout"
+                    >
+                        Logout
+                    </div>
+                </div>
             </div>
         </nav>
     </div>
@@ -79,6 +115,11 @@
 <script>
 import NavLink from "@/components/navbar/NavLink.vue";
 import Button from "@/components/Button.vue";
+import { getCookie } from "@/utils/cookies";
+import { LOGOUT } from "@/mutation-types";
+import { config } from "@/config/config";
+import API from "falcon-client-js";
+
 export default {
     name: "NavMobile",
     components: {
@@ -93,7 +134,8 @@ export default {
     },
     data() {
         return {
-            active: false
+            active: false,
+            name: ""
         };
     },
     methods: {
@@ -104,7 +146,17 @@ export default {
                 let vm = this;
                 vm.active = false;
             }, 500);
+        },
+        logout() {
+            this.$store.dispatch(LOGOUT);
         }
+    },
+    created() {
+        const client = new API.API(config);
+        client.get_logged_in_user(getCookie("sdslabs")).then(user => {
+            console.log(user);
+        });
+        //Do something to fetch user details
     }
 };
 </script>

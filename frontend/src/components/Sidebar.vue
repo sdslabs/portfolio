@@ -15,6 +15,7 @@
 <script>
 import SideLink from "@/components/sidebar/SideLink.vue";
 
+// eslint-disable-next-line
 function handleIntersect(entries, observer) {
     for (let i = 0; i < entries.length; i++) {
         let entry = entries[i];

@@ -2,6 +2,7 @@
     <div
         :key="key"
         class="flex flex-col ml-10 mr-10 sm:ml-0 sm:mr-0 pt-44 sm:pt-60 sm:pl-60 sm:w-full"
+        @click="close"
     >
         <div class="flex flex-col">
             <div class="font-black text-3xl leading-180">News Updates</div>
@@ -115,6 +116,8 @@ import axios from "axios";
 import LargeFeed from "@/components/news/LargeFeed.vue";
 import SmallFeed from "@/components/news/SmallFeed.vue";
 import { CONFIG } from "@/utils/constants.js";
+import { CLOSE_USER } from "@/mutation-types";
+
 export default {
     name: "news",
     components: {
@@ -144,6 +147,7 @@ export default {
         // Re-initialize masonry
         masonry() {
             let elem = document.getElementById("grid");
+            // eslint-disable-next-line
             let msnry = new Masonry(elem, {
                 // options
                 itemSelector: ".grid-item",
@@ -151,6 +155,9 @@ export default {
                 gutter: 24,
                 percentPosition: true
             });
+        },
+        close() {
+            this.$store.commit(CLOSE_USER);
         }
     },
     created() {

@@ -1,5 +1,8 @@
 <template>
-    <div class="flex flex-col sm:pt-60 pt-48 w-full overflow-x-hidden">
+    <div
+        class="flex flex-col sm:pt-60 pt-48 w-full overflow-x-hidden"
+        @click="close"
+    >
         <div
             class="flex flex-col-reverse sm:flex-row-reverse items-center justify-between sm:justify-between flex-col pl-0 pr-0"
         >
@@ -237,6 +240,8 @@ import Team from "@/components/Team.vue";
 import SisterGroups from "@/components/SisterGroups.vue";
 import { CONFIG } from "@/utils/constants.js";
 import axios from "axios";
+import { CLOSE_USER } from "@/mutation-types";
+
 export default {
     name: "about",
     components: {
@@ -253,6 +258,9 @@ export default {
     methods: {
         scrollFunction: function() {
             document.getElementById("timeline_bar").scrollLeft += 1000;
+        },
+        close() {
+            this.$store.commit(CLOSE_USER);
         }
     },
     mounted() {

@@ -1,5 +1,8 @@
 <template>
-    <div class="flex flex-col sm:pt-60 pt-48 w-full overflow-x-hidden">
+    <div
+        class="flex flex-col sm:pt-60 pt-48 w-full overflow-x-hidden"
+        @click="close"
+    >
         <div
             class="flex flex-col sm:flex-row mb-60 items-center justify-between sm:justify-between flex-col pl-0 pr-0"
         >
@@ -145,10 +148,17 @@
 
 <script>
 import Button from "@/components/Button.vue";
+import { CLOSE_USER } from "@/mutation-types";
+
 export default {
     name: "Error404",
     components: {
         Button
+    },
+    methods: {
+        close() {
+            this.$store.commit(CLOSE_USER);
+        }
     }
 };
 </script>

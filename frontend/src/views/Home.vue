@@ -1,5 +1,5 @@
 <template>
-    <div id="home">
+    <div id="home" @click="close">
         <Sidebar v-bind:projects="projects" v-bind:isVisible="true" />
         <div
             id="home"
@@ -33,9 +33,11 @@ import Sidebar from "@/components/Sidebar.vue";
 import Landing from "@/components/Landing.vue";
 import Project from "@/components/Project.vue";
 import { CONFIG } from "@/utils/constants.js";
+import { CLOSE_USER } from "@/mutation-types";
 
 let scrollOptions = { behavior: "smooth", block: "start" };
 
+// eslint-disable-next-line
 function handleIntersect(entries, observer) {
     let projectsElement = document.querySelector("#projects");
     if (projectsElement == null) return;
@@ -101,6 +103,9 @@ export default {
         }
     },
     methods: {
+        close() {
+            this.$store.commit(CLOSE_USER);
+        },
         createObserver: createObserver,
         handleIntersect: handleIntersect,
         calculateSectionOffsets() {
@@ -123,7 +128,7 @@ export default {
             }, 400);
         },
         handleMouseWheel: function(e) {
-            if (e.wheelDelta < 30 && !this.inMove) {
+            if (e.wheelDelta < -30 && !this.inMove) {
                 this.moveUp();
             } else if (e.wheelDelta > 30 && !this.inMove) {
                 this.moveDown();
@@ -193,7 +198,7 @@ export default {
         }
     },
     created() {
-        window.addEventListener("mousewheel", this.handleMouseWheel, {
+        window.addEventListener("wheel", this.handleMouseWheel, {
             passive: false
         });
         window.addEventListener("touchstart", this.touchStart, {
@@ -204,7 +209,7 @@ export default {
         });
     },
     beforeDestroy() {
-        window.removeEventListener("mousewheel", this.handleMouseWheel);
+        window.removeEventListener("wheel", this.handleMouseWheel);
         window.removeEventListener("touchstart", this.touchStart);
         window.removeEventListener("touchmove", this.touchMove);
     }

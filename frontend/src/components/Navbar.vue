@@ -65,10 +65,12 @@
             class="text-sm sm:flex mt-4 sm:mt-0 hidden"
         >
             <Button
+                v-if="!$store.state.login"
                 v-bind:native="true"
-                url="https://accounts.sdslabs.co/"
+                :url="url"
                 text="Login"
             />
+            <User class="sm:flex hidden" v-else />
         </div>
         <div class="fixed -ml-16 -mt-20">
             <NavMobile :open="open" @click="toggle" />
@@ -80,13 +82,17 @@
 import NavLink from "@/components/navbar/NavLink.vue";
 import NavMobile from "@/components/navbar/NavMobile.vue";
 import Button from "@/components/Button.vue";
+import User from "@/components/navbar/User.vue";
 
 export default {
     name: "TopNavbar",
     data: function initData() {
         return {
             open: false,
-            scrolled: false
+            scrolled: false,
+            url: `https://accounts.sdslabs.co/login?redirect=${
+                window.location.href
+            }`
         };
     },
     methods: {
@@ -106,7 +112,8 @@ export default {
     components: {
         NavLink,
         Button,
-        NavMobile
+        NavMobile,
+        User
     }
 };
 </script>

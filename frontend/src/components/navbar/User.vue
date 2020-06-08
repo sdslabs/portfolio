@@ -45,9 +45,9 @@
 
 <script>
 import { TOGGLE_USER, LOGOUT } from "@/mutation-types";
-import { getCookie } from "@/utils/cookies";
 import { config } from "@/config/config";
 import API from "falcon-client-js";
+import cookies from "js-cookie";
 
 export default {
     name: "User",
@@ -66,7 +66,7 @@ export default {
     },
     created() {
         const client = new API.API(config);
-        client.get_logged_in_user(getCookie("sdslabs")).then(user => {
+        client.get_logged_in_user(cookies).then(user => {
             console.log(user);
         });
     }

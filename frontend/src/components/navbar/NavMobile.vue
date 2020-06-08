@@ -115,7 +115,6 @@
 <script>
 import NavLink from "@/components/navbar/NavLink.vue";
 import Button from "@/components/Button.vue";
-import { getCookie } from "@/utils/cookies";
 import { LOGOUT } from "@/mutation-types";
 import { config } from "@/config/config";
 import API from "falcon-client-js";
@@ -152,10 +151,10 @@ export default {
         }
     },
     created() {
-        const client = new API.API(config);
-        client.get_logged_in_user(getCookie("sdslabs")).then(user => {
-            console.log(user);
-        });
+        // const client = new API.API(config);
+        // client.get_logged_in_user(getCookie("sdslabs")).then(user => {
+        //     console.log(user);
+        // });
         //Do something to fetch user details
     }
 };

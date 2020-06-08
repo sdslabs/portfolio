@@ -9,13 +9,15 @@
   },
   "dependencies": {
     "axios": "^0.18.1",
+    "cookies": "^0.7.3",
+    "falcon-client-js": "git@github.com:sdslabs/falcon.git#falcon-client-js",
+    "js-cookie": "^2.2.1",
     "masonry-layout": "^4.2.2",
     "vue": "^2.5.17",
     "vue-carousel": "^0.18.0",
     "vue-masonry": "^0.11.8",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1",
-    "falcon-client-js": "git@github.com:sdslabs/falcon.git#falcon-client-js"
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.1.1",

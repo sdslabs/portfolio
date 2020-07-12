@@ -63,7 +63,7 @@ export default {
                     image: competitions,
                     title: "Competitions",
                     description:
-                        "Online competetions on ML, data science, programming, and CTFs are a great way for enthusiasts to show off some skills or learn something new in a competetive environment."
+                        "Online competitions on ML, data science, programming, and CTFs are a great way for enthusiasts to show off some skills or learn something new in a competitive environment."
                 }
             ]
         };

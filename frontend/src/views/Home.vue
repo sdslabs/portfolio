@@ -11,17 +11,19 @@
             class="px-16 sm:px-88 pb-28 sm:pb-0 flex flex-col justify-center items-center"
             id="projects"
         >
-            <Project
-                class="fullpage section"
-                v-for="(project, permalink, index) in projects"
-                v-bind:key="index"
-                v-bind:title="project.title"
-                v-bind:desc="project.description"
-                v-bind:url="project.url"
-                v-bind:image_url="project.image"
-                v-bind:permalink="project.permalink"
-                v-bind:color="project.color"
-            />
+            <full-page ref="fullpage" :options="options" id="fullpage-home">
+                <Project
+                    class="fullpage section"
+                    v-for="(project, permalink, index) in projects"
+                    v-bind:key="index"
+                    v-bind:title="project.title"
+                    v-bind:desc="project.description"
+                    v-bind:url="project.url"
+                    v-bind:image_url="project.image"
+                    v-bind:permalink="project.permalink"
+                    v-bind:color="project.color"
+                />
+            </full-page>
         </div>
     </div>
 </template>

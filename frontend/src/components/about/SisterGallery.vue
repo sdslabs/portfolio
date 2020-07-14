@@ -51,7 +51,7 @@ export default {
                     image: pag,
                     title: "PROGRAMMING & ALGORITHMS GROUP",
                     description:
-                        "A bunch of competetive programming enthusiasts, PAG, frequently organizes coding lectures and contests for IITR people."
+                        "A bunch of competitive programming enthusiasts, PAG, frequently organizes coding lectures and contests for IITR people."
                 },
                 {
                     image: infosec,

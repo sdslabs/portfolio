@@ -13,7 +13,7 @@
             Sister groups are different smaller groups within the umbrella of
             Software Development Section, along with SDSLabs. The members of
             these groups focus on specific areas of technological innovation
-            like data science, competetive programming, and information
+            like data science, competitive programming, and information
             security.
         </div>
         <div

@@ -12,6 +12,7 @@
             id="projects"
         >
             <Project
+                :data-anchor="index"
                 class="fullpage section"
                 v-for="(project, permalink, index) in projects"
                 v-bind:key="index"
@@ -79,11 +80,7 @@ export default {
             projects: {},
             auto: false,
             isObserverSet: 0,
-            observer: undefined,
-            inMove: false,
-            activeSection: 0,
-            offsets: [],
-            touchStartY: 0
+            observer: undefined
         };
     },
     watch: {
@@ -107,69 +104,9 @@ export default {
             this.$store.commit(CLOSE_USER);
         },
         createObserver: createObserver,
-        handleIntersect: handleIntersect,
-        calculateSectionOffsets() {
-            let sections = document.getElementsByClassName("section");
-            let length = sections.length;
-            for (let i = 0; i < length; i++) {
-                let sectionOffset = sections[i].offsetTop;
-                this.offsets.push(sectionOffset);
-            }
-        },
-        scrollToSection(id, force = false) {
-            if (this.inMove && !force) return false;
-            this.activeSection = id;
-            this.inMove = true;
-            document.getElementsByClassName("section")[id].scrollIntoView({
-                behavior: "smooth"
-            });
-            setTimeout(() => {
-                this.inMove = false;
-            }, 400);
-        },
-        handleMouseWheel: function(e) {
-            if (e.wheelDelta < -30 && !this.inMove) {
-                this.moveUp();
-            } else if (e.wheelDelta > 30 && !this.inMove) {
-                this.moveDown();
-            }
-            e.preventDefault();
-            return false;
-        },
-        moveDown() {
-            this.inMove = true;
-            if (this.activeSection > 0) this.activeSection--;
-            if (this.activeSection < 0)
-                this.activeSection = this.offsets.length - 1;
-            this.scrollToSection(this.activeSection, true);
-        },
-        moveUp() {
-            this.inMove = true;
-            if (this.activeSection < this.offsets.length - 2)
-                this.activeSection++;
-            if (this.activeSection > this.offsets.length - 1)
-                this.activeSection = 0;
-            this.scrollToSection(this.activeSection, true);
-        },
-        touchStart(e) {
-            e.preventDefault();
-            this.touchStartY = e.touches[0].clientY;
-        },
-        touchMove(e) {
-            if (this.inMove) return false;
-            e.preventDefault();
-            const currentY = e.touches[0].clientY;
-            if (this.touchStartY < currentY) {
-                this.moveDown();
-            } else {
-                this.moveUp();
-            }
-            this.touchStartY = 0;
-            return false;
-        }
+        handleIntersect: handleIntersect
     },
     mounted() {
-        this.calculateSectionOffsets();
         window.scrollTo(0, 0);
         axios
             .get(`${CONFIG.baseURL}/api/projects/?format=json`)
@@ -182,7 +119,6 @@ export default {
             });
     },
     updated() {
-        this.calculateSectionOffsets();
         if (!this.isObserverSet && Object.keys(this.projects).length > 0) {
             let currentRoute = this.$route;
             let projectsElement = document.querySelector("#projects");
@@ -197,21 +133,8 @@ export default {
             }, 1);
         }
     },
-    created() {
-        window.addEventListener("wheel", this.handleMouseWheel, {
-            passive: false
-        });
-        window.addEventListener("touchstart", this.touchStart, {
-            passive: true
-        });
-        window.addEventListener("touchmove", this.touchMove, {
-            passive: true
-        });
-    },
-    beforeDestroy() {
-        window.removeEventListener("wheel", this.handleMouseWheel);
-        window.removeEventListener("touchstart", this.touchStart);
-        window.removeEventListener("touchmove", this.touchMove);
+    destroyed() {
+        this.observer.disconnect();
     }
 };
 </script>

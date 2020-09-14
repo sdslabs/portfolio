@@ -13,6 +13,7 @@
     "falcon-client-js": "git@github.com:sdslabs/falcon.git#falcon-client-js",
     "js-cookie": "^2.2.1",
     "masonry-layout": "^4.2.2",
+    "pageable": "^0.6.8",
     "vue": "^2.5.17",
     "vue-carousel": "^0.18.0",
     "vue-masonry": "^0.11.8",

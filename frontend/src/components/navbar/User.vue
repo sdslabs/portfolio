@@ -67,6 +67,7 @@ export default {
     created() {
         const client = new API.API(config);
         client.get_logged_in_user(cookies).then(user => {
+            console.log("createdd")
             console.log(user);
         });
     }

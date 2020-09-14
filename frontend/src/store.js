@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import { TOGGLE_USER, CLOSE_USER, LOGOUT } from "./mutation-types";
+import { TOGGLE_USER, CLOSE_USER, LOGOUT, LOGIN_USER } from "./mutation-types";
 
 Vue.use(Vuex);
 
@@ -15,7 +15,10 @@ export default new Vuex.Store({
         },
         [CLOSE_USER](state) {
             if (state.user) state.user = false;
-        }
+        },
+        [LOGIN_USER](state) {
+            state.login = true;
+        },
     },
     actions: {
         [LOGOUT]({ state }) {

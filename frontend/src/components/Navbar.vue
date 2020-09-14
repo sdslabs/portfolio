@@ -83,6 +83,10 @@ import NavLink from "@/components/navbar/NavLink.vue";
 import NavMobile from "@/components/navbar/NavMobile.vue";
 import Button from "@/components/Button.vue";
 import User from "@/components/navbar/User.vue";
+import { config } from "@/config/config";
+import API from "falcon-client-js";
+import cookies from "js-cookie";
+import {LOGIN_USER} from "@/mutation-types.js";
 
 export default {
     name: "TopNavbar",
@@ -90,7 +94,7 @@ export default {
         return {
             open: false,
             scrolled: false,
-            url: `https://accounts.sdslabs.co/login?redirect=${
+            url: `http://arceus.sdslabs.local/login?redirect=${
                 window.location.href
             }`
         };
@@ -105,6 +109,12 @@ export default {
     },
     created() {
         window.addEventListener("scroll", this.handleScroll);
+        const client = new API.API(config);
+        client.get_logged_in_user(cookies).then(user => {
+            if(user){
+                this.$store.commit(LOGIN_USER);
+            }
+        });
     },
     destroyed() {
         window.removeEventListener("scroll", this.handleScroll);

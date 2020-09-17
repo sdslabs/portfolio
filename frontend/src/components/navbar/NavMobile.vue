@@ -63,7 +63,7 @@
                     @click="close"
                 />
             </div>
-            <div class="text-sm mt-14 ml-12 mr-12">
+            <!-- <div class="text-sm mt-14 ml-12 mr-12">
                 <Button
                     v-if="!$store.state.login"
                     class="w-full h-24 pb-20 text-center text-lg"
@@ -107,23 +107,23 @@
                         Logout
                     </div>
                 </div>
-            </div>
+            </div> -->
         </nav>
     </div>
 </template>
 
 <script>
 import NavLink from "@/components/navbar/NavLink.vue";
-import Button from "@/components/Button.vue";
+// import Button from "@/components/Button.vue";
 import { LOGOUT } from "@/mutation-types";
-import { config } from "@/config/config";
-import API from "falcon-client-js";
+// import { config } from "@/config/config";
+// import API from "falcon-client-js";
 
 export default {
     name: "NavMobile",
     components: {
-        NavLink,
-        Button
+        NavLink
+        // Button
     },
     props: {
         open: {

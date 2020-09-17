@@ -60,7 +60,7 @@
                 />
             </div>
         </div>
-        <div
+        <!-- <div
             :class="open ? 'block' : 'hidden'"
             class="text-sm sm:flex mt-4 sm:mt-0 hidden"
         >
@@ -71,8 +71,8 @@
                 text="Login"
             />
             <User class="sm:flex hidden" v-else />
-        </div>
-        <div class="fixed -ml-16 -mt-20">
+        </div> -->
+        <div class="fixed -ml-16 -mt-39">
             <NavMobile :open="open" @click="toggle" />
         </div>
     </nav>
@@ -81,8 +81,8 @@
 <script>
 import NavLink from "@/components/navbar/NavLink.vue";
 import NavMobile from "@/components/navbar/NavMobile.vue";
-import Button from "@/components/Button.vue";
-import User from "@/components/navbar/User.vue";
+// import Button from "@/components/Button.vue";
+// import User from "@/components/navbar/User.vue";
 
 export default {
     name: "TopNavbar",
@@ -111,9 +111,9 @@ export default {
     },
     components: {
         NavLink,
-        Button,
-        NavMobile,
-        User
+        // Button,
+        NavMobile
+        // User
     }
 };
 </script>

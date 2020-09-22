@@ -1,8 +1,5 @@
 <template>
-    <div
-        class="flex flex-col sm:pt-60 pt-48 w-full overflow-x-hidden"
-        @click="close"
-    >
+    <div class="flex flex-col sm:pt-60 pt-48 w-full overflow-x-hidden">
         <div
             class="flex flex-col sm:flex-row mb-60 items-center justify-between sm:justify-between flex-col pl-0 pr-0"
         >
@@ -122,7 +119,7 @@
                     src="../assets/images/think-build-ship-pic.png"
                 />
                 <div
-                    class="textbox absolute mt-120 sm:mt-64 sm:-ml-81 mt-76 bg-white  shadow-sister p-10 sm:pr-0 h-80 z-20"
+                    class="textbox absolute mt-120 sm:mt-64 sm:-ml-82 mt-76 bg-white  shadow-sister p-10 sm:pr-0 h-80 z-20"
                 >
                     <div class="w-140 sm:w-120 flex flex-row">
                         <img
@@ -148,17 +145,11 @@
 
 <script>
 import Button from "@/components/Button.vue";
-import { CLOSE_USER } from "@/mutation-types";
 
 export default {
     name: "Error404",
     components: {
         Button
-    },
-    methods: {
-        close() {
-            this.$store.commit(CLOSE_USER);
-        }
     }
 };
 </script>

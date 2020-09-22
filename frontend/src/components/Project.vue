@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="-ml-6 flex sm:-ml-0 sm:pl-24 sm:w-7/10">
-                <div class="self-center flex flex-row z-10">
+                <div class="image self-center flex flex-row z-10">
                     <img class="w-full z-20" :src="image_url" />
                     <div
                         :class="
@@ -75,3 +75,8 @@ export default {
     }
 };
 </script>
+<style lang="scss" scoped>
+.image {
+    align-items: center;
+}
+</style>

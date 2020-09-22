@@ -22,7 +22,7 @@
             </div>
             <div class="self-center sm:self-start sm:-mt-32">
                 <span
-                    class="h-4 w-4 sm:h-3 sm:w-3 rounded-50 inline-block mt-16"
+                    class="h-4 w-4 sm:h-3 sm:w-3 rounded-50 inline-block mt-16 pointer"
                     v-bind:class="{
                         'bg-black': queue === 1,
                         'bg-carousel': queue !== 1
@@ -30,7 +30,7 @@
                     v-on:click="queue = 1"
                 />
                 <span
-                    class="h-4 w-4 sm:h-3 sm:w-3 rounded-50 inline-block mt-16 ml-4"
+                    class="h-4 w-4 sm:h-3 sm:w-3 rounded-50 inline-block mt-16 ml-4 pointer"
                     v-bind:class="{
                         'bg-black': queue === 2,
                         'bg-carousel': queue !== 2
@@ -38,7 +38,7 @@
                     v-on:click="queue = 2"
                 />
                 <span
-                    class="h-4 w-4 sm:h-3 sm:w-3 rounded-50 inline-block mt-16 ml-4"
+                    class="h-4 w-4 sm:h-3 sm:w-3 rounded-50 inline-block mt-16 ml-4 pointer"
                     v-bind:class="{
                         'bg-black': queue === 3,
                         'bg-carousel': queue !== 3
@@ -46,7 +46,7 @@
                     v-on:click="queue = 3"
                 />
                 <span
-                    class="h-4 w-4 sm:h-3 sm:w-3 rounded-50 inline-block mt-16 ml-4"
+                    class="h-4 w-4 sm:h-3 sm:w-3 rounded-50 inline-block mt-16 ml-4 pointer"
                     v-bind:class="{
                         'bg-black': queue === 4,
                         'bg-carousel': queue !== 4
@@ -124,5 +124,9 @@ export default {
 .textbox {
     box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.07);
     border-radius: 5px;
+}
+
+.pointer {
+    cursor: pointer;
 }
 </style>

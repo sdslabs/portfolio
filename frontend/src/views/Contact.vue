@@ -119,7 +119,7 @@
                     src="../assets/images/think-build-ship-pic.png"
                 />
                 <div
-                    class="textbox absolute mt-120 sm:mt-64 sm:-ml-82 mt-76 bg-white  shadow-sister p-10 sm:pr-0 h-80 z-20"
+                    class="textbox absolute mt-120 sm:mt-64 sm:-ml-82 mt-76 bg-white shadow-sister p-10 sm:pr-0 h-80 z-20"
                 >
                     <div class="w-140 sm:w-120 flex flex-row">
                         <img

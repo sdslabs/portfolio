@@ -26,7 +26,7 @@
             class="relative w-full flex-grow sm:flex sm:items-center sm:w-auto z-10 hidden"
         >
             <div
-                class="text-sm text-black leading-normal sm:flex justify-center sm:flex-grow "
+                class="text-sm text-black leading-normal sm:flex justify-center sm:flex-grow"
             >
                 <NavLink
                     v-bind:native="false"

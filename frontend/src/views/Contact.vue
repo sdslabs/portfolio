@@ -20,7 +20,7 @@
                     <Button
                         class="mt-14 bg-purple"
                         v-bind:native="true"
-                        url="https://team.sdslabs.co/"
+                        url="https://chat.sdslabs.co/"
                         text="chat.sdslabs.co"
                         :image="
                             require('@/assets/images/button-arrow-small.svg')

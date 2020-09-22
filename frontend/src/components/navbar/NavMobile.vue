@@ -56,7 +56,7 @@
                 />
                 <NavLink
                     class="py-6"
-                    v-bind:native="true"
+                    v-bind:native="false"
                     v-bind:last="true"
                     url="/contact"
                     text="CONTACT"

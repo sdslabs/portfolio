@@ -106,16 +106,22 @@ export default {
         },
         handleScroll(e) {
             let projectsElement = document.getElementById("projects");
-            this.show = (window.scrollY < projectsElement.offsetHeight + 10 * parseFloat(getComputedStyle(document.documentElement).fontSize))
+            this.show =
+                window.scrollY <
+                projectsElement.offsetHeight +
+                    10 *
+                        parseFloat(
+                            getComputedStyle(document.documentElement).fontSize
+                        );
         },
         createObserver: createObserver,
         handleIntersect: handleIntersect
     },
     created() {
-        window.addEventListener('scroll', this.handleScroll);
+        // window.addEventListener("scroll", this.handleScroll);
     },
     destroyed() {
-        window.removeEventListener('scroll', this.handleScroll);
+        // window.removeEventListener("scroll", this.handleScroll);
     },
     mounted() {
         window.scrollTo(0, 0);

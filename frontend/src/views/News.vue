@@ -23,7 +23,7 @@
                     id="feed"
                     class="mb-10 sm:w-feed"
                     v-if="
-                        event_block.event.types == 'upcoming event' &&
+                        event_block.event.types == 'ongoing event' &&
                             event_block.event.priority == 'large'
                     "
                 >
@@ -34,7 +34,7 @@
                 </div>
                 <div
                     v-if="
-                        event_block.event.types == 'upcoming event' &&
+                        event_block.event.types == 'ongoing event' &&
                             event_block.event.priority == 'small'
                     "
                 >
@@ -47,7 +47,7 @@
                     id="feed"
                     class="mb-10 sm:w-feed"
                     v-if="
-                        event_block.event.types == 'ongoing event' &&
+                        event_block.event.types == 'upcoming event' &&
                             event_block.event.priority == 'large'
                     "
                 >
@@ -58,7 +58,7 @@
                 </div>
                 <div
                     v-if="
-                        event_block.event.types == 'ongoing event' &&
+                        event_block.event.types == 'upcoming event' &&
                             event_block.event.priority == 'small'
                     "
                 >
@@ -195,6 +195,10 @@ export default {
                 let event = [];
                 events.forEach(event_block => {
                     eventList.push(event_block);
+                });
+                eventList.forEach(events_list => {
+                    if (events_list.event.types === "ongoing event")
+                        event.push(events_list);
                 });
                 eventList.forEach(events_list => {
                     if (events_list.event.types === "upcoming event")

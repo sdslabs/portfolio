@@ -45,7 +45,7 @@
                     </div>
                     <div class="mr-14">
                         <a
-                            href="https://feedburner.google.com/fb/a/mailverify?uri=sdslabs/IOpf1&loc=en_US"
+                            href="mailto:contact@sdslabs.co.in"
                             rel="noopener noreferrer"
                             target="blank"
                         >

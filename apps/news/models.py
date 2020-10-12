@@ -4,6 +4,7 @@ from django.db import models
 
 TYPES = [
     ('upcoming event', 'upcoming'),
+    ('ongoing event', 'ongoing'),
     ('app update', 'app'),
     ('online competition', 'online'),
     ('past event', 'past')

@@ -19,52 +19,75 @@
                 v-for="event_block in event"
                 v-bind:key="event_block.event.title"
             >
-                <div>
-                    <div
-                        id="feed"
-                        class="mb-10 sm:w-feed"
-                        v-if="
-                            event_block.event.types == 'upcoming event' &&
-                                event_block.event.priority == 'large'
-                        "
-                    >
-                        <LargeFeed
-                            :event="event_block.event"
-                            :eventUpdates="event_block.event_update"
-                        />
-                    </div>
-                    <div
-                        v-if="
-                            event_block.event.types == 'upcoming event' &&
-                                event_block.event.priority == 'small'
-                        "
-                    >
-                        <SmallFeed
-                            class="mb-10 sm:w-event"
-                            :event="event_block.event"
-                        />
-                    </div>
-                    <div
-                        v-if="
-                            event_block.event.types == 'online competition' &&
-                                event_block.event.priority == 'large'
-                        "
-                    >
-                        <LargeFeed
-                            :event="event_block.event"
-                            :eventUpdates="event_block.event_update"
-                        />
-                    </div>
-                    <div
-                        class="mb-10 sm:w-event"
-                        v-if="
-                            event_block.event.types == 'online competition' &&
-                                event_block.event.priority == 'small'
-                        "
-                    >
-                        <SmallFeed :event="event_block.event" />
-                    </div>
+                <div
+                    id="feed"
+                    class="mb-10 sm:w-feed"
+                    v-if="
+                        event_block.event.types == 'upcoming event' &&
+                            event_block.event.priority == 'large'
+                    "
+                >
+                    <LargeFeed
+                        :event="event_block.event"
+                        :eventUpdates="event_block.event_update"
+                    />
                 </div>
+                <div
+                    v-if="
+                        event_block.event.types == 'upcoming event' &&
+                            event_block.event.priority == 'small'
+                    "
+                >
+                    <SmallFeed
+                        class="mb-10 sm:w-event"
+                        :event="event_block.event"
+                    />
+                </div>
+                <div
+                    id="feed"
+                    class="mb-10 sm:w-feed"
+                    v-if="
+                        event_block.event.types == 'ongoing event' &&
+                            event_block.event.priority == 'large'
+                    "
+                >
+                    <LargeFeed
+                        :event="event_block.event"
+                        :eventUpdates="event_block.event_update"
+                    />
+                </div>
+                <div
+                    v-if="
+                        event_block.event.types == 'ongoing event' &&
+                            event_block.event.priority == 'small'
+                    "
+                >
+                    <SmallFeed
+                        class="mb-10 sm:w-event"
+                        :event="event_block.event"
+                    />
+                </div>
+                <div
+                    v-if="
+                        event_block.event.types == 'online competition' &&
+                            event_block.event.priority == 'large'
+                    "
+                >
+                    <LargeFeed
+                        :event="event_block.event"
+                        :eventUpdates="event_block.event_update"
+                    />
+                </div>
+                <div
+                    class="mb-10 sm:w-event"
+                    v-if="
+                        event_block.event.types == 'online competition' &&
+                            event_block.event.priority == 'small'
+                    "
+                >
+                    <SmallFeed :event="event_block.event" />
+                </div>
+
                 <div
                     v-if="
                         event_block.event.types == 'app update' &&

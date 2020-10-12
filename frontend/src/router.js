@@ -15,7 +15,7 @@ const router = new Router({
             props: true,
             meta: {
                 title: "SDSLabs",
-                hideFooter: true
+                hideFooter: false
             }
         },
         {
@@ -25,7 +25,7 @@ const router = new Router({
             props: true,
             meta: {
                 title: "SDSLabs | Projects",
-                hideFooter: true
+                hideFooter: false
             }
         },
         {

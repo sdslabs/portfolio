@@ -1,6 +1,6 @@
 <template>
     <div id="home" @click="close">
-        <Sidebar v-bind:projects="projects" v-bind:isVisible="true" />
+        <Sidebar v-bind:projects="projects" v-show="show" />
         <div
             id="home"
             class="z-20 relative pt-38 sm:pt-0 bg-white fullpage section"
@@ -10,6 +10,7 @@
         <div
             class="px-16 sm:px-88 pb-28 sm:pb-0 flex flex-col justify-center items-center"
             id="projects"
+            ref="projects"
         >
             <Project
                 class="fullpage section"
@@ -79,7 +80,8 @@ export default {
             projects: {},
             auto: false,
             isObserverSet: 0,
-            observer: undefined
+            observer: undefined,
+            show: true
         };
     },
     watch: {
@@ -102,8 +104,18 @@ export default {
         close() {
             this.$store.commit(CLOSE_USER);
         },
+        handleScroll(e) {
+            let projectsElement = document.getElementById("projects");
+            this.show = (window.scrollY < projectsElement.offsetHeight + 10 * parseFloat(getComputedStyle(document.documentElement).fontSize))
+        },
         createObserver: createObserver,
         handleIntersect: handleIntersect
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
     },
     mounted() {
         window.scrollTo(0, 0);

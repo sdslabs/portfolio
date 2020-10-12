@@ -19,12 +19,13 @@
                     <div
                         class="mt-6 ml-10 mr-12 text-xl sm:text-lg text-grey leading-normal"
                     >
-                        {{ slide.description }} Visit them at:
+                        {{ slide.description }} Visit them
                         <a
+                            target="_blank"
                             class="no-underline text-darkblue"
                             :href="slide.website"
-                            >{{ slide.website }}</a
-                        >
+                            >here</a
+                        >.
                     </div>
                 </div>
             </slide>

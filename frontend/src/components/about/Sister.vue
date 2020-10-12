@@ -9,10 +9,13 @@
         <div
             class="mt-6 ml-10 mr-12 text-1.5xl sm:text-base text-grey leading-normal"
         >
-            {{ description }} Visit them at:
-            <a class="no-underline text-darkblue" :href="website">{{
-                website
-            }}</a>
+            {{ description }} Visit them
+            <a
+                target="_blank"
+                class="no-underline text-darkblue"
+                :href="website"
+                >here</a
+            >.
         </div>
     </div>
 </template>

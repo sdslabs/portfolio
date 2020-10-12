@@ -19,7 +19,12 @@
                     <div
                         class="mt-6 ml-10 mr-12 text-xl sm:text-lg text-grey leading-normal"
                     >
-                        {{ slide.description }}
+                        {{ slide.description }} Visit them at:
+                        <a
+                            class="no-underline text-darkblue"
+                            :href="slide.website"
+                            >{{ slide.website }}</a
+                        >
                     </div>
                 </div>
             </slide>
@@ -42,18 +47,21 @@ export default {
         return {
             slides: [
                 {
+                    website: "https://dsgiitr.com",
                     image: dsg,
                     title: "DATA SCIENCE GROUP",
                     description:
                         "As a part of SDS, this group aims at improving the culture of Data Science and Machine Learning in IIT Roorkee."
                 },
                 {
+                    website: "https://www.facebook.com/groups/sdspag",
                     image: pag,
                     title: "PROGRAMMING & ALGORITHMS GROUP",
                     description:
                         "A bunch of competetive programming enthusiasts, PAG, frequently organizes coding lectures and contests for IITR people."
                 },
                 {
+                    website: "https://infoseciitr.in",
                     image: infosec,
                     title: "INFOSECIITR",
                     description:

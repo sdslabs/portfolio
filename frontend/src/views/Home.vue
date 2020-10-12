@@ -102,8 +102,8 @@ export default {
     },
     computed: {
         opacityStyle() {
-            console.log(this.show)
-            return {opacity: this.show}
+            console.log(this.show);
+            return { opacity: this.show };
         }
     },
     methods: {
@@ -118,7 +118,9 @@ export default {
                     10 *
                         parseFloat(
                             getComputedStyle(document.documentElement).fontSize
-                        ) ? 1 : 0;
+                        )
+                    ? 1
+                    : 0;
         },
         createObserver: createObserver,
         handleIntersect: handleIntersect

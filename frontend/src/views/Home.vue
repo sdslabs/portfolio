@@ -1,6 +1,6 @@
 <template>
     <div id="home" @click="close">
-        <Sidebar v-bind:projects="projects" v-show="show" />
+        <Sidebar v-bind:projects="projects" v-bind:style="opacityStyle" />
         <div
             id="home"
             class="z-20 relative pt-38 sm:pt-0 bg-white fullpage section"
@@ -100,6 +100,12 @@ export default {
             }
         }
     },
+    computed: {
+        opacityStyle() {
+            console.log(this.show)
+            return {opacity: this.show}
+        }
+    },
     methods: {
         close() {
             this.$store.commit(CLOSE_USER);
@@ -112,16 +118,16 @@ export default {
                     10 *
                         parseFloat(
                             getComputedStyle(document.documentElement).fontSize
-                        );
+                        ) ? 1 : 0;
         },
         createObserver: createObserver,
         handleIntersect: handleIntersect
     },
     created() {
-        // window.addEventListener("scroll", this.handleScroll);
+        window.addEventListener("scroll", this.handleScroll);
     },
     destroyed() {
-        // window.removeEventListener("scroll", this.handleScroll);
+        window.removeEventListener("scroll", this.handleScroll);
     },
     mounted() {
         window.scrollTo(0, 0);

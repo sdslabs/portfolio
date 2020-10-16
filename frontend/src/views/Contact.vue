@@ -45,7 +45,7 @@
                     </div>
                     <div class="mr-14">
                         <a
-                            href="https://feedburner.google.com/fb/a/mailverify?uri=sdslabs/IOpf1&loc=en_US"
+                            href="mailto:contact@sdslabs.co.in"
                             rel="noopener noreferrer"
                             target="blank"
                         >
@@ -119,7 +119,7 @@
                     src="../assets/images/think-build-ship-pic.png"
                 />
                 <div
-                    class="textbox absolute mt-120 sm:mt-64 sm:-ml-81 mt-76 bg-white  shadow-sister p-10 sm:pr-0 h-80 z-20"
+                    class="textbox absolute mt-120 sm:mt-64 sm:-ml-82 mt-76 bg-white shadow-sister p-10 sm:pr-0 h-80 z-20"
                 >
                     <div class="w-140 sm:w-120 flex flex-row">
                         <img
@@ -145,6 +145,7 @@
 
 <script>
 import Button from "@/components/Button.vue";
+
 export default {
     name: "Error404",
     components: {

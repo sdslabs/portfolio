@@ -20,7 +20,7 @@ def get_projects(request):
     """
     Get a list of projects
     """
-    projects = Project.objects.filter(is_visible=True).order_by('title')
+    projects = Project.objects.filter(is_visible=True)
     serializer = ProjectSerializer(
         projects, many=True, context={'request': request})
     response_data = serializer.data

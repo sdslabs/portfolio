@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 
 TYPES = [
+    ('ongoing event', 'ongoing'),
     ('upcoming event', 'upcoming'),
     ('app update', 'app'),
     ('online competition', 'online'),

@@ -22,6 +22,7 @@
             <div>
                 <Sister
                     v-bind:url="dsg"
+                    website="https://dsgiitr.com"
                     title="DATA SCIENCE GROUP"
                     description="As a part of SDS, this group aims at improving the culture of Data Science and Machine Learning in IIT Roorkee."
                 />
@@ -30,6 +31,7 @@
                 <Sister
                     class="ml-10"
                     v-bind:url="pag"
+                    website="https://www.facebook.com/groups/sdspag"
                     title="PROGRAMMING & ALGORITHMS GROUP"
                     description="A bunch of competitive programming enthusiasts, PAG, frequently organizes coding lectures and contests for IITR people."
                 />
@@ -38,6 +40,7 @@
                 <Sister
                     class="ml-10"
                     v-bind:url="infosec"
+                    website="https://infoseciitr.in"
                     title="INFOSECIITR"
                     description="InfoSecIITR is a group of information security enthusiasts. It is an open group that consists only of IITR students and alumni."
                 />

@@ -8,7 +8,7 @@
                     <img class="w-64 mt-12" src="@/assets/images/dev.svg" />
                 </div>
                 <div class="self-center mt-8">
-                    <span class="font-black text-3xl sm:text-4xl">20 </span>
+                    <span class="font-black text-3xl sm:text-4xl">20+ </span>
                     <span class="font-black text-lg sm:text-xl"
                         >Developers</span
                     >
@@ -20,7 +20,7 @@
                         <img class="w-28 mt-20" src="@/assets/images/des.svg" />
                     </div>
                     <div class="self-center mt-1">
-                        <span class="font-black text-3xl sm:text-4xl">9 </span>
+                        <span class="font-black text-3xl sm:text-4xl">9+ </span>
                         <span class="font-black text-lg sm:text-xl"
                             >Designers</span
                         >

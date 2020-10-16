@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "axios": "^0.18.1",
+    "cookies": "^0.7.3",
+    "js-cookie": "^2.2.1",
     "masonry-layout": "^4.2.2",
     "vue": "^2.5.17",
     "vue-carousel": "^0.18.0",

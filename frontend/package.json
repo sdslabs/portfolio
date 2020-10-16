@@ -10,7 +10,6 @@
   "dependencies": {
     "axios": "^0.18.1",
     "cookies": "^0.7.3",
-    "falcon-client-js": "git@github.com:sdslabs/falcon.git#falcon-client-js",
     "js-cookie": "^2.2.1",
     "masonry-layout": "^4.2.2",
     "vue": "^2.5.17",

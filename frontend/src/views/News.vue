@@ -68,6 +68,7 @@
                     />
                 </div>
                 <div
+                    id="feed"
                     v-if="
                         event_block.event.types == 'online competition' &&
                             event_block.event.priority == 'large'
@@ -89,6 +90,7 @@
                 </div>
 
                 <div
+                    id="feed"
                     v-if="
                         event_block.event.types == 'app update' &&
                             event_block.event.priority == 'large'
@@ -109,6 +111,7 @@
                     <SmallFeed :event="event_block.event" />
                 </div>
                 <div
+                    id="feed"
                     class="mb-10 sm:w-feed"
                     v-if="
                         event_block.event.types == 'past event' &&

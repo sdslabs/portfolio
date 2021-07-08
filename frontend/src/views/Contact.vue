@@ -37,7 +37,7 @@
                     </iframe>
                 </div>
                 <div
-                    class="sm:w-168 mt-10 text-1.5xl sm:text-base sm:font-medium text-grey leading-170"
+                    class="sm:w-168 mt-20 text-1.5xl sm:text-base sm:font-medium text-grey leading-170"
                 >
                     Or find us on these platforms:
                 </div>

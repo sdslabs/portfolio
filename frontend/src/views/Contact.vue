@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col sm:pt-60 pt-48 w-full overflow-x-hidden">
         <div
-            class="flex flex-col sm:flex-row mb-60 items-center justify-between sm:justify-between flex-col pl-0 pr-0"
+            class="flex flex-col sm:flex-row mb-60 justify-between sm:justify-between flex-col pl-0 pr-0"
         >
             <div
                 class="flex flex-col ml-8 mr-8 sm:w-auto sm:pl-60 pr-0 sm:pt-20 sm:pt-0"
@@ -25,7 +25,19 @@
                     />
                 </div>
                 <div
-                    class="sm:w-168 mt-24 text-1.5xl sm:text-base sm:font-medium text-grey leading-170"
+                    class="mt-10"
+                >
+                    <iframe 
+                        src="https://discord.com/widget?id=758961084337618944&theme=dark" 
+                        width="100%" 
+                        height="400" 
+                        allowtransparency="true" 
+                        frameborder="0" 
+                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+                    </iframe>
+                </div>
+                <div
+                    class="sm:w-168 mt-20 text-1.5xl sm:text-base sm:font-medium text-grey leading-170"
                 >
                     Or find us on these platforms:
                 </div>
@@ -110,16 +122,15 @@
                     </div>
                 </div>
             </div>
-
             <div
-                class="flex flex-row justify-center mt-32 sm:mt-12 ml-8 mr-8 sm:ml-64 sm:mr-60 mb-44 sm:mb-0"
+                class="flex flex-row justify-center xl:h-80 mt-32 sm:mt-20 ml-8 mr-8 sm:ml-64 sm:mr-60 mb-44 sm:mb-0"
             >
                 <img
                     class="relative"
                     src="../assets/images/think-build-ship-pic.png"
                 />
                 <div
-                    class="textbox absolute mt-120 sm:mt-64 sm:-ml-82 mt-76 bg-white shadow-sister p-10 sm:pr-0 h-80 z-20"
+                    class="textbox absolute mt-120 xl:mt-80 sm:-ml-82 bg-white shadow-sister p-10 sm:pr-0 h-80 z-20"
                 >
                     <div class="w-140 sm:w-120 flex flex-row">
                         <img

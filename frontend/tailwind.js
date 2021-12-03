@@ -1,18 +1,12 @@
 /*
-
 Tailwind - The Utility-First CSS Framework
-
 A project by Adam Wathan (@adamwathan), Jonathan Reinink (@reinink),
 David Hemphill (@davidhemphill) and Steve Schoger (@steveschoger).
-
 Welcome to the Tailwind config file. This is where you can customize
 Tailwind specifically for your project. Don't be intimidated by the
 length of this file. It's really just a big JavaScript object and
 we've done our very best to explain each section.
-
 View the full documentation at https://tailwindcss.com.
-
-
 |-------------------------------------------------------------------------------
 | The default config
 |-------------------------------------------------------------------------------
@@ -46,12 +40,20 @@ let colors = {
     transparent: "transparent",
     white: "rgba(255, 255, 255, 1)",
     black: "rgba(10, 15, 13, 1)",
-    grey: "rgba(10, 15, 13, 0.07)",
+    grey: "rgba(10, 15, 13, 0.6)",
     purple: "rgba(58, 23, 114, 1)",
     orange: "rgba(229, 89, 52, 1)",
     blue: "rgba(55, 193, 225, 1)",
     yellow: "rgba(251, 177, 60, 1)",
-    green: "rgba(82, 170, 94, 1)"
+    green: "rgba(82, 170, 94, 1)",
+    error: "rgba(255, 88, 81, 1)",
+    red: "rgb(229, 89, 52, 1)",
+    border: "rgba(25, 25, 25, 0.5)",
+    darkblue: "rgba(37, 110, 255, 1)",
+    carousel: "rgba(25, 25, 25, 0.36)",
+    team: "rgba(248, 248, 248, 1)",
+    label: "rgba(10, 15, 13, 0.07)",
+    footer: "rgba(248, 248, 248, 1)"
 };
 
 module.exports = {
@@ -181,9 +183,11 @@ module.exports = {
         base: "1.4rem", // 14px
         lg: "1.6rem", // 16px
         xl: "1.8rem", // 18px
+        "1.5xl": "2.1rem", //21px
         "2xl": "2.4rem", // 24px
         "3xl": "3rem", // 30px
         "4xl": "3.6rem", // 36px
+        "4.5xl": "4.2rem", //42px
         "5xl": "5.2rem" // 52px
     },
 
@@ -317,6 +321,7 @@ module.exports = {
 
     borderWidths: {
         "0": "0",
+        feed: "0.3px",
         "1": "1px",
         "2": "2px",
         "4": "4px",
@@ -366,6 +371,7 @@ module.exports = {
         sm: ".125rem",
         default: ".25rem",
         lg: ".5rem",
+        "50": "50%",
         full: "9999px"
     },
 
@@ -402,13 +408,45 @@ module.exports = {
         "10": "2.5rem",
         "12": "3rem",
         "16": "4rem",
+        "20": "5rem",
         "24": "6rem",
         "28": "7rem",
         "32": "8rem",
         "40": "10rem",
+        "44": "11rem",
         "48": "12rem",
+        "52": "13rem",
+        "56": "14rem",
+        "60": "15rem",
         "64": "16rem",
+        "72": "18rem",
+        "80": "20rem",
+        "84": "21rem",
         "88": "22rem",
+        "92": "23rem",
+        "96": "24rem",
+        "98": "30rem",
+        "100": "25rem",
+        "104": "26rem",
+        "110": "27.5rem",
+        "120": "30rem",
+        "130": "33rem",
+        "140": "35rem",
+        "144": "36rem",
+        "148": "37rem",
+        "168": "42rem",
+        "180": "45rem",
+        "178": "44.5rem",
+        "188": "47rem",
+        "200": "50rem",
+        "206": "51.5rem",
+        "212": "53rem",
+        "216": "54rem",
+        "244": "61rem",
+        "240": "63rem",
+        "268": "67rem",
+        "292": "73rem",
+        gallery: "39.125rem",
         "1/2": "50%",
         "1/3": "33.33333%",
         "2/3": "66.66667%",
@@ -424,6 +462,15 @@ module.exports = {
         "1/6": "16.66667%",
         "5/6": "83.33333%",
         "4/7": "57.14286%",
+        "5/7": "71.42851%",
+        sister: "73.1rem",
+        groups: "112.8rem",
+        largetext: "102.5rem",
+        image: "45.6rem",
+        news: "114.8rem",
+        feed: "55.2rem",
+        event: "26.4rem",
+        eventdesc: "110.8rem",
         full: "100%",
         screen: "100vw"
     },
@@ -455,12 +502,35 @@ module.exports = {
         "8": "2rem",
         "10": "2.5rem",
         "12": "3rem",
+        "14": "3.5rem",
         "16": "4rem",
+        "20": "5rem",
         "24": "6rem",
+        "26": "6.5rem",
         "32": "8rem",
+        "36": "9rem",
+        "40": "10rem",
+        "44": "11rem",
         "48": "12rem",
+        "56": "14rem",
         "64": "16rem",
+        "72": "18rem",
+        "76": "19rem",
+        "80": "20rem",
+        "88": "22rem",
+        "96": "24rem",
+        "108": "27rem",
+        "120": "30rem",
+        "128": "32rem",
+        "140": "35rem",
+        "144": "36rem",
+        "148": "37rem",
+        "152": "38rem",
+        "168": "42rem",
+        "180": "45rem",
+        "3.5/10": "35vh",
         full: "100%",
+        upevent: "54.2rem",
         screen: "100vh"
     },
 
@@ -499,6 +569,8 @@ module.exports = {
 
     minHeight: {
         "0": "0",
+        "64": "16rem",
+        "88": "22rem",
         full: "100%",
         screen: "100vh"
     },
@@ -528,7 +600,8 @@ module.exports = {
         "3xl": "80rem",
         "4xl": "90rem",
         "5xl": "100rem",
-        full: "100%"
+        full: "100%",
+        content: "max-content"
     },
 
     /*
@@ -574,19 +647,31 @@ module.exports = {
         "4": "1rem",
         "5": "1.25rem",
         "6": "1.5rem",
+        "7": "1.75rem",
         "8": "2rem",
         "10": "2.5rem",
         "12": "3rem",
         "14": "3.5rem",
         "16": "4rem",
         "20": "5rem",
+        "22": "5.5rem",
         "24": "6rem",
         "28": "7rem",
         navbar: "7.9rem",
         "32": "8rem",
         "36": "9rem",
+        "38": "9.5rem",
+        "40": "10rem",
         "44": "11rem",
-        "88": "22rem"
+        "48": "12rem",
+        "52": "13rem",
+        "56": "14rem",
+        "60": "15rem",
+        "64": "16rem",
+        "72": "18rem",
+        "88": "22rem",
+        "96": "24rem",
+        "100": "25rem"
     },
 
     /*
@@ -607,6 +692,7 @@ module.exports = {
     margin: {
         auto: "auto",
         px: "1px",
+        gallery: "-15.6875rem",
         "0": "0",
         "1": "0.25rem",
         "2": "0.5rem",
@@ -614,13 +700,38 @@ module.exports = {
         "4": "1rem",
         "5": "1.25rem",
         "6": "1.5rem",
+        "7": "1.75rem",
         "8": "2rem",
         "10": "2.5rem",
         "12": "3rem",
+        "14": "3.6rem",
         "16": "4rem",
         "20": "5rem",
+        "23": "5.75rem",
         "24": "6rem",
-        "32": "8rem"
+        "28": "7rem",
+        "32": "8rem",
+        "36": "9rem",
+        "38": "9.5rem",
+        "40": "10rem",
+        "44": "11rem",
+        "48": "12rem",
+        "52": "13rem",
+        "60": "15rem",
+        "64": "16rem",
+        "68": "17rem",
+        "72": "18rem",
+        "76": "19rem",
+        "80": "20rem",
+        "84": "21rem",
+        "92": "23rem",
+        "96": "24rem",
+        "98": "24.5rem",
+        "100": "25rem",
+        "120": "30rem",
+        "176": "44rem",
+        "178": "44.5rem",
+        "1/4": "25%"
     },
 
     /*
@@ -650,10 +761,34 @@ module.exports = {
         "8": "2rem",
         "10": "2.5rem",
         "12": "3rem",
+        "14": "3.5rem",
         "16": "4rem",
+        "18": "4.5rem",
         "20": "5rem",
+        "21": "5.25rem",
         "24": "6rem",
-        "32": "8rem"
+        "26": "6.5rem",
+        "28": "7rem",
+        "32": "8rem",
+        "36": "9rem",
+        "38": "9.5rem",
+        "39": "9.75rem",
+        "40": "10rem",
+        "44": "11rem",
+        "48": "12rem",
+        "52": "13rem",
+        "56": "14rem",
+        "60": "15rem",
+        "64": "16rem",
+        "68": "17rem",
+        "80": "20rem",
+        "82": "20.5rem",
+        "84": "21rem",
+        "92": "23rem",
+        "100": "25rem",
+        "5/10": "50%",
+        "6.7/10": "67%",
+        gallery: "15.6875rem"
     },
 
     /*
@@ -679,6 +814,10 @@ module.exports = {
             "0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08)",
         inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
         outline: "0 0 0 3px rgba(52, 144, 220, 0.5)",
+        sister: "0px 6px 30px rgba(0, 0, 0, 0.07)",
+        feed: "0px 6px 30px rgba(0, 0, 0, 0.07)",
+        image: "0px 6px 15px rgba(0, 0, 0, 0.1)",
+        user: "4px 4px 20px rgba(0, 0, 0, 0.1)",
         none: "none"
     },
 
@@ -763,6 +902,12 @@ module.exports = {
         current: "currentColor"
     },
 
+    inset: {
+        "0": 0,
+        "20": "20rem",
+        auto: "auto"
+    },
+
     /*
   |-----------------------------------------------------------------------------
   | Modules                  https://tailwindcss.com/docs/configuration#modules
@@ -802,6 +947,8 @@ module.exports = {
         fonts: ["responsive"],
         fontWeights: ["responsive", "hover", "focus"],
         height: ["responsive"],
+        inset: ["responsive"],
+        justifyContent: ["responsive"],
         leading: ["responsive"],
         lists: ["responsive"],
         margin: ["responsive"],

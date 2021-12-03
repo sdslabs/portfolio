@@ -1,40 +1,98 @@
 <template>
-    <nav :class="scrolled ? 'shadow-sm': ''" class="fixed font-sans antialiased bg-white flex justify-between items-center flex-wrap py-4 px-16 sm:py-8 sm:px-36 w-full z-30">
+    <nav
+        :class="scrolled ? 'shadow-sm' : ''"
+        class="fixed font-sans antialiased bg-white flex justify-between items-center flex-wrap py-12 px-16 sm:py-8 sm:px-36 w-full z-30"
+    >
         <div class="flex items-center flex-no-shrink">
             <router-link to="/" class="block">
-                <img alt="SDSLabs Logo" class="w-48 h-12" src="@/assets/images/logo.png">
+                <img
+                    alt="SDSLabs Logo"
+                    class="h-14 -ml-6 sm-ml-0 sm:w-48 sm:h-12"
+                    src="@/assets/images/logo.svg"
+                />
             </router-link>
         </div>
         <div class="block sm:hidden">
-            <button @click="toggle" class="flex items-center px-6 py-4 border rounded">
-                <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            <button
+                @click="toggle"
+                class="flex items-center px-6 py-4 border rounded"
+            >
+                <img class="hamburger" src="@/assets/images/hamburger.svg" />
             </button>
         </div>
-        <div :class="open ? 'block': 'hidden'" class="relative w-full flex-grow sm:flex sm:items-center sm:w-auto z-10">
-            <div class="text-sm text-black leading-normal sm:flex justify-center sm:flex-grow ">
-                <NavLink v-bind:native=false v-bind:last=false url="/projects" text="PROJECTS" />
-                <NavLink v-bind:native=false v-bind:last=false url="/feed" text="FEED" />
-                <NavLink v-bind:native=true v-bind:last=false url="https://blog.sdslabs.co/" text="BLOG" />
-                <NavLink v-bind:native=false v-bind:last=false url="/about" text="ABOUT US" />
-                <NavLink v-bind:native=false v-bind:last=true url="/contact" text="CONTACT" />
+
+        <div
+            :class="open ? 'block' : 'hidden'"
+            class="relative w-full flex-grow sm:flex sm:items-center sm:w-auto z-10 hidden"
+        >
+            <div
+                class="text-sm text-black leading-normal sm:flex justify-center sm:flex-grow"
+            >
+                <NavLink
+                    v-bind:native="false"
+                    v-bind:last="false"
+                    url="/projects"
+                    text="PROJECTS"
+                />
+                <NavLink
+                    v-bind:native="false"
+                    v-bind:last="false"
+                    url="/news"
+                    text="NEWS"
+                />
+                <NavLink
+                    v-bind:native="true"
+                    v-bind:last="false"
+                    url="https://blog.sdslabs.co/"
+                    text="BLOG"
+                />
+                <NavLink
+                    v-bind:native="false"
+                    v-bind:last="false"
+                    url="/about"
+                    text="ABOUT US"
+                />
+                <NavLink
+                    v-bind:native="false"
+                    v-bind:last="true"
+                    url="/contact"
+                    text="CONTACT"
+                />
             </div>
         </div>
-        <div :class="open ? 'block': 'hidden'" class="text-sm sm:flex mt-4 sm:mt-0">
-            <Button v-bind:native=true url="https://accounts.sdslabs.co/" text="LOGIN" />
+        <!-- <div
+            :class="open ? 'block' : 'hidden'"
+            class="text-sm sm:flex mt-4 sm:mt-0 hidden"
+        >
+            <Button
+                v-if="!$store.state.login"
+                v-bind:native="true"
+                :url="url"
+                text="Login"
+            />
+            <User class="sm:flex hidden" v-else />
+        </div> -->
+        <div class="fixed -ml-16 -mt-39">
+            <NavMobile :open="open" @click="toggle" />
         </div>
     </nav>
 </template>
 
 <script>
 import NavLink from "@/components/navbar/NavLink.vue";
-import Button from "@/components/Button.vue";
+import NavMobile from "@/components/navbar/NavMobile.vue";
+// import Button from "@/components/Button.vue";
+// import User from "@/components/navbar/User.vue";
 
 export default {
     name: "TopNavbar",
     data: function initData() {
         return {
             open: false,
-            scrolled: false
+            scrolled: false,
+            url: `https://accounts.sdslabs.co/login?redirect=${
+                window.location.href
+            }`
         };
     },
     methods: {
@@ -53,7 +111,19 @@ export default {
     },
     components: {
         NavLink,
-        Button
+        // Button,
+        NavMobile
+        // User
     }
 };
 </script>
+
+<style lang="scss" scoped>
+button {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+button:active {
+    outline: none;
+}
+</style>

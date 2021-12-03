@@ -1,5 +1,7 @@
 <template>
-    <ul class="hidden fixed z-10 h-screen bg-white flex-col pt-navbar justify-center list-reset pl-16 sm:flex sm:pl-36 sm:w-88 ">
+    <ul
+        class="hidden fixed z-10 h-screen bg-white flex-col pt-navbar justify-center list-reset pl-16 sm:flex sm:pl-36 sm:w-88 "
+    >
         <SideLink
             v-for="(project, permalink, index) in projects"
             v-bind:key="index"
@@ -11,11 +13,11 @@
 </template>
 
 <script>
-
 import SideLink from "@/components/sidebar/SideLink.vue";
 
+// eslint-disable-next-line
 function handleIntersect(entries, observer) {
-    for(let i = 0; i < entries.length; i++) {
+    for (let i = 0; i < entries.length; i++) {
         let entry = entries[i];
         if (entry.isIntersecting) this.isActive = entry.target.id;
     }
@@ -37,8 +39,8 @@ export default {
         return {
             observer: undefined,
             isObserverSet: false,
-            isActive: "",
-        }
+            isActive: ""
+        };
     },
     components: {
         SideLink
@@ -54,8 +56,11 @@ export default {
                 rootMargin: "0px",
                 threshold: 0.51
             };
-            let observer = new IntersectionObserver(this.handleIntersect, options);
-            for(let i = 0; i < keys.length; i++) {
+            let observer = new IntersectionObserver(
+                this.handleIntersect,
+                options
+            );
+            for (let i = 0; i < keys.length; i++) {
                 let el = document.querySelector("#" + keys[i]);
                 observer.observe(el);
             }
@@ -66,6 +71,5 @@ export default {
     destroyed() {
         this.observer.disconnect();
     }
-}
-
+};
 </script>

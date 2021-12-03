@@ -14,7 +14,8 @@ const router = new Router({
             component: Home,
             props: true,
             meta: {
-                title: "SDSLabs"
+                title: "SDSLabs",
+                hideFooter: true
             }
         },
         {
@@ -23,7 +24,8 @@ const router = new Router({
             component: Home,
             props: true,
             meta: {
-                title: "SDSLabs | Projects"
+                title: "SDSLabs | Projects",
+                hideFooter: true
             }
         },
         {
@@ -36,6 +38,43 @@ const router = new Router({
                 import(/* webpackChunkName: "about" */ "./views/About.vue"),
             meta: {
                 title: "SDSLabs | About Us"
+            }
+        },
+        {
+            path: "/news",
+            name: "news",
+            component: () =>
+                import(/* webpackChunkName: "about" */ "./views/News.vue"),
+            meta: {
+                title: "SDSLabs | News"
+            }
+        },
+        {
+            path: "/news/:title",
+            name: "event",
+            props: true,
+            component: () =>
+                import(/* webpackChunkName: "about" */ "./views/Event.vue"),
+            meta: {
+                title: "SDSLabs | News"
+            }
+        },
+        {
+            path: "/contact",
+            name: "contact",
+            component: () => import("./views/Contact.vue"),
+            meta: {
+                title: "SDSLabs | Contact",
+                hideFooter: true
+            }
+        },
+        {
+            path: "*",
+            name: "error404",
+            component: () => import("./views/Error404.vue"),
+            meta: {
+                title: "SDSLabs | Error",
+                hideFooter: true
             }
         }
     ]

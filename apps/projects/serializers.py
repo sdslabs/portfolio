@@ -7,4 +7,4 @@ class ProjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
-        fields = ('permalink', 'title', 'description', 'url', 'image')
+        fields = ('permalink', 'title', 'description', 'url', 'image', 'color')

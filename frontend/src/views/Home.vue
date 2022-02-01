@@ -139,6 +139,8 @@ export default {
                 let projects = {};
                 for (let i = 0; i < response.data.length; i++) {
                     projects[response.data[i]["permalink"]] = response.data[i];
+                    let imageURL = response.data[i]["image"];
+                    projects[response.data[i]["permalink"]]["image"] = CONFIG.baseURL + '/media' + imageURL.split("/media")[1];
                 }
                 this.projects = Object.assign({}, this.projects, projects);
             });

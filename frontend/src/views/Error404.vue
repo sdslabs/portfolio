@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full pt-38 overflow-x-hidden">
+    <div class="w-full pt-38 overflow-x-hidden" @click="close">
         <div class="flex flex-col sm:flex-row">
             <div class="sm:pt-72">
                 <img
@@ -46,7 +46,14 @@
 </template>
 
 <script>
+import { CLOSE_USER } from "@/mutation-types";
+
 export default {
-    name: "Error404"
+    name: "Error404",
+    methods: {
+        close() {
+            this.$store.commit(CLOSE_USER);
+        }
+    }
 };
 </script>

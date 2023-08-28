@@ -1,5 +1,8 @@
 <template>
-    <div class="flex flex-col sm:pt-60 pt-48 w-full overflow-x-hidden">
+    <div
+        class="flex flex-col sm:pt-60 pt-48 w-full overflow-x-hidden"
+        @click="close"
+    >
         <div
             class="flex flex-col-reverse sm:flex-row-reverse items-center justify-between sm:justify-between flex-col pl-0 pr-0"
         >
@@ -214,15 +217,26 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="scroll_icon w-auto hidden sm:block">
-                    <button
-                        id="scroll_btn"
-                        class="scroll_btn self-center h-10 sm:w-16 sm:h-16 mt-16 sm:mt-16"
-                        v-on:click="scrollFunction"
-                    >
-                        <img src="@/assets/images/scroll-arrow.svg" />
-                    </button>
+                
+                <div class="flex flex-row">
+                    <div class="scroll_icon w-auto hidden sm:block">
+                        <button
+                            id="scroll_btn"
+                            class="scroll_btn self-center h-10 sm:w-16 sm:h-16 mt-16 sm:mt-16"
+                            v-on:click="scrollLeftFunction"
+                        >
+                            <img class="transform rotate-180" src="@/assets/images/scroll-arrow-left.svg" />
+                        </button>
+                    </div>
+                    <div class="scroll_icon w-auto hidden sm:block">
+                        <button
+                            id="scroll_btn"
+                            class="scroll_btn self-center h-10 sm:w-16 sm:h-16 mt-16 sm:mt-16"
+                            v-on:click="scrollRightFunction"
+                        >
+                            <img src="@/assets/images/scroll-arrow-right.svg" />
+                        </button>
+                    </div>
                 </div>
             </div>
             <div><Team /></div>
@@ -237,6 +251,8 @@ import Team from "@/components/Team.vue";
 import SisterGroups from "@/components/SisterGroups.vue";
 import { CONFIG } from "@/utils/constants.js";
 import axios from "axios";
+import { CLOSE_USER } from "@/mutation-types";
+
 export default {
     name: "about",
     components: {
@@ -251,8 +267,14 @@ export default {
         };
     },
     methods: {
-        scrollFunction: function() {
+        scrollRightFunction: function() {
             document.getElementById("timeline_bar").scrollLeft += 1000;
+        },
+        scrollLeftFunction: function() {
+            document.getElementById("timeline_bar").scrollLeft -= 1000;
+        },
+        close() {
+            this.$store.commit(CLOSE_USER);
         }
     },
     mounted() {

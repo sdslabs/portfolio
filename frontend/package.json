@@ -14,6 +14,7 @@
     "masonry-layout": "^4.2.2",
     "vue": "^2.5.17",
     "vue-carousel": "^0.18.0",
+    "vue-marquee-slider": "^1.0.6",
     "vue-masonry": "^0.11.8",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"

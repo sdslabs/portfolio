@@ -8,8 +8,8 @@
       >
         <span>
           Registrations for
-          <span style="color: #01CFFF; font-weight: 600;"> Syntax Error 11 </span>
-          starting soon!
+          <span style="color: #01CFFF; font-weight: 600;"><a href="https://hackathon.sdslabs.co/" target="_blank" style="text-decoration: none; color: #01CFFF">Syntax Error 11</a> </span>
+          are live !
         </span>
       </vue-marquee-slider>
     </div>

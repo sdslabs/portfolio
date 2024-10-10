@@ -197,9 +197,6 @@ export default {
                 let eventList = [];
                 let event = [];
                 events.forEach(event_block => {
-                    let imageURL = event_block.event["image"];
-                    event_block.event["image"] =
-                        CONFIG.baseURL + "/media" + imageURL.split("/media")[1];
                     eventList.push(event_block);
                 });
                 eventList.forEach(events_list => {

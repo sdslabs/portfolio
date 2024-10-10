@@ -15,28 +15,28 @@
                         </div></router-link
                     >
                     <div class="mt-24 sm:mt-32">
-                        <Label :text="events.event[0].types" />
+                        <Label :text="events.event.types" />
                     </div>
                     <div
                         class="sm:w-feed mt-20 font-black text-3xl leading-180"
                     >
-                        {{ events.event[0].title.toUpperCase() }}
+                        {{ events.event.title.toUpperCase() }}
                     </div>
                     <div
                         class="mt-8 text-1.5xl sm:text-base text-grey font-semibold leading-170"
                     >
-                        {{ events.event[0].timing }}
+                        {{ events.event.timing }}
                     </div>
                     <div
                         class="sm:w-feed mt-14 text-grey text-1.5xl sm:text-base leading-normal"
                     >
-                        {{ events.event[0].shortDescription }}
+                        {{ events.event.shortDescription }}
                     </div>
                     <div class="mt-28">
                         <Button
-                            v-if="events.event[0].types !== 'past event'"
+                            v-if="events.event.types !== 'past event'"
                             v-bind:native="true"
-                            :url="events.event[0].url"
+                            :url="events.event.url"
                             text="Event Link"
                         />
                     </div>
@@ -44,14 +44,14 @@
                 <div class="mt-20 sm:mt-0 sm:ml-44">
                     <img
                         class="sm:w-image shadow-image"
-                        :src="events.event[0].image"
+                        :src="events.event.image"
                     />
                 </div>
             </div>
             <div
                 class="sm:ml-60 mt-40 text-1.5xl sm:text-base text-grey sm:w-eventdesc leading-normal"
             >
-                {{ events.event[0].fullDescription }}
+                {{ events.event.fullDescription }}
             </div>
         </div>
         <div
@@ -118,7 +118,16 @@ export default {
             })
             .then(response => {
                 let events = [];
-                events = response.data;
+                events = response.json();
+                if (events) {
+                    if (events.event["image"]) {
+                        let imageURL = events.event["image"];
+                        events.event["image"] =
+                            CONFIG.baseURL +
+                            "/media" +
+                            imageURL.split("/media")[1];
+                    }
+                }
                 this.events = Object.assign({}, this.events, events);
             });
     }

@@ -217,7 +217,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="flex flex-row">
                     <div class="scroll_icon w-auto hidden sm:block">
                         <button
@@ -225,7 +225,10 @@
                             class="scroll_btn self-center h-10 sm:w-16 sm:h-16 mt-16 sm:mt-16"
                             v-on:click="scrollLeftFunction"
                         >
-                            <img class="transform rotate-180" src="@/assets/images/scroll-arrow-left.svg" />
+                            <img
+                                class="transform rotate-180"
+                                src="@/assets/images/scroll-arrow-left.svg"
+                            />
                         </button>
                     </div>
                     <div class="scroll_icon w-auto hidden sm:block">

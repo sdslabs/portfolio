@@ -24,16 +24,15 @@
                         "
                     />
                 </div>
-                <div
-                    class="mt-10"
-                >
-                    <iframe 
-                        src="https://discord.com/widget?id=758961084337618944&theme=dark" 
-                        width="100%" 
-                        height="400" 
-                        allowtransparency="true" 
-                        frameborder="0" 
-                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+                <div class="mt-10">
+                    <iframe
+                        src="https://discord.com/widget?id=758961084337618944&theme=dark"
+                        width="100%"
+                        height="400"
+                        allowtransparency="true"
+                        frameborder="0"
+                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+                    >
                     </iframe>
                 </div>
                 <div

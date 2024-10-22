@@ -70,7 +70,7 @@ const router = new Router({
         },
         {
             path: "/recruitments-2y",
-            name: "recruitments-2y",
+            name: "recruitments-2y"
         },
         {
             path: "*",
@@ -85,10 +85,10 @@ const router = new Router({
 });
 
 router.beforeEach((to, from, next) => {
-    if(to.path==="/recruitments-2y"){
-        window.location.href="https://magical-meteoroid-2c8.notion.site/SDSLabs-Sophomore-Recruitment-2023-8ba4def1f5734f768d6f6b33ef8ae803?pvs=4"
-    }
-    else{
+    if (to.path === "/recruitments-2y") {
+        window.location.href =
+            "https://magical-meteoroid-2c8.notion.site/SDSLabs-Sophomore-Recruitment-2023-8ba4def1f5734f768d6f6b33ef8ae803?pvs=4";
+    } else {
         document.title = to.meta.title;
         next();
     }

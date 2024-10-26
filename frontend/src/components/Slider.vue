@@ -2,7 +2,8 @@
     <div class="sticky">
         <vue-marquee-slider id="marquee-slider-loop" :speed="5000" :width="450">
             <span>
-                Registrations for
+                <!-- Add the content of the slider -->
+                Registrations for                                  
                 <span style="color: #01CFFF; font-weight: 600;"
                     ><a
                         href="https://hackathon.sdslabs.co/"

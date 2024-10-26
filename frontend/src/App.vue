@@ -15,7 +15,7 @@ import Footer from "@/components/Footer.vue";
 export default {
     name: "app",
     components: {
-        // MarqueeSlider  ,
+        // MarqueeSlider  ,  // Add the MarqueeSlider component for any notification on the top of the page 
         TopNavbar,
         Footer
     }

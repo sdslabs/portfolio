@@ -129,7 +129,6 @@ export default {
                     }
                 }
                 this.events = Object.assign({}, this.events, events);
-                
             });
     }
 };

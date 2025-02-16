@@ -1,9 +1,9 @@
-FROM python:3.7-stretch
+FROM python:3.7-buster
 
 ENV PYTHONBUFFERED 1
 
-RUN apt-get update \
-    && apt-get install libexempi3 \
+RUN apt update \
+    && apt install libexempi8 \
     && mkdir -p /var/log/portfolio.log
 
 WORKDIR /portfolio

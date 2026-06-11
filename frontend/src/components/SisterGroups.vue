@@ -22,7 +22,7 @@
             <div>
                 <Sister
                     v-bind:url="dsg"
-                    website="https://dsgiitr.com"
+                    website="https://dsgiitr.in"
                     title="DATA SCIENCE GROUP"
                     description="As a part of SDS, this group aims at improving the culture of Data Science and Machine Learning in IIT Roorkee."
                 />

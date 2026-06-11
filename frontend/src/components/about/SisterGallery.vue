@@ -48,7 +48,7 @@ export default {
         return {
             slides: [
                 {
-                    website: "https://dsgiitr.com",
+                    website: "https://dsgiitr.in",
                     image: dsg,
                     title: "DATA SCIENCE GROUP",
                     description:
